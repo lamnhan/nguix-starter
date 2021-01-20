@@ -1,9 +1,27 @@
 {
-  "name": "starter",
-  "version": "0.0.1",
+  "name": "@lamnhan/ngui-starter",
+  "version": "1.0.0",
+  "description": "My starter Angular UI kit.",
+  "author": "Lam Nhan",
+  "homepage": "https://lamnhan.com",
+  "license": "MIT",
+  "keywords": [
+    "lamnhan",
+    "angular",
+    "ui",
+    "component"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lamnhan/ngui-starter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lamnhan/ngui-starter/issues"
+  },
   "peerDependencies": {
-    "@angular/common": "^11.0.9",
-    "@angular/core": "^11.0.9"
+    "@angular/common": "^10.1.6",
+    "@angular/core": "^10.1.6",
+    "ngx-markdown": "^11.0.0"
   },
   "dependencies": {
     "tslib": "^2.0.0"

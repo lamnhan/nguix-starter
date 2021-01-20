@@ -20,7 +20,7 @@
       "dom"
     ],
     "paths": {
-      "starter": [
+      "@lamnhan/ngui-starter": [
         "dist/starter/starter",
         "dist/starter"
       ]
