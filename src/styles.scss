@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+
+// theming
+@import './theming.scss';
+
+// reset
+@import '../../unistylus/src/reset.scss';
+
+// prismjs
+@import 'prismjs/themes/prism-okaidia.css';
+@import 'prismjs/plugins/line-numbers/prism-line-numbers.css';
+
+// global unistylus
+@import '../../unistylus/src/global.scss';

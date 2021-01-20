@@ -1,0 +1,13 @@
+@import '../../projects/starter/src/lib/styles/header.style.scss';
+@import '../../projects/starter/src/lib/styles/footer.style.scss';
+
+app-root {
+
+  ln-header-raw {
+    @include ln-header-style;
+  }
+
+  ln-footer-raw {
+    @include ln-footer-style;
+  }
+}

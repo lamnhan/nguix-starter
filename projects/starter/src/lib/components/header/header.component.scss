@@ -1,0 +1,6 @@
+@import '../../../../../../src/theming.scss';
+@import '../../styles/header.style.scss';
+
+ln-header ln-header-raw {
+  @include ln-header-style;
+}

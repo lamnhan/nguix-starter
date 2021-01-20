@@ -19,8 +19,8 @@
     "url": "https://github.com/lamnhan/ngui-starter/issues"
   },
   "peerDependencies": {
-    "@angular/common": "^10.1.6",
-    "@angular/core": "^10.1.6",
+    "@angular/common": "^11.0.9",
+    "@angular/core": "^11.0.9",
     "ngx-markdown": "^11.0.0"
   },
   "dependencies": {
