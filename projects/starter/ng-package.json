@@ -8,5 +8,8 @@
       "@lamnhan/ngx-useful": "ng.lamnhan.useful",
       "ngx-markdown": "ngxMarkdown"
     }
-  }
+  },
+  "whitelistedNonPeerDependencies": [
+    "ngx-markdown"
+  ]
 }

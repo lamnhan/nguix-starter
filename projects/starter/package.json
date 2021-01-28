@@ -1,6 +1,6 @@
 {
   "name": "@lamnhan/nguix-starter",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "My starter Angular UI kit.",
   "author": "Lam Nhan",
   "homepage": "https://lamnhan.com",
@@ -22,11 +22,11 @@
     "@angular/common": "^11.0.9",
     "@angular/core": "^11.0.9",
     "@angular/router": "^11.0.9",
-    "@lamnhan/ngx-useful": "0.0.1",
-    "@lamnhan/schemata": "^1.0.3",
-    "ngx-markdown": "^11.0.0"
+    "@lamnhan/ngx-useful": "0.0.2",
+    "@lamnhan/schemata": "^1.0.3"
   },
   "dependencies": {
+    "ngx-markdown": "^11.0.0",
     "tslib": "^2.0.0"
   }
 }
