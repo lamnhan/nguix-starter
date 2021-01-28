@@ -10,7 +10,7 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', async () => {
     await page.navigateTo();
-    expect(await page.getTitleText()).toEqual('ngui-starter app is running!');
+    expect(await page.getTitleText()).toEqual('nguix-starter app is running!');
   });
 
   afterEach(async () => {

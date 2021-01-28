@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { NguiStarterModule } from '@lamnhan/ngui-starter';
+import { NguixStarterModule } from '@lamnhan/nguix-starter';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,7 +13,7 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NguiStarterModule
+    NguixStarterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

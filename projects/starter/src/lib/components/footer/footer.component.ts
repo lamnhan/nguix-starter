@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
-  selector: 'ln-footer',
+  selector: 'nguix-footer',
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.scss'],
   encapsulation: ViewEncapsulation.None

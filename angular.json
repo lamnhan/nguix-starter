@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ngui-starter": {
+    "nguix-starter": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ngui-starter",
+            "outputPath": "dist/nguix-starter",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -68,18 +68,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ngui-starter:build"
+            "browserTarget": "nguix-starter:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ngui-starter:build:production"
+              "browserTarget": "nguix-starter:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ngui-starter:build"
+            "browserTarget": "nguix-starter:build"
           }
         },
         "test": {
@@ -116,11 +116,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "ngui-starter:serve"
+            "devServerTarget": "nguix-starter:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "ngui-starter:serve:production"
+              "devServerTarget": "nguix-starter:serve:production"
             }
           }
         }
@@ -130,7 +130,7 @@
       "projectType": "library",
       "root": "projects/starter",
       "sourceRoot": "projects/starter/src",
-      "prefix": "ln",
+      "prefix": "nguix",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
@@ -167,7 +167,7 @@
       }
     }
   },
-  "defaultProject": "ngui-starter",
+  "defaultProject": "nguix-starter",
   "cli": {
     "analytics": "296a5df8-e10d-42ae-ad97-ee10e0827d09"
   }

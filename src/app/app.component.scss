@@ -3,11 +3,11 @@
 
 app-root {
 
-  ln-header-raw {
-    @include ln-header-style;
+  nguix-header-raw {
+    @include nguix-header-style;
   }
 
-  ln-footer-raw {
-    @include ln-footer-style;
+  nguix-footer-raw {
+    @include nguix-footer-style;
   }
 }

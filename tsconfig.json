@@ -15,12 +15,13 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "es2020",
+    "skipLibCheck": true,
     "lib": [
       "es2018",
       "dom"
     ],
     "paths": {
-      "@lamnhan/ngui-starter": [
+      "@lamnhan/nguix-starter": [
         "dist/starter/starter",
         "dist/starter"
       ]
