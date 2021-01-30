@@ -23,6 +23,10 @@
       "@lamnhan/nguix-starter": [
         "dist/starter/starter",
         "dist/starter"
+      ],
+      "@lamnhan/ngx-useful": [
+        "../ngx-useful/dist/useful/useful",
+        "../ngx-useful/dist/useful"
       ]
     }
   },

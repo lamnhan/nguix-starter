@@ -1,0 +1,16 @@
+$component_name: 'header';
+
+$default_icons: (
+  menu: 'https://img.icons8.com/android/32/000000/menu.svg',
+  search: 'https://img.icons8.com/ios-glyphs/32/000000/search.png',
+);
+
+$dark_theme_icons: (
+  menu: 'https://img.icons8.com/android/32/ffffff/menu.svg',
+  searc: 'https://img.icons8.com/ios-glyphs/32/ffffff/search.png',
+);
+
+$icon_groups: (
+  default: $default_icons,
+  dark: $dark_theme_icons,
+);

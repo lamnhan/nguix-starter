@@ -1,10 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 
-// theming
-@import './theming.scss';
+// import unistylus
+@import '../../unistylus/src/setup.scss';
 
-// reset
-@import '../../unistylus/src/reset.scss';
+// register themes
+@import '../../unistylus/src/themes/default.scss';
+@import '../../unistylus/src/themes/dark.scss';
 
-// global
-@import '../../unistylus/src/global.scss';
+// register component icons
+@import '../projects/starter/src/lib/styles/header/header.icon.scss';
+
+// =================================
+// ADD OR OVERRIDE THEMES/ICONS HERE
+// =================================

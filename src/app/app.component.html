@@ -1,6 +1,8 @@
 <nguix-header-raw
   title="Starter"
   [menuItems]="mainMenuItems"
+  extraButton="switch"
+  (extra)="switchTheme($event)"
 ></nguix-header-raw>
 
 <router-outlet></router-outlet>

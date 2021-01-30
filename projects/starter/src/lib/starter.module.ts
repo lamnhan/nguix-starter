@@ -6,11 +6,9 @@ import { FooterRawComponentModule } from './components/footer-raw/footer-raw.mod
 import { FooterComponentModule } from './components/footer/footer.module';
 import { ArticleRawComponentModule } from './components/article-raw/article-raw.module';
 import { ArticleComponentModule } from './components/article/article.module';
-import { ArticleRawComponent } from './components/article-raw/article-raw.component';
-import { ArticleComponent } from './components/article/article.component';
 
 @NgModule({
-  declarations: [ArticleRawComponent, ArticleComponent],
+  declarations: [],
   imports: [
     HeaderRawComponentModule,
     HeaderComponentModule,

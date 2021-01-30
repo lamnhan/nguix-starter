@@ -7,7 +7,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "build": "ng build starter --prod && cpy README.md LICENSE dist/starter && cpy projects/starter/src/lib/styles dist/starter/styles",
+    "build": "ng build starter --prod && cpy README.md LICENSE dist/starter",
     "deploy": "cd ./dist/starter && npm publish && cd ../../",
     "docs": "ayedocs generate",
     "test": "ng test starter",
@@ -38,7 +38,6 @@
     "@angular/platform-browser": "~11.0.9",
     "@angular/platform-browser-dynamic": "~11.0.9",
     "@angular/router": "~11.0.9",
-    "@lamnhan/ngx-useful": "0.0.3",
     "@lamnhan/schemata": "^1.0.3",
     "ngx-markdown": "^11.0.0",
     "rxjs": "~6.6.0",
