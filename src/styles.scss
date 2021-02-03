@@ -11,27 +11,39 @@
 // @import '../../unistylus/src/scss/theming'; // required
 // @inport '...';
 
-// add a theme
+// add a theme (the default)
 @import '../../unistylus/src/themes/light-default';
 // OR multiple themes
 @import '../../unistylus/src/themes/dark';
 
 // ============================================================================
-// II. SETUP NGUIX MODULE
+// II. ADD/OVERRIDE THEMES
+// ============================================================================
+
+// :root, [data-theme="default"] {
+//   --app-color-primary: ...;
+// }
+
+// ============================================================================
+// III. SETUP NGUIX MODULE
 // ============================================================================
 
 // 1-line setup
-@import '../projects/starter/src/scss/starter.light.module';
+@import '../projects/starter/src/scss/light.starter.module';
 // OR per-component setup
-// @import '../projects/starter/src/scss/header/header.light.component';
+// @import '../projects/starter/src/scss/header/light.header.component';
 // @inport '...';
 
 // ============================================================================
-// III. ADD/OVERRIDE THEMES
+// IV. SETUP APP MODULE
 // ============================================================================
 
-// ============================================================================
-// IV. GLOBAL STYLES
-// ============================================================================
+// 1-line setup
+@import './scss/light.app.module';
+// OR per-component setup
+// @import './scss/app/light.app.component';
+// @inport '...';
 
-@import './app/app.icon';
+// ============================================================================
+// V. GLOBAL STYLES
+// ============================================================================

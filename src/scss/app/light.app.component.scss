@@ -1,0 +1,9 @@
+@import '../../../../unistylus/src/scss/mixins';
+@import './app.data';
+
+$icon_groups: (
+  default: $light_theme_icons,
+  light: $light_theme_icons,
+  dark: $dark_theme_icons,
+);
+@include registerAppIcons($icon_groups);
