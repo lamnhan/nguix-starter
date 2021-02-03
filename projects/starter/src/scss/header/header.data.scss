@@ -12,5 +12,12 @@ $dark_theme_icons: (
 
 $icon_groups: (
   default: $default_icons,
+  light: $default_icons,
   dark: $dark_theme_icons,
+);
+
+$custom_properties: (
+  default: (
+    height: 60px
+  )
 );

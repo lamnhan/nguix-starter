@@ -1,1 +1,27 @@
-<nguix-footer-raw></nguix-footer-raw>
+<footer class="footer">
+
+  <div class="alpha">
+
+    <div class="copyright">
+      &copy; <em [innerHtml]="copyright.holder"></em>, <a [href]="copyright.url" target="_blank">{{copyright.url}}</a>. <span [innerHtml]="copyright.text"></span>
+    </div>
+
+    <ul class="socials" *ngIf="socialLinks">
+      <li *ngFor="let item of socialLinks">
+        <a [href]="item.href" [class]="item.classes" target="_blank"><img [src]="item.icon"></a>
+      </li>
+    </ul>
+
+  </div>
+
+  <div class="bravo">
+
+    <ul class="links">
+      <li *ngFor="let item of mainLinks">
+        <a [href]="item.href" [routerLink]="item.routerLink">{{item.text}}</a>
+      </li>
+    </ul>
+
+  </div>
+   
+</footer>

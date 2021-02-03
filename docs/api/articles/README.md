@@ -33,14 +33,10 @@
 <h2><a name="components"><p>Components</p>
 </a></h2>
 
-| Class                                                                                           | Description |
-| ----------------------------------------------------------------------------------------------- | ----------- |
-| [ArticleComponent](https://lamnhan.github.io/nguix-starter/classes/articlecomponent.html)       |             |
-| [ArticleRawComponent](https://lamnhan.github.io/nguix-starter/classes/articlerawcomponent.html) |             |
-| [FooterComponent](https://lamnhan.github.io/nguix-starter/classes/footercomponent.html)         |             |
-| [FooterRawComponent](https://lamnhan.github.io/nguix-starter/classes/footerrawcomponent.html)   |             |
-| [HeaderComponent](https://lamnhan.github.io/nguix-starter/classes/headercomponent.html)         |             |
-| [HeaderRawComponent](https://lamnhan.github.io/nguix-starter/classes/headerrawcomponent.html)   |             |
+| Class                                                                                   | Description |
+| --------------------------------------------------------------------------------------- | ----------- |
+| [FooterComponent](https://lamnhan.github.io/nguix-starter/classes/footercomponent.html) |             |
+| [HeaderComponent](https://lamnhan.github.io/nguix-starter/classes/headercomponent.html) |             |
 
 </section>
 

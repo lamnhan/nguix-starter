@@ -1,13 +1,13 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component } from '@angular/core';
 import { AppService } from '@lamnhan/ngx-useful';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
-  encapsulation: ViewEncapsulation.None,
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
   mainMenuItems = [
     {
       text: 'Components',
@@ -31,6 +31,24 @@ export class AppComponent {
       text: 'Help',
       routerLink: ['/help']
     }
+  ];
+
+  footerSocialItems = [
+    {
+      icon: 'https://img.icons8.com/color/48/000000/new-post.png',
+      classes: 'email',
+      href: '#',
+    },
+    {
+      icon: 'https://img.icons8.com/color/48/000000/phone.png',
+      classes: 'phone',
+      href: '#',
+    },
+    {
+      icon: 'https://img.icons8.com/color/48/000000/facebook.png',
+      classes: 'facebook',
+      href: '#',
+    },
   ];
 
   constructor(private appService: AppService) {}

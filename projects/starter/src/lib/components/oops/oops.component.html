@@ -1,0 +1,9 @@
+<div class="oops">
+  <div class="image">
+    <img [src]="image" alt="404">
+  </div>
+  <p [innerHtml]="content"></p>
+  <p>
+    <a [href]="actionLink.href" [routerLink]="actionLink.routerLink">{{actionLink.text}}</a>
+  </p>
+</div>

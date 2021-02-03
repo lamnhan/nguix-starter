@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ArticleRawComponent } from './article-raw.component';
+import { OopsComponent } from './oops.component';
 
-describe('ArticleRawComponent', () => {
-  let component: ArticleRawComponent;
-  let fixture: ComponentFixture<ArticleRawComponent>;
+describe('OopsComponent', () => {
+  let component: OopsComponent;
+  let fixture: ComponentFixture<OopsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ArticleRawComponent ]
+      declarations: [ OopsComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ArticleRawComponent);
+    fixture = TestBed.createComponent(OopsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

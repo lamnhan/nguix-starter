@@ -1,15 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
 
-// import unistylus
-@import '../../unistylus/src/setup.scss';
+// ============================================================================
+// I. SETUP UNISTYLUS
+// ============================================================================
 
-// register themes
-@import '../../unistylus/src/themes/default.scss';
-@import '../../unistylus/src/themes/dark.scss';
+// 1-line setup
+@import '../../unistylus/src/scss/setup';
+// OR customization setup
+// @import '../../unistylus/src/scss/reset';
+// @import '../../unistylus/src/scss/theming'; // required
+// @inport '...';
 
-// register component icons
-@import '../projects/starter/src/lib/styles/header/header.icon.scss';
+// add a theme
+@import '../../unistylus/src/themes/light-default';
+// OR multiple themes
+@import '../../unistylus/src/themes/dark';
 
-// =================================
-// ADD OR OVERRIDE THEMES/ICONS HERE
-// =================================
+// ============================================================================
+// II. SETUP NGUIX MODULE
+// ============================================================================
+
+// 1-line setup
+@import '../projects/starter/src/scss/starter.module';
+// OR per-component setup
+// @import '../projects/starter/src/scss/header.component';
+// @inport '...';
+
+// ============================================================================
+// III. ADD/OVERRIDE THEMES
+// ============================================================================
+
+// ============================================================================
+// IV. GLOBAL STYLES
+// ============================================================================
+
+@import './app/app.icon';

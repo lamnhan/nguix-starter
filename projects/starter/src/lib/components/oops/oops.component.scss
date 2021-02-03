@@ -1,0 +1,22 @@
+.oops {
+  text-align: center;
+  margin-top: 2rem;
+
+  .image {
+
+    img {
+      width: 100%;
+      max-width: 100px;
+    }
+  }
+
+  p {
+    margin: .5rem 0;
+  }
+
+  a {
+    display: inline-block;
+    margin-top: 1rem;
+  }
+
+}

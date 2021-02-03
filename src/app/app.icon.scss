@@ -1,0 +1,12 @@
+@import '../../../unistylus/src/scss/mixins';
+
+$app_icon_groups: (
+  default: (
+    ok: 'https://img.icons8.com/ios-glyphs/32/000000/ok.png'
+  ),
+  dark: (
+    ok: 'https://img.icons8.com/ios-glyphs/32/ffffff/ok.png'
+  )
+);
+
+@include registerAppIcons($app_icon_groups);
