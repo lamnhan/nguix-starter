@@ -1,0 +1,17 @@
+@import '../../../../../../unistylus/src/scss/mixins';
+@import 'header.data';
+
+$icon_groups: (
+  default: $dark_theme_icons,
+  light: $light_theme_icons,
+  dark: $dark_theme_icons,
+);
+
+$custom_properties: (
+  default: $dark_theme_properties,
+  light: $light_theme_properties,
+  dark: $dark_theme_properties,
+);
+
+@include registerComponentIconProperties($icon_groups, $component_name);
+@include registerComponentProperties($custom_properties, $component_name);

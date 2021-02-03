@@ -1,5 +1,0 @@
-@import '../../../../../../unistylus/src/scss/mixins';
-@import 'header.data';
-
-@include registerComponentIconProperties($icon_groups, $component_name);
-@include registerComponentProperties($custom_properties, $component_name);

@@ -5,19 +5,17 @@ $default_icons: (
   search: 'https://img.icons8.com/ios-glyphs/32/000000/search.png',
 );
 
+$default_properties: (
+  height: 60px
+);
+
+// light
+$light_theme_icons: $default_icons;
+$light_theme_properties: $default_properties;
+
+// dark
 $dark_theme_icons: (
   menu: 'https://img.icons8.com/android/32/ffffff/menu.svg',
   searc: 'https://img.icons8.com/ios-glyphs/32/ffffff/search.png',
 );
-
-$icon_groups: (
-  default: $default_icons,
-  light: $default_icons,
-  dark: $dark_theme_icons,
-);
-
-$custom_properties: (
-  default: (
-    height: 60px
-  )
-);
+$dark_theme_properties: $default_properties;
