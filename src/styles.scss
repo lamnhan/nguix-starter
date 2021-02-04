@@ -7,8 +7,9 @@
 // 1-line setup
 @import '../../unistylus/src/scss/setup';
 // OR customization setup
-// @import '../../unistylus/src/scss/reset';
-// @import '../../unistylus/src/scss/theming'; // required
+// @import '../../unistylus/src/scss/content/reset';
+// @import '../../unistylus/src/scss/content/base';
+// @import '../../unistylus/src/scss/content/typography';
 // @inport '...';
 
 // add a theme (the default)
@@ -40,9 +41,6 @@
 
 // 1-line setup
 @import './scss/light.app.module';
-// OR per-component setup
-// @import './scss/app/light.app.component';
-// @inport '...';
 
 // ============================================================================
 // V. GLOBAL STYLES

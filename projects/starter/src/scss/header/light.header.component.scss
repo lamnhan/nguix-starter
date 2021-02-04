@@ -6,11 +6,11 @@ $custom_properties: (
   light: $light_theme_properties,
   dark: $dark_theme_properties,
 );
-@include registerComponentProperties($custom_properties, $component_name);
+@include register_component_properties($custom_properties, $component_name);
 
 $icon_groups: (
   default: $light_theme_icons,
   light: $light_theme_icons,
   dark: $dark_theme_icons,
 );
-@include registerComponentIconProperties($icon_groups, $component_name);
+@include register_component_icon_properties($icon_groups, $component_name);

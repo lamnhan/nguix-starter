@@ -1,7 +1,7 @@
 @import '../../../../../../../unistylus/src/scss/mixins';
 @import '../../../scss/header/header.data';
 
-@include registerComponentIconRules($default_icons, $component_name);
+@include register_component_icon_rules($default_icons, $component_name);
 
 .header {
   border-bottom: var(--app-size-border) solid var(--app-color-background-shade);
