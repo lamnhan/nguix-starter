@@ -2,7 +2,7 @@
 
   <div class="toggler">
     <button (click)="mobileMenuExpanded=!mobileMenuExpanded">
-      <i class="icon menu"></i>
+      <i class="icon-menu"></i>
     </button>
   </div>
 
@@ -58,7 +58,7 @@
   >
     <input type="search" [placeholder]="searchPlaceholder" />
     <button (click)="searchBar=(searchBar==='collapsed'?true:'collapsed')">
-      <i class="icon search"></i>
+      <i class="icon-search"></i>
     </button>
   </div>
 
@@ -78,7 +78,7 @@
         *ngIf="!extraButton.items; else extraNotButton"
         (click)="extra.emit({$event: $event, extraButton: extraButton})"
       >
-        <i class="icon" [class]="extraButton"></i>
+        <i [class]="'icon-' + extraButton"></i>
       </button>
 
       <!-- listing -->
