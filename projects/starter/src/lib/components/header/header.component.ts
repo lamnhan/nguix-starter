@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { UserProfile } from '@lamnhan/schemata';
-import { NavMenuItem } from '@lamnhan/ngx-useful';
+import { MenuItem } from '@lamnhan/ngx-useful';
 
 export type MobileMenuModes = 'simple' | 'sidebar' | 'modal';
 
@@ -12,7 +12,7 @@ export interface ExtraListing {
   icon?: string;
   text?: string;
   type?: 'menu' | 'select' | 'checkbox' | 'radio';
-  items: NavMenuItem[];
+  items: MenuItem[];
 }
 
 export type HeaderIcons = 'menu' | 'search' | ExtraBuiltinIcons;
@@ -28,8 +28,8 @@ export class HeaderComponent implements OnInit {
   @Input() title = 'Welcome!';
 
   // menu
-  @Input() menuItems: NavMenuItem[] = [];
-  @Input() menuButtons?: NavMenuItem[];
+  @Input() menuItems: MenuItem[] = [];
+  @Input() menuButtons?: MenuItem[];
   @Input() mobileMenuMode: MobileMenuModes = 'simple';
 
   // search
@@ -39,7 +39,7 @@ export class HeaderComponent implements OnInit {
 
   // user
   @Input() userProfile?: UserProfile;
-  @Input() profileMenu: NavMenuItem[] = [];
+  @Input() profileMenu: MenuItem[] = [];
   @Output() profile: EventEmitter<UserProfile> = new EventEmitter();
 
   // extra

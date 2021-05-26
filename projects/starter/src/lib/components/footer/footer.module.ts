@@ -12,4 +12,4 @@ import { FooterComponent } from './footer.component';
   ],
   exports: [FooterComponent]
 })
-export class FooterComponentModule { }
+export class NguixFooterComponentModule { }

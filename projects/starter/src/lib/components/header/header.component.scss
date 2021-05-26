@@ -3,7 +3,7 @@
 
 @include register_component_icon_rules($default_icons, $component_name);
 
-.header {
+.nguix-header {
   border-bottom: var(--app-size-border) solid var(--app-color-background-shade);
   display: flex;
   align-items: center;

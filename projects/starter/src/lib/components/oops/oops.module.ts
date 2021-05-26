@@ -12,4 +12,4 @@ import { OopsComponent } from './oops.component';
   ],
   exports: [OopsComponent]
 })
-export class OopsComponentModule { }
+export class NguixOopsComponentModule { }

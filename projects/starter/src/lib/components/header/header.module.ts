@@ -12,4 +12,4 @@ import { HeaderComponent } from './header.component';
   ],
   exports: [HeaderComponent]
 })
-export class HeaderComponentModule { }
+export class NguixHeaderComponentModule { }
