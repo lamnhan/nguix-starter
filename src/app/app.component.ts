@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AppService } from '@lamnhan/ngx-useful';
+import { LocalstorageService, AppService, MetaService, NavService, NavItem, SettingService } from '@lamnhan/ngx-useful';
 
 @Component({
   selector: 'app-root',
@@ -7,57 +7,75 @@ import { AppService } from '@lamnhan/ngx-useful';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-
-  mainMenuItems = [
+  menuItems: NavItem[] = [
+    {
+      text: 'Getting started',
+      level: 0,
+    },
+      {
+        text: 'Install',
+        level: 1,
+        routerLink: ['']
+      },
     {
       text: 'Components',
-      routerLink: ['/components'],
-      subItems: [
-        {
-          text: 'Header',
-          routerLink: ['/component/header']
-        },
-        {
-          text: 'Footer',
-          routerLink: ['/component/footer']
-        }
-      ]
+      level: 0,
     },
+      {
+        text: 'Content',
+        level: 1,
+        routerLink: ['']
+      },
     {
-      text: 'Donate',
-      routerLink: ['/donate']
+      text: 'Services',
+      level: 0,
     },
-    {
-      text: 'Help',
-      routerLink: ['/help']
-    }
+      {
+        text: 'App',
+        level: 1,
+        routerLink: ['']
+      },
   ];
 
-  footerSocialItems = [
-    {
-      icon: 'https://img.icons8.com/color/48/000000/new-post.png',
-      classes: 'email',
-      href: '#',
-    },
-    {
-      icon: 'https://img.icons8.com/color/48/000000/phone.png',
-      classes: 'phone',
-      href: '#',
-    },
-    {
-      icon: 'https://img.icons8.com/color/48/000000/facebook.png',
-      classes: 'facebook',
-      href: '#',
-    },
-  ];
+  constructor(
+    private localstorageService: LocalstorageService,
+    private appService: AppService,
+    private metaService: MetaService,
+    private navService: NavService,
+    private settingService: SettingService,
+  ) {
+    this.initialize();
+  }
 
-  constructor(private appService: AppService) {}
-
-  switchTheme(e: unknown) {
-    return this.appService.changeTheme(
-      (e as {$event: {target: {checked: boolean}}}).$event.target.checked
-      ? 'dark'
-      : 'default'
+  private initialize() {
+    this.localstorageService.init();
+    this.appService.init({ splashScreen: true });
+    this.settingService.init(
+      {
+        browserColor: true,
+        onReady: () => this.appService.hideSplashScreen(),
+      },
+      {},
+      {
+        localstorageService: this.localstorageService,
+      },
+    );
+    this.navService.init(
+      {},
+      { settingService: this.settingService },
+    );
+    this.metaService.init(
+      {
+        title: 'NGUIX Starter',
+        description: 'Angular UI/UX starter kit.',
+        image: 'https://nguix-starter.lamnhan.com/assets/images/featured.jpg',
+        url: 'https://nguix-starter.lamnhan.com/',
+        lang: 'en',
+        ogLocale: 'en-US',
+        ogSiteName: 'NGUIX Starter'
+      },
+      {},
+      { settingService: this.settingService },
     );
   }
 }

@@ -83,7 +83,7 @@
               "browserTarget": "nguix-starter:build:production"
             },
             "development": {
-              "browserTarget": "ngx-useful:build:development"
+              "browserTarget": "nguix-starter:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -129,7 +129,7 @@
               "tsConfig": "projects/starter/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "projects/useful/tsconfig.lib.json"
+              "tsConfig": "projects/starter/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"

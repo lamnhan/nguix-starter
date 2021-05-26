@@ -1,48 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
 
-// ============================================================================
-// I. SETUP UNISTYLUS
-// ============================================================================
 
-// 1-line setup
-@import '../../unistylus/src/scss/setup';
-// OR customization setup
-// @import '../../unistylus/src/scss/content/reset';
-// @import '../../unistylus/src/scss/content/core';
-// @import '../../unistylus/src/scss/content/common';
-// @import '../../unistylus/src/scss/content/typography';
-// @inport '...';
+/**
+ * ====================================================
+ * Unistylus
+ * ====================================================
+ */
 
-// add a theme (the default)
-@import '../../unistylus/src/themes/light-default';
-// OR multiple themes
-@import '../../unistylus/src/themes/dark';
+// use light and dark theme
+@import '../../unistylus/projects/unistylus/src/scss/unistylus-light-dark';
 
-// ============================================================================
-// II. ADD/OVERRIDE THEMES
-// ============================================================================
+// register app styles
+@import './theming/app.module';
 
-// :root, [data-theme="default"] {
-//   --app-color-primary: ...;
-// }
-
-// ============================================================================
-// III. SETUP NGUIX MODULE
-// ============================================================================
-
-// 1-line setup
-@import '../projects/starter/src/scss/light.starter.module';
-// OR per-component setup
-// @import '../projects/starter/src/scss/header/light.header.component';
-// @inport '...';
-
-// ============================================================================
-// IV. SETUP APP MODULE
-// ============================================================================
-
-// 1-line setup
-@import './scss/light.app.module';
-
-// ============================================================================
-// V. GLOBAL STYLES
-// ============================================================================
+/**
+ * ====================================================
+ * Global styles 
+ * ====================================================
+ */
+ 

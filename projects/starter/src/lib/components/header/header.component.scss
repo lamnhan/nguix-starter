@@ -1,4 +1,4 @@
-@import '../../../../../../../unistylus/src/scss/mixins';
+@import '../../../../../../../unistylus/projects/unistylus/src/scss/mixins';
 @import '../../../scss/header/header.data';
 
 @include register_component_icon_rules($default_icons, $component_name);
