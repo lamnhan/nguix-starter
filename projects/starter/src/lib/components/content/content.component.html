@@ -1,6 +1,11 @@
 <article class="nguix-content">
-  <markdown *ngIf="contentSrc; else directContent" [src]="contentSrc"></markdown>
+  <markdown
+    *ngIf="contentSrc; else directContent"
+    [src]="contentSrc"
+    (load)="load.emit($event)"
+    (error)="error.emit($event)"
+  ></markdown>
   <ng-template #directContent>
-    <markdown [data]="content"></markdown>
+    <markdown [data]="content" (ready)="ready.emit()"></markdown>
   </ng-template>
 </article>

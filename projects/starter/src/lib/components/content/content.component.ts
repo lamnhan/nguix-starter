@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'nguix-content',
@@ -8,6 +8,10 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ContentComponent implements OnInit {
   @Input() content = '';
   @Input() contentSrc?: string;
+
+  @Output() ready: EventEmitter<void> = new EventEmitter();
+  @Output() load: EventEmitter<any> = new EventEmitter();
+  @Output() error: EventEmitter<any> = new EventEmitter();
 
   constructor() { }
 

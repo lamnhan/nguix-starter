@@ -1,5 +1,6 @@
 import { NgModule, SecurityContext } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import { MarkdownModule, MarkdownService, SECURITY_CONTEXT } from 'ngx-markdown';
 import { RouterLinkDirectiveModule } from '@lamnhan/ngx-useful';
 
@@ -11,9 +12,6 @@ import 'prismjs/components/prism-typescript.min.js';
 import 'prismjs/components/prism-bash.min.js';
 import 'prismjs/components/prism-markdown.min.js';
 import 'prismjs/components/prism-json.min.js';
-// import 'prismjs/plugins/line-numbers/prism-line-numbers.min.js';
-// import 'prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js';
-// import 'emoji-toolkit/lib/js/joypixels.min.js';
 
 import { ContentComponent } from './content.component';
 
@@ -21,6 +19,7 @@ import { ContentComponent } from './content.component';
   declarations: [ContentComponent],
   imports: [
     CommonModule,
+    HttpClientModule,
     MarkdownModule,
     RouterLinkDirectiveModule,
   ],
