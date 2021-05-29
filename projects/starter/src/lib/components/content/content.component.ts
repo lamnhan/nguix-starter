@@ -6,7 +6,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./content.component.scss']
 })
 export class ContentComponent implements OnInit {
-  @Input() content = '';
+  @Input() content?: string;
   @Input() contentSrc?: string;
 
   @Output() ready: EventEmitter<void> = new EventEmitter();

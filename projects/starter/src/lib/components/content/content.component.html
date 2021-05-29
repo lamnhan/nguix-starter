@@ -6,6 +6,6 @@
     (error)="error.emit($event)"
   ></markdown>
   <ng-template #directContent>
-    <markdown [data]="content" (ready)="ready.emit()"></markdown>
+    <markdown [data]="content || ''" (ready)="ready.emit()"></markdown>
   </ng-template>
 </article>
