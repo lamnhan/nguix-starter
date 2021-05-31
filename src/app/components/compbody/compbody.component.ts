@@ -6,20 +6,17 @@ import { Component, OnInit, Input, TemplateRef, ElementRef } from '@angular/core
   styleUrls: ['./compbody.component.scss']
 })
 export class CompbodyComponent implements OnInit {
+  @Input() componentTemplate?: TemplateRef<any>;
   @Input() apiSrc?: string;
   @Input() importName?: string = '...';
-  @Input() componentTemplate?: TemplateRef<any>;
+  @Input() htmlCode?: string;
+
+  usageContent = '';
 
   constructor() { }
 
-  ngOnInit(): void {}
-
-  getUsageContent(el: any) {
-    const rawCode = el.innerHTML
-      .replace(/( _ng).*?("")/g, '');
-    console.log(rawCode);
-    const code = '<nguix-footer></nguix-footer>';
-    return `
+  ngOnInit(): void {
+    this.usageContent = `
 Import the module:
 \`\`\`ts
 import {${this.importName}} from '@lamnhan/nguix-starter';
@@ -28,7 +25,7 @@ import {${this.importName}} from '@lamnhan/nguix-starter';
 
 Use the component:
 \`\`\`html
-${code}
+${this.htmlCode}
 \`\`\`
 `;
   }

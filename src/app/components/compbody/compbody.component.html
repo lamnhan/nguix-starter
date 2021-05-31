@@ -5,19 +5,19 @@
     <div class="container">
       <div class="code" #code>
         <ng-container *ngTemplateOutlet="componentTemplate || defaultTemplate"></ng-container>
-        <ng-template #defaultTemplate>No component provided.</ng-template>
+        <ng-template #defaultTemplate>No preview available.</ng-template>
       </div>
     </div>
   </div>
 
   <div class="usage margin-top-2x">
     <h2>Usage</h2>
-    <nguix-content [content]="getUsageContent(code)"></nguix-content>
+    <nguix-content [content]="usageContent"></nguix-content>
   </div>
 
   <div class="api margin-top-2x">
     <h2>API</h2>
-    <nguix-content [contentSrc]="apiSrc" content="No API source."></nguix-content>
+    <nguix-content [contentSrc]="apiSrc" content="No API source"></nguix-content>
   </div>
 
 </div>

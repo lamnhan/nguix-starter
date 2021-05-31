@@ -2,14 +2,14 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLinkDirectiveModule } from '@lamnhan/ngx-useful';
 
-import { HeaderComponent } from './header.component';
+import { Header2ndComponent } from './header2nd.component';
 
 @NgModule({
-  declarations: [HeaderComponent],
+  declarations: [Header2ndComponent],
   imports: [
     CommonModule,
     RouterLinkDirectiveModule,
   ],
-  exports: [HeaderComponent]
+  exports: [Header2ndComponent]
 })
-export class NguixHeaderComponentModule { }
+export class NguixHeader2ndComponentModule { }

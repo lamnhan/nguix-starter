@@ -1,24 +1,24 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NguixHeaderComponentModule } from '@lamnhan/nguix-starter';
+import { NguixHeader2ndComponentModule } from '@lamnhan/nguix-starter';
 
 import { PageComponentModule } from '../../../components/page/page.module';
 import { CompbodyComponentModule } from '../../../components/compbody/compbody.module';
 
-import { HeaderRoutingModule } from './header-routing.module';
-import { HeaderComponent } from './header.component';
+import { Header2ndRoutingModule } from './header2nd-routing.module';
+import { Header2ndComponent } from './header2nd.component';
 
 
 @NgModule({
   declarations: [
-    HeaderComponent
+    Header2ndComponent
   ],
   imports: [
     CommonModule,
-    NguixHeaderComponentModule,
+    NguixHeader2ndComponentModule,
     PageComponentModule,
     CompbodyComponentModule,
-    HeaderRoutingModule
+    Header2ndRoutingModule
   ]
 })
-export class HeaderPageModule {}
+export class Header2ndPageModule {}

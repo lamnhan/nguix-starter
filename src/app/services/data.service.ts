@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { NavItem } from '@lamnhan/ngx-useful';
+import { NavItem, MenuItem } from '@lamnhan/ngx-useful';
 
 interface TemplateItem {
   id: string;
@@ -12,6 +12,12 @@ interface TemplateItem {
   providedIn: 'root'
 })
 export class DataService {
+
+  exampleMenuItems: MenuItem[] = [
+    { text: 'Link 1', routerLink: ['link-1'] },
+    { text: 'Link 2', routerLink: ['link-2'] },
+    { text: 'Link 3', href: 'https://lamnhan.com', target: '_blank' },
+  ];
 
   // guides
   guideMenu: NavItem[] = [
@@ -38,6 +44,25 @@ export class DataService {
       text: 'Footer',
       level: 1,
       routerLink: ['component', 'footer']
+    },
+  ];
+
+  // pages
+  pageMenu: NavItem[] = [
+    {
+      text: 'Oops',
+      level: 1,
+      routerLink: ['page', 'oops']
+    },
+    {
+      text: 'Terms',
+      level: 1,
+      routerLink: ['page', 'terms']
+    },
+    {
+      text: 'Privacy',
+      level: 1,
+      routerLink: ['page', 'privacy']
     },
   ];
 

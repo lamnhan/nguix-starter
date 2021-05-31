@@ -1,21 +1,5 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { UserProfile } from '@lamnhan/schemata';
+import { Component, OnInit, Input } from '@angular/core';
 import { MenuItem } from '@lamnhan/ngx-useful';
-
-export type MobileMenuModes = 'simple' | 'sidebar' | 'modal';
-
-export type ExtraButtons = string | 'switch' | ExtraBuiltinIcons | ExtraListing;
-
-export type ExtraBuiltinIcons = 'more' | 'down' | 'add' | 'send';
-
-export interface ExtraListing {
-  icon?: string;
-  text?: string;
-  type?: 'menu' | 'select' | 'checkbox' | 'radio';
-  items: MenuItem[];
-}
-
-export type HeaderIcons = 'menu' | 'search' | ExtraBuiltinIcons;
 
 @Component({
   selector: 'nguix-header',
@@ -23,30 +7,9 @@ export type HeaderIcons = 'menu' | 'search' | ExtraBuiltinIcons;
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  // brand
-  @Input() logo?: string;
-  @Input() title = 'Welcome!';
-
-  // menu
+  @Input() logo = '/assets/images/logo.svg';
+  @Input() title = 'App';
   @Input() menuItems: MenuItem[] = [];
-  @Input() menuButtons?: MenuItem[];
-  @Input() mobileMenuMode: MobileMenuModes = 'simple';
-
-  // search
-  @Input() searchBar?: true | 'collapsed';
-  @Input() searchPlaceholder = 'Looking for something?';
-  @Output() search: EventEmitter<string> = new EventEmitter();
-
-  // user
-  @Input() userProfile?: UserProfile;
-  @Input() profileMenu: MenuItem[] = [];
-  @Output() profile: EventEmitter<UserProfile> = new EventEmitter();
-
-  // extra
-  @Input() extraButton?: ExtraButtons;
-  @Output() extra: EventEmitter<{ $event: unknown; extraButton: ExtraButtons }> = new EventEmitter();
-
-  mobileMenuExpanded = true;
 
   constructor() {}
 

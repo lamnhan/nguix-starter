@@ -6,6 +6,8 @@ export {NguixStarterModule} from './lib/starter.module';
 
 export * from './lib/components/header/header.component';
 export {NguixHeaderComponentModule} from './lib/components/header/header.module';
+export * from './lib/components/header2nd/header2nd.component';
+export {NguixHeader2ndComponentModule} from './lib/components/header2nd/header2nd.module';
 export * from './lib/components/footer/footer.component';
 export {NguixFooterComponentModule} from './lib/components/footer/footer.module';
 export * from './lib/components/oops/oops.component';

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 
 import { NguixHeaderComponentModule } from './components/header/header.module';
+import { NguixHeader2ndComponentModule } from './components/header2nd/header2nd.module';
 import { NguixFooterComponentModule } from './components/footer/footer.module';
 import { NguixOopsComponentModule } from './components/oops/oops.module';
 import { NguixOauthPopupComponentModule } from './components/oauth-popup/oauth-popup.module';
@@ -13,6 +14,7 @@ import { NguixContentComponentModule } from './components/content/content.module
   declarations: [],
   imports: [
     NguixHeaderComponentModule,
+    NguixHeader2ndComponentModule,
     NguixFooterComponentModule,
     NguixOopsComponentModule,
     NguixOauthPopupComponentModule,
@@ -23,6 +25,7 @@ import { NguixContentComponentModule } from './components/content/content.module
   ],
   exports: [
     NguixHeaderComponentModule,
+    NguixHeader2ndComponentModule,
     NguixFooterComponentModule,
     NguixOopsComponentModule,
     NguixOauthPopupComponentModule,

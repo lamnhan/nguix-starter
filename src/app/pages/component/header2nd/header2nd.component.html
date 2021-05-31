@@ -1,0 +1,24 @@
+<div class="component-header2nd-page">
+
+  <app-page
+    menuName="List of components"
+    [menuItems]="data.componentMenu"
+    [bodyTemplate]="pageBody"
+  ></app-page>
+
+  <ng-template #pageBody>
+
+    <app-compbody
+      [componentTemplate]="componentTemplate"
+      apiSrc="https://raw.githubusercontent.com/lamnhan/nguix-starter/main/docs/content/components/header2nd.md"
+      importName="NguixHeader2ndComponentModule"
+      htmlCode="&#x3C;nguix-header2nd [menuItems]=&quot;...&quot;&#x3E;&#x3C;/nguix-header2nd&#x3E;"
+    ></app-compbody>
+
+    <ng-template #componentTemplate>
+      <nguix-header2nd [menuItems]="data.exampleMenuItems"></nguix-header2nd>
+    </ng-template>
+
+  </ng-template>
+
+</div>

@@ -1,12 +1,4 @@
-<header class="nguix-header">
-
-  <div class="brand">
-    <a [usefulRouterLink]="['']">
-      <em><img [src]="logo" [alt]="title"></em>
-      <span class="font-head">{{title}}</span>
-    </a>
-  </div>
-
+<div class="nguix-header2nd">
   <ul class="nav">
     <li *ngFor="let menuItem of menuItems">
       <a
@@ -17,5 +9,4 @@
       >{{ menuItem.text }}</a>
     </li>
   </ul>
-
-</header>
+</div>
