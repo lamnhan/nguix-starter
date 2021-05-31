@@ -1,12 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {
+  RouterLinkDirectiveModule,
   LocalstorageService,
   AppService,
   MetaService,
   NavService,
   SettingService,
-  RouterLinkDirectiveModule
+  PersonaService,
 } from '@lamnhan/ngx-useful';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -32,6 +33,7 @@ import { FooterComponentModule } from './components/footer/footer.module';
     MetaService,
     NavService,
     SettingService,
+    PersonaService,
   ],
   bootstrap: [AppComponent]
 })

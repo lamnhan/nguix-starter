@@ -1,5 +1,13 @@
 import { Component } from '@angular/core';
-import { LocalstorageService, AppService, MetaService, NavService, NavItem, SettingService } from '@lamnhan/ngx-useful';
+import {
+  LocalstorageService,
+  AppService,
+  MetaService,
+  NavService,
+  NavItem,
+  SettingService,
+  PersonaService,
+} from '@lamnhan/ngx-useful';
 
 @Component({
   selector: 'app-root',
@@ -43,6 +51,7 @@ export class AppComponent {
     private metaService: MetaService,
     private navService: NavService,
     private settingService: SettingService,
+    private personaService: PersonaService,
   ) {
     this.initialize();
   }
@@ -62,6 +71,9 @@ export class AppComponent {
     );
     this.navService.init(
       {},
+      { settingService: this.settingService },
+    );
+    this.personaService.init({}, {},
       { settingService: this.settingService },
     );
     this.metaService.init(
