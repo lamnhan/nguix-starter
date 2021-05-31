@@ -2,12 +2,9 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { QuicklinkModule, QuicklinkStrategy } from 'ngx-quicklink';
 
-import {HomeComponent} from './pages/home/home.component';
-import {OopsComponent} from './pages/oops/oops.component';
-
 const routes: Routes = [
-  {path: '', component: HomeComponent, pathMatch: 'full'},
-  {path: '**', component: OopsComponent},
+  { path: '', loadChildren: () => import('./pages/home/home.module').then(m => m.HomePageModule), pathMatch: 'full' },
+  { path: '**', loadChildren: () => import('./pages/oops/oops.module').then(m => m.OopsPageModule) },
 ];
 
 @NgModule({
