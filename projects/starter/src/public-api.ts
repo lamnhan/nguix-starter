@@ -22,3 +22,6 @@ export * from './lib/components/pwa-box/pwa-box.component';
 export {NguixPwaBoxComponentModule} from './lib/components/pwa-box/pwa-box.module';
 export * from './lib/components/content/content.component';
 export {NguixContentComponentModule} from './lib/components/content/content.module';
+
+export * from './lib/pages/oops/oops.component';
+export {NguixOopsPageModule} from './lib/pages/oops/oops.module';

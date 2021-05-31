@@ -11,14 +11,14 @@ module.exports = {
       template: 'angularx'
     },
     // components
-    'docs/content/components/header.md': {main: ['NguixHeaderComponent', 'FULL']},
-    'docs/content/components/header2nd.md': {main: ['NguixHeader2ndComponent', 'FULL']},
-    'docs/content/components/footer.md': {main: ['NguixFooterComponent', 'FULL']},
-    'docs/content/components/oops.md': {main: ['NguixOopsComponent', 'FULL']},
-    'docs/content/components/oauth-popup.md': {main: ['NguixOauthPopupComponent', 'FULL']},
-    'docs/content/components/nav-indicator.md': {main: ['NguixNavIndicatorComponent', 'FULL']},
-    'docs/content/components/pwa-box.md': {main: ['NguixPwaBoxComponent', 'FULL']},
-    'docs/content/components/pwa-reminder.md': {main: ['NguixPwaReminderComponent', 'FULL']},
-    'docs/content/components/content.md': {main: ['NguixContentComponent', 'FULL']},
+    'docs/content/components/header.md': {main: ['HeaderComponent', 'FULL']},
+    'docs/content/components/header2nd.md': {main: ['Header2ndComponent', 'FULL']},
+    'docs/content/components/footer.md': {main: ['FooterComponent', 'FULL']},
+    'docs/content/components/oops.md': {main: ['OopsComponent', 'FULL']},
+    'docs/content/components/oauth-popup.md': {main: ['OauthPopupComponent', 'FULL']},
+    'docs/content/components/nav-indicator.md': {main: ['NavIndicatorComponent', 'FULL']},
+    'docs/content/components/pwa-box.md': {main: ['PwaBoxComponent', 'FULL']},
+    'docs/content/components/pwa-reminder.md': {main: ['PwaReminderComponent', 'FULL']},
+    'docs/content/components/content.md': {main: ['ContentComponent', 'FULL']},
   }
 };

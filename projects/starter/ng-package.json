@@ -10,10 +10,13 @@
     "umdId": "ng.lamnhan.nguix.starter",
     "umdModuleIds": {
       "@lamnhan/ngx-useful": "ng.lamnhan.useful",
+      "@ngneat/transloco": "ng.transloco",
       "ngx-markdown": "ngxMarkdown"
     }
   },
   "allowedNonPeerDependencies": [
+    "@lamnhan/ngx-useful",
+    "@lamnhan/unistylus",
     "ngx-markdown"
   ]
 }

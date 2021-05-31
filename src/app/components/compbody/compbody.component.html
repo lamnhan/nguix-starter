@@ -15,9 +15,9 @@
     <nguix-content [content]="usageContent"></nguix-content>
   </div>
 
-  <div class="api margin-top-2x">
+  <div class="api margin-top-2x" *ngIf="apiSrc">
     <h2>API</h2>
-    <nguix-content [contentSrc]="apiSrc" content="No API source"></nguix-content>
+    <nguix-content [contentSrc]="apiSrc"></nguix-content>
   </div>
 
 </div>

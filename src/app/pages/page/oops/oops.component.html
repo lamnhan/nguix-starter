@@ -1,0 +1,22 @@
+<div class="app-page-oops-page">
+
+  <app-page
+    menuName="List of pages"
+    [menuItems]="data.pageMenu"
+    [bodyTemplate]="pageBody"
+  ></app-page>
+
+  <ng-template #pageBody>
+
+    <app-compbody
+      [componentTemplate]="pageTemplate"
+      importName="NguixOopsPageModule"
+    ></app-compbody>
+
+    <ng-template #pageTemplate>
+      <nguix-oops-page></nguix-oops-page>
+    </ng-template>
+
+  </ng-template>
+
+</div>

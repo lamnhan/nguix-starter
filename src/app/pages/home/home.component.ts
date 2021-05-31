@@ -42,7 +42,7 @@ Use a page:
 // 1. define a route --> app-routing.module.ts
 
 const routes: Routes = [
-  { path: 'privacy', loadChildren: () => import('@lamnhan/nguix-starter').then(m => m.NguixOopsPageModule) },
+  { path: '**', loadChildren: () => import('@lamnhan/nguix-starter').then(m => m.NguixOopsPageModule) },
 ];
 \`\`\``;
 

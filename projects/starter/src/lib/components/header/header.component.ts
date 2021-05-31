@@ -7,6 +7,9 @@ import { MenuItem } from '@lamnhan/ngx-useful';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  @Input() i18n = false;
+
+  @Input() fixed = false;
   @Input() logo = '/assets/images/logo.svg';
   @Input() title = 'App';
   @Input() menuItems: MenuItem[] = [];

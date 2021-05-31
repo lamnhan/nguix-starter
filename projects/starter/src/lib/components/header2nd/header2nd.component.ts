@@ -7,6 +7,9 @@ import { MenuItem } from '@lamnhan/ngx-useful';
   styleUrls: ['./header2nd.component.scss']
 })
 export class Header2ndComponent implements OnInit {
+  @Input() i18n = false;
+
+  @Input() fixed = false;
   @Input() menuItems: MenuItem[] = [];
 
   constructor() { }
