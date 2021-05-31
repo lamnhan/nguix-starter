@@ -1,1 +1,23 @@
-<p>footer works!</p>
+<div class="component-footer-page">
+
+  <app-page
+    menuName="List of components"
+    [menuItems]="data.componentMenu"
+    [bodyTemplate]="pageBody"
+  ></app-page>
+
+  <ng-template #pageBody>
+
+    <app-compbody
+      apiSrc="https://raw.githubusercontent.com/lamnhan/nguix-starter/main/docs/content/components/footer.md"
+      importName="NguixFooterComponentModule"
+      [componentTemplate]="componentTemplate"
+    ></app-compbody>
+
+    <ng-template #componentTemplate>
+      <nguix-footer></nguix-footer>
+    </ng-template>
+
+  </ng-template>
+
+</div>

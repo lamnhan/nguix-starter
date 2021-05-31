@@ -1,15 +1,21 @@
 <div class="template-page" *ngIf="templateData$ | async as templateData; else loading">
-  
-  <aside class="menu">
-    <app-menu name="List of templates" [items]="data.templateMenu"></app-menu>
-  </aside>
 
-  <div class="body">
-    <h2>Template</h2>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis veritatis natus sit voluptas vitae a, laudantium eaque molestias voluptates sapiente amet velit in ratione aliquam odio unde similique! Voluptates, saepe!
-    </p>
-  </div>
+  <app-page
+    menuName="List of templates"
+    [menuItems]="data.templateMenu"
+    [bodyTemplate]="pageBody"
+  ></app-page>
+
+  <ng-template #pageBody>
+    <h2 class="margin-bottom-2x">{{ templateData.title }}</h2>
+    <figure class="figure">
+      <img class="image" [src]="templateData.thumbnail" [alt]="templateData.title">
+      <figcaption class="figure-caption">{{ templateData.description }}</figcaption>
+    </figure>
+    <div class="actions">
+      <button class="button-primary-lg" (click)="setting.changePersona(templateData.id)">Activate</button>
+    </div>
+  </ng-template>
 
 </div>
 

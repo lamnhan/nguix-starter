@@ -1,1 +1,14 @@
-<p>header works!</p>
+<div class="component-header-page">
+
+  <app-page
+    menuName="List of components"
+    [menuItems]="data.componentMenu"
+    [bodyTemplate]="pageBody"
+  ></app-page>
+
+  <ng-template #pageBody>
+    <h2>Header</h2>
+    <p>lorem ...</p>
+  </ng-template>
+
+</div>

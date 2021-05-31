@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NguixFooterComponentModule } from '@lamnhan/nguix-starter';
 
-import { MenuComponentModule } from '../../../components/menu/menu.module';
+import { PageComponentModule } from '../../../components/page/page.module';
+import { CompbodyComponentModule } from '../../../components/compbody/compbody.module';
 
 import { FooterRoutingModule } from './footer-routing.module';
 import { FooterComponent } from './footer.component';
@@ -13,8 +15,10 @@ import { FooterComponent } from './footer.component';
   ],
   imports: [
     CommonModule,
-    MenuComponentModule,
-    FooterRoutingModule
+    NguixFooterComponentModule,
+    PageComponentModule,
+    CompbodyComponentModule,
+    FooterRoutingModule,
   ]
 })
 export class FooterPageModule {}

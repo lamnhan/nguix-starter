@@ -1,6 +1,13 @@
 import { Injectable } from '@angular/core';
 import { NavItem } from '@lamnhan/ngx-useful';
 
+interface TemplateItem {
+  id: string;
+  title: string;
+  description: string;
+  thumbnail: string;
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -47,6 +54,20 @@ export class DataService {
       routerLink: ['template', 'shop']
     },
   ];
+  templateItems: Record<string, TemplateItem> = {
+    blog: {
+      id: 'blog',
+      title: 'Blog',
+      description: 'General bloging template',
+      thumbnail: 'http://source.unsplash.com/3GZNPBLImWc/768x480',
+    },
+    shop: {
+      id: 'shop',
+      title: 'Shop',
+      description: 'Online shoping template',
+      thumbnail: 'http://source.unsplash.com/c9FQyqIECds/768x480',
+    },
+  };
 
   constructor() { }
 }

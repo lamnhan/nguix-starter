@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { MenuComponentModule } from '../../components/menu/menu.module';
+import { PageComponentModule } from '../../components/page/page.module';
 
 import { TemplateRoutingModule } from './template-routing.module';
 import { TemplateComponent } from './template.component';
@@ -13,7 +13,7 @@ import { TemplateComponent } from './template.component';
   ],
   imports: [
     CommonModule,
-    MenuComponentModule,
+    PageComponentModule,
     TemplateRoutingModule
   ]
 })

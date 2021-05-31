@@ -1,0 +1,35 @@
+.app-compbody {
+
+  .display {
+    border: 1px solid var(--app-color-medium);
+    border-radius: 3px;
+    
+    h2 {
+      background: var(--app-color-primary);
+      color: var(--app-color-primary-contrast);
+      font-size: 1.2rem;
+      padding: .5rem 1rem;
+      margin: 0;
+    }
+
+    .container {
+      padding: 1rem;
+      background: url('/assets/images/transparent.jpg');
+      background-size: auto;
+      background-repeat: repeat;
+
+      .code {
+        background: var(--app-color-background);
+      }
+    }
+  }
+
+  .usage {
+
+  }
+
+  .api {
+
+  }
+
+}
