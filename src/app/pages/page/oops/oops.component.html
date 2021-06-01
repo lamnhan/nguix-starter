@@ -1,18 +1,14 @@
-<div class="app-page-oops-page">
+<app-page
+  menuName="List of pages"
+  [menuItems]="data.pageMenu"
+  [bodyTemplate]="pageBody"
+></app-page>
 
-  <app-page
-    menuName="List of pages"
-    [menuItems]="data.pageMenu"
-    [bodyTemplate]="pageBody"
-  ></app-page>
+<ng-template #pageBody>
 
-  <ng-template #pageBody>
+  <app-pagebody
+    pageUrl="/oops"
+    importName="NguixOopsPageModule"
+  ></app-pagebody>
 
-    <app-pagebody
-      pageUrl="/oops"
-      importName="NguixOopsPageModule"
-    ></app-pagebody>
-
-  </ng-template>
-
-</div>
+</ng-template>

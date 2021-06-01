@@ -22,11 +22,15 @@
 <h2><a name="modules"><p>Modules</p>
 </a></h2>
 
-| Class                                                                                                       | Description |
-| ----------------------------------------------------------------------------------------------------------- | ----------- |
-| [NguixOopsPageModule](https://nguix-starter.lamnhan.com/content/reference/classes/nguixoopspagemodule.html) |             |
-| [NguixStarterModule](https://nguix-starter.lamnhan.com/content/reference/classes/nguixstartermodule.html)   |             |
-| [OopsRoutingModule](https://nguix-starter.lamnhan.com/content/reference/classes/oopsroutingmodule.html)     |             |
+| Class                                                                                                             | Description |
+| ----------------------------------------------------------------------------------------------------------------- | ----------- |
+| [NguixOopsPageModule](https://nguix-starter.lamnhan.com/content/reference/classes/nguixoopspagemodule.html)       |             |
+| [NguixPrivacyPageModule](https://nguix-starter.lamnhan.com/content/reference/classes/nguixprivacypagemodule.html) |             |
+| [NguixStarterModule](https://nguix-starter.lamnhan.com/content/reference/classes/nguixstartermodule.html)         |             |
+| [NguixTermsPageModule](https://nguix-starter.lamnhan.com/content/reference/classes/nguixtermspagemodule.html)     |             |
+| [OopsRoutingModule](https://nguix-starter.lamnhan.com/content/reference/classes/oopsroutingmodule.html)           |             |
+| [PrivacyRoutingModule](https://nguix-starter.lamnhan.com/content/reference/classes/privacyroutingmodule.html)     |             |
+| [TermsRoutingModule](https://nguix-starter.lamnhan.com/content/reference/classes/termsroutingmodule.html)         |             |
 
 </section>
 
@@ -46,6 +50,7 @@
 | [OopsComponent](https://nguix-starter.lamnhan.com/content/reference/classes/oopscomponent.html)                 |             |
 | [PwaBoxComponent](https://nguix-starter.lamnhan.com/content/reference/classes/pwaboxcomponent.html)             |             |
 | [PwaReminderComponent](https://nguix-starter.lamnhan.com/content/reference/classes/pwaremindercomponent.html)   |             |
+| [SpinnerComponent](https://nguix-starter.lamnhan.com/content/reference/classes/spinnercomponent.html)           |             |
 
 </section>
 

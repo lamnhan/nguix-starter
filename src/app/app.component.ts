@@ -1,12 +1,15 @@
 import { Component } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/firestore';
 import {
+  // normal services
   LocalstorageService,
+  CacheService,
   AppService,
   MetaService,
   NavService,
-  NavItem,
   SettingService,
   PersonaService,
+  DatabaseService
 } from '@lamnhan/ngx-useful';
 
 @Component({
@@ -15,49 +18,32 @@ import {
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  menuItems: NavItem[] = [
-    {
-      text: 'Getting started',
-      level: 0,
-    },
-      {
-        text: 'Install',
-        level: 1,
-        routerLink: ['']
-      },
-    {
-      text: 'Components',
-      level: 0,
-    },
-      {
-        text: 'Content',
-        level: 1,
-        routerLink: ['']
-      },
-    {
-      text: 'Services',
-      level: 0,
-    },
-      {
-        text: 'App',
-        level: 1,
-        routerLink: ['']
-      },
-  ];
 
   constructor(
+    private firebaseFirestore: AngularFirestore,
     private localstorageService: LocalstorageService,
+    private cacheService: CacheService,
     private appService: AppService,
     private metaService: MetaService,
     private navService: NavService,
     private settingService: SettingService,
     private personaService: PersonaService,
+    private databaseService: DatabaseService,
   ) {
     this.initialize();
   }
 
   private initialize() {
     this.localstorageService.init();
+    this.cacheService.init();
+    this.databaseService.init(
+      this.firebaseFirestore,
+      {
+        driver: 'firestore',
+        cacheTime: 1440, // 24 hours
+      },
+      { cacheService: this.cacheService }
+    );
     this.appService.init({ splashScreen: true });
     this.settingService.init(
       {

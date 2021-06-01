@@ -1,0 +1,16 @@
+<div class="nguix-terms-page" *ngIf="page$ | async as page; else loading">
+
+  <div class="main">
+    <h3 class="text-medium margin-bottom">{{ page.title }}</h3>
+    <div class="article">
+      <nguix-content [content]="page.content" [contentSrc]="page.contentSrc"></nguix-content>
+    </div>
+  </div>
+
+</div>
+
+<ng-template #loading>
+  <div class="loading">
+    <nguix-spinner></nguix-spinner>
+  </div>
+</ng-template>

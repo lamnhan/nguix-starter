@@ -1,0 +1,14 @@
+<app-page
+  menuName="List of pages"
+  [menuItems]="data.pageMenu"
+  [bodyTemplate]="pageBody"
+></app-page>
+
+<ng-template #pageBody>
+
+  <app-pagebody
+    pageUrl="/privacy"
+    importName="NguixPrivacyPageModule"
+  ></app-pagebody>
+
+</ng-template>

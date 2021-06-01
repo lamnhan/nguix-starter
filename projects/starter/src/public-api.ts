@@ -12,6 +12,8 @@ export * from './lib/components/footer/footer.component';
 export {NguixFooterComponentModule} from './lib/components/footer/footer.module';
 export * from './lib/components/oops/oops.component';
 export {NguixOopsComponentModule} from './lib/components/oops/oops.module';
+export * from './lib/components/spinner/spinner.component';
+export {NguixSpinnerComponentModule} from './lib/components/spinner/spinner.module';
 export * from './lib/components/oauth-popup/oauth-popup.component';
 export {NguixOauthPopupComponentModule} from './lib/components/oauth-popup/oauth-popup.module';
 export * from './lib/components/nav-indicator/nav-indicator.component';
@@ -25,3 +27,7 @@ export {NguixContentComponentModule} from './lib/components/content/content.modu
 
 export * from './lib/pages/oops/oops.component';
 export {NguixOopsPageModule} from './lib/pages/oops/oops.module';
+export * from './lib/pages/terms/terms.component';
+export {NguixTermsPageModule} from './lib/pages/terms/terms.module';
+export * from './lib/pages/privacy/privacy.component';
+export {NguixPrivacyPageModule} from './lib/pages/privacy/privacy.module';
