@@ -1,9 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NguixOopsPageModule } from '@lamnhan/nguix-starter';
 
 import { PageComponentModule } from '../../../components/page/page.module';
-import { CompbodyComponentModule } from '../../../components/compbody/compbody.module';
+import { PagebodyComponentModule } from '../../../components/pagebody/pagebody.module';
 
 import { OopsRoutingModule } from './oops-routing.module';
 import { OopsComponent } from './oops.component';
@@ -15,9 +14,8 @@ import { OopsComponent } from './oops.component';
   ],
   imports: [
     CommonModule,
-    NguixOopsPageModule,
     PageComponentModule,
-    CompbodyComponentModule,
+    PagebodyComponentModule,
     OopsRoutingModule
   ]
 })

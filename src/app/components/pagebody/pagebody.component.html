@@ -1,0 +1,17 @@
+<div class="app-pagebody">
+
+  <div class="display">
+    <h2>Preview</h2>
+    <div class="container">
+      <div class="code">
+        <iframe [src]="pageUrl | safe: false"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="usage margin-top-2x">
+    <h2>Usage</h2>
+    <nguix-content [content]="usageContent"></nguix-content>
+  </div>
+
+</div>

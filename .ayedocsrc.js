@@ -11,14 +11,14 @@ module.exports = {
       template: 'angularx'
     },
     // components
-    'docs/content/components/header.md': {main: ['HeaderComponent', 'FULL']},
-    'docs/content/components/header2nd.md': {main: ['Header2ndComponent', 'FULL']},
-    'docs/content/components/footer.md': {main: ['FooterComponent', 'FULL']},
-    'docs/content/components/oops.md': {main: ['OopsComponent', 'FULL']},
-    'docs/content/components/oauth-popup.md': {main: ['OauthPopupComponent', 'FULL']},
-    'docs/content/components/nav-indicator.md': {main: ['NavIndicatorComponent', 'FULL']},
-    'docs/content/components/pwa-box.md': {main: ['PwaBoxComponent', 'FULL']},
-    'docs/content/components/pwa-reminder.md': {main: ['PwaReminderComponent', 'FULL']},
-    'docs/content/components/content.md': {main: ['ContentComponent', 'FULL']},
+    'docs/content/components/header.md': {main: ['HeaderComponent', 'SUMMARY_PROPERTIES']},
+    'docs/content/components/header2nd.md': {main: ['Header2ndComponent', 'SUMMARY_PROPERTIES']},
+    'docs/content/components/footer.md': {main: ['FooterComponent', 'SUMMARY_PROPERTIES']},
+    'docs/content/components/oops.md': {main: ['OopsComponent', 'SUMMARY_PROPERTIES']},
+    'docs/content/components/oauth-popup.md': {main: ['OauthPopupComponent', 'SUMMARY_PROPERTIES']},
+    'docs/content/components/nav-indicator.md': {main: ['NavIndicatorComponent', 'SUMMARY_PROPERTIES']},
+    'docs/content/components/pwa-box.md': {main: ['PwaBoxComponent', 'SUMMARY_PROPERTIES']},
+    'docs/content/components/pwa-reminder.md': {main: ['PwaReminderComponent', 'SUMMARY_PROPERTIES']},
+    'docs/content/components/content.md': {main: ['ContentComponent', 'SUMMARY_PROPERTIES']},
   }
 };

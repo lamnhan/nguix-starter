@@ -20,7 +20,7 @@
     flex: 1;
 
     a {
-      color: var(--app-color-primary-contrast);
+      color: var(--app-color-foreground-tint);
       text-decoration: none;
       display: flex;
       align-items: center;
@@ -61,14 +61,14 @@
       align-items: center;
       width: auto;
       height: 32px;
-      color: var(--app-color-primary-contrast);
+      color: var(--app-color-foreground-tint);
       padding: 0 .5rem;
       opacity: .7;
       margin-left: .5rem;
       
       &:hover, &:focus {
         text-decoration: none;
-        color: var(--app-color-light);
+        color: var(--app-color-foreground-shade);
         opacity: 1;
       }
     }
