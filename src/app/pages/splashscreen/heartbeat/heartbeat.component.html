@@ -1,0 +1,18 @@
+<div class="splashscreen-heartbeat-page">
+
+  <app-page
+    menuName="List of splashscreens"
+    [menuItems]="data.splashscreenMenu"
+    [bodyTemplate]="pageBody"
+  ></app-page>
+
+  <ng-template #pageBody>
+
+    <app-splashbody
+      splashscreenUrl="/content/splashscreens/heartbeat.html"
+      name="heartbeat"
+    ></app-splashbody>
+
+  </ng-template>
+
+</div>

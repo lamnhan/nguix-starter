@@ -12,6 +12,7 @@ const routes: Routes = [
   { path: 'guide/:id', loadChildren: () => import('./pages/guide/guide.module').then(m => m.GuidePageModule) },
   { path: 'templates', loadChildren: () => import('./pages/templates/templates.module').then(m => m.TemplatesPageModule) },
   { path: 'template/:id', loadChildren: () => import('./pages/template/template.module').then(m => m.TemplatePageModule) },
+  { path: 'splashscreens', loadChildren: () => import('./pages/splashscreens/splashscreens.module').then(m => m.SplashscreensPageModule) },
   { path: 'components', loadChildren: () => import('./pages/components/components.module').then(m => m.ComponentsPageModule) },
   { path: 'component/header', loadChildren: () => import('./pages/component/header/header.module').then(m => m.HeaderPageModule) },
   { path: 'component/header2nd', loadChildren: () => import('./pages/component/header2nd/header2nd.module').then(m => m.Header2ndPageModule) },
@@ -20,6 +21,9 @@ const routes: Routes = [
   { path: 'page/oops', loadChildren: () => import('./pages/page/oops/oops.module').then(m => m.OopsPageModule) },
   { path: 'page/terms', loadChildren: () => import('./pages/page/terms/terms.module').then(m => m.TermsPageModule) },
   { path: 'page/privacy', loadChildren: () => import('./pages/page/privacy/privacy.module').then(m => m.PrivacyPageModule) },
+  { path: 'splashscreen/heartbeat', loadChildren: () => import('./pages/splashscreen/heartbeat/heartbeat.module').then(m => m.HeartbeatPageModule) },
+  { path: 'splashscreen/bouncing', loadChildren: () => import('./pages/splashscreen/bouncing/bouncing.module').then(m => m.BouncingPageModule) },
+  { path: 'splashscreen/still', loadChildren: () => import('./pages/splashscreen/still/still.module').then(m => m.StillModule) },
   { path: '**', loadChildren: () => import('@lamnhan/nguix-starter').then(m => m.NguixOopsPageModule) },
 ];
 

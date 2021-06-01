@@ -27,6 +27,9 @@ Or, through a proxy:
 import {${this.importName}} from '@lamnhan/nguix-starter';
 // create a proxy
 @NgModule({ imports: [${this.importName}] }) ${this.importName}WrapperModule {}
+\`\`\`
+
+\`\`\`ts
 // add the route
 { path: 'path/to/page', loadChildren: () => import('./path/to/proxy/module').then(m => m.${this.importName}WrapperModule) }
 \`\`\``;

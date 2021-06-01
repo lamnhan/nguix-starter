@@ -1,0 +1,18 @@
+<div class="splashscreen-still-page">
+
+  <app-page
+    menuName="List of splashscreens"
+    [menuItems]="data.splashscreenMenu"
+    [bodyTemplate]="pageBody"
+  ></app-page>
+
+  <ng-template #pageBody>
+
+    <app-splashbody
+      splashscreenUrl="/content/splashscreens/still.html"
+      name="still"
+    ></app-splashbody>
+
+  </ng-template>
+
+</div>

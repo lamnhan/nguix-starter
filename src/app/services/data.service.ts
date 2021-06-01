@@ -18,52 +18,102 @@ export class DataService {
     { text: 'Link 2', routerLink: ['link-2'] },
     { text: 'Link 3', href: 'https://lamnhan.com', target: '_blank' },
   ];
+  
+  templateItems: Record<string, TemplateItem> = {
+    blog: {
+      id: 'blog',
+      title: 'Blog',
+      description: 'General bloging template',
+      thumbnail: 'http://source.unsplash.com/3GZNPBLImWc/768x480',
+    },
+    shop: {
+      id: 'shop',
+      title: 'Shop',
+      description: 'Online shoping template',
+      thumbnail: 'http://source.unsplash.com/c9FQyqIECds/768x480',
+    },
+  };
 
   // guides
   guideMenu: NavItem[] = [
     {
-      text: 'Introduction',
-      level: 1,
-      routerLink: ['guide', 'introduction']
+      text: 'Getting started',
+      level: 0
     },
+      {
+        text: 'Introduction',
+        level: 1,
+        routerLink: ['guide', 'introduction']
+      },
   ];
 
   // components
   componentMenu: NavItem[] = [
     {
-      text: 'Header',
-      level: 1,
-      routerLink: ['component', 'header']
+      text: 'Layout',
+      level: 0,
     },
-    {
-      text: 'Header 2nd',
-      level: 1,
-      routerLink: ['component', 'header2nd']
-    },
-    {
-      text: 'Footer',
-      level: 1,
-      routerLink: ['component', 'footer']
-    },
+      {
+        text: 'Header',
+        level: 1,
+        routerLink: ['component', 'header']
+      },
+      {
+        text: 'Header 2nd',
+        level: 1,
+        routerLink: ['component', 'header2nd']
+      },
+      {
+        text: 'Footer',
+        level: 1,
+        routerLink: ['component', 'footer']
+      },
   ];
 
   // pages
   pageMenu: NavItem[] = [
     {
-      text: 'Oops',
-      level: 1,
-      routerLink: ['page', 'oops']
+      text: 'General',
+      level: 0,
     },
+      {
+        text: 'Oops',
+        level: 1,
+        routerLink: ['page', 'oops']
+      },
+      {
+        text: 'Terms',
+        level: 1,
+        routerLink: ['page', 'terms']
+      },
+      {
+        text: 'Privacy',
+        level: 1,
+        routerLink: ['page', 'privacy']
+      },
+  ];
+
+  // splashscreen
+  splashscreenMenu: NavItem[] = [
     {
-      text: 'Terms',
-      level: 1,
-      routerLink: ['page', 'terms']
+      text: 'Basic',
+      level: 0,
     },
-    {
-      text: 'Privacy',
-      level: 1,
-      routerLink: ['page', 'privacy']
-    },
+      {
+        text: 'Still',
+        level: 1,
+        routerLink: ['splashscreen', 'still']
+      },
+      {
+        text: 'Heartbeat',
+        level: 1,
+        routerLink: ['splashscreen', 'heartbeat']
+      },
+      {
+        text: 'Bouncing',
+        level: 1,
+        routerLink: ['splashscreen', 'bouncing']
+      },
   ];
 
   // templates
@@ -79,20 +129,6 @@ export class DataService {
       routerLink: ['template', 'shop']
     },
   ];
-  templateItems: Record<string, TemplateItem> = {
-    blog: {
-      id: 'blog',
-      title: 'Blog',
-      description: 'General bloging template',
-      thumbnail: 'http://source.unsplash.com/3GZNPBLImWc/768x480',
-    },
-    shop: {
-      id: 'shop',
-      title: 'Shop',
-      description: 'Online shoping template',
-      thumbnail: 'http://source.unsplash.com/c9FQyqIECds/768x480',
-    },
-  };
 
   constructor() { }
 }

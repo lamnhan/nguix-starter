@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, TemplateRef, ElementRef } from '@angular/core';
+import { Component, OnInit, Input, TemplateRef } from '@angular/core';
 
 @Component({
   selector: 'app-compbody',
@@ -21,8 +21,7 @@ export class CompbodyComponent implements OnInit {
 `
 Import the module:
 \`\`\`ts
-import {${this.importName}} from '@lamnhan/nguix-starter';
-@NgModule({ imports: [${this.importName}] })
+import { ${this.importName} } from '@lamnhan/nguix-starter';
 \`\`\`
 
 Use the component:

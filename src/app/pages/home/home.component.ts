@@ -8,14 +8,19 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   installContent =
-`Install utilities:
-\`\`\`sh
-npm install -S @lamnhan/ngx-useful@0.0.8
-\`\`\`
-
-Install theming:
+`Install theming:
 \`\`\`sh
 npm install -S @lamnhan/unistylus@0.0.7
+\`\`\`
+
+Install data models:
+\`\`\`sh
+npm install -S @lamnhan/schemata@0.0.7
+\`\`\`
+
+Install utilities:
+\`\`\`sh
+npm install -S @lamnhan/ngx-useful@0.0.8
 \`\`\`
 
 Install NGUIX library:

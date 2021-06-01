@@ -11,7 +11,7 @@ import { DataService } from '../../services/data.service';
 })
 export class GuideComponent implements OnInit {
   public readonly contentSrc$ = this.activatedRoute.params.pipe(
-    map(params => `https://raw.githubusercontent.com/lamnhan/nguix-starter/main/src/content/guides/${params.id}.md`),
+    map(params => `/content/guides/${params.id}.md`),
   );
 
   constructor(

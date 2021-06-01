@@ -25,4 +25,8 @@ export class TemplateComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  activateTemplate(id: string) {
+    alert('// TODO: ....');
+  }
+
 }
