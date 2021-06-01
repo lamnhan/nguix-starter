@@ -1,0 +1,1 @@
+(()=>{var s=document.getElementById("app-splash-screen");s.classList.add("has-js"),setTimeout(()=>s.classList.add("too-long"),7000)})();
