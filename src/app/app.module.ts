@@ -7,6 +7,7 @@ import {
   // normal services
   LocalstorageService,
   CacheService,
+  FetchService,
   AppService,
   MetaService,
   NavService,
@@ -39,6 +40,7 @@ import { FooterComponentModule } from './components/footer/footer.module';
     // useful normal services
     LocalstorageService,
     CacheService,
+    FetchService,
     AppService,
     MetaService,
     NavService,

@@ -21,7 +21,7 @@ Use the page directly:
 { path: 'path/to/page', loadChildren: () => import('@lamnhan/nguix-starter').then(m => m.${this.importName}) }
 \`\`\`
 
-Or, through a proxy:
+Or, through a proxy module:
 \`\`\`ts
 // import the page module
 import {${this.importName}} from '@lamnhan/nguix-starter';

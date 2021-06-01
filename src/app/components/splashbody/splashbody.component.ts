@@ -1,4 +1,6 @@
-import { Component, OnInit, Input, TemplateRef } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { take } from 'rxjs/operators';
+import { FetchService } from '@lamnhan/ngx-useful';
 
 @Component({
   selector: 'app-splashbody',
@@ -11,23 +13,33 @@ export class SplashbodyComponent implements OnInit {
   
   usageContent = '';
 
-  constructor() { }
+  constructor(private fetchService: FetchService) {}
 
   ngOnInit(): void {
-    this.usageContent =
+    this.fetchService
+      .get(this.splashscreenUrl, undefined, false)
+      .pipe(take(1))
+      .subscribe(htmlCode => {
+        // extract content
+        const a = (htmlCode as string).indexOf('<body>') + 6;
+        const z = (htmlCode as string).indexOf('</body>');
+        htmlCode = (htmlCode as string).substring(a, z);
+        // set usage
+
+        this.usageContent =
 `
-Import the assets:
+Imports in the head of index.html:
 \`\`\`html
 <!-- In-app splashscreen -->
-<link rel="stylesheet" href="${this.name}/index.css">
-<script defer src="${this.name}/index.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/@lamnhan/nguix-starter@latest/src/splashscreens/${this.name}/index.css">
+<script defer src="https://unpkg.com/@lamnhan/nguix-starter@latest/src/splashscreens/${this.name}/index.js"></script>
 \`\`\`
 
-Provide the template:
+Put the template after <app-root>:
 \`\`\`html
-<!-- put this after app-root -->
-...
+${htmlCode}
 \`\`\``;
+    });
   }
 
 }

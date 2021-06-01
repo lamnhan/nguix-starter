@@ -4,6 +4,7 @@ import {
   // normal services
   LocalstorageService,
   CacheService,
+  FetchService,
   AppService,
   MetaService,
   NavService,
@@ -23,6 +24,7 @@ export class AppComponent {
     private firebaseFirestore: AngularFirestore,
     private localstorageService: LocalstorageService,
     private cacheService: CacheService,
+    private fetchService: FetchService,
     private appService: AppService,
     private metaService: MetaService,
     private navService: NavService,
@@ -36,6 +38,10 @@ export class AppComponent {
   private initialize() {
     this.localstorageService.init();
     this.cacheService.init();
+    this.fetchService.init(
+      { cacheTime: 1440, /* 24 hours */ },
+      { cacheService: this.cacheService },
+    );
     this.databaseService.init(
       this.firebaseFirestore,
       {
