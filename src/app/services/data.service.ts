@@ -94,11 +94,6 @@ export class DataService {
         routerLink: ['component', 'content']
       },
       {
-        text: 'Oauth Popup',
-        level: 1,
-        routerLink: ['component', 'oauth-popup']
-      },
-      {
         text: 'Nav Indicator',
         level: 1,
         routerLink: ['component', 'nav-indicator']
@@ -136,6 +131,20 @@ export class DataService {
         level: 1,
         routerLink: ['page', 'privacy']
       },
+      {
+        text: 'Setting',
+        level: 1,
+        routerLink: ['page', 'setting']
+      },
+    {
+      text: 'Others',
+      level: 0,
+    },
+      {
+        text: 'Oauth Popup',
+        level: 1,
+        routerLink: ['page', 'oauth-popup']
+      },
   ];
 
   // splashscreen
@@ -163,6 +172,11 @@ export class DataService {
 
   // templates
   templateMenu: NavItem[] = [
+    {
+      text: 'Intro',
+      level: 1,
+      routerLink: ['template', 'intro']
+    },
     {
       text: 'Blog',
       level: 1,

@@ -1,0 +1,14 @@
+<app-page
+  menuName="List of pages"
+  [menuItems]="data.pageMenu"
+  [bodyTemplate]="pageBody"
+></app-page>
+
+<ng-template #pageBody>
+
+  <app-pagebody
+    pageUrl="/oauth"
+    importName="NguixOauthPopupPageModule"
+  ></app-pagebody>
+
+</ng-template>

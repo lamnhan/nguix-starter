@@ -10,9 +10,9 @@ import {PwaService} from '@lamnhan/ngx-useful';
 export class PwaBoxComponent implements OnInit {
   @Input() i18n = false;
 
-  @Input('pwaService') pwa!: PwaService;
+  @Input() pwaService!: PwaService;
   @Input() title = 'Install app?';
-  @Input() icon = '/icons/icon-72x72.png';
+  @Input() icon = '/assets/images/logo.svg';
   @Input() name = 'Install now';
   @Input() tagline = 'Add app to your home screen';
 

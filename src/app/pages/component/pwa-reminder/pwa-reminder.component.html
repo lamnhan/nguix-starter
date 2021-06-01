@@ -1,0 +1,26 @@
+<div class="component-pwa-reminder-page">
+
+  <app-page
+    menuName="List of components"
+    [menuItems]="data.componentMenu"
+    [bodyTemplate]="pageBody"
+  ></app-page>
+
+  <ng-template #pageBody>
+
+    <app-compbody
+      [componentTemplate]="componentTemplate"
+      apiSrc="https://raw.githubusercontent.com/lamnhan/nguix-starter/main/docs/content/components/pwa-reminder.md"
+      importName="NguixPwaReminderComponentModule"
+      htmlCode="&lt;nguix-pwa-reminder&gt;&lt;/nguix-pwa-reminder&gt;"
+    ></app-compbody>
+
+    <ng-template #componentTemplate>
+      <div class="padding" style="text-align: center;">
+        <button class="button-primary" (click)="toggleReminder()">Toggle PWA Reminder</button>
+      </div>
+    </ng-template>
+
+  </ng-template>
+
+</div>

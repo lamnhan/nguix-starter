@@ -1,9 +1,9 @@
 <div
   class="nguix-nav-indicator"
-  *ngIf="nav"
-  [class.show]="nav.loading"
+  *ngIf="navService"
+  [class.show]="navService.loading"
 >
-  <div class="body" (click)="nav.hideLoadingIndicator()">
+  <div class="body" (click)="navService.hideLoadingIndicator()">
     <img [src]="icon">
     <span>{{ !i18n ? text : ('USEFUL_NAV_INDICATOR.TEXT' | transloco) }}</span>
   </div>

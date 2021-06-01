@@ -22,15 +22,19 @@
 <h2><a name="modules"><p>Modules</p>
 </a></h2>
 
-| Class                                                                                                             | Description |
-| ----------------------------------------------------------------------------------------------------------------- | ----------- |
-| [NguixOopsPageModule](https://nguix-starter.lamnhan.com/content/reference/classes/nguixoopspagemodule.html)       |             |
-| [NguixPrivacyPageModule](https://nguix-starter.lamnhan.com/content/reference/classes/nguixprivacypagemodule.html) |             |
-| [NguixStarterModule](https://nguix-starter.lamnhan.com/content/reference/classes/nguixstartermodule.html)         |             |
-| [NguixTermsPageModule](https://nguix-starter.lamnhan.com/content/reference/classes/nguixtermspagemodule.html)     |             |
-| [OopsRoutingModule](https://nguix-starter.lamnhan.com/content/reference/classes/oopsroutingmodule.html)           |             |
-| [PrivacyRoutingModule](https://nguix-starter.lamnhan.com/content/reference/classes/privacyroutingmodule.html)     |             |
-| [TermsRoutingModule](https://nguix-starter.lamnhan.com/content/reference/classes/termsroutingmodule.html)         |             |
+| Class                                                                                                                   | Description |
+| ----------------------------------------------------------------------------------------------------------------------- | ----------- |
+| [NguixOauthPopupPageModule](https://nguix-starter.lamnhan.com/content/reference/classes/nguixoauthpopuppagemodule.html) |             |
+| [NguixOopsPageModule](https://nguix-starter.lamnhan.com/content/reference/classes/nguixoopspagemodule.html)             |             |
+| [NguixPrivacyPageModule](https://nguix-starter.lamnhan.com/content/reference/classes/nguixprivacypagemodule.html)       |             |
+| [NguixSettingPageModule](https://nguix-starter.lamnhan.com/content/reference/classes/nguixsettingpagemodule.html)       |             |
+| [NguixStarterModule](https://nguix-starter.lamnhan.com/content/reference/classes/nguixstartermodule.html)               |             |
+| [NguixTermsPageModule](https://nguix-starter.lamnhan.com/content/reference/classes/nguixtermspagemodule.html)           |             |
+| [OauthPopupRoutingModule](https://nguix-starter.lamnhan.com/content/reference/classes/oauthpopuproutingmodule.html)     |             |
+| [OopsRoutingModule](https://nguix-starter.lamnhan.com/content/reference/classes/oopsroutingmodule.html)                 |             |
+| [PrivacyRoutingModule](https://nguix-starter.lamnhan.com/content/reference/classes/privacyroutingmodule.html)           |             |
+| [SettingRoutingModule](https://nguix-starter.lamnhan.com/content/reference/classes/settingroutingmodule.html)           |             |
+| [TermsRoutingModule](https://nguix-starter.lamnhan.com/content/reference/classes/termsroutingmodule.html)               |             |
 
 </section>
 
@@ -46,7 +50,6 @@
 | [Header2ndComponent](https://nguix-starter.lamnhan.com/content/reference/classes/header2ndcomponent.html)       |             |
 | [HeaderComponent](https://nguix-starter.lamnhan.com/content/reference/classes/headercomponent.html)             |             |
 | [NavIndicatorComponent](https://nguix-starter.lamnhan.com/content/reference/classes/navindicatorcomponent.html) |             |
-| [OauthPopupComponent](https://nguix-starter.lamnhan.com/content/reference/classes/oauthpopupcomponent.html)     |             |
 | [OopsComponent](https://nguix-starter.lamnhan.com/content/reference/classes/oopscomponent.html)                 |             |
 | [PwaBoxComponent](https://nguix-starter.lamnhan.com/content/reference/classes/pwaboxcomponent.html)             |             |
 | [PwaReminderComponent](https://nguix-starter.lamnhan.com/content/reference/classes/pwaremindercomponent.html)   |             |

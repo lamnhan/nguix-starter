@@ -1,0 +1,26 @@
+<div class="component-pwa-box-page">
+
+  <app-page
+    menuName="List of components"
+    [menuItems]="data.componentMenu"
+    [bodyTemplate]="pageBody"
+  ></app-page>
+
+  <ng-template #pageBody>
+
+    <app-compbody
+      [componentTemplate]="componentTemplate"
+      apiSrc="https://raw.githubusercontent.com/lamnhan/nguix-starter/main/docs/content/components/pwa-box.md"
+      importName="NguixPwaBoxComponentModule"
+      htmlCode="&lt;nguix-pwa-box&gt;&lt;/nguix-pwa-box&gt;"
+    ></app-compbody>
+
+    <ng-template #componentTemplate>
+      <div class="padding">
+        <nguix-pwa-box [pwaService]="pwa"></nguix-pwa-box>
+      </div>
+    </ng-template>
+
+  </ng-template>
+
+</div>

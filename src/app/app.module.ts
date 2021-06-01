@@ -12,11 +12,16 @@ import {
   MetaService,
   NavService,
   SettingService,
+  PwaService,
   PersonaService,
   DatabaseService,
+  AuthService,
+  UserService,
   // data services
   PageDataService,
+  UserDataService,
 } from '@lamnhan/ngx-useful';
+import { NguixNavIndicatorComponentModule, NguixPwaReminderComponentModule } from '@lamnhan/nguix-starter';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -35,6 +40,8 @@ import { FooterComponentModule } from './components/footer/footer.module';
     HeaderComponentModule,
     Header2ndComponentModule,
     FooterComponentModule,
+    NguixNavIndicatorComponentModule,
+    NguixPwaReminderComponentModule,
   ],
   providers: [
     // useful normal services
@@ -45,10 +52,14 @@ import { FooterComponentModule } from './components/footer/footer.module';
     MetaService,
     NavService,
     SettingService,
+    PwaService,
     PersonaService,
     DatabaseService,
+    AuthService,
+    UserService,
     // schemata data services
     PageDataService,
+    UserDataService,
   ],
   bootstrap: [AppComponent]
 })

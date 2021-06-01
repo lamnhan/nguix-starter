@@ -1,0 +1,26 @@
+<div class="component-nav-indicator-page">
+
+  <app-page
+    menuName="List of components"
+    [menuItems]="data.componentMenu"
+    [bodyTemplate]="pageBody"
+  ></app-page>
+
+  <ng-template #pageBody>
+
+    <app-compbody
+      [componentTemplate]="componentTemplate"
+      apiSrc="https://raw.githubusercontent.com/lamnhan/nguix-starter/main/docs/content/components/nav-indicator.md"
+      importName="NguixNavIndicatorComponentModule"
+      htmlCode="&lt;nguix-nav-indicator&gt;&lt;/nguix-nav-indicator&gt;"
+    ></app-compbody>
+
+    <ng-template #componentTemplate>
+      <div class="padding" style="text-align: center;">
+        <button class="button-primary" (click)="nav.loading=!nav.loading">Toggle Nav Indicator</button>
+      </div>
+    </ng-template>
+
+  </ng-template>
+
+</div>

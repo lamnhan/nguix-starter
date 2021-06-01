@@ -10,9 +10,9 @@ import {PwaService} from '@lamnhan/ngx-useful';
 export class PwaReminderComponent implements OnInit {
   @Input() i18n = false;
 
-  @Input('pwaService') pwa!: PwaService;
+  @Input() pwaService!: PwaService;
 
-  @Input() icon = '/icons/icon-72x72.png';
+  @Input() icon = '/assets/images/logo.svg';
   @Input() title = 'Install app?';
   @Input() text = 'Add app to your home screen';
 
@@ -61,12 +61,12 @@ export class PwaReminderComponent implements OnInit {
 
   getI18nMessageCode() {
     return 'USEFUL_PWA_REMINDER.MESSAGE.'
-      + (this.pwa.runtime || 'desktop-any').replace(/-/g, '_').toUpperCase();
+      + (this.pwaService.runtime || 'desktop-any').replace(/-/g, '_').toUpperCase();
   }
 
   getMessage() {
     let msg: string | string[] = '';
-    switch (this.pwa.runtime) {
+    switch (this.pwaService.runtime) {
       case 'ios-safari':
         msg = this.iosSafariMessage;
         break;

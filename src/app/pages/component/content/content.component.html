@@ -1,0 +1,26 @@
+<div class="component-content-page">
+
+  <app-page
+    menuName="List of components"
+    [menuItems]="data.componentMenu"
+    [bodyTemplate]="pageBody"
+  ></app-page>
+
+  <ng-template #pageBody>
+
+    <app-compbody
+      [componentTemplate]="componentTemplate"
+      apiSrc="https://raw.githubusercontent.com/lamnhan/nguix-starter/main/docs/content/components/content.md"
+      importName="NguixContentComponentModule"
+      htmlCode="&lt;nguix-content content=&quot;...&quot;&gt;&lt;/nguix-content&gt;"
+    ></app-compbody>
+
+    <ng-template #componentTemplate>
+      <div class="padding">
+        <nguix-content [content]="exampleContent"></nguix-content>
+      </div>
+    </ng-template>
+
+  </ng-template>
+
+</div>

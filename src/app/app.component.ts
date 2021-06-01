@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore } from '@angular/fire/firestore';
 import {
   // normal services
@@ -9,8 +10,13 @@ import {
   MetaService,
   NavService,
   SettingService,
+  PwaService,
   PersonaService,
-  DatabaseService
+  DatabaseService,
+  AuthService,
+  UserService,
+  // data services
+  UserDataService,
 } from '@lamnhan/ngx-useful';
 
 @Component({
@@ -22,15 +28,21 @@ export class AppComponent {
 
   constructor(
     private firebaseFirestore: AngularFirestore,
+    private readonly firebaseAuth: AngularFireAuth,
     private localstorageService: LocalstorageService,
     private cacheService: CacheService,
     private fetchService: FetchService,
     private appService: AppService,
     private metaService: MetaService,
-    private navService: NavService,
+    public navService: NavService,
     private settingService: SettingService,
+    public pwaService: PwaService,
     private personaService: PersonaService,
     private databaseService: DatabaseService,
+    public readonly authService: AuthService,
+    private userService: UserService,
+    // data services
+    private readonly userDataService: UserDataService,
   ) {
     this.initialize();
   }
@@ -51,20 +63,31 @@ export class AppComponent {
       { cacheService: this.cacheService }
     );
     this.appService.init({ splashScreen: true });
+    this.authService.init(this.firebaseAuth, {driver: 'firestore'});
+    this.userService.init(this.userDataService);
     this.settingService.init(
       {
         browserColor: true,
         onReady: () => this.appService.hideSplashScreen(),
       },
-      {},
+      {
+        personas: [
+          { text: 'Default', value: 'default' },
+          { text: 'Intro', value: 'intro' },
+          { text: 'Blog', value: 'blog' },
+          { text: 'Shop', value: 'shop' },
+        ],
+      },
       {
         localstorageService: this.localstorageService,
+        userService: this.userService,
       },
     );
     this.navService.init(
       {},
       { settingService: this.settingService },
     );
+    this.pwaService.init({ reminder: false });
     this.personaService.init({}, {},
       { settingService: this.settingService },
     );

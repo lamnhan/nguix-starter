@@ -14,8 +14,6 @@ export * from './lib/components/oops/oops.component';
 export {NguixOopsComponentModule} from './lib/components/oops/oops.module';
 export * from './lib/components/spinner/spinner.component';
 export {NguixSpinnerComponentModule} from './lib/components/spinner/spinner.module';
-export * from './lib/components/oauth-popup/oauth-popup.component';
-export {NguixOauthPopupComponentModule} from './lib/components/oauth-popup/oauth-popup.module';
 export * from './lib/components/nav-indicator/nav-indicator.component';
 export {NguixNavIndicatorComponentModule} from './lib/components/nav-indicator/nav-indicator.module';
 export * from './lib/components/pwa-reminder/pwa-reminder.component';
@@ -27,7 +25,11 @@ export {NguixContentComponentModule} from './lib/components/content/content.modu
 
 export * from './lib/pages/oops/oops.component';
 export {NguixOopsPageModule} from './lib/pages/oops/oops.module';
+export * from './lib/pages/oauth-popup/oauth-popup.component';
+export {NguixOauthPopupPageModule} from './lib/pages/oauth-popup/oauth-popup.module';
 export * from './lib/pages/terms/terms.component';
 export {NguixTermsPageModule} from './lib/pages/terms/terms.module';
 export * from './lib/pages/privacy/privacy.component';
 export {NguixPrivacyPageModule} from './lib/pages/privacy/privacy.module';
+export * from './lib/pages/setting/setting.component';
+export {NguixSettingPageModule} from './lib/pages/setting/setting.module';

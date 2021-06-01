@@ -12,7 +12,7 @@
 | [icon](https://nguix-starter.lamnhan.com/content/reference/classes/pwaremindercomponent.html#icon)                                 | <code>string</code>             |             |
 | [iosAnyMessage](https://nguix-starter.lamnhan.com/content/reference/classes/pwaremindercomponent.html#iosanymessage)               | <code>string \| string[]</code> |             |
 | [iosSafariMessage](https://nguix-starter.lamnhan.com/content/reference/classes/pwaremindercomponent.html#iossafarimessage)         | <code>string \| string[]</code> |             |
-| [pwa](https://nguix-starter.lamnhan.com/content/reference/classes/pwaremindercomponent.html#pwa)                                   | <code>PwaService</code>         |             |
+| [pwaService](https://nguix-starter.lamnhan.com/content/reference/classes/pwaremindercomponent.html#pwaservice)                     | <code>PwaService</code>         |             |
 | [text](https://nguix-starter.lamnhan.com/content/reference/classes/pwaremindercomponent.html#text)                                 | <code>string</code>             |             |
 | [title](https://nguix-starter.lamnhan.com/content/reference/classes/pwaremindercomponent.html#title)                               | <code>string</code>             |             |
 
