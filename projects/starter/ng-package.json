@@ -16,9 +16,6 @@
     }
   },
   "allowedNonPeerDependencies": [
-    "@lamnhan/unistylus",
-    "@lamnhan/schemata",
-    "@lamnhan/ngx-useful",
     "ngx-markdown"
   ]
 }

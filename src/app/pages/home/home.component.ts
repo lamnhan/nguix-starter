@@ -25,7 +25,7 @@ npm install -S @lamnhan/ngx-useful@0.0.8
 
 Install NGUIX library:
 \`\`\`sh
-npm install -S @lamnhan/nguix-starter
+npm install -S @lamnhan/nguix-starter@0.0.5
 \`\`\``;
 
   usageContent =
