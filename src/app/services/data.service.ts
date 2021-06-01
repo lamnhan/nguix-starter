@@ -20,6 +20,12 @@ export class DataService {
   ];
   
   templateItems: Record<string, TemplateItem> = {
+    intro: {
+      id: 'intro',
+      title: 'Intro',
+      description: 'General landing page template',
+      thumbnail: 'http://source.unsplash.com/SymZoeE8quA/768x480',
+    },
     blog: {
       id: 'blog',
       title: 'Blog',
@@ -67,6 +73,45 @@ export class DataService {
         text: 'Footer',
         level: 1,
         routerLink: ['component', 'footer']
+      },
+    {
+      text: 'Misc',
+      level: 0,
+    },
+      {
+        text: 'Oops',
+        level: 1,
+        routerLink: ['component', 'oops']
+      },
+      {
+        text: 'Spinner',
+        level: 1,
+        routerLink: ['component', 'spinner']
+      },
+      {
+        text: 'Content',
+        level: 1,
+        routerLink: ['component', 'content']
+      },
+      {
+        text: 'Oauth Popup',
+        level: 1,
+        routerLink: ['component', 'oauth-popup']
+      },
+      {
+        text: 'Nav Indicator',
+        level: 1,
+        routerLink: ['component', 'nav-indicator']
+      },
+      {
+        text: 'PWA Box',
+        level: 1,
+        routerLink: ['component', 'pwa-box']
+      },
+      {
+        text: 'PWA Reminder',
+        level: 1,
+        routerLink: ['component', 'pwa-reminder']
       },
   ];
 
