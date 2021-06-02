@@ -8,14 +8,40 @@ import {PwaService} from '@lamnhan/ngx-useful';
   styleUrls: ['./pwa-box.component.scss']
 })
 export class PwaBoxComponent implements OnInit {
+
+  /**
+   * Input() Enable localization
+   */
   @Input() i18n = false;
 
+  /**
+   * Input() Box title. For i18n: `NGUIX_PWA_BOX.TITLE` = Install app?
+   */
   @Input() title = 'Install app?';
+  
+  /**
+   * Input() App icon url
+   */
   @Input() icon = '/assets/images/logo.svg';
+  
+  /**
+   * Input() App name. For i18n: `NGUIX_PWA_BOX.NAME` = Install now
+   */
   @Input() name = 'Install now';
+  
+  /**
+   * Input() Description text. For i18n: `NGUIX_PWA_BOX.TAGLINE` = Add app to ...
+   */
   @Input() tagline = 'Add app to your home screen';
 
+  /**
+   * Output() Action when clicked
+   */
   @Output() action: EventEmitter<void> = new EventEmitter();
+
+  /**
+   * Output() Dismiss the box
+   */
   @Output() dismiss: EventEmitter<void> = new EventEmitter();
 
   constructor(

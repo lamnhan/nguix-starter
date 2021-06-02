@@ -8,9 +8,20 @@ import { NavService } from '@lamnhan/ngx-useful';
   styleUrls: ['./nav-indicator.component.scss']
 })
 export class NavIndicatorComponent implements OnInit {
+  
+  /**
+   * Input() Enable localization
+   */
   @Input() i18n = false;
 
+  /**
+   * Input() Icon url
+   */
   @Input() icon = '/assets/images/logo.svg';
+
+  /**
+   * Input() Diplay text. For i18n, `NGUIX_NAV_INDICATOR.TEXT` = Please wait ...
+   */
   @Input() text = 'Please wait ...';
 
   constructor(

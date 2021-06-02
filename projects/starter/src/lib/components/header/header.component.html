@@ -2,8 +2,8 @@
 
   <div class="brand">
     <a [usefulRouterLink]="['']">
-      <em><img [src]="logo" [alt]="title"></em>
-      <span class="font-head">{{title}}</span>
+      <em><img [src]="logo"></em>
+      <span class="font-head">{{ !i18n  ? name : ('NGUIX_HEADER.NAME' | transloco) }}</span>
     </a>
   </div>
 
@@ -14,7 +14,7 @@
         [target]="menuItem.target"
         [usefulRouterLink]="menuItem.routerLink"
         usefulRouterLinkActive="active"
-      >{{ menuItem.text }}</a>
+      >{{ !i18n ? menuItem.text : (menuItem.text | transloco) }}</a>
     </li>
   </ul>
 

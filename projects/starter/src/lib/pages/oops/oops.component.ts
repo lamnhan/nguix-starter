@@ -37,7 +37,7 @@ export class OopsPage implements OnInit, AfterViewInit, OnDestroy {
   image = '/assets/images/404.png';
 
   /**
-   * Page content. For i18n, `OOPS.CONTENT`: Page not found
+   * Page content. For i18n, `NGUIX_OOPS.CONTENT`: Page not found
    */
   content = 'Page not found!';
 
@@ -47,7 +47,7 @@ export class OopsPage implements OnInit, AfterViewInit, OnDestroy {
   actionLink = [''];
 
   /**
-   * Page action text. For i18n, `OOPS.ACTION_TEXT`: Go home
+   * Page action text. For i18n, `NGUIX_OOPS.ACTION_TEXT`: Go home
    */
   actionText = 'Go home';
 

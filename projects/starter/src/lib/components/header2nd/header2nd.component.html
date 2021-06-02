@@ -6,7 +6,7 @@
         [target]="menuItem.target"
         [usefulRouterLink]="menuItem.routerLink"
         usefulRouterLinkActive="active"
-      >{{ menuItem.text }}</a>
+      >{{ !i18n ? menuItem.text : (menuItem.text | transloco) }}</a>
     </li>
   </ul>
 </div>

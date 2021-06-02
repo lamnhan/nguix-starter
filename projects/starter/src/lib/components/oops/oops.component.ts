@@ -17,7 +17,7 @@ export class OopsComponent implements OnInit {
   @Input() image = '/assets/images/404.png';
 
   /**
-   * Input() Component content. For i18n, `OOPS.CONTENT` = Page not found
+   * Input() Component content. For i18n, `NGUIX_OOPS.CONTENT` = Page not found
    */
   @Input() content = 'Page not found!';
 
@@ -27,7 +27,7 @@ export class OopsComponent implements OnInit {
   @Input() actionLink = ['/'];
 
   /**
-   * Input() Component action text. For i18n, `OOPS.ACTION_TEXT` = Go home
+   * Input() Component action text. For i18n, `NGUIX_OOPS.ACTION_TEXT` = Go home
    */
   @Input() actionText = 'Go home';
 

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslocoModule } from '@ngneat/transloco';
 import { RouterLinkDirectiveModule } from '@lamnhan/ngx-useful';
 
 import { HeaderComponent } from './header.component';
@@ -11,6 +12,7 @@ import { HeaderComponent } from './header.component';
   declarations: [HeaderComponent],
   imports: [
     CommonModule,
+    TranslocoModule,
     RouterLinkDirectiveModule,
   ],
   exports: [HeaderComponent]

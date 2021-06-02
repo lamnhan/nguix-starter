@@ -8,22 +8,65 @@ import {PwaService} from '@lamnhan/ngx-useful';
   styleUrls: ['./pwa-reminder.component.scss']
 })
 export class PwaReminderComponent implements OnInit {
+  
+  /**
+   * Input() Enable localization
+   */
   @Input() i18n = false;
 
-  @Input() icon = '/assets/images/logo.svg';
+  /**
+   * Input() Reminder title. For i18n: `NGUIX_PWA_REMINDER.TITLE` = Install app?
+   */
   @Input() title = 'Install app?';
+
+  /**
+   * Input() App icon
+   */
+  @Input() icon = '/assets/images/logo.svg';
+
+  /**
+   * Input() Description text. For i18n: `NGUIX_PWA_REMINDER.TEXT` = Add app to ...
+   */
   @Input() text = 'Add app to your home screen';
 
+  /**
+   * Input() Install message for IOS with Safari. For i18n: `NGUIX_PWA_REMINDER.MESSAGES.IOS_SAFARI` = ...
+   */
   @Input() iosSafariMessage: string | string[];
+
+  /**
+   * Input() Install message for IOS with other browsers. For i18n: `NGUIX_PWA_REMINDER.MESSAGES.IOS_ANY` = ...
+   */
   @Input() iosAnyMessage: string | string[];
 
+  /**
+   * Input() Install message for Android with Chrome. For i18n: `NGUIX_PWA_REMINDER.MESSAGES.ANDROID_CHROME` = ...
+   */
   @Input() androidChromeMessage: string | string[];
+
+  /**
+   * Input() Install message for Android with other browsers. For i18n: `NGUIX_PWA_REMINDER.MESSAGES.ANDROID_ANY` = ...
+   */
   @Input() androidAnyMessage: string | string[];
 
+  /**
+   * Input() Install message for Desktop with Chrome. For i18n: `NGUIX_PWA_REMINDER.MESSAGES.DESKTOP_CHROME` = ...
+   */
   @Input() desktopChromeMessage: string | string[];
+
+  /**
+   * Input() Install message for Desktop with other browsers. For i18n: `NGUIX_PWA_REMINDER.MESSAGES.DESKTOP_ANY` = ...
+   */
   @Input() desktopAnyMessage: string | string[];
 
+  /**
+   * Input() Dismiss button text. For i18n: `NGUIX_PWA_REMINDER.DISMISS_TEXT` = Already installed
+   */
   @Input() dismissText = 'Already installed';
+
+  /**
+   * Input() Hide button text. For i18n: `NGUIX_PWA_REMINDER.HIDE_TEXT` = Remind me later
+   */
   @Input() hideText = 'Remind me later';
 
   constructor(
@@ -69,7 +112,7 @@ export class PwaReminderComponent implements OnInit {
    * @ignore
    */
   getI18nMessageCode() {
-    return 'USEFUL_PWA_REMINDER.MESSAGE.'
+    return 'NGUIX_PWA_REMINDER.MESSAGES.'
       + (this.pwaService.runtime || 'desktop-any').replace(/-/g, '_').toUpperCase();
   }
 

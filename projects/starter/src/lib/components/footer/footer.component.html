@@ -1,5 +1,5 @@
 <footer class="host">
-  <div class="text" [innerHtml]="text"></div>
+  <div class="text" [innerHtml]="!i18n ? text : ('NGUIX_FOOTER.TEXT' | transloco)"></div>
   <ul class="links">
     <li *ngFor="let menuItem of menuItems">
       <a
@@ -7,7 +7,7 @@
         [target]="menuItem.target"
         [usefulRouterLink]="menuItem.routerLink"
         usefulRouterLinkActive="active"
-      >{{ menuItem.text }}</a>
+      >{{ !i18n ? menuItem.text : (menuItem.text | transloco) }}</a>
     </li>
   </ul>
 </footer>
