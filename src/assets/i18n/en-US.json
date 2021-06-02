@@ -18,6 +18,7 @@
   "APP": {
     "HOME": "Home",
     "ABOUT": "About",
+    "SETTING": "Settings",
     "POSTS": "Posts",
     "PRODUCTS": "Products"
   }

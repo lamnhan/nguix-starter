@@ -1,17 +1,24 @@
 <nguix-header
   *ngIf="personaService.name!=='default'; else docsHeaders"
+  [fixed]="true"
+  [i18n]="true"
+  [name]="('PERSONA.' + personaService.name) | uppercase | transloco"
+  [menuItems]="personaService.menu"
 ></nguix-header>
 <ng-template #docsHeaders>
   <app-header></app-header>
   <app-header2nd></app-header2nd>
 </ng-template>
 
-<main class="page-container">
+<main class="page-container" [class.single-header]="personaService.name!=='default'">
   <router-outlet></router-outlet>
 </main>
 
 <nguix-footer
   *ngIf="personaService.name!=='default'; else docsFooter"
+  [i18n]="true"
+  [text]="('PERSONA.' + personaService.name) | uppercase | transloco"
+  [menuItems]="personaService.menu"
 ></nguix-footer>
 <ng-template #docsFooter>
   <app-footer></app-footer>

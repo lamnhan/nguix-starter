@@ -17,7 +17,8 @@
   },
   "APP": {
     "HOME": "Trang nhà",
-    "ABOUT": "Giới thiệu",
+    "ABOUT": "Giới thiệu",    
+    "SETTING": "Thiết lập",
     "POSTS": "Bài viết",
     "PRODUCTS": "Sản phẩm"
   }

@@ -26,7 +26,7 @@ export class TemplateComponent implements OnInit {
   }
 
   activateTemplate(id: string) {
-    alert('// TODO: ....');
+    this.setting.changePersona(id);
   }
 
 }
