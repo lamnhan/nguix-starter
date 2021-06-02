@@ -9,6 +9,9 @@ export class SpinnerComponent implements OnInit {
 
   constructor() { }
 
+  /**
+   * @ignore
+   */
   ngOnInit(): void {
   }
 

@@ -10,14 +10,14 @@
 
     <app-compbody
       [componentTemplate]="componentTemplate"
-      apiSrc="https://raw.githubusercontent.com/lamnhan/nguix-starter/main/docs/content/components/pwa-box.md"
+      apiSrc="/content/components/pwa-box.md"
       importName="NguixPwaBoxComponentModule"
       htmlCode="&lt;nguix-pwa-box&gt;&lt;/nguix-pwa-box&gt;"
     ></app-compbody>
 
     <ng-template #componentTemplate>
       <div class="padding">
-        <nguix-pwa-box [pwaService]="pwa"></nguix-pwa-box>
+        <nguix-pwa-box></nguix-pwa-box>
       </div>
     </ng-template>
 

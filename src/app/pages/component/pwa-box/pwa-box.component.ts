@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { PwaService } from '@lamnhan/ngx-useful';
 
 import { DataService } from '../../../services/data.service';
 
@@ -10,10 +9,7 @@ import { DataService } from '../../../services/data.service';
 })
 export class PwaBoxComponent implements OnInit {
 
-  constructor(
-    public readonly pwa: PwaService,
-    public readonly data: DataService
-  ) { }
+  constructor(public readonly data: DataService) {}
 
   ngOnInit(): void {
   }

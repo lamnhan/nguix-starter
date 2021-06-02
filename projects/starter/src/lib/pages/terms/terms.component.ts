@@ -15,6 +15,9 @@ export class TermsPage implements OnInit, AfterViewInit, OnDestroy {
     'en-US': 'terms',
   };
 
+  /**
+   * @ignore
+   */
   public readonly page$ = this.settingService.onLocaleChanged.pipe(
     switchMap(locale =>
       this.pageDataService.getDoc(this.pageLocalizedIds[locale], {time: 10080 /* 7 days */})
@@ -22,9 +25,18 @@ export class TermsPage implements OnInit, AfterViewInit, OnDestroy {
   );
 
   constructor(
-    private metaService: MetaService,
-    private settingService: SettingService,
-    private pageDataService: PageDataService,
+    /**
+     * Inject() Requires the [MetaService](https://ngx-useful.lamnhan.com/service/meta)
+     */
+    public readonly metaService: MetaService,
+    /**
+     * Inject() Requires the [SettingService](https://ngx-useful.lamnhan.com/service/setting)
+     */
+    public readonly settingService: SettingService,
+    /**
+     * Inject() Requires the [PageDataService](https://ngx-useful.lamnhan.com/schemata/service/page)
+     */
+    public readonly pageDataService: PageDataService,
   ) {}
 
   /**

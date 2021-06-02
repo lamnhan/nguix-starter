@@ -15,6 +15,9 @@ export class ContentComponent implements OnInit {
 
   constructor() { }
 
+  /**
+   * @ignore
+   */
   ngOnInit(): void {
   }
 

@@ -14,6 +14,9 @@ export class Header2ndComponent implements OnInit {
 
   constructor() { }
 
+  /**
+   * @ignore
+   */
   ngOnInit(): void {
   }
 

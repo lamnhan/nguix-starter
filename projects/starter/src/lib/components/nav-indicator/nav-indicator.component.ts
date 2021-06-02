@@ -10,11 +10,18 @@ import { NavService } from '@lamnhan/ngx-useful';
 export class NavIndicatorComponent implements OnInit {
   @Input() i18n = false;
 
-  @Input() navService!: NavService;
   @Input() icon = '/assets/images/logo.svg';
   @Input() text = 'Please wait ...';
 
-  constructor() {}
+  constructor(
+    /**
+     * Inject() Requires the [NavService](https://ngx-useful.lamnhan.com/service/nav)
+     */
+    public readonly navService: NavService,
+  ) {}
 
+  /**
+   * @ignore
+   */
   ngOnInit(): void {}
 }

@@ -4,6 +4,9 @@ import { RouterLinkDirectiveModule } from '@lamnhan/ngx-useful';
 
 import { FooterComponent } from './footer.component';
 
+/**
+ * @ignore
+ */
 @NgModule({
   declarations: [FooterComponent],
   imports: [

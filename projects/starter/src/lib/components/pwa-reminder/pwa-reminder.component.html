@@ -1,5 +1,6 @@
 <div
-  class="nguix-pwa-reminder"
+  id="nguix-pwa-reminder"
+  class="host"
   *ngIf="pwaService && !pwaService.installed"
   [class]="pwaService.runtime"
   [class.show]="pwaService.reminderShowed"

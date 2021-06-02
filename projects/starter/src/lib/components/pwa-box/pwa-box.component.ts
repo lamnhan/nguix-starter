@@ -10,7 +10,6 @@ import {PwaService} from '@lamnhan/ngx-useful';
 export class PwaBoxComponent implements OnInit {
   @Input() i18n = false;
 
-  @Input() pwaService!: PwaService;
   @Input() title = 'Install app?';
   @Input() icon = '/assets/images/logo.svg';
   @Input() name = 'Install now';
@@ -19,7 +18,15 @@ export class PwaBoxComponent implements OnInit {
   @Output() action: EventEmitter<void> = new EventEmitter();
   @Output() dismiss: EventEmitter<void> = new EventEmitter();
 
-  constructor() {}
+  constructor(
+    /**
+     * Inject() Requires the [PwaService](https://ngx-useful.lamnhan.com/service/pwa)
+     */
+    public readonly pwaService: PwaService,
+  ) {}
 
+  /**
+   * @ignore
+   */
   ngOnInit(): void {}
 }

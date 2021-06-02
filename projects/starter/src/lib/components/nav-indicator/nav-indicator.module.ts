@@ -4,6 +4,9 @@ import { TranslocoModule } from '@ngneat/transloco';
 
 import {NavIndicatorComponent} from './nav-indicator.component';
 
+/**
+ * @ignore
+ */
 @NgModule({
   declarations: [
     NavIndicatorComponent,

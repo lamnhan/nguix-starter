@@ -7,6 +7,9 @@ import { NguixContentComponentModule } from '../../components/content/content.mo
 import { TermsRoutingModule } from './terms-routing.module';
 import { TermsPage } from './terms.component';
 
+/**
+ * @ignore
+ */
 
 @NgModule({
   declarations: [TermsPage],

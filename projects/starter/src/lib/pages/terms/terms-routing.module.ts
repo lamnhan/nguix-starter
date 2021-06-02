@@ -4,6 +4,9 @@ import { TermsPage } from './terms.component';
 
 const routes: Routes = [{ path: '', component: TermsPage }];
 
+/**
+ * @ignore
+ */
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]

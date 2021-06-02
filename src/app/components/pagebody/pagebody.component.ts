@@ -27,12 +27,12 @@ Or, through a proxy module:
 \`\`\`ts
 // wrapper.module.ts
 import { ${this.importName} } from '@lamnhan/nguix-starter';
-@NgModule({ imports: [${this.importName}] }) ${this.importName}WrapperModule {}
+@NgModule({ imports: [${this.importName}] }) ${this.importName.replace('Module', '')}WrapperModule {}
 \`\`\`
 
 \`\`\`ts
 // app-routing.module.ts
-{ path: 'path/to/page', loadChildren: () => import('./path/to/wrapper.module').then(m => m.${this.importName}WrapperModule) }
+{ path: 'path/to/page', loadChildren: () => import('./path/to/wrapper.module').then(m => m.${this.importName.replace('Module', '')}WrapperModule) }
 \`\`\``;
   }
 

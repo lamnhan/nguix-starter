@@ -51,6 +51,11 @@ export class DataService {
         level: 1,
         routerLink: ['guide', 'introduction']
       },
+      {
+        text: 'Contribution',
+        level: 1,
+        routerLink: ['guide', 'contribution']
+      },
   ];
 
   // components

@@ -53,11 +53,14 @@ export class OopsPage implements OnInit, AfterViewInit, OnDestroy {
 
   constructor(
     private route: ActivatedRoute,
-    private metaService: MetaService,
     /**
-     * @ignore
+     * Inject() Requires the [MetaService](https://ngx-useful.lamnhan.com/service/meta)
      */
-    public readonly setting: SettingService
+    public readonly metaService: MetaService,
+    /**
+     * Inject() Requires the [SettingService](https://ngx-useful.lamnhan.com/service/setting)
+     */
+    public readonly settingService: SettingService
   ) { }
 
   /**
@@ -76,7 +79,7 @@ export class OopsPage implements OnInit, AfterViewInit, OnDestroy {
    * @ignore
    */
   ngAfterViewInit() {
-    this.metaSubscription = this.setting.onLocaleChanged.subscribe(locale =>
+    this.metaSubscription = this.settingService.onLocaleChanged.subscribe(locale =>
       this.metaService.changePageMetas({
         title: 'Oops',
         description: 'Page not found!',

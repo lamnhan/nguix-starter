@@ -4,6 +4,9 @@ import { SettingPage } from './setting.component';
 
 const routes: Routes = [{ path: '', component: SettingPage }];
 
+/**
+ * @ignore
+ */
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]

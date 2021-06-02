@@ -7,6 +7,9 @@ import { NguixContentComponentModule } from '../../components/content/content.mo
 import { PrivacyRoutingModule } from './privacy-routing.module';
 import { PrivacyPage } from './privacy.component';
 
+/**
+ * @ignore
+ */
 
 @NgModule({
   declarations: [PrivacyPage],

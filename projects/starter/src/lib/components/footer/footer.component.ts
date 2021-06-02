@@ -12,5 +12,8 @@ export class FooterComponent implements OnInit {
 
   constructor() {}
 
+  /**
+   * @ignore
+   */
   ngOnInit(): void {}
 }

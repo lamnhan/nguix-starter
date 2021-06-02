@@ -15,6 +15,9 @@ import 'prismjs/components/prism-json.min.js';
 
 import { ContentComponent } from './content.component';
 
+/**
+ * @ignore
+ */
 @NgModule({
   declarations: [ContentComponent],
   imports: [

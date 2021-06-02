@@ -2,7 +2,7 @@ import { Component, OnInit, AfterViewInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { MetaService, SettingService, UserService } from '@lamnhan/ngx-useful';
+import { MetaService, SettingService } from '@lamnhan/ngx-useful';
 
 @Component({
   selector: 'nguix-setting-page',
@@ -59,15 +59,14 @@ export class SettingPage implements OnInit, AfterViewInit, OnDestroy {
 
   constructor(
     private route: ActivatedRoute,
-    private metaService: MetaService,
     /**
-     * @ignore
+     * Inject() Requires the [MetaService](https://ngx-useful.lamnhan.com/service/meta)
      */
-    public readonly user: UserService,
+    public readonly metaService: MetaService,
     /**
-     * @ignore
+     * Inject() Requires the [SettingService](https://ngx-useful.lamnhan.com/service/setting)
      */
-    public readonly setting: SettingService
+    public readonly settingService: SettingService
   ) { }
 
   /**
@@ -86,7 +85,7 @@ export class SettingPage implements OnInit, AfterViewInit, OnDestroy {
    * @ignore
    */
   ngAfterViewInit() {
-    this.metaSubscription = this.setting.onLocaleChanged.subscribe(locale =>
+    this.metaSubscription = this.settingService.onLocaleChanged.subscribe(locale =>
       this.metaService.changePageMetas({
         title: 'Settings',
         description: 'Change app settings',
@@ -98,6 +97,6 @@ export class SettingPage implements OnInit, AfterViewInit, OnDestroy {
    * @ignore
    */
   toggleTheme(e: any) {
-    return this.setting.changeTheme(e.target.checked ? 'dark' : 'light');
+    return this.settingService.changeTheme(e.target.checked ? 'dark' : 'light');
   }
 }

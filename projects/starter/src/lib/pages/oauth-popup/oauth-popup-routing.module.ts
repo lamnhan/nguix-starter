@@ -4,6 +4,9 @@ import { OauthPopupPage } from './oauth-popup.component';
 
 const routes: Routes = [{ path: '', component: OauthPopupPage }];
 
+/**
+ * @ignore
+ */
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]

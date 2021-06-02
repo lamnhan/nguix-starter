@@ -5,6 +5,9 @@ import { RouterLinkDirectiveModule } from '@lamnhan/ngx-useful';
 
 import { OopsComponent } from './oops.component';
 
+/**
+ * @ignore
+ */
 @NgModule({
   declarations: [OopsComponent],
   imports: [

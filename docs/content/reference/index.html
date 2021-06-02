@@ -70,12 +70,63 @@
 				</section>
 				<section id="tocx" data-note="AUTO-GENERATED CONTENT, DO NOT EDIT DIRECTLY!">
 					<ul>
+						<li><a href="#getting-started">Getting started</a><ul>
+								<li><a href="#installation">Installation</a></li>
+								<li><a href="#basic-usage">Basic usage</a></li>
+							</ul>
+						</li>
 						<li><a href="#modules">Modules</a></li>
 						<li><a href="#components">Components</a></li>
 						<li><a href="#services">Services</a></li>
 						<li><a href="#pipes">Pipes</a></li>
 						<li><a href="https://nguix-starter.lamnhan.com/content/reference">Detail API reference</a></li>
 					</ul>
+				</section>
+				<section id="main">
+					<a href="#getting-started" id="getting-started" style="color: inherit; text-decoration: none;">
+						<h2>Getting started</h2>
+					</a>
+					<p>Homepage: <a href="https://nguix-starter.lamnhan.com">https://nguix-starter.lamnhan.com</a></p>
+					<a href="#installation" id="installation" style="color: inherit; text-decoration: none;">
+						<h3>Installation</h3>
+					</a>
+					<p>Install theming, <a href="https://unistylus.lamnhan.com">@lamnhan/unistylus</a>:
+						```sh
+						npm install -S @lamnhan/unistylus@0.0.7
+					```</p>
+					<p>Install data models, <a href="https://schemata.lamnhan.com">@lamnhan/schemata</a>:
+						```sh
+						npm install -S @lamnhan/schemata@0.0.7
+					```</p>
+					<p>Install utilities, <a href="https://ngx-useful.lamnhan.com">@lamnhan/ngx-useful</a>:
+						```sh
+						npm install -S @lamnhan/ngx-useful@0.0.8
+					```</p>
+					<p>Install NGUIX library, <a href="https://nguix-starter.lamnhan.com">@lamnhan/nguix-starter</a>:
+						```sh
+						npm install -S @lamnhan/nguix-starter@0.0.5
+					```</p>
+					<a href="#basic-usage" id="basic-usage" style="color: inherit; text-decoration: none;">
+						<h3>Basic usage</h3>
+					</a>
+					<p>Use a component:
+						```ts
+						// import the module --&gt; app.module.ts
+						import { NguixHeaderComponentModule } from &#39;@lamnhan/nguix-starter&#39;;
+					```</p>
+					<p>```html</p>
+					<!--  use the component ~~> app.component.html -->
+					<p><nguix-header></nguix-header>
+					```</p>
+					<p>Use a page:
+						```ts
+						// define a route --&gt; app-routing.module.ts
+						const routes: Routes = [
+						{ path: &#39;**&#39;, loadChildren: () =&gt; import(&#39;@lamnhan/nguix-starter&#39;).then(m =&gt; m.NguixOopsPageModule) },
+						];
+					```</p>
+					<p>See <a href="https://nguix-starter.lamnhan.com/guides">guides</a> for more articles. Also see the list of <a href="https://nguix-starter.lamnhan.com/components">components</a>, <a href="https://nguix-starter.lamnhan.com/pages">pages</a>, <a href="https://nguix-starter.lamnhan.com/splashscreens">splashscreens</a>, <a href="https://nguix-starter.lamnhan.com/templates">templates</a>.</p>
+					<p>Also, visit the <a href="https://nguix-starter.lamnhan.com">homepage</a>.</p>
 				</section>
 				<section id="modules" data-note="AUTO-GENERATED CONTENT, DO NOT EDIT DIRECTLY!">
 					<h2><a name="modules"><p>Modules</p>
@@ -88,47 +139,7 @@
 							</tr>
 						</thead>
 						<tbody><tr>
-								<td><a href="https://nguix-starter.lamnhan.com/content/reference/classes/nguixoauthpopuppagemodule.html">NguixOauthPopupPageModule</a></td>
-								<td></td>
-							</tr>
-							<tr>
-								<td><a href="https://nguix-starter.lamnhan.com/content/reference/classes/nguixoopspagemodule.html">NguixOopsPageModule</a></td>
-								<td></td>
-							</tr>
-							<tr>
-								<td><a href="https://nguix-starter.lamnhan.com/content/reference/classes/nguixprivacypagemodule.html">NguixPrivacyPageModule</a></td>
-								<td></td>
-							</tr>
-							<tr>
-								<td><a href="https://nguix-starter.lamnhan.com/content/reference/classes/nguixsettingpagemodule.html">NguixSettingPageModule</a></td>
-								<td></td>
-							</tr>
-							<tr>
 								<td><a href="https://nguix-starter.lamnhan.com/content/reference/classes/nguixstartermodule.html">NguixStarterModule</a></td>
-								<td></td>
-							</tr>
-							<tr>
-								<td><a href="https://nguix-starter.lamnhan.com/content/reference/classes/nguixtermspagemodule.html">NguixTermsPageModule</a></td>
-								<td></td>
-							</tr>
-							<tr>
-								<td><a href="https://nguix-starter.lamnhan.com/content/reference/classes/oauthpopuproutingmodule.html">OauthPopupRoutingModule</a></td>
-								<td></td>
-							</tr>
-							<tr>
-								<td><a href="https://nguix-starter.lamnhan.com/content/reference/classes/oopsroutingmodule.html">OopsRoutingModule</a></td>
-								<td></td>
-							</tr>
-							<tr>
-								<td><a href="https://nguix-starter.lamnhan.com/content/reference/classes/privacyroutingmodule.html">PrivacyRoutingModule</a></td>
-								<td></td>
-							</tr>
-							<tr>
-								<td><a href="https://nguix-starter.lamnhan.com/content/reference/classes/settingroutingmodule.html">SettingRoutingModule</a></td>
-								<td></td>
-							</tr>
-							<tr>
-								<td><a href="https://nguix-starter.lamnhan.com/content/reference/classes/termsroutingmodule.html">TermsRoutingModule</a></td>
 								<td></td>
 							</tr>
 					</tbody></table>
@@ -223,55 +234,10 @@
 						<a href="classes/navindicatorcomponent.html" class="tsd-kind-icon">Nav<wbr>Indicator<wbr>Component</a>
 					</li>
 					<li class=" tsd-kind-class">
-						<a href="classes/nguixcontentcomponentmodule.html" class="tsd-kind-icon">Nguix<wbr>Content<wbr>Component<wbr>Module</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="classes/nguixfootercomponentmodule.html" class="tsd-kind-icon">Nguix<wbr>Footer<wbr>Component<wbr>Module</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="classes/nguixheader2ndcomponentmodule.html" class="tsd-kind-icon">Nguix<wbr>Header2nd<wbr>Component<wbr>Module</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="classes/nguixheadercomponentmodule.html" class="tsd-kind-icon">Nguix<wbr>Header<wbr>Component<wbr>Module</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="classes/nguixnavindicatorcomponentmodule.html" class="tsd-kind-icon">Nguix<wbr>Nav<wbr>Indicator<wbr>Component<wbr>Module</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="classes/nguixoauthpopuppagemodule.html" class="tsd-kind-icon">Nguix<wbr>Oauth<wbr>Popup<wbr>Page<wbr>Module</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="classes/nguixoopscomponentmodule.html" class="tsd-kind-icon">Nguix<wbr>Oops<wbr>Component<wbr>Module</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="classes/nguixoopspagemodule.html" class="tsd-kind-icon">Nguix<wbr>Oops<wbr>Page<wbr>Module</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="classes/nguixprivacypagemodule.html" class="tsd-kind-icon">Nguix<wbr>Privacy<wbr>Page<wbr>Module</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="classes/nguixpwaboxcomponentmodule.html" class="tsd-kind-icon">Nguix<wbr>Pwa<wbr>Box<wbr>Component<wbr>Module</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="classes/nguixpwaremindercomponentmodule.html" class="tsd-kind-icon">Nguix<wbr>Pwa<wbr>Reminder<wbr>Component<wbr>Module</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="classes/nguixsettingpagemodule.html" class="tsd-kind-icon">Nguix<wbr>Setting<wbr>Page<wbr>Module</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="classes/nguixspinnercomponentmodule.html" class="tsd-kind-icon">Nguix<wbr>Spinner<wbr>Component<wbr>Module</a>
-					</li>
-					<li class=" tsd-kind-class">
 						<a href="classes/nguixstartermodule.html" class="tsd-kind-icon">Nguix<wbr>Starter<wbr>Module</a>
 					</li>
 					<li class=" tsd-kind-class">
-						<a href="classes/nguixtermspagemodule.html" class="tsd-kind-icon">Nguix<wbr>Terms<wbr>Page<wbr>Module</a>
-					</li>
-					<li class=" tsd-kind-class">
 						<a href="classes/oauthpopuppage.html" class="tsd-kind-icon">Oauth<wbr>Popup<wbr>Page</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="classes/oauthpopuproutingmodule.html" class="tsd-kind-icon">Oauth<wbr>Popup<wbr>Routing<wbr>Module</a>
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="classes/oopscomponent.html" class="tsd-kind-icon">Oops<wbr>Component</a>
@@ -280,13 +246,7 @@
 						<a href="classes/oopspage.html" class="tsd-kind-icon">Oops<wbr>Page</a>
 					</li>
 					<li class=" tsd-kind-class">
-						<a href="classes/oopsroutingmodule.html" class="tsd-kind-icon">Oops<wbr>Routing<wbr>Module</a>
-					</li>
-					<li class=" tsd-kind-class">
 						<a href="classes/privacypage.html" class="tsd-kind-icon">Privacy<wbr>Page</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="classes/privacyroutingmodule.html" class="tsd-kind-icon">Privacy<wbr>Routing<wbr>Module</a>
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="classes/pwaboxcomponent.html" class="tsd-kind-icon">Pwa<wbr>Box<wbr>Component</a>
@@ -298,16 +258,10 @@
 						<a href="classes/settingpage.html" class="tsd-kind-icon">Setting<wbr>Page</a>
 					</li>
 					<li class=" tsd-kind-class">
-						<a href="classes/settingroutingmodule.html" class="tsd-kind-icon">Setting<wbr>Routing<wbr>Module</a>
-					</li>
-					<li class=" tsd-kind-class">
 						<a href="classes/spinnercomponent.html" class="tsd-kind-icon">Spinner<wbr>Component</a>
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="classes/termspage.html" class="tsd-kind-icon">Terms<wbr>Page</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="classes/termsroutingmodule.html" class="tsd-kind-icon">Terms<wbr>Routing<wbr>Module</a>
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#context" class="tsd-kind-icon">context</a>

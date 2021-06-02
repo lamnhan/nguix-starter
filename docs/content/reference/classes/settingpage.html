@@ -95,7 +95,9 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="settingpage.html#i18n" class="tsd-kind-icon">i18n</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="settingpage.html#localetitle" class="tsd-kind-icon">locale<wbr>Title</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="settingpage.html#metaservice" class="tsd-kind-icon">meta<wbr>Service</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="settingpage.html#personatitle" class="tsd-kind-icon">persona<wbr>Title</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="settingpage.html#settingservice" class="tsd-kind-icon">setting<wbr>Service</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="settingpage.html#themedarkmode" class="tsd-kind-icon">theme<wbr>Dark<wbr>Mode</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="settingpage.html#themetitle" class="tsd-kind-icon">theme<wbr>Title</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="settingpage.html#title" class="tsd-kind-icon">title</a></li>
@@ -110,13 +112,13 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Setting<wbr>Page<span class="tsd-signature-symbol">(</span>route<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ActivatedRoute</span>, metaService<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">MetaService</span>, user<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">UserService</span>, setting<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">SettingService</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="settingpage.html" class="tsd-signature-type">SettingPage</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Setting<wbr>Page<span class="tsd-signature-symbol">(</span>route<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ActivatedRoute</span>, metaService<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">MetaService</span>, settingService<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">SettingService</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="settingpage.html" class="tsd-signature-type">SettingPage</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in projects/starter/src/lib/pages/setting/setting.component.ts:58</li>
+									<li>Defined in <a href="https://github.com/lamnhan/nguix-starter/blob/208befd/projects/starter/src/lib/pages/setting/setting.component.ts#L58">projects/starter/src/lib/pages/setting/setting.component.ts:58</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -128,10 +130,7 @@
 									<h5>metaService: <span class="tsd-signature-type">MetaService</span></h5>
 								</li>
 								<li>
-									<h5>user: <span class="tsd-signature-type">UserService</span></h5>
-								</li>
-								<li>
-									<h5>setting: <span class="tsd-signature-type">SettingService</span></h5>
+									<h5>settingService: <span class="tsd-signature-type">SettingService</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="settingpage.html" class="tsd-signature-type">SettingPage</a></h4>
@@ -147,7 +146,7 @@
 					<div class="tsd-signature tsd-kind-icon">i18n<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in projects/starter/src/lib/pages/setting/setting.component.ts:33</li>
+							<li>Defined in <a href="https://github.com/lamnhan/nguix-starter/blob/208befd/projects/starter/src/lib/pages/setting/setting.component.ts#L33">projects/starter/src/lib/pages/setting/setting.component.ts:33</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -162,7 +161,7 @@
 					<div class="tsd-signature tsd-kind-icon">locale<wbr>Title<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;Locale&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in projects/starter/src/lib/pages/setting/setting.component.ts:53</li>
+							<li>Defined in <a href="https://github.com/lamnhan/nguix-starter/blob/208befd/projects/starter/src/lib/pages/setting/setting.component.ts#L53">projects/starter/src/lib/pages/setting/setting.component.ts:53</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -172,12 +171,27 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="metaservice" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> meta<wbr>Service</h3>
+					<div class="tsd-signature tsd-kind-icon">meta<wbr>Service<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">MetaService</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lamnhan/nguix-starter/blob/208befd/projects/starter/src/lib/pages/setting/setting.component.ts#L65">projects/starter/src/lib/pages/setting/setting.component.ts:65</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Inject() Requires the <a href="https://ngx-useful.lamnhan.com/service/meta">MetaService</a></p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="personatitle" class="tsd-anchor"></a>
 					<h3>persona<wbr>Title</h3>
 					<div class="tsd-signature tsd-kind-icon">persona<wbr>Title<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;Persona&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in projects/starter/src/lib/pages/setting/setting.component.ts:58</li>
+							<li>Defined in <a href="https://github.com/lamnhan/nguix-starter/blob/208befd/projects/starter/src/lib/pages/setting/setting.component.ts#L58">projects/starter/src/lib/pages/setting/setting.component.ts:58</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -187,12 +201,27 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="settingservice" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> setting<wbr>Service</h3>
+					<div class="tsd-signature tsd-kind-icon">setting<wbr>Service<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">SettingService</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lamnhan/nguix-starter/blob/208befd/projects/starter/src/lib/pages/setting/setting.component.ts#L69">projects/starter/src/lib/pages/setting/setting.component.ts:69</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Inject() Requires the <a href="https://ngx-useful.lamnhan.com/service/setting">SettingService</a></p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="themedarkmode" class="tsd-anchor"></a>
 					<h3>theme<wbr>Dark<wbr>Mode</h3>
 					<div class="tsd-signature tsd-kind-icon">theme<wbr>Dark<wbr>Mode<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;Dark mode&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in projects/starter/src/lib/pages/setting/setting.component.ts:48</li>
+							<li>Defined in <a href="https://github.com/lamnhan/nguix-starter/blob/208befd/projects/starter/src/lib/pages/setting/setting.component.ts#L48">projects/starter/src/lib/pages/setting/setting.component.ts:48</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -207,7 +236,7 @@
 					<div class="tsd-signature tsd-kind-icon">theme<wbr>Title<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;Theme&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in projects/starter/src/lib/pages/setting/setting.component.ts:43</li>
+							<li>Defined in <a href="https://github.com/lamnhan/nguix-starter/blob/208befd/projects/starter/src/lib/pages/setting/setting.component.ts#L43">projects/starter/src/lib/pages/setting/setting.component.ts:43</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -222,7 +251,7 @@
 					<div class="tsd-signature tsd-kind-icon">title<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;Settings&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in projects/starter/src/lib/pages/setting/setting.component.ts:38</li>
+							<li>Defined in <a href="https://github.com/lamnhan/nguix-starter/blob/208befd/projects/starter/src/lib/pages/setting/setting.component.ts#L38">projects/starter/src/lib/pages/setting/setting.component.ts:38</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -259,55 +288,10 @@
 						<a href="navindicatorcomponent.html" class="tsd-kind-icon">Nav<wbr>Indicator<wbr>Component</a>
 					</li>
 					<li class=" tsd-kind-class">
-						<a href="nguixcontentcomponentmodule.html" class="tsd-kind-icon">Nguix<wbr>Content<wbr>Component<wbr>Module</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="nguixfootercomponentmodule.html" class="tsd-kind-icon">Nguix<wbr>Footer<wbr>Component<wbr>Module</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="nguixheader2ndcomponentmodule.html" class="tsd-kind-icon">Nguix<wbr>Header2nd<wbr>Component<wbr>Module</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="nguixheadercomponentmodule.html" class="tsd-kind-icon">Nguix<wbr>Header<wbr>Component<wbr>Module</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="nguixnavindicatorcomponentmodule.html" class="tsd-kind-icon">Nguix<wbr>Nav<wbr>Indicator<wbr>Component<wbr>Module</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="nguixoauthpopuppagemodule.html" class="tsd-kind-icon">Nguix<wbr>Oauth<wbr>Popup<wbr>Page<wbr>Module</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="nguixoopscomponentmodule.html" class="tsd-kind-icon">Nguix<wbr>Oops<wbr>Component<wbr>Module</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="nguixoopspagemodule.html" class="tsd-kind-icon">Nguix<wbr>Oops<wbr>Page<wbr>Module</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="nguixprivacypagemodule.html" class="tsd-kind-icon">Nguix<wbr>Privacy<wbr>Page<wbr>Module</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="nguixpwaboxcomponentmodule.html" class="tsd-kind-icon">Nguix<wbr>Pwa<wbr>Box<wbr>Component<wbr>Module</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="nguixpwaremindercomponentmodule.html" class="tsd-kind-icon">Nguix<wbr>Pwa<wbr>Reminder<wbr>Component<wbr>Module</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="nguixsettingpagemodule.html" class="tsd-kind-icon">Nguix<wbr>Setting<wbr>Page<wbr>Module</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="nguixspinnercomponentmodule.html" class="tsd-kind-icon">Nguix<wbr>Spinner<wbr>Component<wbr>Module</a>
-					</li>
-					<li class=" tsd-kind-class">
 						<a href="nguixstartermodule.html" class="tsd-kind-icon">Nguix<wbr>Starter<wbr>Module</a>
 					</li>
 					<li class=" tsd-kind-class">
-						<a href="nguixtermspagemodule.html" class="tsd-kind-icon">Nguix<wbr>Terms<wbr>Page<wbr>Module</a>
-					</li>
-					<li class=" tsd-kind-class">
 						<a href="oauthpopuppage.html" class="tsd-kind-icon">Oauth<wbr>Popup<wbr>Page</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="oauthpopuproutingmodule.html" class="tsd-kind-icon">Oauth<wbr>Popup<wbr>Routing<wbr>Module</a>
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="oopscomponent.html" class="tsd-kind-icon">Oops<wbr>Component</a>
@@ -316,13 +300,7 @@
 						<a href="oopspage.html" class="tsd-kind-icon">Oops<wbr>Page</a>
 					</li>
 					<li class=" tsd-kind-class">
-						<a href="oopsroutingmodule.html" class="tsd-kind-icon">Oops<wbr>Routing<wbr>Module</a>
-					</li>
-					<li class=" tsd-kind-class">
 						<a href="privacypage.html" class="tsd-kind-icon">Privacy<wbr>Page</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="privacyroutingmodule.html" class="tsd-kind-icon">Privacy<wbr>Routing<wbr>Module</a>
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="pwaboxcomponent.html" class="tsd-kind-icon">Pwa<wbr>Box<wbr>Component</a>
@@ -345,7 +323,13 @@
 								<a href="settingpage.html#localetitle" class="tsd-kind-icon">locale<wbr>Title</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="settingpage.html#metaservice" class="tsd-kind-icon">meta<wbr>Service</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="settingpage.html#personatitle" class="tsd-kind-icon">persona<wbr>Title</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="settingpage.html#settingservice" class="tsd-kind-icon">setting<wbr>Service</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="settingpage.html#themedarkmode" class="tsd-kind-icon">theme<wbr>Dark<wbr>Mode</a>
@@ -361,16 +345,10 @@
 				</ul>
 				<ul class="after-current">
 					<li class=" tsd-kind-class">
-						<a href="settingroutingmodule.html" class="tsd-kind-icon">Setting<wbr>Routing<wbr>Module</a>
-					</li>
-					<li class=" tsd-kind-class">
 						<a href="spinnercomponent.html" class="tsd-kind-icon">Spinner<wbr>Component</a>
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="termspage.html" class="tsd-kind-icon">Terms<wbr>Page</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="termsroutingmodule.html" class="tsd-kind-icon">Terms<wbr>Routing<wbr>Module</a>
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="../globals.html#context" class="tsd-kind-icon">context</a>

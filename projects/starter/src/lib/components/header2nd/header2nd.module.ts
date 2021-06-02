@@ -4,6 +4,9 @@ import { RouterLinkDirectiveModule } from '@lamnhan/ngx-useful';
 
 import { Header2ndComponent } from './header2nd.component';
 
+/**
+ * @ignore
+ */
 @NgModule({
   declarations: [Header2ndComponent],
   imports: [

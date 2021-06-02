@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./oauth-popup.component.scss']
 })
 export class OauthPopupPage implements OnInit {
+
   constructor() { }
 
   /**

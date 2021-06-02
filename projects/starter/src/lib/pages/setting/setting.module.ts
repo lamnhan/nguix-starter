@@ -5,6 +5,9 @@ import { TranslocoModule } from '@ngneat/transloco';
 import { SettingRoutingModule } from './setting-routing.module';
 import { SettingPage } from './setting.component';
 
+/**
+ * @ignore
+ */
 @NgModule({
   declarations: [SettingPage],
   imports: [

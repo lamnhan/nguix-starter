@@ -4,6 +4,9 @@ import { TranslocoModule } from '@ngneat/transloco';
 
 import {PwaReminderComponent} from './pwa-reminder.component';
 
+/**
+ * @ignore
+ */
 @NgModule({
   declarations: [
     PwaReminderComponent,

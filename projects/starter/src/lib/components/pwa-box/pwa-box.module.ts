@@ -4,6 +4,9 @@ import { TranslocoModule } from '@ngneat/transloco';
 
 import {PwaBoxComponent} from './pwa-box.component';
 
+/**
+ * @ignore
+ */
 @NgModule({
   declarations: [
     PwaBoxComponent,

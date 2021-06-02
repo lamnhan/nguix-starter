@@ -11,7 +11,7 @@
       <label class="switch">
         <input type="checkbox"
           id="theming"
-          [checked]="setting.theme==='dark'"
+          [checked]="settingService.theme==='dark'"
           (change)="toggleTheme($event)">
         <span class="slider round"></span>
       </label>
@@ -23,9 +23,9 @@
     <div class="title">{{ !pageData.i18n ? pageData.localeTitle : ('LOCALE.TITLE' | transloco) }}</div>
     <div class="body">
       <button
-        *ngFor="let localeItem of setting.locales"
-        [class]="setting.locale === localeItem.value ? 'button-primary' : 'button-outline-medium'"
-        (click)="setting.changeLocale(localeItem.value)"
+        *ngFor="let localeItem of settingService.locales"
+        [class]="settingService.locale === localeItem.value ? 'button-primary' : 'button-outline-medium'"
+        (click)="settingService.changeLocale(localeItem.value)"
       >{{ localeItem.text }}</button>
     </div>
   </section>
@@ -34,10 +34,10 @@
     <div class="title">{{ !pageData.i18n ? pageData.personaTitle : ('PERSONA.TITLE' | transloco) }}</div>
     <div class="body">
       <ul>
-        <li *ngFor="let personaItem of setting.personas">
+        <li *ngFor="let personaItem of settingService.personas">
           <button
-            [class]="setting.persona === personaItem.value ? 'button-secondary' : 'button-outline-medium'"
-            (click)="setting.changePersona(personaItem.value)"
+            [class]="settingService.persona === personaItem.value ? 'button-secondary' : 'button-outline-medium'"
+            (click)="settingService.changePersona(personaItem.value)"
           >{{ !pageData.i18n ? personaItem.text : (personaItem.text | transloco) }}</button>
         </li>
       </ul>

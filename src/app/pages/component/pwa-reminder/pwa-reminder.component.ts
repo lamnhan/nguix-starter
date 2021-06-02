@@ -15,7 +15,7 @@ export class PwaReminderComponent implements OnInit {
   }
 
   toggleReminder() {
-    const el = document.querySelector('.nguix-pwa-reminder');
+    const el = document.querySelector('#nguix-pwa-reminder');
     if (el) {
       el.classList.toggle('show');
     }

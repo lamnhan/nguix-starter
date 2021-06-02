@@ -7,6 +7,9 @@ import { NguixOopsComponentModule } from '../../components/oops/oops.module';
 import { OopsRoutingModule } from './oops-routing.module';
 import { OopsPage } from './oops.component';
 
+/**
+ * @ignore
+ */
 
 @NgModule({
   declarations: [OopsPage],
