@@ -14,7 +14,7 @@
         [target]="menuItem.target"
         [usefulRouterLink]="menuItem.routerLink"
         usefulRouterLinkActive="active"
-      >{{ !i18n ? menuItem.text : (menuItem.text | transloco) }}</a>
+      >{{ !i18n ? menuItem.text : ((menuItem.text || '') | transloco) }}</a>
     </li>
   </ul>
 
