@@ -1,3 +1,4 @@
+<ng-container *transloco="let t">
 <div
   id="nguix-nav-indicator"
   class="host"
@@ -6,6 +7,7 @@
 >
   <div class="body" (click)="navService.hideLoadingIndicator()">
     <img [src]="icon">
-    <span>{{ !i18n ? text : ('NGUIX_NAV_INDICATOR.TEXT' | transloco) }}</span>
+    <span>{{ !i18n ? text : t('NGUIX_NAV_INDICATOR.TEXT') || text }}</span>
   </div>
 </div>
+</ng-container>

@@ -3,6 +3,7 @@ import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { TranslocoService } from '@ngneat/transloco';
 import {
+  MenuItem,
   // normal services
   LocalstorageService,
   CacheService,
@@ -26,6 +27,12 @@ import {
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+  footerMenu: MenuItem[] = [
+    { text: 'APP.SETTING', routerLink: ['setting'] },
+    { text: 'APP.TERMS', routerLink: ['terms'] },
+    { text: 'APP.PRIVACY', routerLink: ['privacy'] },
+  ];
 
   constructor(
     private firebaseFirestore: AngularFirestore,
@@ -115,10 +122,10 @@ export class AppComponent {
       {},
       { settingService: this.settingService },
       {
-        home: { name: 'home', text: 'APP.HOME', routerLink: [''], icon: 'icon-home' },
-        about: { name: 'about', text: 'APP.ABOUT', routerLink: ['about'], icon: 'icon-about' },
-        posts: { name: 'posts', text: 'APP.POSTS', routerLink: ['posts'], icon: 'icon-posts', activeAlso: ['post'] },
-        products: { name: 'products', text: 'APP.PRODUCTS', routerLink: ['products'], icon: 'icon-products', activeAlso: ['product'] },
+        home: { name: 'home', text: 'APP.HOME', routerLink: [''] },
+        about: { name: 'about', text: 'APP.ABOUT', routerLink: ['about'] },
+        posts: { name: 'posts', text: 'APP.POSTS', routerLink: ['posts'], activeAlso: ['post'] },
+        products: { name: 'products', text: 'APP.PRODUCTS', routerLink: ['products'], activeAlso: ['product'] },
       }
     );
     this.metaService.init(

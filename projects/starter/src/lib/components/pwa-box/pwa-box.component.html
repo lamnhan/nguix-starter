@@ -1,16 +1,18 @@
+<ng-container *transloco="let t">
 <div class="host" *ngIf="pwaService && !pwaService.installed">
 
   <div class="head">
-    <span class="title">{{ !i18n ? title : ('NGUIX_PWA_BOX.TITLE' | transloco) }}</span>
+    <span class="title">{{ !i18n ? title : t('NGUIX_PWA_BOX.TITLE') || title }}</span>
     <button class="close button-clear" (click)="dismiss.emit()">✕</button>
   </div>
 
   <div class="body" (click)="action.emit()">
     <img class="thumbnail" [src]="icon" alt="name">
     <div class="text">
-      <strong>{{ !i18n ? name : ('NGUIX_PWA_BOX.NAME' | transloco) }}</strong>
-      <span>{{ !i18n ? tagline : ('NGUIX_PWA_BOX.TAGLINE' | transloco) }}</span>
+      <strong>{{ !i18n ? name : t('NGUIX_PWA_BOX.NAME') || name }}</strong>
+      <span>{{ !i18n ? tagline : t('NGUIX_PWA_BOX.TAGLINE') || tagline }}</span>
     </div>
   </div>
 
 </div>
+</ng-container>

@@ -76,8 +76,6 @@
 				<h3>Implements</h3>
 				<ul class="tsd-hierarchy">
 					<li><span class="tsd-signature-type">OnInit</span></li>
-					<li><span class="tsd-signature-type">AfterViewInit</span></li>
-					<li><span class="tsd-signature-type">OnDestroy</span></li>
 				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
@@ -93,10 +91,17 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="termspage.html#i18n" class="tsd-kind-icon">i18n</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="termspage.html#id" class="tsd-kind-icon">id</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="termspage.html#metaservice" class="tsd-kind-icon">meta<wbr>Service</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="termspage.html#page_" class="tsd-kind-icon">page$</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="termspage.html#pagedataservice" class="tsd-kind-icon">page<wbr>Data<wbr>Service</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="termspage.html#settingservice" class="tsd-kind-icon">setting<wbr>Service</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Object literals</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-object-literal tsd-parent-kind-class"><a href="termspage.html#ids" class="tsd-kind-icon">ids</a></li>
 							</ul>
 						</section>
 					</div>
@@ -108,17 +113,20 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Terms<wbr>Page<span class="tsd-signature-symbol">(</span>metaService<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">MetaService</span>, settingService<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">SettingService</span>, pageDataService<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">PageDataService</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="termspage.html" class="tsd-signature-type">TermsPage</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Terms<wbr>Page<span class="tsd-signature-symbol">(</span>route<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ActivatedRoute</span>, metaService<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">MetaService</span>, settingService<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">SettingService</span>, pageDataService<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">PageDataService</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="termspage.html" class="tsd-signature-type">TermsPage</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/lamnhan/nguix-starter/blob/208befd/projects/starter/src/lib/pages/terms/terms.component.ts#L22">projects/starter/src/lib/pages/terms/terms.component.ts:22</a></li>
+									<li>Defined in projects/starter/src/lib/pages/terms/terms.component.ts:66</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
+								<li>
+									<h5>route: <span class="tsd-signature-type">ActivatedRoute</span></h5>
+								</li>
 								<li>
 									<h5>metaService: <span class="tsd-signature-type">MetaService</span></h5>
 								</li>
@@ -137,12 +145,42 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="i18n" class="tsd-anchor"></a>
+					<h3>i18n</h3>
+					<div class="tsd-signature tsd-kind-icon">i18n<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in projects/starter/src/lib/pages/terms/terms.component.ts:54</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Enable localization.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="id" class="tsd-anchor"></a>
+					<h3>id</h3>
+					<div class="tsd-signature tsd-kind-icon">id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;terms&quot;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in projects/starter/src/lib/pages/terms/terms.component.ts:59</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Privacy page id.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="metaservice" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> meta<wbr>Service</h3>
 					<div class="tsd-signature tsd-kind-icon">meta<wbr>Service<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">MetaService</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/lamnhan/nguix-starter/blob/208befd/projects/starter/src/lib/pages/terms/terms.component.ts#L28">projects/starter/src/lib/pages/terms/terms.component.ts:28</a></li>
+							<li>Defined in projects/starter/src/lib/pages/terms/terms.component.ts:73</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -152,22 +190,12 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="page_" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> page$</h3>
-					<div class="tsd-signature tsd-kind-icon">page$<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Page</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = this.settingService.onLocaleChanged.pipe(switchMap(locale &#x3D;&gt;this.pageDataService.getDoc(this.pageLocalizedIds[locale], {time: 10080 /* 7 days */})),)</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/lamnhan/nguix-starter/blob/208befd/projects/starter/src/lib/pages/terms/terms.component.ts#L18">projects/starter/src/lib/pages/terms/terms.component.ts:18</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="pagedataservice" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> page<wbr>Data<wbr>Service</h3>
 					<div class="tsd-signature tsd-kind-icon">page<wbr>Data<wbr>Service<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">PageDataService</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/lamnhan/nguix-starter/blob/208befd/projects/starter/src/lib/pages/terms/terms.component.ts#L36">projects/starter/src/lib/pages/terms/terms.component.ts:36</a></li>
+							<li>Defined in projects/starter/src/lib/pages/terms/terms.component.ts:81</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -182,7 +210,7 @@
 					<div class="tsd-signature tsd-kind-icon">setting<wbr>Service<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">SettingService</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/lamnhan/nguix-starter/blob/208befd/projects/starter/src/lib/pages/terms/terms.component.ts#L32">projects/starter/src/lib/pages/terms/terms.component.ts:32</a></li>
+							<li>Defined in projects/starter/src/lib/pages/terms/terms.component.ts:77</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -190,6 +218,34 @@
 							<p>Inject() Requires the <a href="https://ngx-useful.lamnhan.com/service/setting">SettingService</a></p>
 						</div>
 					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Object literals</h2>
+				<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-class">
+					<a name="ids" class="tsd-anchor"></a>
+					<h3>ids</h3>
+					<div class="tsd-signature tsd-kind-icon">ids<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in projects/starter/src/lib/pages/terms/terms.component.ts:64</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>List of terms page localized ids.</p>
+						</div>
+					</div>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="ids.en_us" class="tsd-anchor"></a>
+						<h3>en-<wbr>US</h3>
+						<div class="tsd-signature tsd-kind-icon">en-<wbr>US<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;terms&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in projects/starter/src/lib/pages/terms/terms.component.ts:65</li>
+							</ul>
+						</aside>
+					</section>
 				</section>
 			</section>
 		</div>
@@ -254,16 +310,22 @@
 								<a href="termspage.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="termspage.html#metaservice" class="tsd-kind-icon">meta<wbr>Service</a>
+								<a href="termspage.html#i18n" class="tsd-kind-icon">i18n</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="termspage.html#page_" class="tsd-kind-icon">page$</a>
+								<a href="termspage.html#id" class="tsd-kind-icon">id</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="termspage.html#metaservice" class="tsd-kind-icon">meta<wbr>Service</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="termspage.html#pagedataservice" class="tsd-kind-icon">page<wbr>Data<wbr>Service</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="termspage.html#settingservice" class="tsd-kind-icon">setting<wbr>Service</a>
+							</li>
+							<li class=" tsd-kind-object-literal tsd-parent-kind-class">
+								<a href="termspage.html#ids" class="tsd-kind-icon">ids</a>
 							</li>
 						</ul>
 					</li>
@@ -290,7 +352,6 @@
 			<ul class="tsd-legend">
 				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
 				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
 			</ul>
 		</div>
 	</div>

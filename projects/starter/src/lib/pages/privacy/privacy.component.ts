@@ -1,6 +1,7 @@
-import { Component, OnInit, AfterViewInit, OnDestroy } from '@angular/core';
-import { Subscription } from 'rxjs';
-import { switchMap } from 'rxjs/operators';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { combineLatest, of } from 'rxjs';
+import { switchMap, map, tap } from 'rxjs/operators';
 import { MetaService, SettingService, PageDataService } from '@lamnhan/ngx-useful';
 
 @Component({
@@ -8,23 +9,64 @@ import { MetaService, SettingService, PageDataService } from '@lamnhan/ngx-usefu
   templateUrl: './privacy.component.html',
   styleUrls: ['./privacy.component.scss']
 })
-export class PrivacyPage implements OnInit, AfterViewInit, OnDestroy {
-  private metaSubscription!: Subscription;
-
-  private readonly pageLocalizedIds: Record<string, string> = {
-    'en-US': 'privacy',
-  };
+export class PrivacyPage implements OnInit {
 
   /**
    * @ignore
    */
-  public readonly page$ = this.settingService.onLocaleChanged.pipe(
-    switchMap(locale =>
-      this.pageDataService.getDoc(this.pageLocalizedIds[locale], {time: 10080 /* 7 days */})
+  public readonly page$ = this.route.data.pipe(
+    // retrieve data
+    map(data => ({
+      i18n: this.i18n,
+      id: this.id,
+      ids: this.ids,
+      ...data,
+    })),
+    // get locale
+    switchMap(data =>
+      combineLatest([
+        of(data),
+        !data.i18n
+          ? of('en-US')
+          : this.settingService.onLocaleChanged
+      ])
+    ),
+    // get the page
+    switchMap(([data, locale]) =>
+      this.pageDataService.getDoc(
+        !data.i18n
+          ? data.id
+          : data.ids[locale] || data.ids['en-US'],
+        { time: 10080 /* 7 days */ }
+      )
+    ),
+    // change metas
+    tap(page =>
+      !page
+        ? false
+        : this.metaService.changePageMetas({ title: page.title, description: page.excerpt})
     ),
   );
 
+  /**
+   * Enable localization.
+   */
+  i18n = false;
+
+  /**
+   * Privacy page id.
+   */
+  id = 'privacy';
+
+  /**
+   * List of privacy page localized ids.
+   */
+  ids: Record<string, string> = {
+    'en-US': 'privacy',
+  };
+
   constructor(
+    private route: ActivatedRoute,
     /**
      * Inject() Requires the [MetaService](https://ngx-useful.lamnhan.com/service/meta)
      */
@@ -42,24 +84,6 @@ export class PrivacyPage implements OnInit, AfterViewInit, OnDestroy {
   /**
    * @ignore
    */
-  ngOnDestroy(): void {
-    this.metaSubscription.unsubscribe();
-  }
-
-  /**
-   * @ignore
-   */
   ngOnInit(): void {}
 
-  /**
-   * @ignore
-   */
-  ngAfterViewInit() {
-    this.metaSubscription = this.settingService.onLocaleChanged.subscribe(locale =>
-      this.metaService.changePageMetas({
-        title: 'Privacy',
-        description: 'The privacy policy',
-      })
-    );
-  }
 }

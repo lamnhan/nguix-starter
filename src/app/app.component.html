@@ -18,7 +18,7 @@
   *ngIf="personaService.name!=='default'; else docsFooter"
   [i18n]="true"
   [text]="('PERSONA.' + personaService.name) | uppercase | transloco"
-  [menuItems]="personaService.menu"
+  [menuItems]="footerMenu"
 ></nguix-footer>
 <ng-template #docsFooter>
   <app-footer></app-footer>

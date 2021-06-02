@@ -7,9 +7,42 @@ const routes: Routes = [
    * general pages (including the ** route)
    */
   { path: 'oauth', loadChildren: () => import('@lamnhan/nguix-starter').then(m => m.NguixOauthPopupPageModule) },
-  { path: 'terms', loadChildren: () => import('@lamnhan/nguix-starter').then(m => m.NguixTermsPageModule) },
-  { path: 'privacy', loadChildren: () => import('@lamnhan/nguix-starter').then(m => m.NguixPrivacyPageModule) },
-  { path: 'setting', loadChildren: () => import('@lamnhan/nguix-starter').then(m => m.NguixSettingPageModule), data: {i18n: true} },
+  {
+    path: 'terms',
+    loadChildren: () => import('@lamnhan/nguix-starter').then(m => m.NguixTermsPageModule),
+    data: {
+      i18n: true,
+      ids: {
+        'en-US': 'terms',
+        'vi-VN': 'dieu-khoan',
+      },
+    }
+  },
+  {
+    path: 'privacy',
+    loadChildren: () => import('@lamnhan/nguix-starter').then(m => m.NguixPrivacyPageModule),
+    data: {
+      i18n: true,
+      ids: {
+        'en-US': 'privacy',
+        'vi-VN': 'bao-mat',
+      },
+    }
+  },
+  {
+    path: 'bao-mat',
+    loadChildren: () => import('@lamnhan/nguix-starter').then(m => m.NguixPrivacyPageModule),
+    data: {
+      id: 'bao-mat',
+    }
+  },
+  {
+    path: 'setting',
+    loadChildren: () => import('@lamnhan/nguix-starter').then(m => m.NguixSettingPageModule),
+    data: {
+      i18n: true,
+    }
+  },
   
   /**
    * documentation pages

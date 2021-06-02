@@ -1,3 +1,4 @@
+<ng-container *transloco="let t">
 <div class="host" [class.fixed]="fixed">
   <ul class="nav">
     <li *ngFor="let menuItem of menuItems">
@@ -6,7 +7,8 @@
         [target]="menuItem.target"
         [usefulRouterLink]="menuItem.routerLink"
         usefulRouterLinkActive="active"
-      >{{ !i18n ? menuItem.text : ((menuItem.text || '') | transloco) }}</a>
+      >{{ !i18n ? menuItem.text : t(menuItem.text || '') || menuItem.text }}</a>
     </li>
   </ul>
 </div>
+</ng-container>

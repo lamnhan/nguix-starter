@@ -1,5 +1,6 @@
+<ng-container *transloco="let t">
 <footer class="host">
-  <div class="text" [innerHtml]="!i18n ? text : ('NGUIX_FOOTER.TEXT' | transloco)"></div>
+  <div class="text" [innerHtml]="!i18n ? text : t('NGUIX_FOOTER.TEXT') || text"></div>
   <ul class="links">
     <li *ngFor="let menuItem of menuItems">
       <a
@@ -7,7 +8,8 @@
         [target]="menuItem.target"
         [usefulRouterLink]="menuItem.routerLink"
         usefulRouterLinkActive="active"
-      >{{ !i18n ? menuItem.text : ((menuItem.text || '') | transloco) }}</a>
+      >{{ !i18n ? menuItem.text : t(menuItem.text || '') || menuItem.text }}</a>
     </li>
   </ul>
 </footer>
+</ng-container>

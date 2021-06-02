@@ -1,3 +1,4 @@
+<ng-container *transloco="let t">
 <div
   id="nguix-pwa-reminder"
   class="host"
@@ -10,8 +11,8 @@
   <div class="head">
     <img class="icon" [src]="icon" alt="title">
     <div class="text">
-      <strong>{{ !i18n ? title : ('NGUIX_PWA_REMINDER.TITLE' | transloco) }}</strong>
-      <span>{{ !i18n ? text : ('NGUIX_PWA_REMINDER.TEXT' | transloco) }}</span>
+      <strong>{{ !i18n ? title : t('NGUIX_PWA_REMINDER.TITLE') || title }}</strong>
+      <span>{{ !i18n ? text : t('NGUIX_PWA_REMINDER.TEXT') || text }}</span>
     </div>
     <button class="close button-clear" (click)="pwaService.hideReminder()">✕</button>
   </div>
@@ -19,7 +20,7 @@
   <div class="body">
     <div
       [class]="pwaService.runtime + '-message'"
-      [innerHtml]="!i18n ? getMessage() : (getI18nMessageCode() | transloco)"
+      [innerHtml]="!i18n ? getMessage() : t(getI18nMessageCode()) || getMessage()"
     ></div>
   </div>
 
@@ -27,10 +28,11 @@
     <button
       class="dismiss button-link"
       (click)="pwaService.dismissReminder()"
-    >{{ !i18n ? dismissText : ('NGUIX_PWA_REMINDER.DISMISS_TEXT' | transloco) }}</button>
+    >{{ !i18n ? dismissText : t('NGUIX_PWA_REMINDER.DISMISS_TEXT') || dismissText }}</button>
     <button
       class="hide button-sm"
       (click)="pwaService.hideReminder()"
-    >{{ !i18n ? hideText : ('NGUIX_PWA_REMINDER.HIDE_TEXT' | transloco) }}</button>
+    >{{ !i18n ? hideText : t('NGUIX_PWA_REMINDER.HIDE_TEXT') || hideText }}</button>
   </div>
 </div>
+</ng-container>

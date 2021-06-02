@@ -1,13 +1,15 @@
+<ng-container *transloco="let t">
+
 <div class="host" *ngIf="pageData$ | async; let pageData">
 
   <section class="title">
-    <h3 class="text-medium">{{ !pageData.i18n ? pageData.title : ('APP.SETTING' | transloco) }}</h3>
+    <h3 class="text-medium">{{ !pageData.i18n ? pageData.title : t('APP.SETTING') || pageData.title }}</h3>
   </section>
 
   <section class="theme">
-    <div class="title">{{ !pageData.i18n ? pageData.themeTitle : ('THEME.TITLE' | transloco) }}</div>
+    <div class="title">{{ !pageData.i18n ? pageData.themeTitle : t('THEME.TITLE') || pageData.themeTitle }}</div>
     <div class="body">
-      <label class="text" for="theming">{{ !pageData.i18n ? pageData.themeDarkMode : ('THEME.DARK_MODE' | transloco) }}</label>
+      <label class="text" for="theming">{{ !pageData.i18n ? pageData.themeDarkMode : t('THEME.DARK_MODE') || pageData.themeDarkMode }}</label>
       <label class="switch">
         <input type="checkbox"
           id="theming"
@@ -20,7 +22,7 @@
   </section>
 
   <section class="locale">
-    <div class="title">{{ !pageData.i18n ? pageData.localeTitle : ('LOCALE.TITLE' | transloco) }}</div>
+    <div class="title">{{ !pageData.i18n ? pageData.localeTitle : t('LOCALE.TITLE') || pageData.localeTitle }}</div>
     <div class="body">
       <button
         *ngFor="let localeItem of settingService.locales"
@@ -31,20 +33,18 @@
   </section>
 
   <section class="persona">
-    <div class="title">{{ !pageData.i18n ? pageData.personaTitle : ('PERSONA.TITLE' | transloco) }}</div>
+    <div class="title">{{ !pageData.i18n ? pageData.personaTitle : t('PERSONA.TITLE') || pageData.personaTitle }}</div>
     <div class="body">
       <ul>
         <li *ngFor="let personaItem of settingService.personas">
           <button
             [class]="settingService.persona === personaItem.value ? 'button-secondary' : 'button-outline-medium'"
             (click)="settingService.changePersona(personaItem.value)"
-          >{{ !pageData.i18n ? personaItem.text : (personaItem.text | transloco) }}</button>
+          >{{ !pageData.i18n ? personaItem.text : t(personaItem.text) || personaItem.text }}</button>
         </li>
       </ul>
     </div>
   </section>
 
-
-  
-
 </div>
+</ng-container>
