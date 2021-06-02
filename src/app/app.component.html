@@ -1,11 +1,21 @@
-<app-header></app-header>
-<app-header2nd></app-header2nd>
+<nguix-header
+  *ngIf="personaService.name!=='default'; else docsHeaders"
+></nguix-header>
+<ng-template #docsHeaders>
+  <app-header></app-header>
+  <app-header2nd></app-header2nd>
+</ng-template>
 
 <main class="page-container">
   <router-outlet></router-outlet>
 </main>
 
-<app-footer></app-footer>
+<nguix-footer
+  *ngIf="personaService.name!=='default'; else docsFooter"
+></nguix-footer>
+<ng-template #docsFooter>
+  <app-footer></app-footer>
+</ng-template>
 
 <nguix-nav-indicator></nguix-nav-indicator>
 <nguix-pwa-reminder></nguix-pwa-reminder>

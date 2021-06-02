@@ -21,9 +21,15 @@ import {
   PageDataService,
   UserDataService,
 } from '@lamnhan/ngx-useful';
-import { NguixNavIndicatorComponentModule, NguixPwaReminderComponentModule } from '@lamnhan/nguix-starter';
+import {
+  NguixHeaderComponentModule,
+  NguixFooterComponentModule,
+  NguixNavIndicatorComponentModule,
+  NguixPwaReminderComponentModule
+} from '@lamnhan/nguix-starter';
 
 import { AppRoutingModule } from './app-routing.module';
+import { AppTranslateModule } from './app-translate.module';
 import { AppComponent } from './app.component';
 
 import { HeaderComponentModule } from './components/header/header.module';
@@ -35,11 +41,14 @@ import { FooterComponentModule } from './components/footer/footer.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    AppTranslateModule,
     AngularFireModule.initializeApp(environment.firebase),
     RouterLinkDirectiveModule,
     HeaderComponentModule,
     Header2ndComponentModule,
     FooterComponentModule,
+    NguixHeaderComponentModule,
+    NguixFooterComponentModule,
     NguixNavIndicatorComponentModule,
     NguixPwaReminderComponentModule,
   ],

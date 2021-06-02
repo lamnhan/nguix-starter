@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { TranslocoService } from '@ngneat/transloco';
 import {
   // normal services
   LocalstorageService,
@@ -28,7 +29,8 @@ export class AppComponent {
 
   constructor(
     private firebaseFirestore: AngularFirestore,
-    private readonly firebaseAuth: AngularFireAuth,
+    private firebaseAuth: AngularFireAuth,
+    private translateService: TranslocoService,
     private localstorageService: LocalstorageService,
     private cacheService: CacheService,
     private fetchService: FetchService,
@@ -37,12 +39,12 @@ export class AppComponent {
     public navService: NavService,
     private settingService: SettingService,
     public pwaService: PwaService,
-    private personaService: PersonaService,
+    public personaService: PersonaService,
     private databaseService: DatabaseService,
-    public readonly authService: AuthService,
+    public authService: AuthService,
     private userService: UserService,
     // data services
-    private readonly userDataService: UserDataService,
+    private userDataService: UserDataService,
   ) {
     this.initialize();
   }
@@ -71,15 +73,24 @@ export class AppComponent {
         onReady: () => this.appService.hideSplashScreen(),
       },
       {
+        themes: [
+          { text: 'THEME.LIGHT', value: 'light' },
+          { text: 'THEME.DARK', value: 'dark' },
+        ],
         personas: [
-          { text: 'Default', value: 'default' },
-          { text: 'Intro', value: 'intro' },
-          { text: 'Blog', value: 'blog' },
-          { text: 'Shop', value: 'shop' },
+          { text: 'PERSONA.DEFAULT', value: 'default' },
+          { text: 'PERSONA.INTRO', value: 'intro' },
+          { text: 'PERSONA.BLOG', value: 'blog' },
+          { text: 'PERSONA.SHOP', value: 'shop' },
+        ],
+        locales: [
+          { text: 'English', value: 'en-US' },
+          { text: 'Tiếng việt', value: 'vi-VN' },
         ],
       },
       {
-        localstorageService: this.localstorageService,
+        localstorageService: this.localstorageService,        
+        translateService: this.translateService,
         userService: this.userService,
       },
     );
@@ -88,8 +99,27 @@ export class AppComponent {
       { settingService: this.settingService },
     );
     this.pwaService.init({ reminder: false });
-    this.personaService.init({}, {},
+    this.personaService.init(
+      {
+        default: {}, // the documentation
+        intro: {
+          menu: ['home', 'about'],
+        },
+        blog: {
+          menu: ['home', 'posts', 'about'],
+        },
+        shop: {
+          menu: ['home', 'products', 'about'],
+        }
+      },
+      {},
       { settingService: this.settingService },
+      {
+        home: { name: 'home', text: 'APP.HOME', routerLink: [''], icon: 'icon-home' },
+        about: { name: 'about', text: 'APP.ABOUT', routerLink: ['about'], icon: 'icon-about' },
+        posts: { name: 'posts', text: 'APP.POSTS', routerLink: ['posts'], icon: 'icon-posts', activeAlso: ['post'] },
+        products: { name: 'products', text: 'APP.PRODUCTS', routerLink: ['products'], icon: 'icon-products', activeAlso: ['product'] },
+      }
     );
     this.metaService.init(
       {
@@ -103,6 +133,17 @@ export class AppComponent {
       },
       {},
       { settingService: this.settingService },
+      {
+        'vi-VN': {
+          title: 'NGUIX Bắt Đầu',
+          description: 'Bộ giao diện Angular khởi đâu.',
+          image: 'https://nguix-starter.lamnhan.com/assets/images/featured.jpg',
+          url: 'https://nguix-starter.lamnhan.com/vi-VN',
+          lang: 'vi',
+          ogLocale: 'vi-VN',
+          ogSiteName: 'NGUIX Bắt Đầu'
+        }
+      }
     );
   }
 }

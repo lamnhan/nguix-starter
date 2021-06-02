@@ -9,7 +9,7 @@ const routes: Routes = [
   { path: 'oauth', loadChildren: () => import('@lamnhan/nguix-starter').then(m => m.NguixOauthPopupPageModule) },
   { path: 'terms', loadChildren: () => import('@lamnhan/nguix-starter').then(m => m.NguixTermsPageModule) },
   { path: 'privacy', loadChildren: () => import('@lamnhan/nguix-starter').then(m => m.NguixPrivacyPageModule) },
-  { path: 'setting', loadChildren: () => import('@lamnhan/nguix-starter').then(m => m.NguixSettingPageModule) },
+  { path: 'setting', loadChildren: () => import('@lamnhan/nguix-starter').then(m => m.NguixSettingPageModule), data: {i18n: true} },
   
   /**
    * documentation pages
