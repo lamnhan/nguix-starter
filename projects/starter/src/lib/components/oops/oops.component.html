@@ -1,9 +1,5 @@
-<div class="nguix-oops">
-  <div class="image">
-    <img [src]="image" alt="404">
-  </div>
-  <p [innerHtml]="content"></p>
-  <p>
-    <a [href]="actionLink.href" [usefulRouterLink]="actionLink.routerLink">{{actionLink.text}}</a>
-  </p>
+<div class="host">
+  <div class="image"><img [src]="image" alt="404"></div>
+  <p [innerHtml]="!i18n ? content : ('OOPS.CONTENT' | transloco)"></p>
+  <p><a [usefulRouterLink]="actionLink">{{ !i18n ? actionText : ('OOPS.ACTION_TEXT' | transloco) }}</a></p>
 </div>

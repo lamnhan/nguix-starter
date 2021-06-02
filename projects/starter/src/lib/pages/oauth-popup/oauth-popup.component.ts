@@ -8,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class OauthPopupPage implements OnInit {
   constructor() { }
 
+  /**
+   * @ignore
+   */
   ngOnInit(): void {
     if (window.opener !== null && !window.opener.closed) {
       window.opener.handleOauthResult(window.location.hash);

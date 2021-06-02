@@ -20,5 +20,11 @@ module.exports = {
     'docs/content/components/nav-indicator.md': {main: ['NavIndicatorComponent', 'SUMMARY_PROPERTIES']},
     'docs/content/components/pwa-box.md': {main: ['PwaBoxComponent', 'SUMMARY_PROPERTIES']},
     'docs/content/components/pwa-reminder.md': {main: ['PwaReminderComponent', 'SUMMARY_PROPERTIES']},
+    // pages
+    'docs/content/pages/oauth-popup.md': {main: ['OauthPopupPage', 'SUMMARY_PROPERTIES']},
+    'docs/content/pages/oops.md': {main: ['OopsPage', 'SUMMARY_PROPERTIES']},
+    'docs/content/pages/terms.md': {main: ['TermsPage', 'SUMMARY_PROPERTIES']},
+    'docs/content/pages/privacy.md': {main: ['PrivacyPage', 'SUMMARY_PROPERTIES']},
+    'docs/content/pages/setting.md': {main: ['SettingPage', 'SUMMARY_PROPERTIES']},
   }
 };

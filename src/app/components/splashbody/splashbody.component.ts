@@ -28,15 +28,16 @@ export class SplashbodyComponent implements OnInit {
 
         this.usageContent =
 `
-Imports in the head of index.html:
+Imports the assets:
 \`\`\`html
 <!-- In-app splashscreen -->
 <link rel="stylesheet" href="https://unpkg.com/@lamnhan/nguix-starter@latest/src/splashscreens/${this.name}/index.css">
 <script defer src="https://unpkg.com/@lamnhan/nguix-starter@latest/src/splashscreens/${this.name}/index.js"></script>
 \`\`\`
 
-Put the template after <app-root>:
+Includes the template:
 \`\`\`html
+<!-- <app-root></app-root> -->
 ${htmlCode}
 \`\`\``;
     });

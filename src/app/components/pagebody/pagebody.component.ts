@@ -6,6 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./pagebody.component.scss']
 })
 export class PagebodyComponent implements OnInit {
+  @Input() apiSrc?: string;
   @Input() pageUrl = '/oops';
   @Input() importName = '...';
   
@@ -18,20 +19,20 @@ export class PagebodyComponent implements OnInit {
 `
 Use the page directly:
 \`\`\`ts
+// app-routing.module.ts
 { path: 'path/to/page', loadChildren: () => import('@lamnhan/nguix-starter').then(m => m.${this.importName}) }
 \`\`\`
 
 Or, through a proxy module:
 \`\`\`ts
-// import the page module
-import {${this.importName}} from '@lamnhan/nguix-starter';
-// create a proxy
+// wrapper.module.ts
+import { ${this.importName} } from '@lamnhan/nguix-starter';
 @NgModule({ imports: [${this.importName}] }) ${this.importName}WrapperModule {}
 \`\`\`
 
 \`\`\`ts
-// add the route
-{ path: 'path/to/page', loadChildren: () => import('./path/to/proxy/module').then(m => m.${this.importName}WrapperModule) }
+// app-routing.module.ts
+{ path: 'path/to/page', loadChildren: () => import('./path/to/wrapper.module').then(m => m.${this.importName}WrapperModule) }
 \`\`\``;
   }
 

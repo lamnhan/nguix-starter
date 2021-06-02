@@ -27,12 +27,21 @@ export class PrivacyPage implements OnInit, AfterViewInit, OnDestroy {
     private pageDataService: PageDataService,
   ) {}
 
+  /**
+   * @ignore
+   */
   ngOnDestroy(): void {
     this.metaSubscription.unsubscribe();
   }
 
+  /**
+   * @ignore
+   */
   ngOnInit(): void {}
 
+  /**
+   * @ignore
+   */
   ngAfterViewInit() {
     this.metaSubscription = this.settingService.onLocaleChanged.subscribe(locale =>
       this.metaService.changePageMetas({

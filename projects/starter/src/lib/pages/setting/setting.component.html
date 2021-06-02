@@ -1,13 +1,13 @@
-<div class="nguix-setting-page" *ngIf="pageData$ | async; let pageData">
+<div class="host" *ngIf="pageData$ | async; let pageData">
 
   <section class="title">
-    <h3 class="text-medium">Settings</h3>
+    <h3 class="text-medium">{{ !pageData.i18n ? pageData.title : ('APP.SETTING' | transloco) }}</h3>
   </section>
 
   <section class="theme">
-    <div class="title">Theme</div>
+    <div class="title">{{ !pageData.i18n ? pageData.themeTitle : ('THEME.TITLE' | transloco) }}</div>
     <div class="body">
-      <label class="text" for="theming">Dark mode</label>
+      <label class="text" for="theming">{{ !pageData.i18n ? pageData.themeDarkMode : ('THEME.DARK_MODE' | transloco) }}</label>
       <label class="switch">
         <input type="checkbox"
           id="theming"
@@ -20,7 +20,7 @@
   </section>
 
   <section class="locale">
-    <div class="title">Locale</div>
+    <div class="title">{{ !pageData.i18n ? pageData.localeTitle : ('LOCALE.TITLE' | transloco) }}</div>
     <div class="body">
       <button
         *ngFor="let localeItem of setting.locales"
@@ -31,14 +31,14 @@
   </section>
 
   <section class="persona">
-    <div class="title">Persona</div>
+    <div class="title">{{ !pageData.i18n ? pageData.personaTitle : ('PERSONA.TITLE' | transloco) }}</div>
     <div class="body">
       <ul>
         <li *ngFor="let personaItem of setting.personas">
           <button
             [class]="setting.persona === personaItem.value ? 'button-secondary' : 'button-outline-medium'"
             (click)="setting.changePersona(personaItem.value)"
-          >{{ personaItem.text }}</button>
+          >{{ !pageData.i18n ? personaItem.text : (personaItem.text | transloco) }}</button>
         </li>
       </ul>
     </div>

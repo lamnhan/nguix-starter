@@ -64,8 +64,10 @@
 
       strong {
         display: block;
-        font-weight: 500;
-        color: var(--app-color-foreground);
+        font-weight: normal;
+        color: var(--app-color-medium);
+        text-transform: uppercase;
+        padding-bottom: 1rem;
       }
 
       a {

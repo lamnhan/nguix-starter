@@ -76,6 +76,8 @@
 				<h3>Implements</h3>
 				<ul class="tsd-hierarchy">
 					<li><span class="tsd-signature-type">OnInit</span></li>
+					<li><span class="tsd-signature-type">AfterViewInit</span></li>
+					<li><span class="tsd-signature-type">OnDestroy</span></li>
 				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
@@ -89,9 +91,13 @@
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
-							<h3>Methods</h3>
+							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="oopspage.html#ngoninit" class="tsd-kind-icon">ng<wbr>OnInit</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="oopspage.html#actionlink" class="tsd-kind-icon">action<wbr>Link</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="oopspage.html#actiontext" class="tsd-kind-icon">action<wbr>Text</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="oopspage.html#content" class="tsd-kind-icon">content</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="oopspage.html#i18n" class="tsd-kind-icon">i18n</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="oopspage.html#image" class="tsd-kind-icon">image</a></li>
 							</ul>
 						</section>
 					</div>
@@ -103,38 +109,108 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Oops<wbr>Page<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="oopspage.html" class="tsd-signature-type">OopsPage</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Oops<wbr>Page<span class="tsd-signature-symbol">(</span>route<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ActivatedRoute</span>, metaService<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">MetaService</span>, setting<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">SettingService</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="oopspage.html" class="tsd-signature-type">OopsPage</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in projects/starter/src/lib/pages/oops/oops.component.ts:8</li>
+									<li>Defined in projects/starter/src/lib/pages/oops/oops.component.ts:52</li>
 								</ul>
 							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>route: <span class="tsd-signature-type">ActivatedRoute</span></h5>
+								</li>
+								<li>
+									<h5>metaService: <span class="tsd-signature-type">MetaService</span></h5>
+								</li>
+								<li>
+									<h5>setting: <span class="tsd-signature-type">SettingService</span></h5>
+								</li>
+							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="oopspage.html" class="tsd-signature-type">OopsPage</a></h4>
 						</li>
 					</ul>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Methods</h2>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="ngoninit" class="tsd-anchor"></a>
-					<h3>ng<wbr>OnInit</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">ng<wbr>OnInit<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in projects/starter/src/lib/pages/oops/oops.component.ts:12</li>
-								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="actionlink" class="tsd-anchor"></a>
+					<h3>action<wbr>Link</h3>
+					<div class="tsd-signature tsd-kind-icon">action<wbr>Link<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = [&#x27;&#x27;]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in projects/starter/src/lib/pages/oops/oops.component.ts:47</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Page action link</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="actiontext" class="tsd-anchor"></a>
+					<h3>action<wbr>Text</h3>
+					<div class="tsd-signature tsd-kind-icon">action<wbr>Text<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;Go home&quot;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in projects/starter/src/lib/pages/oops/oops.component.ts:52</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Page action text. For i18n, <code>OOPS.ACTION_TEXT</code>: Go home</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="content" class="tsd-anchor"></a>
+					<h3>content</h3>
+					<div class="tsd-signature tsd-kind-icon">content<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;Page not found!&quot;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in projects/starter/src/lib/pages/oops/oops.component.ts:42</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Page content. For i18n, <code>OOPS.CONTENT</code>: Page not found</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="i18n" class="tsd-anchor"></a>
+					<h3>i18n</h3>
+					<div class="tsd-signature tsd-kind-icon">i18n<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in projects/starter/src/lib/pages/oops/oops.component.ts:32</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Enable localization.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="image" class="tsd-anchor"></a>
+					<h3>image</h3>
+					<div class="tsd-signature tsd-kind-icon">image<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;/assets/images/404.png&quot;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in projects/starter/src/lib/pages/oops/oops.component.ts:37</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Page image</p>
+						</div>
+					</div>
 				</section>
 			</section>
 		</div>
@@ -225,8 +301,20 @@
 							<li class=" tsd-kind-constructor tsd-parent-kind-class">
 								<a href="oopspage.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="oopspage.html#ngoninit" class="tsd-kind-icon">ng<wbr>OnInit</a>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="oopspage.html#actionlink" class="tsd-kind-icon">action<wbr>Link</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="oopspage.html#actiontext" class="tsd-kind-icon">action<wbr>Text</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="oopspage.html#content" class="tsd-kind-icon">content</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="oopspage.html#i18n" class="tsd-kind-icon">i18n</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="oopspage.html#image" class="tsd-kind-icon">image</a>
 							</li>
 						</ul>
 					</li>

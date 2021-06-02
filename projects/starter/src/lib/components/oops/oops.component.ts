@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { NavItem } from '@lamnhan/ngx-useful';
 
 @Component({
   selector: 'nguix-oops',
@@ -7,14 +6,35 @@ import { NavItem } from '@lamnhan/ngx-useful';
   styleUrls: ['./oops.component.scss']
 })
 export class OopsComponent implements OnInit {
-  @Input() image = 'https://img.icons8.com/color/96/000000/broken-link.png';
+  /**
+   * Input() Enable localization
+   */
+  @Input() i18n = false;
+
+  /**
+   * Input() Component image
+   */
+  @Input() image = '/assets/images/404.png';
+
+  /**
+   * Input() Component content. For i18n, `OOPS.CONTENT` = Page not found
+   */
   @Input() content = 'Page not found!';
-  @Input() actionLink: NavItem = {
-    text: 'Go home',
-    routerLink: ['/'],
-  };
+
+  /**
+   * Input() Component action link
+   */
+  @Input() actionLink = ['/'];
+
+  /**
+   * Input() Component action text. For i18n, `OOPS.ACTION_TEXT` = Go home
+   */
+  @Input() actionText = 'Go home';
 
   constructor() {}
 
+  /**
+   * @ignore
+   */
   ngOnInit(): void {}
 }

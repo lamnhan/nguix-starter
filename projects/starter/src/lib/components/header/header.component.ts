@@ -7,14 +7,36 @@ import { MenuItem } from '@lamnhan/ngx-useful';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+
+  /**
+   * Input() Enable localization
+   */
   @Input() i18n = false;
 
+  /**
+   * Input() Stick the header at the top
+   */
   @Input() fixed = false;
+
+  /**
+   * Input() Brand logo
+   */
   @Input() logo = '/assets/images/logo.svg';
+
+  /**
+   * Input() Brand name
+   */
   @Input() title = 'App';
+
+  /**
+   * Input() Menu items
+   */
   @Input() menuItems: MenuItem[] = [];
 
   constructor() {}
 
+  /**
+   * @ignore
+   */
   ngOnInit(): void {}
 }
