@@ -29,47 +29,56 @@ Homepage: [https://nguix-starter.lamnhan.com](https://nguix-starter.lamnhan.com)
 ### Installation
 
 Install theming, [@lamnhan/unistylus](https://unistylus.lamnhan.com):
-\`\`\`sh
+
+```sh
 npm install -S @lamnhan/unistylus@0.0.7
-\`\`\`
+```
 
 Install data models, [@lamnhan/schemata](https://schemata.lamnhan.com):
-\`\`\`sh
+
+```sh
 npm install -S @lamnhan/schemata@0.0.7
-\`\`\`
+```
 
 Install utilities, [@lamnhan/ngx-useful](https://ngx-useful.lamnhan.com):
-\`\`\`sh
+
+```sh
 npm install -S @lamnhan/ngx-useful@0.0.8
-\`\`\`
+```
 
 Install NGUIX library, [@lamnhan/nguix-starter](https://nguix-starter.lamnhan.com):
-\`\`\`sh
+
+```sh
 npm install -S @lamnhan/nguix-starter@0.0.5
-\`\`\`
+```
 
 ### Basic usage
 
 Use a component:
-\`\`\`ts
+
+```ts
 // import the module --> app.module.ts
-import { NguixHeaderComponentModule } from '@lamnhan/nguix-starter';
-\`\`\`
+import { NguixHeaderComponentModule } from "@lamnhan/nguix-starter";
+```
 
-\`\`\`html
-
+```html
 <!--  use the component ~~> app.component.html -->
 
 <nguix-header></nguix-header>
-\`\`\`
+```
 
 Use a page:
-\`\`\`ts
+
+```ts
 // define a route --> app-routing.module.ts
 const routes: Routes = [
-{ path: '**', loadChildren: () => import('@lamnhan/nguix-starter').then(m => m.NguixOopsPageModule) },
+  {
+    path: "**",
+    loadChildren: () =>
+      import("@lamnhan/nguix-starter").then((m) => m.NguixOopsPageModule),
+  },
 ];
-\`\`\`
+```
 
 See [guides](https://nguix-starter.lamnhan.com/guides) for more articles. Also see the list of [components](https://nguix-starter.lamnhan.com/components), [pages](https://nguix-starter.lamnhan.com/pages), [splashscreens](https://nguix-starter.lamnhan.com/splashscreens), [templates](https://nguix-starter.lamnhan.com/templates).
 
