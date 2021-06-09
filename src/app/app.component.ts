@@ -4,7 +4,6 @@ import { AngularFirestore } from '@angular/fire/firestore';
 import { TranslocoService } from '@ngneat/transloco';
 import {
   MenuItem,
-  // normal services
   LocalstorageService,
   CacheService,
   FetchService,
@@ -17,9 +16,8 @@ import {
   DatabaseService,
   AuthService,
   UserService,
-  // data services
-  UserDataService,
 } from '@lamnhan/ngx-useful';
+import { UserDataService } from '@lamnhan/ngx-schemata';
 
 @Component({
   selector: 'app-root',

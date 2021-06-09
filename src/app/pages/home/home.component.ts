@@ -10,22 +10,22 @@ export class HomeComponent implements OnInit {
   installContent =
 `Install theming, [@lamnhan/unistylus](https://unistylus.lamnhan.com):
 \`\`\`sh
-npm install -S @lamnhan/unistylus@0.0.7
+npm install -S @lamnhan/unistylus@0.0.10
 \`\`\`
 
 Install data models, [@lamnhan/schemata](https://schemata.lamnhan.com):
 \`\`\`sh
-npm install -S @lamnhan/schemata@0.0.7
+npm install -S @lamnhan/schemata@0.0.9 @lamnhan/ngx-schemata@0.0.2
 \`\`\`
 
 Install utilities, [@lamnhan/ngx-useful](https://ngx-useful.lamnhan.com):
 \`\`\`sh
-npm install -S @lamnhan/ngx-useful@0.0.8
+npm install -S @lamnhan/ngx-useful@0.0.11
 \`\`\`
 
 Install NGUIX library, [@lamnhan/nguix-starter](/):
 \`\`\`sh
-npm install -S @lamnhan/nguix-starter@0.0.5
+npm install -S @lamnhan/nguix-starter@0.0.7
 \`\`\``;
 
   usageContent =

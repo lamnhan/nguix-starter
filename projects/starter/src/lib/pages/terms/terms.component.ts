@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { combineLatest, of } from 'rxjs';
 import { switchMap, map, tap } from 'rxjs/operators';
-import { MetaService, SettingService, PageDataService } from '@lamnhan/ngx-useful';
+import { MetaService, SettingService } from '@lamnhan/ngx-useful';
+import { PageDataService } from '@lamnhan/ngx-schemata';
 
 @Component({
   selector: 'nguix-terms-page',
@@ -76,7 +77,7 @@ export class TermsPage implements OnInit {
      */
     public readonly settingService: SettingService,
     /**
-     * Inject() Requires the [PageDataService](https://ngx-useful.lamnhan.com/schemata/service/page)
+     * Inject() Requires the [PageDataService](https://schemata.lamnhan.com/schema/page)
      */
     public readonly pageDataService: PageDataService,
   ) {}

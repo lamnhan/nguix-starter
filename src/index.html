@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   
-  <!-- Github Pages hack to allow SPA refresh without receiving 404. -->
+  <!-- Github Pages Only -->
   <script>
     (function () {
       var redirect = sessionStorage.redirect;
@@ -42,17 +42,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&amp;family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet">
 
-  <!-- In-app splash screen -->
-  <link rel="stylesheet" href="/assets/css/splash-screen.css">
+  <!-- In-app splashscreen -->
+  <link rel="stylesheet" href="https://unpkg.com/@lamnhan/nguix-starter@latest/src/splashscreens/heartbeat/index.css">
+  <script defer src="https://unpkg.com/@lamnhan/nguix-starter@latest/src/splashscreens/heartbeat/index.js"></script>
 
 </head>
 <body>
-
   <app-root></app-root>
-
-  <div id="app-splash-screen">
-    <img src="/assets/images/logo.svg">
-  </div>
-
+  <div id="app-splash-screen"><div class="main"><div class="body"><img src="/assets/images/logo.svg"></div><div class="foot">Still working, please wait! 👌</div></div><noscript>Please enable JavaScript!</noscript></div>
 </body>
 </html>

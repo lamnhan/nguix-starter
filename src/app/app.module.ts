@@ -4,7 +4,6 @@ import { environment } from '../environments/environment';
 import { AngularFireModule } from '@angular/fire';
 import {
   RouterLinkDirectiveModule,
-  // normal services
   LocalstorageService,
   CacheService,
   FetchService,
@@ -17,10 +16,8 @@ import {
   DatabaseService,
   AuthService,
   UserService,
-  // data services
-  PageDataService,
-  UserDataService,
 } from '@lamnhan/ngx-useful';
+import { PageDataService, UserDataService } from '@lamnhan/ngx-schemata';
 import {
   NguixHeaderComponentModule,
   NguixFooterComponentModule,
