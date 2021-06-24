@@ -155,7 +155,7 @@ export class DataService {
   // splashscreen
   splashscreenMenu: NavItem[] = [
     {
-      text: 'Basic',
+      text: 'Logo',
       level: 0,
     },
       {
@@ -178,9 +178,9 @@ export class DataService {
   // templates
   templateMenu: NavItem[] = [
     {
-      text: 'Intro',
+      text: 'Blank',
       level: 1,
-      routerLink: ['template', 'intro']
+      routerLink: ['template', 'blank']
     },
     {
       text: 'Blog',

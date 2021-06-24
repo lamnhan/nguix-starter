@@ -48,14 +48,12 @@ Or, imports CSS and JS in \`index.html\`:
 <script defer src="https://unpkg.com/@lamnhan/nguix-starter@latest/splashscreens/${this.name}/index.js"></script>
 \`\`\`
 
-II. (Optional) No script and prerender translations:
+II. (Optional) Prerender ([@lamnhan/ngxer](https://ngxer.lamnhan.com)) no script and translations:
 
 \`\`\`html
 <noscript><style>#app-splash-screen{display: none !important;}</style></noscript>
 <style>#app-splash-screen.en-US .only.en-US {display: inline-block !important;}</style>
 \`\`\`
-
-See [@lamnhan/ngxer](https://ngxer.lamnhan.com) for prerendering.
 
 III. Includes the template, after \`<app-root></app-root>\`:
 \`\`\`html

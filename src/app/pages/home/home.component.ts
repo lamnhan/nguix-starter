@@ -8,24 +8,24 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   installContent =
-`Install theming, [@lamnhan/unistylus](https://unistylus.lamnhan.com):
+`Install theming, [@unistylus/core](https://unistylus.lamnhan.com):
 \`\`\`sh
-npm install -S @lamnhan/unistylus@0.0.10
+npm i @unistylus/core @unistylus/bootstrap
 \`\`\`
 
 Install data models, [@lamnhan/schemata](https://schemata.lamnhan.com):
 \`\`\`sh
-npm install -S @lamnhan/schemata@0.0.9 @lamnhan/ngx-schemata@0.0.2
+npm i @lamnhan/schemata @lamnhan/ngx-schemata
 \`\`\`
 
 Install utilities, [@lamnhan/ngx-useful](https://ngx-useful.lamnhan.com):
 \`\`\`sh
-npm install -S @lamnhan/ngx-useful@0.0.11
+npm i @lamnhan/ngx-useful
 \`\`\`
 
-Install NGUIX library, [@lamnhan/nguix-starter](/):
+Install NGUIX library:
 \`\`\`sh
-npm install -S @lamnhan/nguix-starter@0.0.7
+npm i @lamnhan/nguix-starter
 \`\`\``;
 
   usageContent =

@@ -29,7 +29,7 @@ export class OopsPage implements OnInit {
         description: this.content,
         image: this.image.startsWith('http')
           ? this.image
-          : location.href + this.image.substr(1)
+          : location.origin + this.image
       })
     )
   );
