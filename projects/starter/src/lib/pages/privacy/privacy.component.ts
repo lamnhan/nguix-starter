@@ -45,7 +45,7 @@ export class PrivacyPage implements OnInit {
     tap(page =>
       !page
         ? false
-        : this.metaService.changePageMetas({ title: page.title, description: page.excerpt})
+        : this.metaService.changePageMetas(page)
     ),
   );
 

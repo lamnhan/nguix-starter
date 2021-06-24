@@ -57,27 +57,31 @@ export class AppComponent {
   private initialize() {
     this.localstorageService.init();
     this.cacheService.init();
-    this.fetchService.init(
-      { cacheTime: 1440, /* 24 hours */ },
-      { cacheService: this.cacheService },
-    );
-    this.databaseService.init(
-      this.firebaseFirestore,
-      {
+    this.fetchService
+      .setOptions({ cacheTime: 1440, /* 24 hours */ })
+      .setIntegrations({ cacheService: this.cacheService })
+      .init();
+    this.databaseService
+      .setOptions({
         driver: 'firestore',
         cacheTime: 1440, // 24 hours
-      },
-      { cacheService: this.cacheService }
-    );
-    this.appService.init({ splashScreen: true });
-    this.authService.init(this.firebaseAuth, {driver: 'firestore'});
+      })
+      .setIntegrations({ cacheService: this.cacheService })
+      .init(this.firebaseFirestore);
+    this.appService.setOptions({ splashScreen: true }).init();
+    this.authService.setOptions({driver: 'firestore'}).init(this.firebaseAuth);
     this.userService.init(this.userDataService);
-    this.settingService.init(
-      {
+    this.settingService
+      .setOptions({
         browserColor: true,
         onReady: () => this.appService.hideSplashScreen(),
-      },
-      {
+      })
+      .setIntegrations({
+        localstorageService: this.localstorageService,        
+        translateService: this.translateService,
+        userService: this.userService,
+      })
+      .setData({
         themes: [
           { text: 'THEME.LIGHT', value: 'light' },
           { text: 'THEME.DARK', value: 'dark' },
@@ -92,20 +96,21 @@ export class AppComponent {
           { text: 'English', value: 'en-US' },
           { text: 'Tiếng việt', value: 'vi-VN' },
         ],
-      },
-      {
-        localstorageService: this.localstorageService,        
-        translateService: this.translateService,
-        userService: this.userService,
-      },
-    );
-    this.navService.init(
-      {},
-      { settingService: this.settingService },
-    );
-    this.pwaService.init({ reminder: false });
-    this.personaService.init(
-      {
+      })
+      .init();
+    this.navService
+      .setIntegrations({ settingService: this.settingService })
+      .init();
+    this.pwaService.setOptions({ reminder: false }).init();
+    this.personaService
+      .setIntegrations({ settingService: this.settingService })
+      .setMenuRegistry({
+        home: { name: 'home', text: 'APP.HOME', routerLink: [''] },
+        about: { name: 'about', text: 'APP.ABOUT', routerLink: ['about'] },
+        posts: { name: 'posts', text: 'APP.POSTS', routerLink: ['posts'], activeAlso: ['post'] },
+        products: { name: 'products', text: 'APP.PRODUCTS', routerLink: ['products'], activeAlso: ['product'] },
+      })
+      .init({
         default: {}, // the documentation
         intro: {
           menu: ['home', 'about'],
@@ -116,39 +121,26 @@ export class AppComponent {
         shop: {
           menu: ['home', 'products', 'about'],
         }
-      },
-      {},
-      { settingService: this.settingService },
-      {
-        home: { name: 'home', text: 'APP.HOME', routerLink: [''] },
-        about: { name: 'about', text: 'APP.ABOUT', routerLink: ['about'] },
-        posts: { name: 'posts', text: 'APP.POSTS', routerLink: ['posts'], activeAlso: ['post'] },
-        products: { name: 'products', text: 'APP.PRODUCTS', routerLink: ['products'], activeAlso: ['product'] },
-      }
-    );
-    this.metaService.init(
-      {
-        title: 'NGUIX Starter',
-        description: 'Angular UI/UX starter kit.',
-        image: 'https://nguix-starter.lamnhan.com/assets/images/featured.jpg',
-        url: 'https://nguix-starter.lamnhan.com/',
-        lang: 'en',
-        ogLocale: 'en-US',
-        ogSiteName: 'NGUIX Starter'
-      },
-      {},
-      { settingService: this.settingService },
-      {
-        'vi-VN': {
-          title: 'NGUIX Bắt Đầu',
-          description: 'Bộ giao diện Angular khởi đâu.',
+      });
+    this.metaService
+      .setIntegrations({ settingService: this.settingService })
+      .init(
+        {
+          url: 'https://nguix-starter.lamnhan.com/',
+          title: 'NGUIX Starter',
+          description: 'Angular UI/UX starter kit.',
           image: 'https://nguix-starter.lamnhan.com/assets/images/featured.jpg',
-          url: 'https://nguix-starter.lamnhan.com/vi-VN',
-          lang: 'vi',
-          ogLocale: 'vi-VN',
-          ogSiteName: 'NGUIX Bắt Đầu'
+          locale: 'en-US'
+        },
+        {
+          'vi-VN': {
+            url: 'https://nguix-starter.lamnhan.com/vi-VN',
+            title: 'NGUIX Bắt Đầu',
+            description: 'Bộ giao diện Angular khởi đâu.',
+            image: 'https://nguix-starter.lamnhan.com/assets/images/featured.jpg',
+            locale: 'vi-VN'
+          }
         }
-      }
-    );
+      );
   }
 }

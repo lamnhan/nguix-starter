@@ -14,7 +14,7 @@ export class OauthPopupPage implements OnInit {
    */
   ngOnInit(): void {
     if (window.opener !== null && !window.opener.closed) {
-      window.opener.handleOauthResult(window.location.hash);
+      (window.opener as any).handleOauthResult(window.location.hash);
     }
     window.close();
   }

@@ -17,8 +17,8 @@
  */
 
 // register skins
-@import '../../unistylus/projects/unistylus/src/scss/skins/light-default';
-@import '../../unistylus/projects/unistylus/src/scss/skins/dark';
+@import '@unistylus/core/scss/skins/light-default';
+@import '@unistylus/core/scss/skins/dark';
 
 // modify skins
 :root,
@@ -31,7 +31,7 @@
 }
 
 // register soul
-@import '../../unistylus/projects/unistylus/src/scss/souls/bootstrap/full';
+@import '@unistylus/bootstrap/full';
 
 // register app
 @import './theming/app.module';

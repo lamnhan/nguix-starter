@@ -10,12 +10,12 @@
     <div class="title">{{ !pageData.i18n ? pageData.themeTitle : t('THEME.TITLE') || pageData.themeTitle }}</div>
     <div class="body">
       <label class="text" for="theming">{{ !pageData.i18n ? pageData.themeDarkMode : t('THEME.DARK_MODE') || pageData.themeDarkMode }}</label>
-      <label class="switch">
+      <label class="form-switch">
         <input type="checkbox"
           id="theming"
           [checked]="settingService.theme==='dark'"
           (change)="toggleTheme($event)">
-        <span class="slider round"></span>
+        <span class="slider"></span>
       </label>
     </div>
 

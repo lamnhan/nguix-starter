@@ -1,7 +1,6 @@
-import { Component, OnInit, AfterViewInit, OnDestroy } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Subscription } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { map, tap } from 'rxjs/operators';
 import { MetaService, SettingService } from '@lamnhan/ngx-useful';
 
 @Component({
@@ -9,8 +8,7 @@ import { MetaService, SettingService } from '@lamnhan/ngx-useful';
   templateUrl: './setting.component.html',
   styleUrls: ['./setting.component.scss']
 })
-export class SettingPage implements OnInit, AfterViewInit, OnDestroy {
-  private metaSubscription!: Subscription;
+export class SettingPage implements OnInit {
 
   /**
    * @ignore
@@ -24,7 +22,13 @@ export class SettingPage implements OnInit, AfterViewInit, OnDestroy {
       localeTitle: this.localeTitle,
       personaTitle: this.personaTitle,
       ...data,
-    }))
+    })),
+    tap(() =>
+      this.metaService.changePageMetas({
+        title: this.title,
+        description: 'Change app settings',
+      })
+    )
   );
 
   /**
@@ -72,26 +76,7 @@ export class SettingPage implements OnInit, AfterViewInit, OnDestroy {
   /**
    * @ignore
    */
-  ngOnDestroy(): void {
-    this.metaSubscription.unsubscribe();
-  }
-
-  /**
-   * @ignore
-   */
   ngOnInit(): void {}
-
-  /**
-   * @ignore
-   */
-  ngAfterViewInit() {
-    this.metaSubscription = this.settingService.onLocaleChanged.subscribe(locale =>
-      this.metaService.changePageMetas({
-        title: 'Settings',
-        description: 'Change app settings',
-      })
-    );
-  }
 
   /**
    * @ignore

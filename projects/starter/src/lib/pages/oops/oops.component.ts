@@ -1,7 +1,6 @@
-import { Component, OnInit, AfterViewInit, OnDestroy } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Subscription } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { map, tap } from 'rxjs/operators';
 import { MetaService, SettingService } from '@lamnhan/ngx-useful';
 
 @Component({
@@ -9,8 +8,7 @@ import { MetaService, SettingService } from '@lamnhan/ngx-useful';
   templateUrl: './oops.component.html',
   styleUrls: ['./oops.component.scss']
 })
-export class OopsPage implements OnInit, AfterViewInit, OnDestroy {
-  private metaSubscription!: Subscription;
+export class OopsPage implements OnInit {
 
   /**
    * @ignore
@@ -18,18 +16,33 @@ export class OopsPage implements OnInit, AfterViewInit, OnDestroy {
   public readonly pageData$ = this.route.data.pipe(
     map(data => ({
       i18n: this.i18n,
+      title: this.title,
       image: this.image,
       content: this.content,
       actionLink: this.actionLink,
       actionText: this.actionText,
       ...data,
-    }))
+    })),
+    tap(() =>
+      this.metaService.changePageMetas({
+        title: this.title,
+        description: this.content,
+        image: this.image.startsWith('http')
+          ? this.image
+          : location.href + this.image.substr(1)
+      })
+    )
   );
 
   /**
    * Enable localization.
    */
   i18n = false;
+
+  /**
+   * Page title
+   */
+  title = 'Oops!';
 
   /**
    * Page image
@@ -66,25 +79,5 @@ export class OopsPage implements OnInit, AfterViewInit, OnDestroy {
   /**
    * @ignore
    */
-  ngOnDestroy(): void {
-    this.metaSubscription.unsubscribe();
-  }
-
-  /**
-   * @ignore
-   */
   ngOnInit(): void {}
-
-  /**
-   * @ignore
-   */
-  ngAfterViewInit() {
-    this.metaSubscription = this.settingService.onLocaleChanged.subscribe(locale =>
-      this.metaService.changePageMetas({
-        title: 'Oops',
-        description: 'Page not found!',
-      })
-    );
-  }
-
 }

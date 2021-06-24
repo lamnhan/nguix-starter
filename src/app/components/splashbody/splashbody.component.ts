@@ -28,16 +28,37 @@ export class SplashbodyComponent implements OnInit {
 
         this.usageContent =
 `
-Imports the assets:
-\`\`\`html
-<!-- In-app splashscreen -->
-<link rel="stylesheet" href="https://unpkg.com/@lamnhan/nguix-starter@latest/src/splashscreens/${this.name}/index.css">
-<script defer src="https://unpkg.com/@lamnhan/nguix-starter@latest/src/splashscreens/${this.name}/index.js"></script>
+I. Include SCSS and JS in \`angular.json\`:
+
+\`\`\`json
+{
+  "styles" [
+    "node_modules/lamnhan/nguix-starter/splashscreens/${this.name}/index.scss"
+  ],
+  "scripts": [
+    "node_modules/lamnhan/nguix-starter/splashscreens/${this.name}/index.js"
+  ]
+}
 \`\`\`
 
-Includes the template:
+Or, imports CSS and JS in \`index.html\`:
+
 \`\`\`html
-<!-- <app-root></app-root> -->
+<link rel="stylesheet" href="https://unpkg.com/@lamnhan/nguix-starter@latest/splashscreens/${this.name}/index.css">
+<script defer src="https://unpkg.com/@lamnhan/nguix-starter@latest/splashscreens/${this.name}/index.js"></script>
+\`\`\`
+
+II. (Optional) No script and prerender translations:
+
+\`\`\`html
+<noscript><style>#app-splash-screen{display: none !important;}</style></noscript>
+<style>#app-splash-screen.en-US .only.en-US {display: inline-block !important;}</style>
+\`\`\`
+
+See [@lamnhan/ngxer](https://ngxer.lamnhan.com) for prerendering.
+
+III. Includes the template, after \`<app-root></app-root>\`:
+\`\`\`html
 ${htmlCode}
 \`\`\``;
     });

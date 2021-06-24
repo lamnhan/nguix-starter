@@ -5,8 +5,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Preview</title>
-  <link rel="stylesheet" href="https://unpkg.com/@lamnhan/nguix-starter@latest/src/splashscreens/bouncing/index.css">
-  <script defer src="https://unpkg.com/@lamnhan/nguix-starter@latest/src/splashscreens/bouncing/index.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/@lamnhan/nguix-starter@latest/splashscreens/bouncing/index.css">
+  <script defer src="https://unpkg.com/@lamnhan/nguix-starter@latest/splashscreens/bouncing/index.js"></script>
+  <noscript><style>#app-splash-screen{display: none !important;}</style></noscript>
+  <style>
+    #app-splash-screen.en-US .only.en-US {display: inline-block !important;}
+  </style>
 </head>
-<body><div id="app-splash-screen"><div class="main"><div class="body"><img src="/assets/images/logo.svg"></div><div class="foot">Still working, please wait! 👌</div></div><noscript>Please enable JavaScript!</noscript></div></body>
+<body><div id="app-splash-screen" class="en-US"><div class="body"><img src="/assets/images/logo.svg"></div><div class="foot"> <span class="only en-US">Still working, please wait! 👌</span></div></div></body>
 </html>
