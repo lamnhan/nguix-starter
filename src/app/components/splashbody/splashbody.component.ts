@@ -33,10 +33,10 @@ I. Include SCSS and JS in \`angular.json\`:
 \`\`\`json
 {
   "styles" [
-    "node_modules/lamnhan/nguix-starter/splashscreens/${this.name}/index.scss"
+    "node_modules/@lamnhan/nguix-starter/splashscreens/${this.name}/index.scss"
   ],
   "scripts": [
-    "node_modules/lamnhan/nguix-starter/splashscreens/${this.name}/index.js"
+    "node_modules/@lamnhan/nguix-starter/splashscreens/${this.name}/index.js"
   ]
 }
 \`\`\`

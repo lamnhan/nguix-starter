@@ -81,7 +81,7 @@ export class AppComponent {
         translateService: this.translateService,
         userService: this.userService,
       })
-      .setData({
+      .setListing({
         themes: [
           { text: 'THEME.LIGHT', value: 'light' },
           { text: 'THEME.DARK', value: 'dark' },
