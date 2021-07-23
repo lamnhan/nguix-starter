@@ -9,6 +9,7 @@ import { NguixNavIndicatorComponentModule } from './components/nav-indicator/nav
 import { NguixPwaReminderComponentModule } from './components/pwa-reminder/pwa-reminder.module';
 import { NguixPwaBoxComponentModule } from './components/pwa-box/pwa-box.module';
 import { NguixContentComponentModule } from './components/content/content.module';
+import { NguixIconComponentModule } from './components/icon/icon.module';
 
 @NgModule({
   declarations: [],
@@ -22,6 +23,7 @@ import { NguixContentComponentModule } from './components/content/content.module
     NguixPwaReminderComponentModule,
     NguixPwaBoxComponentModule,
     NguixContentComponentModule,
+    NguixIconComponentModule,
   ],
   exports: [
     NguixHeaderComponentModule,
@@ -33,6 +35,7 @@ import { NguixContentComponentModule } from './components/content/content.module
     NguixPwaReminderComponentModule,
     NguixPwaBoxComponentModule,
     NguixContentComponentModule,
+    NguixIconComponentModule,
   ]
 })
 export class NguixStarterModule { }
