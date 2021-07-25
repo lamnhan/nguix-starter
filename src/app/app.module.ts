@@ -17,7 +17,7 @@ import {
   AuthService,
   UserService,
 } from '@lamnhan/ngx-useful';
-import { PageDataService, UserDataService } from '@lamnhan/ngx-schemata';
+import { PageDataService, UserDataService, ProfileDataService } from '@lamnhan/ngx-schemata';
 import {
   NguixHeaderComponentModule,
   NguixFooterComponentModule,
@@ -66,6 +66,7 @@ import { FooterComponentModule } from './components/footer/footer.module';
     // schemata data services
     PageDataService,
     UserDataService,
+    ProfileDataService,
   ],
   bootstrap: [AppComponent]
 })
