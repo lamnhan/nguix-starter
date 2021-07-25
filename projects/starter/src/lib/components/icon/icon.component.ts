@@ -27,6 +27,11 @@ export class IconComponent implements OnInit {
    */
   @Input() url?: string;
 
+  /**
+   * Input() Overide the base size
+   */
+  @Input() size?: string | number;
+
   constructor() {}
 
   /**
