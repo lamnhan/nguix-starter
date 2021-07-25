@@ -63,6 +63,7 @@ const routes: Routes = [
   { path: 'components', loadChildren: () => import('./pages/components/components.module').then(m => m.ComponentsPageModule) },
   { path: 'component/header', loadChildren: () => import('./pages/component/header/header.module').then(m => m.HeaderPageModule) },
   { path: 'component/header2nd', loadChildren: () => import('./pages/component/header2nd/header2nd.module').then(m => m.Header2ndPageModule) },
+  { path: 'component/tabs', loadChildren: () => import('./pages/component/tabs/tabs.module').then(m => m.TabsPageModule) },
   { path: 'component/footer', loadChildren: () => import('./pages/component/footer/footer.module').then(m => m.FooterPageModule) },
   { path: 'component/oops', loadChildren: () => import('./pages/component/oops/oops.module').then(m => m.OopsPageModule) },
   { path: 'component/spinner', loadChildren: () => import('./pages/component/spinner/spinner.module').then(m => m.SpinnerPageModule) },

@@ -114,6 +114,7 @@ Also, visit the [homepage](https://nguix-starter.lamnhan.com).
 | [PwaBoxComponent](https://nguix-starter.lamnhan.com/content/reference/classes/pwaboxcomponent.html)             |             |
 | [PwaReminderComponent](https://nguix-starter.lamnhan.com/content/reference/classes/pwaremindercomponent.html)   |             |
 | [SpinnerComponent](https://nguix-starter.lamnhan.com/content/reference/classes/spinnercomponent.html)           |             |
+| [TabsComponent](https://nguix-starter.lamnhan.com/content/reference/classes/tabscomponent.html)                 |             |
 
 </section>
 

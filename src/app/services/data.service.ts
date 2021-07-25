@@ -75,6 +75,11 @@ export class DataService {
         routerLink: ['component', 'header2nd']
       },
       {
+        text: 'Tabs',
+        level: 1,
+        routerLink: ['component', 'tabs']
+      },
+      {
         text: 'Footer',
         level: 1,
         routerLink: ['component', 'footer']

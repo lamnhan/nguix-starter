@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 
 import { NguixHeaderComponentModule } from './components/header/header.module';
 import { NguixHeader2ndComponentModule } from './components/header2nd/header2nd.module';
+import { NguixTabsComponentModule } from './components/tabs/tabs.module';
 import { NguixFooterComponentModule } from './components/footer/footer.module';
 import { NguixOopsComponentModule } from './components/oops/oops.module';
 import { NguixSpinnerComponentModule } from './components/spinner/spinner.module';
@@ -16,6 +17,7 @@ import { NguixIconComponentModule } from './components/icon/icon.module';
   imports: [
     NguixHeaderComponentModule,
     NguixHeader2ndComponentModule,
+    NguixTabsComponentModule,
     NguixFooterComponentModule,
     NguixOopsComponentModule,
     NguixSpinnerComponentModule,
@@ -28,6 +30,7 @@ import { NguixIconComponentModule } from './components/icon/icon.module';
   exports: [
     NguixHeaderComponentModule,
     NguixHeader2ndComponentModule,
+    NguixTabsComponentModule,
     NguixFooterComponentModule,
     NguixOopsComponentModule,
     NguixSpinnerComponentModule,

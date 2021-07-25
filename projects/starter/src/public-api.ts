@@ -8,6 +8,8 @@ export * from './lib/components/header/header.component';
 export * from './lib/components/header/header.module';
 export * from './lib/components/header2nd/header2nd.component';
 export * from './lib/components/header2nd/header2nd.module';
+export * from './lib/components/tabs/tabs.component';
+export * from './lib/components/tabs/tabs.module';
 export * from './lib/components/footer/footer.component';
 export * from './lib/components/footer/footer.module';
 export * from './lib/components/oops/oops.component';

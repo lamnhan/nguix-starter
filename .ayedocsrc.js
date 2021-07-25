@@ -13,6 +13,7 @@ module.exports = {
     // components
     'docs/content/components/header.md': {main: ['HeaderComponent', 'SUMMARY_PROPERTIES']},
     'docs/content/components/header2nd.md': {main: ['Header2ndComponent', 'SUMMARY_PROPERTIES']},
+    'docs/content/components/tabs.md': {main: ['TabsComponent', 'SUMMARY_PROPERTIES']},
     'docs/content/components/footer.md': {main: ['FooterComponent', 'SUMMARY_PROPERTIES']},
     'docs/content/components/oops.md': {main: ['OopsComponent', 'SUMMARY_PROPERTIES']},
     'docs/content/components/spinner.md': {main: ['SpinnerComponent', 'SUMMARY_PROPERTIES']},
