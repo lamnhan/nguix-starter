@@ -3,11 +3,16 @@
   <ul class="nav">
     <li *ngFor="let menuItem of menuItems">
       <a
-        [href]="menuItem.href"
-        [target]="menuItem.target"
+        *ngIf="menuItem.routerLink; else regularLink"
         [usefulRouterLink]="menuItem.routerLink"
         usefulRouterLinkActive="active"
       >{{ !i18n ? menuItem.text : t(menuItem.text || '') || menuItem.text }}</a>
+      <ng-template #regularLink>
+        <a
+          [href]="menuItem.href"
+          [target]="menuItem.target"
+        >{{ !i18n ? menuItem.text : t(menuItem.text || '') || menuItem.text }}</a>
+      </ng-template>
     </li>
   </ul>
 </div>
