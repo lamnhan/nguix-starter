@@ -109,10 +109,13 @@ Also, visit the [homepage](https://nguix-starter.lamnhan.com).
 | [Header2ndComponent](https://nguix-starter.lamnhan.com/content/reference/classes/header2ndcomponent.html)       |             |
 | [HeaderComponent](https://nguix-starter.lamnhan.com/content/reference/classes/headercomponent.html)             |             |
 | [IconComponent](https://nguix-starter.lamnhan.com/content/reference/classes/iconcomponent.html)                 |             |
+| [LoginComponent](https://nguix-starter.lamnhan.com/content/reference/classes/logincomponent.html)               |             |
 | [NavIndicatorComponent](https://nguix-starter.lamnhan.com/content/reference/classes/navindicatorcomponent.html) |             |
 | [OopsComponent](https://nguix-starter.lamnhan.com/content/reference/classes/oopscomponent.html)                 |             |
 | [PwaBoxComponent](https://nguix-starter.lamnhan.com/content/reference/classes/pwaboxcomponent.html)             |             |
 | [PwaReminderComponent](https://nguix-starter.lamnhan.com/content/reference/classes/pwaremindercomponent.html)   |             |
+| [RegisterComponent](https://nguix-starter.lamnhan.com/content/reference/classes/registercomponent.html)         |             |
+| [ShareComponent](https://nguix-starter.lamnhan.com/content/reference/classes/sharecomponent.html)               |             |
 | [SpinnerComponent](https://nguix-starter.lamnhan.com/content/reference/classes/spinnercomponent.html)           |             |
 | [TabsComponent](https://nguix-starter.lamnhan.com/content/reference/classes/tabscomponent.html)                 |             |
 

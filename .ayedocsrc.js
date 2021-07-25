@@ -22,6 +22,9 @@ module.exports = {
     'docs/content/components/nav-indicator.md': {main: ['NavIndicatorComponent', 'SUMMARY_PROPERTIES']},
     'docs/content/components/pwa-box.md': {main: ['PwaBoxComponent', 'SUMMARY_PROPERTIES']},
     'docs/content/components/pwa-reminder.md': {main: ['PwaReminderComponent', 'SUMMARY_PROPERTIES']},
+    'docs/content/components/share.md': {main: ['ShareComponent', 'SUMMARY_PROPERTIES']},
+    'docs/content/components/login.md': {main: ['LoginComponent', 'SUMMARY_PROPERTIES']},
+    'docs/content/components/register.md': {main: ['RegisterComponent', 'SUMMARY_PROPERTIES']},
     // pages
     'docs/content/pages/oauth-popup.md': {main: ['OauthPopupPage', 'SUMMARY_PROPERTIES']},
     'docs/content/pages/oops.md': {main: ['OopsPage', 'SUMMARY_PROPERTIES']},

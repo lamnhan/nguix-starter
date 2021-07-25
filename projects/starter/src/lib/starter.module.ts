@@ -11,6 +11,9 @@ import { NguixPwaReminderComponentModule } from './components/pwa-reminder/pwa-r
 import { NguixPwaBoxComponentModule } from './components/pwa-box/pwa-box.module';
 import { NguixContentComponentModule } from './components/content/content.module';
 import { NguixIconComponentModule } from './components/icon/icon.module';
+import { NguixShareComponentModule } from './components/share/share.module';
+import { NguixLoginComponentModule } from './components/login/login.module';
+import { NguixRegisterComponentModule } from './components/register/register.module';
 
 @NgModule({
   declarations: [],
@@ -26,6 +29,9 @@ import { NguixIconComponentModule } from './components/icon/icon.module';
     NguixPwaBoxComponentModule,
     NguixContentComponentModule,
     NguixIconComponentModule,
+    NguixShareComponentModule,
+    NguixLoginComponentModule,
+    NguixRegisterComponentModule,
   ],
   exports: [
     NguixHeaderComponentModule,
@@ -39,6 +45,9 @@ import { NguixIconComponentModule } from './components/icon/icon.module';
     NguixPwaBoxComponentModule,
     NguixContentComponentModule,
     NguixIconComponentModule,
+    NguixShareComponentModule,
+    NguixLoginComponentModule,
+    NguixRegisterComponentModule,
   ]
 })
 export class NguixStarterModule { }

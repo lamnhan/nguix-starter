@@ -8,10 +8,7 @@
     <a
       [usefulRouterLink]="menuItem.routerLink"
       usefulRouterLinkActive="active"
-      [usefulRouterLinkActiveOptions]="{
-        exact: menuItem.name === 'home',
-        also: menuItem.activeAlso,
-      }"
+      [usefulRouterLinkActiveOptions]="{exact: menuItem.name === 'home', also: menuItem.activeAlso}"
       [usefulRouterBackwardable]="false"
     >
       <i class="icon" [class]="menuItem.icon"></i>

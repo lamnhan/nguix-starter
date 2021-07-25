@@ -1,0 +1,26 @@
+<div class="host">
+
+  <app-page
+    menuName="List of components"
+    [menuItems]="data.componentMenu"
+    [bodyTemplate]="pageBody"
+  ></app-page>
+
+  <ng-template #pageBody>
+
+    <app-compbody
+      [componentTemplate]="componentTemplate"
+      apiSrc="https://raw.githubusercontent.com/lamnhan/nguix-starter/main/docs/content/components/register.md"
+      importName="NguixRegisterComponentModule"
+      htmlCode="&lt;nguix-register&gt;&lt;/nguix-register&gt;"
+    ></app-compbody>
+
+    <ng-template #componentTemplate>
+      <div class="padding">
+        <nguix-register></nguix-register>
+      </div>
+    </ng-template>
+
+  </ng-template>
+
+</div>

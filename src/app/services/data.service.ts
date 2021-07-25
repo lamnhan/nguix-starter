@@ -85,6 +85,20 @@ export class DataService {
         routerLink: ['component', 'footer']
       },
     {
+      text: 'User',
+      level: 0,
+    },
+      {
+        text: 'Login',
+        level: 1,
+        routerLink: ['component', 'login']
+      },
+      {
+        text: 'Register',
+        level: 1,
+        routerLink: ['component', 'register']
+      },
+    {
       text: 'Misc',
       level: 0,
     },
@@ -107,6 +121,11 @@ export class DataService {
         text: 'Content',
         level: 1,
         routerLink: ['component', 'content']
+      },
+      {
+        text: 'Share',
+        level: 1,
+        routerLink: ['component', 'share']
       },
       {
         text: 'Nav Indicator',

@@ -1,0 +1,70 @@
+.host {
+  width: 100%;
+
+  .title h3 {
+    text-align: center;
+  }
+
+  .form {
+
+    form {
+
+      .group {
+        width: 100%;
+  
+        input {
+          width: 100%;
+        }
+      }
+  
+      .action {
+        margin-top: 1rem;
+        text-align: center;
+  
+        button {
+          width: 100%;
+        }
+      }
+    }
+
+    .foot {
+      text-align: center;
+      margin-top: 1rem;
+    }
+  }
+
+  .providers {
+
+    .text {
+      text-align: center;
+      margin: 1rem 0;
+      padding-top: 1rem;
+      border-top: 1px solid var(--app-color-medium);
+    }
+
+    button {
+      display: block;
+      text-align: center;
+      width: 100%;
+      margin-bottom: 1rem;
+      position: relative;
+      
+      img {
+        width: 1.5rem;
+        height: 1.5rem;
+        position: absolute;
+        left: 1rem;
+      }
+
+      span {
+        display: inline-block;
+        margin-left: 1rem;
+      }
+    }
+
+    p {
+      margin-top: 2rem;
+      text-align: center;
+    }
+  }
+}

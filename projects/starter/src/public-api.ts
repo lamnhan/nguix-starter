@@ -26,6 +26,12 @@ export * from './lib/components/content/content.component';
 export * from './lib/components/content/content.module';
 export * from './lib/components/icon/icon.component';
 export * from './lib/components/icon/icon.module';
+export * from './lib/components/share/share.component';
+export * from './lib/components/share/share.module';
+export * from './lib/components/login/login.component';
+export * from './lib/components/login/login.module';
+export * from './lib/components/register/register.component';
+export * from './lib/components/register/register.module';
 
 export * from './lib/pages/oops/oops.component';
 export * from './lib/pages/oops/oops.module';

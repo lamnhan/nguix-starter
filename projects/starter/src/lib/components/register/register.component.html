@@ -1,0 +1,39 @@
+<div class="host">
+
+  <div class="message margin-bottom" *ngIf="message">
+    <div class="alert-danger" [innerHtml]="message"></div>
+  </div>
+
+  <div class="form">
+
+    <form [formGroup]="registerFormGroup" (ngSubmit)="signUp()" #registerForm="ngForm">
+  
+      <label class="group margin-bottom">
+        <span class="form-label">{{ 'REGISTER.EMAIL' | transloco }}</span>
+        <input class="form-control" type="email" formControlName="email" [placeholder]="'REGISTER.EMAIL_PLACEHOLDER' | transloco">
+      </label>
+  
+      <label class="group margin-bottom">
+        <span class="form-label">{{ 'REGISTER.PASSWORD' | transloco }}</span>
+        <input class="form-control" type="password" formControlName="password" [placeholder]="'REGISTER.PASSWORD_PLACEHOLDER' | transloco">
+      </label>
+  
+      <label class="group margin-bottom">
+        <span class="form-label">{{ 'REGISTER.CONFIRM_PASSWORD' | transloco }}</span>
+        <input class="form-control" type="password" formControlName="passwordConfirm" [placeholder]="'REGISTER.CONFIRM_PASSWORD_PLACEHOLDER' | transloco">
+      </label>
+  
+      <div class="action">
+        <button class="button-primary" type="submit"
+          [disabled]="!registerForm.form.valid || lockdown">{{ 'REGISTER.SUBMIT_TEXT' | transloco }}</button>
+      </div>
+  
+    </form>
+
+    <div class="foot">
+      <a class="button-link" href="/login" (click)="goLogin.emit(); false;">{{ 'LOGIN.SUBMIT_TEXT' | transloco }}?</a>
+    </div>
+
+  </div>
+
+</div>
