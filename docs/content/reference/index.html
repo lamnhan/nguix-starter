@@ -91,22 +91,28 @@
 						<h3>Installation</h3>
 					</a>
 					<p>Install theming, <a href="https://unistylus.lamnhan.com">@unistylus/core</a>:</p>
-					<pre><code class="language-sh">npm i @unistylus/core @unistylus/bootstrap</code></pre>
+					<pre><code class="language-sh">npm i @unistylus/core @unistylus/bootstrap
+</code></pre>
 					<p>Install data models, <a href="https://schemata.lamnhan.com">@lamnhan/schemata</a>:</p>
-					<pre><code class="language-sh">npm i @lamnhan/schemata @lamnhan/ngx-schemata</code></pre>
+					<pre><code class="language-sh">npm i @lamnhan/schemata @lamnhan/ngx-schemata
+</code></pre>
 					<p>Install utilities, <a href="https://ngx-useful.lamnhan.com">@lamnhan/ngx-useful</a>:</p>
-					<pre><code class="language-sh">npm i @lamnhan/ngx-useful</code></pre>
+					<pre><code class="language-sh">npm i @lamnhan/ngx-useful
+</code></pre>
 					<p>Install NGUIX library, <a href="https://nguix-starter.lamnhan.com">@lamnhan/nguix-starter</a>:</p>
-					<pre><code class="language-sh">npm i @lamnhan/nguix-starter</code></pre>
+					<pre><code class="language-sh">npm i @lamnhan/nguix-starter
+</code></pre>
 					<a href="#basic-usage" id="basic-usage" style="color: inherit; text-decoration: none;">
 						<h3>Basic usage</h3>
 					</a>
 					<p>Use a component:</p>
 					<pre><code class="language-ts"><span class="hljs-comment">// import the module --&gt; app.module.ts</span>
-<span class="hljs-keyword">import</span> { NguixHeaderComponentModule } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;@lamnhan/nguix-starter&quot;</span>;</code></pre>
+<span class="hljs-keyword">import</span> { NguixHeaderComponentModule } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;@lamnhan/nguix-starter&quot;</span>;
+</code></pre>
 					<pre><code class="language-html"><span class="hljs-comment">&lt;!--  use the component ~~&gt; app.component.html --&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">nguix-header</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">nguix-header</span>&gt;</span></code></pre>
+<span class="hljs-tag">&lt;<span class="hljs-name">nguix-header</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">nguix-header</span>&gt;</span>
+</code></pre>
 					<p>Use a page:</p>
 					<pre><code class="language-ts"><span class="hljs-comment">// define a route --&gt; app-routing.module.ts</span>
 <span class="hljs-keyword">const</span> routes: Routes = [
@@ -115,7 +121,8 @@
     <span class="hljs-attr">loadChildren</span>: <span class="hljs-function">() =&gt;</span>
       <span class="hljs-keyword">import</span>(<span class="hljs-string">&quot;@lamnhan/nguix-starter&quot;</span>).then(<span class="hljs-function">(<span class="hljs-params">m</span>) =&gt;</span> m.NguixOopsPageModule),
   },
-];</code></pre>
+];
+</code></pre>
 					<p>See <a href="https://nguix-starter.lamnhan.com/guides">guides</a> for more articles. Also see the list of <a href="https://nguix-starter.lamnhan.com/components">components</a>, <a href="https://nguix-starter.lamnhan.com/pages">pages</a>, <a href="https://nguix-starter.lamnhan.com/splashscreens">splashscreens</a>, <a href="https://nguix-starter.lamnhan.com/templates">templates</a>.</p>
 					<p>Also, visit the <a href="https://nguix-starter.lamnhan.com">homepage</a>.</p>
 				</section>
@@ -220,6 +227,9 @@
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="classes/headercomponent.html" class="tsd-kind-icon">Header<wbr>Component</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/iconcomponent.html" class="tsd-kind-icon">Icon<wbr>Component</a>
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="classes/navindicatorcomponent.html" class="tsd-kind-icon">Nav<wbr>Indicator<wbr>Component</a>

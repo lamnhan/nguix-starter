@@ -1,0 +1,26 @@
+<div class="host">
+
+  <app-page
+    menuName="List of components"
+    [menuItems]="data.componentMenu"
+    [bodyTemplate]="pageBody"
+  ></app-page>
+
+  <ng-template #pageBody>
+
+    <app-compbody
+      [componentTemplate]="componentTemplate"
+      apiSrc="https://raw.githubusercontent.com/lamnhan/nguix-starter/main/docs/content/components/icon.md"
+      importName="NguixIconComponentModule"
+      htmlCode="&lt;nguix-icon&gt;&lt;/nguix-icon&gt;"
+    ></app-compbody>
+
+    <ng-template #componentTemplate>
+      <div class="padding">
+        <nguix-icon name="emoji-smile"></nguix-icon>
+      </div>
+    </ng-template>
+
+  </ng-template>
+
+</div>

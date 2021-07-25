@@ -70,6 +70,7 @@ const routes: Routes = [
   { path: 'component/nav-indicator', loadChildren: () => import('./pages/component/nav-indicator/nav-indicator.module').then(m => m.NavIndicatorPageModule) },
   { path: 'component/pwa-box', loadChildren: () => import('./pages/component/pwa-box/pwa-box.module').then(m => m.PwaBoxPageModule) },
   { path: 'component/pwa-reminder', loadChildren: () => import('./pages/component/pwa-reminder/pwa-reminder.module').then(m => m.PwaReminderPageModule) },
+  { path: 'component/icon', loadChildren: () => import('./pages/component/icon/icon.module').then(m => m.IconPageModule) },
   // pages
   { path: 'pages', loadChildren: () => import('./pages/pages/pages.module').then(m => m.PagesPageModule) },
   { path: 'page/oauth-popup', loadChildren: () => import('./pages/page/oauth-popup/oauth-popup.module').then(m => m.OauthPopupPageModule) },

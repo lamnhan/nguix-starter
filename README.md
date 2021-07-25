@@ -108,6 +108,7 @@ Also, visit the [homepage](https://nguix-starter.lamnhan.com).
 | [FooterComponent](https://nguix-starter.lamnhan.com/content/reference/classes/footercomponent.html)             |             |
 | [Header2ndComponent](https://nguix-starter.lamnhan.com/content/reference/classes/header2ndcomponent.html)       |             |
 | [HeaderComponent](https://nguix-starter.lamnhan.com/content/reference/classes/headercomponent.html)             |             |
+| [IconComponent](https://nguix-starter.lamnhan.com/content/reference/classes/iconcomponent.html)                 |             |
 | [NavIndicatorComponent](https://nguix-starter.lamnhan.com/content/reference/classes/navindicatorcomponent.html) |             |
 | [OopsComponent](https://nguix-starter.lamnhan.com/content/reference/classes/oopscomponent.html)                 |             |
 | [PwaBoxComponent](https://nguix-starter.lamnhan.com/content/reference/classes/pwaboxcomponent.html)             |             |

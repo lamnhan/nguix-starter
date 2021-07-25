@@ -94,6 +94,11 @@ export class DataService {
         routerLink: ['component', 'spinner']
       },
       {
+        text: 'Icon',
+        level: 1,
+        routerLink: ['component', 'icon']
+      },
+      {
         text: 'Content',
         level: 1,
         routerLink: ['component', 'content']
