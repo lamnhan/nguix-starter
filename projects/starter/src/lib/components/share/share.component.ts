@@ -11,17 +11,17 @@ export class ShareComponent implements OnInit {
   /**
    * Input() Share title
    */
-  @Input() title?: string;
+  @Input() title?: string = 'Share';
 
   /**
    * Input() The text to share
    */
-  @Input() text?: string;
+  @Input() text?: string = 'This is sommething!';
 
   /**
    * Input() The url to share
    */
-  @Input() url?: string;
+  @Input() url?: string = 'https://lamnhan.com';
 
   constructor(
     /**
@@ -39,10 +39,6 @@ export class ShareComponent implements OnInit {
    * @ignore
    */
   share() {
-    return this.appService.share(
-      this.title || 'Share',
-      this.text || 'This is sommething!',
-      this.url || 'https://lamnhan.com',
-    );
+    return this.appService.share(this.title, this.text, this.url);
   }
 }

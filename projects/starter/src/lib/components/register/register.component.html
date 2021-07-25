@@ -1,3 +1,4 @@
+<ng-container *transloco="let t">
 <div class="host">
 
   <div class="message margin-bottom" *ngIf="message">
@@ -9,31 +10,32 @@
     <form [formGroup]="registerFormGroup" (ngSubmit)="signUp()" #registerForm="ngForm">
   
       <label class="group margin-bottom">
-        <span class="form-label">{{ 'REGISTER.EMAIL' | transloco }}</span>
-        <input class="form-control" type="email" formControlName="email" [placeholder]="'REGISTER.EMAIL_PLACEHOLDER' | transloco">
+        <span class="form-label">{{ !i18n ? emailLabel : t('NGUIX_REGISTER.EMAIL_LABEL') || emailLabel }}</span>
+        <input class="form-control" type="email" formControlName="email" [placeholder]="!i18n ? emailPlaceholder : t('NGUIX_REGISTER.EMAIL_PLACEHOLDER') || emailPlaceholder ">
       </label>
   
       <label class="group margin-bottom">
-        <span class="form-label">{{ 'REGISTER.PASSWORD' | transloco }}</span>
-        <input class="form-control" type="password" formControlName="password" [placeholder]="'REGISTER.PASSWORD_PLACEHOLDER' | transloco">
+        <span class="form-label">{{ !i18n ? passwordLabel : t('NGUIX_REGISTER.PASSWORD_LABEL') || passwordLabel }}</span>
+        <input class="form-control" type="password" formControlName="password" [placeholder]="!i18n ? passwordPlaceholder : t('NGUIX_REGISTER.PASSWORD_PLACEHOLDER') || passwordPlaceholder">
       </label>
   
       <label class="group margin-bottom">
-        <span class="form-label">{{ 'REGISTER.CONFIRM_PASSWORD' | transloco }}</span>
-        <input class="form-control" type="password" formControlName="passwordConfirm" [placeholder]="'REGISTER.CONFIRM_PASSWORD_PLACEHOLDER' | transloco">
+        <span class="form-label">{{ !i18n ? confirmPasswordLabel : t('NGUIX_REGISTER.CONFIRM_PASSWORD_LABEL') || confirmPasswordLabel }}</span>
+        <input class="form-control" type="password" formControlName="passwordConfirm" [placeholder]="!i18n ? confirmPasswordPlaceholder : t('NGUIX_REGISTER.CONFIRM_PASSWORD_PLACEHOLDER') || confirmPasswordPlaceholder">
       </label>
   
       <div class="action">
         <button class="button-primary" type="submit"
-          [disabled]="!registerForm.form.valid || lockdown">{{ 'REGISTER.SUBMIT_TEXT' | transloco }}</button>
+          [disabled]="!registerForm.form.valid || lockdown">{{ !i18n ? submitText : t('NGUIX_REGISTER.SUBMIT_TEXT') || submitText }}</button>
       </div>
   
     </form>
+    
+  </div>
 
-    <div class="foot">
-      <a class="button-link" href="/login" (click)="goLogin.emit(); false;">{{ 'LOGIN.SUBMIT_TEXT' | transloco }}?</a>
-    </div>
-
+  <div class="login">
+    <a class="button-link" [usefulRouterLink]="loginRouterLink">{{ !i18n ? loginText : t('NGUIX_NGUIX_REGISTER.LOGIN_TEXT') || loginText }}?</a>
   </div>
 
 </div>
+</ng-container>

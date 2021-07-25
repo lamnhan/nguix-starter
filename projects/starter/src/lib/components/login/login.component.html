@@ -1,3 +1,4 @@
+<ng-container *transloco="let t">
 <div class="host" *ngIf="authService">
 
   <div class="message margin-bottom" *ngIf="message">
@@ -13,33 +14,33 @@
     >
   
       <label class="group margin-bottom">
-        <span class="form-label">{{ 'LOGIN.EMAIL' | transloco }}</span>
-        <input class="form-control" type="email" formControlName="email" [placeholder]="'LOGIN.EMAIL_PLACEHOLDER' | transloco">
+        <span class="form-label">{{ !i18n ? emailLabel : t('NGUIX_LOGIN.EMAIL_LABEL') || emailLabel }}</span>
+        <input class="form-control" type="email" formControlName="email" [placeholder]="!i18n ? emailPlaceholder : t('NGUIX_LOGIN.EMAIL_PLACEHOLDER') || emailPlaceholder">
       </label>
   
       <label class="group margin-bottom">
-        <span class="form-label">{{ 'LOGIN.PASSWORD' | transloco }}</span>
-        <input class="form-control" type="password" formControlName="password" [placeholder]="'LOGIN.PASSWORD_PLACEHOLDER' | transloco">
+        <span class="form-label">{{ !i18n ? passwordLabel : t('NGUIX_LOGIN.PASSWORD_LABEL') || passwordLabel }}</span>
+        <input class="form-control" type="password" formControlName="password" [placeholder]="!i18n ? passwordPlaceholder : t('NGUIX_LOGIN.PASSWORD_PLACEHOLDER') || passwordPlaceholder">
       </label>
   
       <div class="action">
         <button class="button-primary" type="submit"
-          [disabled]="!loginForm.form.valid || lockdown">{{ 'LOGIN.SUBMIT_TEXT' | transloco }}</button>
+          [disabled]="!loginForm.form.valid || lockdown">{{ !i18n ? submitText : t('NGUIX_LOGIN.SUBMIT_TEXT') || submitText }}</button>
       </div>
   
     </form>
   
     <div class="foot">
-      <button class="button-link" (click)="resetPassword()">{{ 'LOGIN.FORGOT' | transloco }}</button>
+      <button class="button-link" (click)="resetPassword()">{{ !i18n ? forgotPassword : t('NGUIX_LOGIN.FORGOT') || forgotPassword }}</button>
     </div>
 
   </div>
 
-  <div class="providers">
-    <div class="text">{{ 'LOGIN.SOCIAL_TEXT' | transloco }}</div>
+  <div class="socials" *ngIf="withSocials">
+    <div class="text">{{ !i18n ? socialText : t('NGUIX_LOGIN.SOCIAL_TEXT') || socialText }}</div>
     <button
       class="button-outline"
-      *ngIf="authService.methodAllowedForGoogle"
+      *ngIf="isGoogleOauth && authService.methodAllowedForGoogle"
       [disabled]="lockdown"
       (click)="signInWithPopupForGoogle()"
     >
@@ -48,7 +49,7 @@
     </button>
     <button
       class="button-outline"
-      *ngIf="authService.methodAllowedForFacebook"
+      *ngIf="isFacebookOauth && authService.methodAllowedForFacebook"
       [disabled]="lockdown"
       (click)="signInWithPopupForFacebook()"
     >
@@ -57,16 +58,18 @@
     </button>
     <button
       class="button-outline"
-      *ngIf="authService.methodAllowedForGithub"
+      *ngIf="isGithubOauth && authService.methodAllowedForGithub"
       [disabled]="lockdown"
       (click)="signInWithPopupForGithub()"
     >
       <img src="https://img.icons8.com/fluent/48/000000/github.png"/>
       <span>Github</span>
     </button>
-    <p>
-      <a href="/register" (click)="goRegister.emit(); false;">{{ 'REGISTER.SUBMIT_TEXT' | transloco }}?</a>
-    </p>
+  </div>
+  
+  <div class="register">
+    <a [usefulRouterLink]="registerRouterLink">{{ !i18n ? registerText : ('NGUIX_LOGIN.REGISTER_TEXT') || registerText }}?</a>
   </div>
 
 </div>
+</ng-container>

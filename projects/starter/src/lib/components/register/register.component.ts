@@ -8,11 +8,55 @@ import { AuthService } from '@lamnhan/ngx-useful';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
+  /**
+   * Input() Enable localization
+   */
+  @Input() i18n = false;
 
   /**
-   * Output() Go to the login page
+   * Input() Register page router link
    */
-  @Output() goLogin: EventEmitter<void> = new EventEmitter();
+  @Input() loginRouterLink: string | string[] = ['login'];
+
+  /**
+   * Input() The email input label. For i18n: NGUIX_REGISTER.EMAIL_LABEL
+   */
+  emailLabel = 'Email';
+
+  /**
+   * Input() The email input placeholder. For i18n: NGUIX_REGISTER.EMAIL_PLACEHOLDER
+   */
+  emailPlaceholder = 'Your email';
+
+  /**
+   * Input() The password input label. For i18n: NGUIX_REGISTER.PASSWORD_LABEL
+   */
+  passwordLabel = 'Password';
+
+  /**
+   * Input() The password input placeholder. For i18n: NGUIX_REGISTER.PASSWORD_PLACEHOLDER
+   */
+  passwordPlaceholder = 'Your password';
+
+  /**
+   * Input() The password confirmation input label. For i18n: NGUIX_REGISTER.CONFIRM_PASSWORD_LABEL
+   */
+  confirmPasswordLabel = 'Password again';
+
+  /**
+   * Input() The password input placeholder. For i18n: NGUIX_REGISTER.CONFIRM_PASSWORD_PLACEHOLDER
+   */
+   confirmPasswordPlaceholder = 'Confirm password';
+
+  /**
+   * Input() Submit text. For i18n: NGUIX_REGISTER.SUBMIT_TEXT
+   */
+  submitText = "Create account";
+
+  /**
+   * Input() Login link text. For i18n: NGUIX_REGISTER.REGISTER_TEXT
+   */
+  loginText = 'Login';
 
   /**
    * Output() Sign up completed
@@ -24,8 +68,6 @@ export class RegisterComponent implements OnInit {
    */
   @Output() error: EventEmitter<any> = new EventEmitter();
 
-  public readonly registerFormGroup: FormGroup;
-
   /**
    * @ignore
    */
@@ -35,6 +77,8 @@ export class RegisterComponent implements OnInit {
    * @ignore
    */
   message?: string;
+
+  public readonly registerFormGroup: FormGroup;
 
   constructor(
     private formBuilder: FormBuilder,

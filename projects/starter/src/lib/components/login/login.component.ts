@@ -8,11 +8,60 @@ import { AuthService, NativeUserCredential } from '@lamnhan/ngx-useful';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
+  /**
+   * Input() Enable localization
+   */
+  @Input() i18n = false;
 
   /**
-   * Output() Go to the register page
+   * Input() Register page router link
    */
-  @Output() goRegister = new EventEmitter<void>();
+  @Input() registerRouterLink: string | string[] = ['register'];
+
+  /**
+   * Input() The email input label. For i18n: NGUIX_LOGIN.EMAIL_LABEL
+   */
+  @Input() emailLabel = 'Email';
+
+  /**
+   * Input() The email input placeholder. For i18n: NGUIX_LOGIN.EMAIL_PLACEHOLDER
+   */
+  @Input() emailPlaceholder = 'Your email';
+
+  /**
+   * Input() The password input label. For i18n: NGUIX_LOGIN.PASSWORD_LABEL
+   */
+  @Input() passwordLabel = 'Password';
+
+  /**
+   * Input() The password input placeholder. For i18n: NGUIX_LOGIN.PASSWORD_PLACEHOLDER
+   */
+  @Input() passwordPlaceholder = 'Your password';
+
+  /**
+   * Input() Submit text. For i18n: NGUIX_LOGIN.SUBMIT_TEXT
+   */
+  @Input() submitText = "Sign In";
+
+  /**
+   * Input() Forgot password text. For i18n: NGUIX_LOGIN.FORGOT_PASSWORD
+   */
+  @Input() forgotPassword = "Forgot password";
+
+  /**
+   * Input() Social text. For i18n: NGUIX_LOGIN.SOCIAL_TEXT
+   */
+  @Input() socialText = 'Or, social accounts:';
+
+  /**
+   * Input() Register link text. For i18n: NGUIX_LOGIN.REGISTER_TEXT
+   */
+  @Input() registerText = 'Register an account';
+
+  /**
+   * Input() With socials signin: google, facebook, github
+   */
+  @Input() withSocials?: string[];
 
   /**
    * Output() Sign in completed
@@ -24,8 +73,6 @@ export class LoginComponent implements OnInit {
    */
   @Output() error = new EventEmitter<any>();
 
-  public readonly loginFormGroup: FormGroup;
-
   /**
    * @ignore
    */
@@ -35,6 +82,23 @@ export class LoginComponent implements OnInit {
    * @ignore
    */
   message?: string;
+
+  /**
+   * @ignore
+   */
+  isGoogleOauth = false;
+  
+  /**
+   * @ignore
+   */
+  isFacebookOauth = false;
+
+  /**
+   * @ignore
+   */
+  isGithubOauth = false;
+
+  public readonly loginFormGroup: FormGroup;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -58,7 +122,13 @@ export class LoginComponent implements OnInit {
   /**
    * @ignore
    */
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    if (this.withSocials) {
+      this.isGoogleOauth = this.withSocials.includes('google');
+      this.isFacebookOauth = this.withSocials.includes('facebook');
+      this.isGithubOauth = this.withSocials.includes('github');
+    }
+  }
 
   /**
    * @ignore
