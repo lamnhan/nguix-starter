@@ -1,0 +1,22 @@
+<ng-container *transloco="let t">
+<div class="host" *ngIf="userService.currentUser">
+<ng-container *ngIf="userService.data; let userData">
+
+  <div class="head">
+    <div class="avatar"><img [src]="userData.photoURL" [alt]="userData.displayName"></div>
+    <div class="info">
+      <h3>{{ userData.displayName }}</h3>
+      <p class="email">
+        <em>{{ userData.email }}</em>
+        <!-- <a *ngIf="!userData.emailVerified" href="#" (click)="false;">Verify email</a> -->
+      </p>
+    </div>
+  </div>
+  
+  <div class="foot">
+    <button class="button-outline" (click)="signOut()">{{ !i18n ? logoutText : t('NGUIX_ACCOUNT.LOGOUT_TEXT') || logoutText }}</button>
+  </div>
+
+</ng-container>
+</div>
+</ng-container>

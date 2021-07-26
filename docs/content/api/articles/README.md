@@ -104,6 +104,7 @@ Also, visit the [homepage](https://nguix-starter.lamnhan.com).
 
 | Class                                                                                                           | Description |
 | --------------------------------------------------------------------------------------------------------------- | ----------- |
+| [AccountComponent](https://nguix-starter.lamnhan.com/content/reference/classes/accountcomponent.html)           |             |
 | [ContentComponent](https://nguix-starter.lamnhan.com/content/reference/classes/contentcomponent.html)           |             |
 | [FooterComponent](https://nguix-starter.lamnhan.com/content/reference/classes/footercomponent.html)             |             |
 | [Header2ndComponent](https://nguix-starter.lamnhan.com/content/reference/classes/header2ndcomponent.html)       |             |

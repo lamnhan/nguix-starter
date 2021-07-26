@@ -32,6 +32,8 @@ export * from './lib/components/login/login.component';
 export * from './lib/components/login/login.module';
 export * from './lib/components/register/register.component';
 export * from './lib/components/register/register.module';
+export * from './lib/components/account/account.component';
+export * from './lib/components/account/account.module';
 
 export * from './lib/pages/oops/oops.component';
 export * from './lib/pages/oops/oops.module';

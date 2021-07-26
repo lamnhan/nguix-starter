@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>HeaderComponent | @lamnhan/nguix-starter</title>
+	<title>AccountComponent | @lamnhan/nguix-starter</title>
 	<meta name="description" content="Documentation for @lamnhan/nguix-starter">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -54,10 +54,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="headercomponent.html">HeaderComponent</a>
+					<a href="accountcomponent.html">AccountComponent</a>
 				</li>
 			</ul>
-			<h1>Class HeaderComponent</h1>
+			<h1>Class AccountComponent</h1>
 		</div>
 	</div>
 </header>
@@ -68,7 +68,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">HeaderComponent</span>
+						<span class="target">AccountComponent</span>
 					</li>
 				</ul>
 			</section>
@@ -85,17 +85,17 @@
 						<section class="tsd-index-section ">
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="headercomponent.html#constructor" class="tsd-kind-icon">constructor</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="accountcomponent.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="headercomponent.html#fixed" class="tsd-kind-icon">fixed</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="headercomponent.html#i18n" class="tsd-kind-icon">i18n</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="headercomponent.html#logo" class="tsd-kind-icon">logo</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="headercomponent.html#menuitems" class="tsd-kind-icon">menu<wbr>Items</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="headercomponent.html#name" class="tsd-kind-icon">name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="accountcomponent.html#authservice" class="tsd-kind-icon">auth<wbr>Service</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="accountcomponent.html#i18n" class="tsd-kind-icon">i18n</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="accountcomponent.html#logouttext" class="tsd-kind-icon">logout<wbr>Text</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="accountcomponent.html#navservice" class="tsd-kind-icon">nav<wbr>Service</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="accountcomponent.html#userservice" class="tsd-kind-icon">user<wbr>Service</a></li>
 							</ul>
 						</section>
 					</div>
@@ -107,16 +107,28 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Header<wbr>Component<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="headercomponent.html" class="tsd-signature-type">HeaderComponent</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Account<wbr>Component<span class="tsd-signature-symbol">(</span>navService<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">NavService</span>, authService<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">AuthService</span>, userService<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">UserService</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="accountcomponent.html" class="tsd-signature-type">AccountComponent</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/lamnhan/nguix-starter/blob/9e12bdb/projects/starter/src/lib/components/header/header.component.ts#L34">projects/starter/src/lib/components/header/header.component.ts:34</a></li>
+									<li>Defined in projects/starter/src/lib/components/account/account.component.ts:18</li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <a href="headercomponent.html" class="tsd-signature-type">HeaderComponent</a></h4>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>navService: <span class="tsd-signature-type">NavService</span></h5>
+								</li>
+								<li>
+									<h5>authService: <span class="tsd-signature-type">AuthService</span></h5>
+								</li>
+								<li>
+									<h5>userService: <span class="tsd-signature-type">UserService</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="accountcomponent.html" class="tsd-signature-type">AccountComponent</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -124,17 +136,17 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="fixed" class="tsd-anchor"></a>
-					<h3>fixed</h3>
-					<div class="tsd-signature tsd-kind-icon">fixed<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></div>
+					<a name="authservice" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> auth<wbr>Service</h3>
+					<div class="tsd-signature tsd-kind-icon">auth<wbr>Service<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">AuthService</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/lamnhan/nguix-starter/blob/9e12bdb/projects/starter/src/lib/components/header/header.component.ts#L19">projects/starter/src/lib/components/header/header.component.ts:19</a></li>
+							<li>Defined in projects/starter/src/lib/components/account/account.component.ts:28</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>Input() Stick the header at the top</p>
+							<p>Inject() Requires the <a href="https://ngx-useful.lamnhan.com/service/auth">AuthService</a></p>
 						</div>
 					</div>
 				</section>
@@ -144,7 +156,7 @@
 					<div class="tsd-signature tsd-kind-icon">i18n<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/lamnhan/nguix-starter/blob/9e12bdb/projects/starter/src/lib/components/header/header.component.ts#L14">projects/starter/src/lib/components/header/header.component.ts:14</a></li>
+							<li>Defined in projects/starter/src/lib/components/account/account.component.ts:13</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -154,47 +166,47 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="logo" class="tsd-anchor"></a>
-					<h3>logo</h3>
-					<div class="tsd-signature tsd-kind-icon">logo<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;/assets/images/logo.svg&quot;</span></div>
+					<a name="logouttext" class="tsd-anchor"></a>
+					<h3>logout<wbr>Text</h3>
+					<div class="tsd-signature tsd-kind-icon">logout<wbr>Text<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;Logout&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/lamnhan/nguix-starter/blob/9e12bdb/projects/starter/src/lib/components/header/header.component.ts#L24">projects/starter/src/lib/components/header/header.component.ts:24</a></li>
+							<li>Defined in projects/starter/src/lib/components/account/account.component.ts:18</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>Input() Brand logo</p>
+							<p>Input() The log out text. For i18n: NGUIX_ACCOUNT.LOGOUT_TEXT</p>
 						</div>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="menuitems" class="tsd-anchor"></a>
-					<h3>menu<wbr>Items</h3>
-					<div class="tsd-signature tsd-kind-icon">menu<wbr>Items<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">MenuItem</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = []</span></div>
+					<a name="navservice" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> nav<wbr>Service</h3>
+					<div class="tsd-signature tsd-kind-icon">nav<wbr>Service<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">NavService</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/lamnhan/nguix-starter/blob/9e12bdb/projects/starter/src/lib/components/header/header.component.ts#L34">projects/starter/src/lib/components/header/header.component.ts:34</a></li>
+							<li>Defined in projects/starter/src/lib/components/account/account.component.ts:24</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>Input() Menu items</p>
+							<p>Inject() Requires the <a href="https://ngx-useful.lamnhan.com/service/nav">NavService</a></p>
 						</div>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="name" class="tsd-anchor"></a>
-					<h3>name</h3>
-					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;App&quot;</span></div>
+					<a name="userservice" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> user<wbr>Service</h3>
+					<div class="tsd-signature tsd-kind-icon">user<wbr>Service<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">UserService</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/lamnhan/nguix-starter/blob/9e12bdb/projects/starter/src/lib/components/header/header.component.ts#L29">projects/starter/src/lib/components/header/header.component.ts:29</a></li>
+							<li>Defined in projects/starter/src/lib/components/account/account.component.ts:32</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>Input() Brand name. For i18n: <code>NGUIX_HEADER.NAME</code> = App</p>
+							<p>Inject() Requires the <a href="https://ngx-useful.lamnhan.com/service/user">UserService</a></p>
 						</div>
 					</div>
 				</section>
@@ -210,9 +222,33 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-class">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-class">
 						<a href="accountcomponent.html" class="tsd-kind-icon">Account<wbr>Component</a>
+						<ul>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class">
+								<a href="accountcomponent.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="accountcomponent.html#authservice" class="tsd-kind-icon">auth<wbr>Service</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="accountcomponent.html#i18n" class="tsd-kind-icon">i18n</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="accountcomponent.html#logouttext" class="tsd-kind-icon">logout<wbr>Text</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="accountcomponent.html#navservice" class="tsd-kind-icon">nav<wbr>Service</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="accountcomponent.html#userservice" class="tsd-kind-icon">user<wbr>Service</a>
+							</li>
+						</ul>
 					</li>
+				</ul>
+				<ul class="after-current">
 					<li class=" tsd-kind-class">
 						<a href="contentcomponent.html" class="tsd-kind-icon">Content<wbr>Component</a>
 					</li>
@@ -222,33 +258,9 @@
 					<li class=" tsd-kind-class">
 						<a href="header2ndcomponent.html" class="tsd-kind-icon">Header2nd<wbr>Component</a>
 					</li>
-				</ul>
-				<ul class="current">
-					<li class="current tsd-kind-class">
+					<li class=" tsd-kind-class">
 						<a href="headercomponent.html" class="tsd-kind-icon">Header<wbr>Component</a>
-						<ul>
-							<li class=" tsd-kind-constructor tsd-parent-kind-class">
-								<a href="headercomponent.html#constructor" class="tsd-kind-icon">constructor</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="headercomponent.html#fixed" class="tsd-kind-icon">fixed</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="headercomponent.html#i18n" class="tsd-kind-icon">i18n</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="headercomponent.html#logo" class="tsd-kind-icon">logo</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="headercomponent.html#menuitems" class="tsd-kind-icon">menu<wbr>Items</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="headercomponent.html#name" class="tsd-kind-icon">name</a>
-							</li>
-						</ul>
 					</li>
-				</ul>
-				<ul class="after-current">
 					<li class=" tsd-kind-class">
 						<a href="iconcomponent.html" class="tsd-kind-icon">Icon<wbr>Component</a>
 					</li>

@@ -14,6 +14,7 @@ import { NguixIconComponentModule } from './components/icon/icon.module';
 import { NguixShareComponentModule } from './components/share/share.module';
 import { NguixLoginComponentModule } from './components/login/login.module';
 import { NguixRegisterComponentModule } from './components/register/register.module';
+import { NguixAccountComponentModule } from './components/account/account.module';
 
 @NgModule({
   declarations: [],
@@ -32,6 +33,7 @@ import { NguixRegisterComponentModule } from './components/register/register.mod
     NguixShareComponentModule,
     NguixLoginComponentModule,
     NguixRegisterComponentModule,
+    NguixAccountComponentModule,
   ],
   exports: [
     NguixHeaderComponentModule,
@@ -48,6 +50,7 @@ import { NguixRegisterComponentModule } from './components/register/register.mod
     NguixShareComponentModule,
     NguixLoginComponentModule,
     NguixRegisterComponentModule,
+    NguixAccountComponentModule,
   ]
 })
 export class NguixStarterModule { }
