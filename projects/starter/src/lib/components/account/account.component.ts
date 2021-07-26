@@ -48,4 +48,18 @@ export class AccountComponent implements OnInit {
         .subscribe(() => this.navService.navigate(['']));
     }
   }
+
+  /**
+   * @ignore
+   */
+  updateIntro(value: string) {
+    console.log({value});
+  }
+
+  /**
+   * @ignore
+   */
+  updateEmailPublicly(isPublic: boolean) {
+    console.log({isPublic});
+  }
 }

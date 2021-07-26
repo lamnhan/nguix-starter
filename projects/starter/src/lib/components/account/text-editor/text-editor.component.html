@@ -1,0 +1,52 @@
+<ng-container *transloco="let t">
+<div class="host">
+
+  <div class="label">
+    <div class="left">{{ !i18n ? label : t(label) || label }}</div>
+    <div class="right">
+      <ng-container *ngIf="!isEdit">
+        <a href="#" *ngIf="editable && value" (click)="isEdit=true;false;">Edit</a>
+        <label class="form-switch" *ngIf="showPubliclyToggler">
+          <input
+            type="checkbox"
+            [checked]="isPublicly"
+            (change)="togglePublicly($event)"
+          />
+          <span class="slider"></span>
+        </label>
+      </ng-container>
+    </div>
+  </div>
+
+  <div class="value" *ngIf="!isEdit; else editMode">
+    <p *ngIf="value; else noValue" [innerHtml]="value"></p>
+    <ng-template #noValue>
+      <a class="no-value" href="#" (click)="isEdit=true;false;">Click to edit</a>
+    </ng-template>
+  </div>
+
+  <ng-template #editMode>
+  <div class="edit" *ngIf="editable">
+    
+    <ng-container *ngIf="type==='text'">
+      <input class="form-control" type="text" [(ngModel)]="currentValue">
+    </ng-container>
+  
+    <ng-container *ngIf="type==='textarea'">
+      <textarea class="form-control" [(ngModel)]="currentValue"></textarea>
+    </ng-container>
+
+    <div class="actions">
+      <div class="left">
+        <button class="button-primary-sm" (click)="submit()">Save</button>
+      </div>
+      <div class="right">
+        <button class="button-outline-foreground-sm" (click)="isEdit=false">Cacnel</button>
+      </div>
+    </div>
+
+  </div>
+  </ng-template>
+
+</div>
+</ng-container>

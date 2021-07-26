@@ -1,0 +1,47 @@
+.host {  
+
+  .label {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-bottom: .5rem;
+
+    .left {
+      flex: 1;
+    }
+
+    .right {
+
+      a {
+
+      }
+
+      .form-switch {
+        margin-left: 1rem;
+      }
+    }
+  }
+
+  .value {
+    color: var(--app-color-medium);
+
+    .no-value {
+      font-size: .75rem;
+      font-style: italic;
+    }
+  }
+
+  .edit {
+
+    .actions {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      margin-top: .5rem;
+
+      .left {
+        flex: 1;
+      }
+    }
+  }
+}
