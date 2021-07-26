@@ -1,16 +1,71 @@
 <ng-container *transloco="let t">
-<div class="host" *ngIf="userService.currentUser">
-<ng-container *ngIf="userService.data; let userData">
+<div class="host" *ngIf="userService.currentUser; else noUser">
+<ng-container *ngIf="userService.data; let data">
+<ng-container *ngIf="userService.publicData; let publicData">
 
   <div class="head">
-    <div class="avatar"><img [src]="userData.photoURL" [alt]="userData.displayName"></div>
-    <div class="info">
-      <h3>{{ userData.displayName }}</h3>
-      <p class="email">
-        <em>{{ userData.email }}</em>
-        <!-- <a *ngIf="!userData.emailVerified" href="#" (click)="false;">Verify email</a> -->
-      </p>
+
+    <div class="cover" [style.background-image]="!data.coverPhoto ? null : 'url(' + data.coverPhoto + ')'">
+      <button class="button-light">
+        <nguix-icon base="icon-dark" name="arrow-up-circle-fill" size="24"></nguix-icon>
+      </button>
     </div>
+
+    <div class="content">
+      <div class="avatar">
+        <img [src]="data.photoURL" [alt]="data.displayName">
+        <button class="edit button"><nguix-icon name="arrow-up-circle-fill" size="16"></nguix-icon></button>
+      </div>
+      <div class="info">
+        <h3 class="name">
+          <strong class="truncate">{{ data.displayName }}</strong>
+          <button class="edit button-clear"><nguix-icon name="pencil-square" size="16"></nguix-icon></button>
+        </h3>
+        <div class="email">
+          <em>{{ data.email }}</em>
+          <!-- <a *ngIf="!data.emailVerified" href="#" (click)="false;">Verify email</a> -->
+        </div>
+      </div>
+      <div class="public" *ngIf="data.username">
+        <a class="button-primary" [usefulRouterLink]="[data.username]">Public Profile</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="body">
+
+    <ul class="general">
+      <li class="title">General</li>
+
+      <li class="publicly">
+        <div class="label">Publicly</div>
+        <div class="value">
+          <label class="form-switch">
+            <input
+              type="checkbox"
+              [checked]="publicData.status==='publish'"
+            />
+            <span class="slider"></span>
+          </label>
+        </div>
+      </li>
+
+      <li class="intro">
+        <div class="label">
+          <div class="left">Intro</div>
+          <div class="right"><a href="#">Edit</a></div>
+        </div>
+        <div class="value">
+          <p *ngIf="data.intro; else noValue" [innerHtml]="data.intro"></p>
+          <ng-template #noValue>
+            <a href="#">Click to edit</a>
+          </ng-template>
+        </div>
+      </li>
+
+    </ul>
+
   </div>
   
   <div class="foot">
@@ -18,5 +73,11 @@
   </div>
 
 </ng-container>
+</ng-container>
 </div>
+
+<ng-template #noUser>
+  <p>No signed in user!</p>
+</ng-template>
+
 </ng-container>
