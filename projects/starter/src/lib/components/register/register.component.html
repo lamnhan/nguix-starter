@@ -1,41 +1,38 @@
 <ng-container *transloco="let t">
 <div class="host">
 
-  <div class="message margin-bottom" *ngIf="message">
+  <div class="head">
+    <h3>{{ !i18n ? submitText : t('NGUIX_REGISTER.SUBMIT_TEXT') || submitText }}</h3>
+    <p>{{ !i18n ? loginDescription : t('NGUIX_NGUIX_REGISTER.LOGIN_DESCRIPTION') || loginDescription }}, <a [usefulRouterLink]="loginRouterLink">{{ !i18n ? loginText : t('NGUIX_NGUIX_REGISTER.LOGIN_TEXT') || loginText }}</a></p>
+  </div>
+
+  <div class="message" *ngIf="message">
     <div class="alert-danger" [innerHtml]="message"></div>
   </div>
 
-  <div class="form">
+  <form [formGroup]="registerFormGroup" (ngSubmit)="signUp()" #registerForm="ngForm">
 
-    <form [formGroup]="registerFormGroup" (ngSubmit)="signUp()" #registerForm="ngForm">
-  
-      <label class="group margin-bottom">
-        <span class="form-label">{{ !i18n ? emailLabel : t('NGUIX_REGISTER.EMAIL_LABEL') || emailLabel }}</span>
-        <input class="form-control" type="email" formControlName="email" [placeholder]="!i18n ? emailPlaceholder : t('NGUIX_REGISTER.EMAIL_PLACEHOLDER') || emailPlaceholder ">
-      </label>
-  
-      <label class="group margin-bottom">
-        <span class="form-label">{{ !i18n ? passwordLabel : t('NGUIX_REGISTER.PASSWORD_LABEL') || passwordLabel }}</span>
-        <input class="form-control" type="password" formControlName="password" [placeholder]="!i18n ? passwordPlaceholder : t('NGUIX_REGISTER.PASSWORD_PLACEHOLDER') || passwordPlaceholder">
-      </label>
-  
-      <label class="group margin-bottom">
-        <span class="form-label">{{ !i18n ? confirmPasswordLabel : t('NGUIX_REGISTER.CONFIRM_PASSWORD_LABEL') || confirmPasswordLabel }}</span>
-        <input class="form-control" type="password" formControlName="passwordConfirm" [placeholder]="!i18n ? confirmPasswordPlaceholder : t('NGUIX_REGISTER.CONFIRM_PASSWORD_PLACEHOLDER') || confirmPasswordPlaceholder">
-      </label>
-  
-      <div class="action">
-        <button class="button-primary" type="submit"
-          [disabled]="!registerForm.form.valid || lockdown">{{ !i18n ? submitText : t('NGUIX_REGISTER.SUBMIT_TEXT') || submitText }}</button>
-      </div>
-  
-    </form>
-    
-  </div>
+    <label class="group">
+      <span class="form-label">{{ !i18n ? emailLabel : t('NGUIX_REGISTER.EMAIL_LABEL') || emailLabel }}</span>
+      <input class="form-control" type="email" formControlName="email" [placeholder]="!i18n ? emailPlaceholder : t('NGUIX_REGISTER.EMAIL_PLACEHOLDER') || emailPlaceholder ">
+    </label>
 
-  <div class="login">
-    <a class="button-link" [usefulRouterLink]="loginRouterLink">{{ !i18n ? loginText : t('NGUIX_NGUIX_REGISTER.LOGIN_TEXT') || loginText }}?</a>
-  </div>
+    <label class="group">
+      <span class="form-label">{{ !i18n ? passwordLabel : t('NGUIX_REGISTER.PASSWORD_LABEL') || passwordLabel }}</span>
+      <input class="form-control" type="password" formControlName="password" [placeholder]="!i18n ? passwordPlaceholder : t('NGUIX_REGISTER.PASSWORD_PLACEHOLDER') || passwordPlaceholder">
+    </label>
+
+    <label class="group">
+      <span class="form-label">{{ !i18n ? confirmPasswordLabel : t('NGUIX_REGISTER.CONFIRM_PASSWORD_LABEL') || confirmPasswordLabel }}</span>
+      <input class="form-control" type="password" formControlName="passwordConfirm" [placeholder]="!i18n ? confirmPasswordPlaceholder : t('NGUIX_REGISTER.CONFIRM_PASSWORD_PLACEHOLDER') || confirmPasswordPlaceholder">
+    </label>
+
+    <div class="action">
+      <button class="button-primary" type="submit"
+        [disabled]="!registerForm.form.valid || lockdown">{{ !i18n ? submitText : t('NGUIX_REGISTER.SUBMIT_TEXT') || submitText }}</button>
+    </div>
+
+  </form>
 
 </div>
 </ng-container>

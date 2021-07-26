@@ -1,43 +1,43 @@
 <ng-container *transloco="let t">
 <div class="host" *ngIf="authService">
 
-  <div class="message margin-bottom" *ngIf="message">
+  <div class="head">
+    <h3>{{ !i18n ? submitText : t('NGUIX_LOGIN.SUBMIT_TEXT') || submitText }}</h3>
+    <p>{{ !i18n ? registerDescription : ('NGUIX_LOGIN.REGISTER_DESCRIPTION') || registerDescription }}, <a [usefulRouterLink]="registerRouterLink">{{ !i18n ? registerText : ('NGUIX_LOGIN.REGISTER_TEXT') || registerText }}</a></p>
+  </div>
+
+  <div class="message" *ngIf="message">
     <div class="alert-danger" [innerHtml]="message"></div>
   </div>
 
-  <div class="form" *ngIf="authService.methodAllowedForEmailPassword">
+  <ng-container *ngIf="authService.methodAllowedForEmailPassword">
+  <form [formGroup]="loginFormGroup" (ngSubmit)="signIn()" #loginForm="ngForm">
 
-    <form
-      [formGroup]="loginFormGroup"
-      (ngSubmit)="signIn()"
-      #loginForm="ngForm"
-    >
-  
-      <label class="group margin-bottom">
-        <span class="form-label">{{ !i18n ? emailLabel : t('NGUIX_LOGIN.EMAIL_LABEL') || emailLabel }}</span>
-        <input class="form-control" type="email" formControlName="email" [placeholder]="!i18n ? emailPlaceholder : t('NGUIX_LOGIN.EMAIL_PLACEHOLDER') || emailPlaceholder">
-      </label>
-  
-      <label class="group margin-bottom">
-        <span class="form-label">{{ !i18n ? passwordLabel : t('NGUIX_LOGIN.PASSWORD_LABEL') || passwordLabel }}</span>
-        <input class="form-control" type="password" formControlName="password" [placeholder]="!i18n ? passwordPlaceholder : t('NGUIX_LOGIN.PASSWORD_PLACEHOLDER') || passwordPlaceholder">
-      </label>
-  
-      <div class="action">
-        <button class="button-primary" type="submit"
-          [disabled]="!loginForm.form.valid || lockdown">{{ !i18n ? submitText : t('NGUIX_LOGIN.SUBMIT_TEXT') || submitText }}</button>
+    <label class="group">
+      <span class="form-label">{{ !i18n ? emailLabel : t('NGUIX_LOGIN.EMAIL_LABEL') || emailLabel }}</span>
+      <input class="form-control" type="email" formControlName="email" [placeholder]="!i18n ? emailPlaceholder : t('NGUIX_LOGIN.EMAIL_PLACEHOLDER') || emailPlaceholder">
+    </label>
+
+    <div class="group">
+      <div class="text">
+        <label for="password" class="form-label">{{ !i18n ? passwordLabel : t('NGUIX_LOGIN.PASSWORD_LABEL') || passwordLabel }}</label>
+        <a href="#" (click)="resetPassword();false;">{{ !i18n ? forgotPassword : t('NGUIX_LOGIN.FORGOT') || forgotPassword }}</a>
       </div>
-  
-    </form>
-  
-    <div class="foot">
-      <button class="button-link" (click)="resetPassword()">{{ !i18n ? forgotPassword : t('NGUIX_LOGIN.FORGOT') || forgotPassword }}</button>
+      <input id="password" class="form-control" type="password" formControlName="password" [placeholder]="!i18n ? passwordPlaceholder : t('NGUIX_LOGIN.PASSWORD_PLACEHOLDER') || passwordPlaceholder">
     </div>
 
-  </div>
+    <div class="action">
+      <button class="button-primary" type="submit"
+        [disabled]="!loginForm.form.valid || lockdown">{{ !i18n ? submitText : t('NGUIX_LOGIN.SUBMIT_TEXT') || submitText }}</button>
+    </div>
+
+  </form>
+  </ng-container>
 
   <div class="socials" *ngIf="withSocials">
+
     <div class="text">{{ !i18n ? socialText : t('NGUIX_LOGIN.SOCIAL_TEXT') || socialText }}</div>
+
     <button
       class="button-outline"
       *ngIf="isGoogleOauth && authService.methodAllowedForGoogle"
@@ -47,6 +47,7 @@
       <img src="https://img.icons8.com/color/48/000000/google-logo.png"/>
       <span>Google</span>
     </button>
+
     <button
       class="button-outline"
       *ngIf="isFacebookOauth && authService.methodAllowedForFacebook"
@@ -56,6 +57,7 @@
       <img src="https://img.icons8.com/color/48/000000/facebook-new.png"/>
       <span>Facebook</span>
     </button>
+
     <button
       class="button-outline"
       *ngIf="isGithubOauth && authService.methodAllowedForGithub"
@@ -65,10 +67,7 @@
       <img src="https://img.icons8.com/fluent/48/000000/github.png"/>
       <span>Github</span>
     </button>
-  </div>
-  
-  <div class="register">
-    <a [usefulRouterLink]="registerRouterLink">{{ !i18n ? registerText : ('NGUIX_LOGIN.REGISTER_TEXT') || registerText }}?</a>
+
   </div>
 
 </div>

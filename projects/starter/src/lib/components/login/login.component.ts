@@ -46,17 +46,22 @@ export class LoginComponent implements OnInit {
   /**
    * Input() Forgot password text. For i18n: NGUIX_LOGIN.FORGOT_PASSWORD
    */
-  @Input() forgotPassword = "Forgot password";
+  @Input() forgotPassword = "Forgot password?";
 
   /**
    * Input() Social text. For i18n: NGUIX_LOGIN.SOCIAL_TEXT
    */
-  @Input() socialText = 'Or, social accounts:';
+  @Input() socialText = 'Using social accounts:';
 
   /**
    * Input() Register link text. For i18n: NGUIX_LOGIN.REGISTER_TEXT
    */
-  @Input() registerText = 'Register an account';
+  @Input() registerText = 'create now?';
+
+  /**
+   * Input() Register link description. For i18n: NGUIX_LOGIN.REGISTER_DESCRIPTION
+   */
+  @Input() registerDescription = 'Don\'t have an account';
 
   /**
    * Input() With socials signin: google, facebook, github

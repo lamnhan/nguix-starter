@@ -21,42 +21,47 @@ export class RegisterComponent implements OnInit {
   /**
    * Input() The email input label. For i18n: NGUIX_REGISTER.EMAIL_LABEL
    */
-  emailLabel = 'Email';
+  @Input() emailLabel = 'Email';
 
   /**
    * Input() The email input placeholder. For i18n: NGUIX_REGISTER.EMAIL_PLACEHOLDER
    */
-  emailPlaceholder = 'Your email';
+  @Input() emailPlaceholder = 'Your email';
 
   /**
    * Input() The password input label. For i18n: NGUIX_REGISTER.PASSWORD_LABEL
    */
-  passwordLabel = 'Password';
+  @Input() passwordLabel = 'Password';
 
   /**
    * Input() The password input placeholder. For i18n: NGUIX_REGISTER.PASSWORD_PLACEHOLDER
    */
-  passwordPlaceholder = 'Your password';
+  @Input() passwordPlaceholder = 'Your password';
 
   /**
    * Input() The password confirmation input label. For i18n: NGUIX_REGISTER.CONFIRM_PASSWORD_LABEL
    */
-  confirmPasswordLabel = 'Password again';
+  @Input() confirmPasswordLabel = 'Confirm password';
 
   /**
    * Input() The password input placeholder. For i18n: NGUIX_REGISTER.CONFIRM_PASSWORD_PLACEHOLDER
    */
-   confirmPasswordPlaceholder = 'Confirm password';
+  @Input() confirmPasswordPlaceholder = 'Enter password again';
 
   /**
    * Input() Submit text. For i18n: NGUIX_REGISTER.SUBMIT_TEXT
    */
-  submitText = "Create account";
+  @Input() submitText = "Create account";
 
   /**
-   * Input() Login link text. For i18n: NGUIX_REGISTER.REGISTER_TEXT
+   * Input() Login link text. For i18n: NGUIX_REGISTER.LOGIN_TEXT
    */
-  loginText = 'Login';
+  @Input() loginText = 'login here!';
+
+  /**
+   * Input() Login link description. For i18n: NGUIX_REGISTER.LOGIN_DESCRIPTION
+   */
+  @Input() loginDescription = 'Already an user';
 
   /**
    * Output() Sign up completed
