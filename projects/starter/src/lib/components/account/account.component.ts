@@ -40,6 +40,21 @@ export class AccountComponent implements OnInit {
   /**
    * @ignore
    */
+  openPublicProfile() {
+    if (this.userService.username && this.userService.publicData?.status === 'publish') {
+      return this.navService.navigate(this.userService.username);
+    } else {
+      const yes = confirm('Your profile is private, make it public now?');
+      if (yes) {
+        return this.userService.changePublicity(true);
+      }
+      return null;
+    }
+  }
+
+  /**
+   * @ignore
+   */
   signOut() {
     const yes = confirm('Sign out now?');
     if (yes) {
@@ -52,14 +67,33 @@ export class AccountComponent implements OnInit {
   /**
    * @ignore
    */
+  updatePublicity(e: any) {
+    const toPublic = e.target.checked;
+    return this.userService.changePublicity(toPublic);
+  }
+
+  /**
+   * @ignore
+   */
+  updateDisplayName() {
+    const value = prompt('Please input your display name:');
+    if (value && this.userService.data?.displayName !== value) {
+      return this.userService.updateProfile({ displayName: value });
+    }
+    return null;
+  }
+
+  /**
+   * @ignore
+   */
   updateIntro(value: string) {
-    console.log({value});
+    return this.userService.updateProfile({ intro: value });
   }
 
   /**
    * @ignore
    */
   updateEmailPublicly(isPublic: boolean) {
-    console.log({isPublic});
+    return this.userService.updatePublicly({ email: isPublic });
   }
 }

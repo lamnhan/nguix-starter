@@ -121,7 +121,7 @@
         }
       }
 
-      li.publicly {
+      li.publicity {
         display: flex;
         flex-wrap: nowrap;
         align-items: center;
@@ -136,6 +136,8 @@
 
   .foot {
     margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--app-color-background-shade);
     text-align: center;
   }
 }

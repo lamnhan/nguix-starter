@@ -19,7 +19,9 @@
       <div class="info">
         <h3 class="name">
           <strong class="truncate">{{ data.displayName }}</strong>
-          <button class="edit button-clear"><nguix-icon name="pencil-square" size="16"></nguix-icon></button>
+          <button class="edit button-clear" (click)="updateDisplayName()">
+            <nguix-icon name="pencil-square" size="16"></nguix-icon>
+          </button>
         </h3>
         <div class="email">
           <em>{{ data.email }}</em>
@@ -27,7 +29,7 @@
         </div>
       </div>
       <div class="public" *ngIf="data.username">
-        <a class="button-primary" [usefulRouterLink]="[data.username]">Public Profile</a>
+        <button class="button-primary" (click)="openPublicProfile()">Public Profile</button>
       </div>
     </div>
 
@@ -38,17 +40,41 @@
     <ul class="general">
       <li class="title">General</li>
 
-      <li class="publicly">
-        <div class="label">Publicly</div>
+      <li class="publicity">
+        <div class="label">Publicity</div>
         <div class="value">
           <label class="form-switch">
             <input
               type="checkbox"
               [checked]="publicData.status==='publish'"
+              (change)="updatePublicity($event)"
             />
             <span class="slider"></span>
           </label>
         </div>
+      </li>
+
+      <li class="username">
+        <nguix-account-text-editor
+          [i18n]="i18n"
+          label="Username"
+          type="text"
+          [value]="data.username"
+          [editable]="false"
+        ></nguix-account-text-editor>
+      </li>
+
+      <li class="email">
+        <nguix-account-text-editor
+          [i18n]="i18n"
+          label="Email"
+          type="email"
+          [value]="data.email"
+          [editable]="false"
+          [showPubliclyToggler]="true"
+          [isPublicly]="!!data.publicly?.email"
+          (publiclyChanged)="updateEmailPublicly($event)"
+        ></nguix-account-text-editor>
       </li>
 
       <li class="intro">
@@ -58,17 +84,6 @@
           type="text"
           [value]="data.intro"
           (save)="updateIntro($event)"
-        ></nguix-account-text-editor>
-      </li>
-
-      <li class="email">
-        <nguix-account-text-editor
-          [i18n]="i18n"
-          label="Email"
-          [value]="data.email"
-          [editable]="false"
-          [showPubliclyToggler]="true"
-          (publiclyChanged)="updateEmailPublicly($event)"
         ></nguix-account-text-editor>
       </li>
 
@@ -85,7 +100,7 @@
 </div>
 
 <ng-template #noUser>
-  <p>No signed in user!</p>
+  <p>No signed in user, <a [usefulRouterLink]="['login']">login here</a>!</p>
 </ng-template>
 
 </ng-container>
