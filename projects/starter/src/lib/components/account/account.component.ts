@@ -45,8 +45,19 @@ export class AccountComponent implements OnInit {
   /**
    * @ignore
    */
-  handleImageChanged(result: MediaItem) {
-    console.log(result);
+  handleImageChanged(
+    result: {
+      callerId: string;
+      url: string;
+    }
+  ) {
+    const {callerId, url} = result;
+    if (callerId === 'avatar') {
+      return this.userService.updateProfile({ photoURL: url });
+    } else if (callerId === 'cover') {
+      return this.userService.updateProfile({ coverPhoto: url });
+    }
+    return null;
   }
 
   /**

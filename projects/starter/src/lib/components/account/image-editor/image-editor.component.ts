@@ -2,11 +2,9 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Observable } from 'rxjs';
 import { finalize } from 'rxjs/operators';
 import * as Croppie from 'croppie';
-import { StorageService, MediaItem } from '@lamnhan/ngx-useful';
+import { StorageService } from '@lamnhan/ngx-useful';
 
 interface Uploading {
-  name: string;
-  size: number;
   uploadPercent$: Observable<undefined | number>;
 }
 
@@ -19,7 +17,7 @@ export class ImageEditorComponent implements OnInit {
   @Input() callerId = '';
   @Input() uid!: string;
   @Output() close = new EventEmitter<void>();
-  @Output() done = new EventEmitter<MediaItem>();
+  @Output() done = new EventEmitter<{ callerId: string; url: string; }>();
 
   fileLoaded = false;
   croppie?: Croppie;
@@ -58,30 +56,36 @@ export class ImageEditorComponent implements OnInit {
           format: 'jpeg',
           size,
         })
-        .then(blob => {
-          
-        });
+        .then(blob => this.uploadBlob(blob));
     }
   }
 
-  uploadFile(e: any) {
-    const file = e.target.files[0];
-    const {name: path, size} = file;
-    const {name, fullPath, task} = this.storageService.uploadFile(path, file);
+  uploadBlob(blob: Blob) {
+    const {name, fullPath, task} = this.storageService.uploadBlob(
+      `${this.uid}/${this.callerId}.jpg`,
+      blob,
+      {
+        uploadFolder: 'user-content',
+        noDateGrouping: true,
+        noRandomSuffix: true,
+      }
+    );
     // uploading
     this.uploading = {
-      name,
-      size,
       uploadPercent$: task.percentageChanges(),
     };
     // completed
     task.snapshotChanges().pipe(
       finalize(() => {
-        const result = this.storageService.buildMediaItem(name, fullPath);
-        // event
-        this.done.emit(result);
-        // exit
-        this.closeAndReset();
+        this.storageService
+          .buildMediaItem(name, fullPath)
+          .downloadUrl$
+          .subscribe(url => {
+            // event
+            this.done.emit({ callerId: this.callerId, url });
+            // exit
+            this.closeAndReset();
+          });
       })
     ).subscribe();
   }
@@ -100,8 +104,7 @@ export class ImageEditorComponent implements OnInit {
       const avatarConfig: any = {
         viewport: {
           width: 150,
-          height: 150,
-          type: 'circle'
+          height: 150
         },
       };
       const coverConfig: any = {

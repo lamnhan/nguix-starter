@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { AngularFireStorage } from '@angular/fire/storage';
 import { TranslocoService } from '@ngneat/transloco';
 import {
   MenuItem,
@@ -14,6 +15,7 @@ import {
   PwaService,
   PersonaService,
   DatabaseService,
+  StorageService,
   AuthService,
   UserService,
 } from '@lamnhan/ngx-useful';
@@ -34,6 +36,7 @@ export class AppComponent {
 
   constructor(
     private firebaseFirestore: AngularFirestore,
+    private firebaseStorage: AngularFireStorage,
     private firebaseAuth: AngularFireAuth,
     private translateService: TranslocoService,
     private localstorageService: LocalstorageService,
@@ -46,6 +49,7 @@ export class AppComponent {
     public pwaService: PwaService,
     public personaService: PersonaService,
     private databaseService: DatabaseService,
+    private storageService: StorageService,
     public authService: AuthService,
     private userService: UserService,
     // data services
@@ -69,6 +73,7 @@ export class AppComponent {
       })
       .setIntegrations({ cacheService: this.cacheService })
       .init(this.firebaseFirestore);
+    this.storageService.init(this.firebaseStorage);
     this.appService.setOptions({ splashScreen: true }).init();
     this.authService.setOptions({driver: 'firestore'}).init(this.firebaseAuth);
     this.userService.init(this.userDataService, this.profileDataService);

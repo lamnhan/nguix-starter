@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { environment } from '../environments/environment';
 import { AngularFireModule } from '@angular/fire';
+import { AngularFireStorage } from '@angular/fire/storage';
 import {
   RouterLinkDirectiveModule,
   LocalstorageService,
@@ -14,6 +15,7 @@ import {
   PwaService,
   PersonaService,
   DatabaseService,
+  StorageService,
   AuthService,
   UserService,
 } from '@lamnhan/ngx-useful';
@@ -50,6 +52,7 @@ import { FooterComponentModule } from './components/footer/footer.module';
     NguixPwaReminderComponentModule,
   ],
   providers: [
+    AngularFireStorage,
     // useful normal services
     LocalstorageService,
     CacheService,
@@ -61,6 +64,7 @@ import { FooterComponentModule } from './components/footer/footer.module';
     PwaService,
     PersonaService,
     DatabaseService,
+    StorageService,
     AuthService,
     UserService,
     // schemata data services
