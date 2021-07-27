@@ -9,10 +9,12 @@
       "@lamnhan/ngx-useful": "ng.lamnhan.useful",
       "@lamnhan/ngx-schemata": "ng.lamnhan.schemata",
       "@ngneat/transloco": "ng.transloco",
-      "ngx-markdown": "ngxMarkdown"
+      "ngx-markdown": "ngxMarkdown",
+      "croppie": "croppie"
     }
   },
   "allowedNonPeerDependencies": [
-    "ngx-markdown"
+    "ngx-markdown",
+    "croppie"
   ]
 }

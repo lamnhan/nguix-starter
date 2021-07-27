@@ -100,6 +100,7 @@
   <nguix-account-image-editor
     [callerId]="imageEditorCallerId"
     [uid]="data.uid"
+    (close)="imageEditorCallerId=''"
     (done)="handleImageChanged($event)"
   ></nguix-account-image-editor>
 

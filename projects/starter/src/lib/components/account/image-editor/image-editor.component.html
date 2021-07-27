@@ -10,15 +10,13 @@
 
   <div class="body">
 
-    <ng-container *ngIf="selectedFile; else uploadInput;">
-      <div class="cropper">
-  
-      </div>
-    </ng-container>
+    <div class="cropper" [style.display]="fileLoaded?'block':'none'">
+      <div id="croppie-image-editor"></div>
+    </div>
     
-    <ng-template #uploadInput>
+    <div *ngIf="!fileLoaded">
       <input type="file" (change)="fileSelected($event)">
-    </ng-template>
+    </div>
 
   </div>
 
@@ -29,7 +27,11 @@
       </ng-container>
     </div>
     <div class="right">
-      <button class="button-primary" [disabled]="uploading">Done</button>
+      <button
+        class="button-primary"
+        [disabled]="!croppie || uploading"
+        (click)="doneCropping()"
+      >Done</button>
     </div>
   </div>
 
