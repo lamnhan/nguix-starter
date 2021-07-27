@@ -6,7 +6,7 @@
   <div class="head">
 
     <div class="cover" [style.background-image]="!data.coverPhoto ? null : 'url(' + data.coverPhoto + ')'">
-      <button class="button-dark">
+      <button class="button-dark" (click)="imageEditorCallerId='cover'">
         <nguix-icon base="icon-light" name="arrow-up-circle-fill" size="24"></nguix-icon>
       </button>
     </div>
@@ -14,7 +14,9 @@
     <div class="content">
       <div class="avatar">
         <img [src]="data.photoURL" [alt]="data.displayName">
-        <button class="edit button"><nguix-icon name="arrow-up-circle-fill" size="16"></nguix-icon></button>
+        <button class="edit button" (click)="imageEditorCallerId='avatar'">
+          <nguix-icon name="arrow-up-circle-fill" size="16"></nguix-icon>
+        </button>
       </div>
       <div class="info">
         <h3 class="name">
@@ -94,6 +96,12 @@
   <div class="foot">
     <button class="button-outline" (click)="signOut()">{{ !i18n ? logoutText : t('NGUIX_ACCOUNT.LOGOUT_TEXT') || logoutText }}</button>
   </div>
+
+  <nguix-account-image-editor
+    [callerId]="imageEditorCallerId"
+    [uid]="data.uid"
+    (done)="handleImageChanged($event)"
+  ></nguix-account-image-editor>
 
 </ng-container>
 </ng-container>

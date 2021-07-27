@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { NavService, AuthService, UserService } from '@lamnhan/ngx-useful';
+import { NavService, AuthService, UserService, MediaItem } from '@lamnhan/ngx-useful';
 
 @Component({
   selector: 'nguix-account',
@@ -16,6 +16,11 @@ export class AccountComponent implements OnInit {
    * Input() The log out text. For i18n: NGUIX_ACCOUNT.LOGOUT_TEXT
    */
   @Input() logoutText = 'Logout';
+
+  /**
+   * @ignore
+   */
+  imageEditorCallerId = '';
 
   constructor(
     /**
@@ -36,6 +41,13 @@ export class AccountComponent implements OnInit {
    * @ignore
    */
   ngOnInit(): void {}
+
+  /**
+   * @ignore
+   */
+  handleImageChanged(result: MediaItem) {
+    console.log(result);
+  }
 
   /**
    * @ignore

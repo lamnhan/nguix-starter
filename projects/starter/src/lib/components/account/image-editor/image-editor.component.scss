@@ -1,0 +1,44 @@
+.host {
+  background: var(--app-color-background);
+  border-top: 1px solid var(--app-color-medium);
+  color: var(--app-color-foreground);
+  width: 100%;
+  max-height: 480px;
+  position: fixed;
+  bottom: -480px;
+  left: 0;
+  transition: all .3s ease;
+  z-index: 9;
+
+  &.show {
+    bottom: 0;
+  }
+
+  .head, .foot {
+
+    &, & .left, & .right {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+    }
+
+    .left {
+      flex: 1;
+    }
+  }
+
+  .head {
+    padding: .5rem 1rem;
+    border-bottom: 1px solid var(--app-color-background-shade);
+  }
+  
+  .body {
+    padding: 1rem;
+    min-height: 150px;
+  }
+  
+  .foot {
+    padding: .5rem 1rem;
+    border-top: 1px solid var(--app-color-background-shade);
+  }
+}

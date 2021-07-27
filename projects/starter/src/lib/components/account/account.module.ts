@@ -5,6 +5,7 @@ import { RouterLinkDirectiveModule } from '@lamnhan/ngx-useful';
 
 import { NguixIconComponentModule } from '../icon/icon.module';
 import { NguixAccountTextEditorComponentModule } from './text-editor/text-editor.module';
+import { NguixAccountImageEditorComponentModule } from './image-editor/image-editor.module';
 
 import { AccountComponent } from './account.component';
 
@@ -16,6 +17,7 @@ import { AccountComponent } from './account.component';
     RouterLinkDirectiveModule,
     NguixIconComponentModule,
     NguixAccountTextEditorComponentModule,
+    NguixAccountImageEditorComponentModule,
   ],
   exports: [AccountComponent]
 })
