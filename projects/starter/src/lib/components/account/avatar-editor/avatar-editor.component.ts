@@ -17,7 +17,6 @@ interface Uploading {
 export class AvatarEditorComponent implements OnInit, OnChanges {
   @Input() file?: File;
   @Input() uid!: string;
-
   @Output() close = new EventEmitter<void>();
   @Output() done = new EventEmitter<string>();
 
@@ -32,13 +31,14 @@ export class AvatarEditorComponent implements OnInit, OnChanges {
   ngOnChanges() {
     if (this.file && !this.croppieInstance) {
       const reader = new FileReader();
-      reader.onload = (e: any) => this.croppieInstance = this.getCroppie(e.target.result)
+      reader.onload = (e: any) => this.croppieInstance = this.getCroppie(e.target.result);
       reader.readAsDataURL(this.file);
     }
   }
 
   closeAndReset() {
     this.uploading = undefined;
+    this.isProcessing = false;
     this.croppieInstance?.destroy();
     this.croppieInstance = undefined;
     this.close.emit();
@@ -63,12 +63,8 @@ export class AvatarEditorComponent implements OnInit, OnChanges {
       this.uploadBlob(
         data,
         url => {
-          // event
           this.done.emit(url);
-          // exit
           this.closeAndReset();
-          // reset
-          this.isProcessing = false;
         }
       )
     );

@@ -30,9 +30,10 @@
     width: 200px;
     position: absolute;
     top: 7rem;
-    left: calc(-50% - .5rem);
+    left: calc(-50% - .25rem);
     background: var(--app-color-background-tint);
     padding: .3rem;
+    border: 1px solid var(--app-color-background-shade);
     border-radius: var(--app-size-radius);
     z-index: 9;
 

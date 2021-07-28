@@ -1,7 +1,5 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { finalize } from 'rxjs/operators';
-import { UserService, StorageService } from '@lamnhan/ngx-useful';
-import Compressor from 'compressorjs';
+import { Component, OnInit, Input } from '@angular/core';
+import { UserService } from '@lamnhan/ngx-useful';
 
 @Component({
   selector: 'nguix-account-cover',
@@ -16,7 +14,6 @@ export class CoverComponent implements OnInit {
   coverEditorFile?: File;
 
   constructor(
-    private storageService: StorageService,
     private userService: UserService,
   ) {}
 
@@ -49,52 +46,6 @@ export class CoverComponent implements OnInit {
 
   handleCoverChanged(coverPhoto: string) {
     return this.userService.updateProfile({ coverPhoto });
-  }
-
-  private processCover(file: File) {
-    this.isProcessing = true;
-    this.compressImage(file).then(data =>
-      this.uploadBlob(
-        data,
-        url => {
-          this.userService.updateProfile({ coverPhoto: url });
-          this.isProcessing = false;
-        }
-      ),
-    );
-  }
-
-  private compressImage(file: File) {
-    return new Promise<Blob>((resolve, reject) => new Compressor(
-      file,
-      {
-        quality: 0.6,
-        mimeType: 'image/jpeg',
-        success: data => resolve(data),
-        error: err => reject(err),
-      }
-    ));
-  }
-
-  private uploadBlob(blob: Blob, completed: (url: string) => void) {
-    const {name, fullPath, task} = this.storageService.uploadBlob(
-      `${this.uid}/cover.jpg`,
-      blob,
-      {
-        uploadFolder: 'user-content',
-        noDateGrouping: true,
-        noRandomSuffix: true,
-      }
-    );
-    // completed
-    task.snapshotChanges().pipe(
-      finalize(() => {
-        this.storageService
-          .buildMediaItem(name, fullPath)
-          .downloadUrl$
-          .subscribe(url => completed(url));
-      })
-    ).subscribe();
   }
 
 }

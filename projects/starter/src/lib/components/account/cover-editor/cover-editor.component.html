@@ -12,7 +12,11 @@
         </ng-container>
       </div>
       <div class="right">
-        <button class="button-foreground-sm" (click)="closeAndReset()">Cancel</button>
+        <button
+          class="button-foreground-sm"
+          [disabled]="isProcessing || uploading"
+          (click)="closeAndReset()"
+        >Cancel</button>
         <button
           class="button-primary-sm"
           [disabled]="!croppieInstance || isProcessing || uploading"

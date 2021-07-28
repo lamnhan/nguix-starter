@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { UserService } from '@lamnhan/ngx-useful';
 
 @Component({
@@ -18,7 +18,7 @@ export class AvatarComponent implements OnInit {
   ngOnInit(): void {}
 
   viewAvatar() {
-    console.log('View avatar!', this.photoURL);
+    console.log(this.photoURL);
   }
 
   avatarSelected(e: any) {

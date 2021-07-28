@@ -1,4 +1,4 @@
-import { Component, OnInit, OnChanges, AfterViewInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, OnChanges, Input, Output, EventEmitter } from '@angular/core';
 import { Observable } from 'rxjs';
 import { finalize } from 'rxjs/operators';
 import { StorageService } from '@lamnhan/ngx-useful';
@@ -14,7 +14,7 @@ interface Uploading {
   templateUrl: './cover-editor.component.html',
   styleUrls: ['./cover-editor.component.scss']
 })
-export class CoverEditorComponent implements OnInit, AfterViewInit, OnChanges {
+export class CoverEditorComponent implements OnInit, OnChanges {
   @Input() file?: File;
   @Input() uid!: string;
   @Output() close = new EventEmitter<void>();
@@ -30,14 +30,11 @@ export class CoverEditorComponent implements OnInit, AfterViewInit, OnChanges {
 
   ngOnInit(): void {}
 
-  ngAfterViewInit(): void {
-    this.setContainerWidth();
-  }
-  
   ngOnChanges() {
     if (this.file) {
       const reader = new FileReader();
       reader.onload = (e: any) => {
+        this.containerWidth = document.getElementById('cover-editor')?.clientWidth || 250;
         this.fileUrl = e.target.result;
         this.setCroppieInstance();
       };
@@ -46,6 +43,8 @@ export class CoverEditorComponent implements OnInit, AfterViewInit, OnChanges {
   }
 
   closeAndReset() {
+    this.fileUrl = undefined;
+    this.isProcessing = false;
     this.uploading = undefined;
     this.croppieInstance?.destroy();
     this.croppieInstance = undefined;
@@ -72,12 +71,8 @@ export class CoverEditorComponent implements OnInit, AfterViewInit, OnChanges {
       this.uploadBlob(
         data,
         url => {
-          // event
           this.done.emit(url);
-          // exit
           this.closeAndReset();
-          // reset
-          this.isProcessing = false;
         }
       )
     );
@@ -120,30 +115,13 @@ export class CoverEditorComponent implements OnInit, AfterViewInit, OnChanges {
     ).subscribe();
   }
 
-  private setContainerWidth() {
-    const setWidth = () => {
-      this.containerWidth = document.getElementById('cover-editor')?.clientWidth || 250;
-    };
-    let resizeTimer: any;
-    window.addEventListener('resize', () => {
-      clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(() => {
-        setWidth();
-        this.setCroppieInstance();
-      }, 500);
-    });
-    setWidth();
-  }
-
   private setCroppieInstance() {
     const el = document.getElementById('croppie-image-editor');
     if (el && this.fileUrl) {
       const width = this.containerWidth;
       const height = (width * 56.25) / 100;
       // clear if exists
-      if (this.croppieInstance) {
-        this.croppieInstance.destroy();
-      }
+      this.croppieInstance?.destroy();
       // new instance
       const croppie = new Croppie(
         el,

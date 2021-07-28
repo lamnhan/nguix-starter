@@ -32,14 +32,24 @@
     &::-webkit-scrollbar {
       display: none;
     }
-
   }
   
   .foot {
-    padding: .5rem 0;
+    padding: 0;
+    margin-top: -.5rem;
 
-    button {
-      margin-left: .5rem;
+    .left {
+
+      progress {
+        width: 100%;
+      }
+    }
+
+    .right {
+
+      button {
+        margin-left: .5rem;
+      }
     }
   }
 }

@@ -10,11 +10,13 @@
       "@lamnhan/ngx-schemata": "ng.lamnhan.schemata",
       "@ngneat/transloco": "ng.transloco",
       "ngx-markdown": "ngxMarkdown",
-      "croppie": "croppie"
+      "croppie": "croppie",
+      "compressorjs": "compressorjs"
     }
   },
   "allowedNonPeerDependencies": [
     "ngx-markdown",
-    "croppie"
+    "croppie",
+    "compressorjs"
   ]
 }

@@ -4,15 +4,11 @@
   
   .picture {
     display: block;
+    overflow: hidden;
     width: 100%;
     padding-top: 56.25%;
     background-position: center;
     background-size: cover;
-    border-radius: 0 0 var(--app-size-radius) var(--app-size-radius);
-
-    &.loading {
-      opacity: .5;
-    }
   }
 
   .edit {
@@ -47,6 +43,7 @@
     right: 0;
     background: var(--app-color-background-tint);
     padding: .3rem;
+    border: 1px solid var(--app-color-background-shade);
     border-radius: var(--app-size-radius);
     z-index: 9;
 
