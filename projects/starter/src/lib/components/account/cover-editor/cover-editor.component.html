@@ -1,0 +1,25 @@
+<ng-container *transloco="let t">
+  <div id="cover-editor" class="host" [class.show]="!!file">
+
+    <div class="body" [style.display]="croppieInstance ? 'block' : 'none'">
+      <div id="croppie-image-editor"></div>
+    </div>
+  
+    <div class="foot">
+      <div class="left">
+        <ng-container *ngIf="uploading">
+          <progress [value]="uploading.uploadPercent$ | async" max="100"></progress>
+        </ng-container>
+      </div>
+      <div class="right">
+        <button class="button-foreground-sm" (click)="closeAndReset()">Cancel</button>
+        <button
+          class="button-primary-sm"
+          [disabled]="!croppieInstance || isProcessing || uploading"
+          (click)="doneCropping()"
+        >Change</button>
+      </div>
+    </div>
+  
+  </div>
+  </ng-container>

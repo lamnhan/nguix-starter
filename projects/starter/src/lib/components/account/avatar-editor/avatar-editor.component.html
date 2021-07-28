@@ -1,0 +1,33 @@
+<ng-container *transloco="let t">
+  <div class="host" [class.show]="!!file">
+  
+    <div class="head">
+      <div class="left">Edit Avatar</div>
+      <div class="right">
+        <a href="javascript:void(0)" (click)="closeAndReset()">Cancel</a>
+      </div>
+    </div>
+  
+    <div class="body">
+      <div class="cropper" [style.display]="croppieInstance ? 'block' : 'none'">
+        <div id="croppie-image-editor"></div>
+      </div>
+    </div>
+  
+    <div class="foot">
+      <div class="left">
+        <ng-container *ngIf="uploading">
+          <progress [value]="uploading.uploadPercent$ | async" max="100"></progress>
+        </ng-container>
+      </div>
+      <div class="right">
+        <button
+          class="button-primary"
+          [disabled]="!croppieInstance || isProcessing || uploading"
+          (click)="doneCropping()"
+        >Change</button>
+      </div>
+    </div>
+  
+  </div>
+  </ng-container>

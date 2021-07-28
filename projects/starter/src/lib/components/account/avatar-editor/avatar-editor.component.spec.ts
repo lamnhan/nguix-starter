@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ImageEditorComponent } from './image-editor.component';
+import { AvatarEditorComponent } from './avatar-editor.component';
 
-describe('ImageEditorComponent', () => {
-  let component: ImageEditorComponent;
-  let fixture: ComponentFixture<ImageEditorComponent>;
+describe('AvatarEditorComponent', () => {
+  let component: AvatarEditorComponent;
+  let fixture: ComponentFixture<AvatarEditorComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ImageEditorComponent ]
+      declarations: [ AvatarEditorComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ImageEditorComponent);
+    fixture = TestBed.createComponent(AvatarEditorComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

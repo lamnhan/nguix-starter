@@ -5,18 +5,20 @@
 
   <div class="head">
 
-    <div class="cover" [style.background-image]="!data.coverPhoto ? null : 'url(' + data.coverPhoto + ')'">
-      <button class="button-dark" (click)="imageEditorCallerId='cover'">
-        <nguix-icon base="icon-light" name="arrow-up-circle-fill" size="24"></nguix-icon>
-      </button>
+    <div class="cover">
+      <nguix-account-cover
+        [uid]="data.uid"
+        [coverPhoto]="data.coverPhoto"
+      ></nguix-account-cover>
     </div>
 
     <div class="content">
       <div class="avatar">
-        <img [src]="data.photoURL" [alt]="data.displayName">
-        <button class="edit button" (click)="imageEditorCallerId='avatar'">
-          <nguix-icon name="arrow-up-circle-fill" size="16"></nguix-icon>
-        </button>
+        <nguix-account-avatar
+          [uid]="data.uid"
+          [displayName]="data.displayName"
+          [photoURL]="data.photoURL"
+        ></nguix-account-avatar>
       </div>
       <div class="info">
         <h3 class="name">
@@ -27,7 +29,7 @@
         </h3>
         <div class="email">
           <em>{{ data.email }}</em>
-          <!-- <a *ngIf="!data.emailVerified" href="#" (click)="false;">Verify email</a> -->
+          <a *ngIf="!data.emailVerified" href="#" (click)="false;">Verify Email</a>
         </div>
       </div>
       <div class="public" *ngIf="data.username">
@@ -96,13 +98,6 @@
   <div class="foot">
     <button class="button-outline" (click)="signOut()">{{ !i18n ? logoutText : t('NGUIX_ACCOUNT.LOGOUT_TEXT') || logoutText }}</button>
   </div>
-
-  <nguix-account-image-editor
-    [callerId]="imageEditorCallerId"
-    [uid]="data.uid"
-    (close)="imageEditorCallerId=''"
-    (done)="handleImageChanged($event)"
-  ></nguix-account-image-editor>
 
 </ng-container>
 </ng-container>

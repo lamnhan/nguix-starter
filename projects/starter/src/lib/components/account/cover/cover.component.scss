@@ -1,0 +1,81 @@
+.host {
+  position: relative;
+  background-color: var(--app-color-medium);
+  
+  .picture {
+    display: block;
+    width: 100%;
+    padding-top: 56.25%;
+    background-position: center;
+    background-size: cover;
+    border-radius: 0 0 var(--app-size-radius) var(--app-size-radius);
+
+    &.loading {
+      opacity: .5;
+    }
+  }
+
+  .edit {
+    position: absolute;
+    bottom: .5rem;
+    right: .5rem;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    span {
+      margin-left: .5rem;
+      font-size: .9rem;
+    }
+
+    &:focus, &:focus-within {
+  
+      & + ul.menu {
+        display: block;
+      }
+    }
+  }
+
+  ul.menu {
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: var(--app-color-background-tint);
+    padding: .3rem;
+    border-radius: var(--app-size-radius);
+    z-index: 9;
+
+    &:hover, &:focus, &:focus-within {
+      display: block;
+    }
+
+    li {
+      padding: .5rem;
+      font-size: .9rem;
+      
+      &, label {
+        cursor: pointer;
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+      }
+      
+      &:hover {
+        background: var(--app-color-background);
+      }
+
+      span {
+        margin-left: .5rem;
+      }
+    }
+  }
+
+  input {
+    display: none;
+  }
+}

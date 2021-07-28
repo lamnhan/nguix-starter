@@ -45,24 +45,6 @@ export class AccountComponent implements OnInit {
   /**
    * @ignore
    */
-  handleImageChanged(
-    result: {
-      callerId: string;
-      url: string;
-    }
-  ) {
-    const {callerId, url} = result;
-    if (callerId === 'avatar') {
-      return this.userService.updateProfile({ photoURL: url });
-    } else if (callerId === 'cover') {
-      return this.userService.updateProfile({ coverPhoto: url });
-    }
-    return null;
-  }
-
-  /**
-   * @ignore
-   */
   openPublicProfile() {
     if (this.userService.username && this.userService.publicData?.status === 'publish') {
       return this.navService.navigate(this.userService.username);

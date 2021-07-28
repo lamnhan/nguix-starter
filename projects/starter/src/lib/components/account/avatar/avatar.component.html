@@ -1,0 +1,29 @@
+<div class="host">
+  <a class="picture" href="#" (click)="!uid ? viewAvatar() : false">
+    <img [src]="photoURL" [alt]="displayName">
+  </a>
+  <ul class="menu" *ngIf="uid">
+    <li class="view" (click)="viewAvatar()">
+      <nguix-icon name="image" size="20"></nguix-icon>
+      <span>View Avatar</span>
+    </li>
+    <li class="change">
+      <label for="avatar">
+        <nguix-icon name="camera" size="20"></nguix-icon>
+        <span>Change Avatar</span>
+      </label>
+    </li>
+  </ul>
+  <label class="edit button">
+    <nguix-icon name="arrow-up-circle-fill" size="16"></nguix-icon>
+    <input id="avatar" type="file" (change)="avatarSelected($event)">
+  </label>
+  <div class="editor" *ngIf="uid">
+    <nguix-account-avatar-editor
+      [file]="avatarEditorFile"
+      (close)="avatarEditorFile=undefined"
+      [uid]="uid"
+      (done)="handleAvatarChanged($event)"
+    ></nguix-account-avatar-editor>
+  </div>
+</div>

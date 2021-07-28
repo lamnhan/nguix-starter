@@ -1,0 +1,41 @@
+<div class="host">
+  <ng-container *ngIf="!coverEditorFile; else coverEditor;">
+    <a
+      class="picture"
+      [style.background-image]="!coverPhoto ? null : 'url(' + coverPhoto + ')'"
+      href="#"
+      (click)="viewCover();false;"
+    ></a>
+    <button class="edit button-light-sm">
+      <nguix-icon base="icon-dark" name="trash" size="16"></nguix-icon>
+      <span>Edit Cover</span>
+    </button>
+    <ul class="menu" *ngIf="uid">
+      <li class="view" (click)="viewCover()">
+        <nguix-icon name="image" size="20"></nguix-icon>
+        <span>View Cover</span>
+      </li>
+      <li class="change">
+        <label for="cover">
+          <nguix-icon name="camera" size="20"></nguix-icon>
+          <span>Change Cover</span>
+        </label>
+      </li>
+      <li class="remove" (click)="removeCover()">
+        <nguix-icon name="trash" size="20"></nguix-icon>
+        <span>Remove Cover</span>
+      </li>
+    </ul>
+    <input id="cover" type="file" (change)="coverSelected($event)">
+  </ng-container>
+  <ng-template #coverEditor>
+    <div class="editor" *ngIf="uid">
+      <nguix-account-cover-editor
+        [file]="coverEditorFile"
+        (close)="coverEditorFile=undefined"
+        [uid]="uid"
+        (done)="handleCoverChanged($event)"
+      ></nguix-account-cover-editor>
+    </div>
+  </ng-template>
+</div>
