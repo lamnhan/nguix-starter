@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { UserService } from '@lamnhan/ngx-useful';
+import * as basicLightbox from 'basiclightbox';
 
 @Component({
   selector: 'nguix-account-avatar',
@@ -18,7 +19,13 @@ export class AvatarComponent implements OnInit {
   ngOnInit(): void {}
 
   viewAvatar() {
-    console.log(this.photoURL);
+    if (this.photoURL) {
+      return basicLightbox.create(`
+        <img width="500" height="500" src="${this.photoURL}">
+      `)
+      .show();
+    }
+    return null;
   }
 
   avatarSelected(e: any) {

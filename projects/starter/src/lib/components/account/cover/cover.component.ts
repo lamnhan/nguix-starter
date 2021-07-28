@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { UserService } from '@lamnhan/ngx-useful';
+import * as basicLightbox from 'basiclightbox';
 
 @Component({
   selector: 'nguix-account-cover',
@@ -20,7 +21,13 @@ export class CoverComponent implements OnInit {
   ngOnInit(): void {}
 
   viewCover() {
-    console.log(this.coverPhoto);
+    if (this.coverPhoto) {
+      return basicLightbox.create(`
+        <img width="1920" height="1080" src="${this.coverPhoto}">
+      `)
+      .show();
+    }
+    return null;
   }
 
   removeCover() {
