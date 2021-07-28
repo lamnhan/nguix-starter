@@ -29,7 +29,7 @@
         </h3>
         <div class="email">
           <em>{{ data.email }}</em>
-          <a *ngIf="!data.emailVerified" href="#" (click)="false;">Verify Email</a>
+          <a *ngIf="!data.emailVerified" href="#" (click)="verifyEmail();false;">Verify Email</a>
         </div>
       </div>
       <div class="public" *ngIf="data.username">

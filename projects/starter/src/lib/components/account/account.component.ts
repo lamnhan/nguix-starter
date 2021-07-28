@@ -45,6 +45,18 @@ export class AccountComponent implements OnInit {
   /**
    * @ignore
    */
+  verifyEmail() {
+    const yes = confirm('Verify email now?');
+    if (yes) {
+      return this.userService.verifyEmail()
+        .subscribe(() => alert('Please check your inbox for instruction.'));
+    }
+    return null;
+  }
+
+  /**
+   * @ignore
+   */
   openPublicProfile() {
     if (this.userService.username && this.userService.publicData?.status === 'publish') {
       return this.navService.navigate(this.userService.username);
