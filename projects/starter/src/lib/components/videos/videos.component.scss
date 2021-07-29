@@ -46,7 +46,7 @@
           position: absolute;
           right: .5rem;
           bottom: .5rem;
-          padding: .25rem;
+          padding: .1rem .25rem;
           border-radius: var(--app-size-radius);
           background: var(--app-color-dark);
           color: var(--app-color-light);
@@ -58,16 +58,30 @@
         flex: 1;
         display: flex;
         flex-flow: column;
-        padding: 0 1rem;
+        padding: 0;
         margin-top: 1rem;
 
         .title {
-          font-size: 1.1rem;
+          font-size: 1.2rem;
           font-family: var(--app-font-head);
           font-weight: 500;
 
           a {
             color: var(--app-color-foreground);
+          }
+        }
+
+        .info {
+          margin-top: .5rem;
+          margin-bottom: .5rem;
+          color: var(--app-color-medium);
+          font-size: .9rem;
+          display: flex;
+          flex-wrap: nowrap;
+          align-items: center;
+
+          .view {
+            flex: 1;
           }
         }
       }

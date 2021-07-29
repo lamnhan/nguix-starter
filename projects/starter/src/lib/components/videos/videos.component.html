@@ -9,7 +9,7 @@
           <img [src]="videoItem.thumbnail" [alt]="videoItem.title">
         </a>
   
-        <span class="duration">{{ videoItem.duration }}</span>
+        <span class="duration">{{ ((videoItem.duration || 0 )* 1000) | date : 'mm:ss' }}</span>
   
       </div>
   
@@ -17,6 +17,11 @@
   
         <div class="title">
           <a [usefulRouterLink]="['video', videoItem.id]" [usefulRouterBackwardable]="true">{{ videoItem.title }}</a>
+        </div>
+
+        <div class="info">
+          <div class="view">{{ videoItem.viewCount || 0 }} views</div>
+          <div class="date">{{ videoItem.createdAt | date }}</div>
         </div>
   
       </div>

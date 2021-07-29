@@ -23,4 +23,4 @@ import { VideosComponent } from './videos.component';
     VideosRoutingModule
   ]
 })
-export class VideosModule { }
+export class VideosPageModule { }
