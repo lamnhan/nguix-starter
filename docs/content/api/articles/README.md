@@ -105,7 +105,11 @@ Also, visit the [homepage](https://nguix-starter.lamnhan.com).
 | Class                                                                                                           | Description |
 | --------------------------------------------------------------------------------------------------------------- | ----------- |
 | [AccountComponent](https://nguix-starter.lamnhan.com/content/reference/classes/accountcomponent.html)           |             |
+| [AvatarComponent](https://nguix-starter.lamnhan.com/content/reference/classes/avatarcomponent.html)             |             |
+| [AvatarEditorComponent](https://nguix-starter.lamnhan.com/content/reference/classes/avatareditorcomponent.html) |             |
 | [ContentComponent](https://nguix-starter.lamnhan.com/content/reference/classes/contentcomponent.html)           |             |
+| [CoverComponent](https://nguix-starter.lamnhan.com/content/reference/classes/covercomponent.html)               |             |
+| [CoverEditorComponent](https://nguix-starter.lamnhan.com/content/reference/classes/covereditorcomponent.html)   |             |
 | [FooterComponent](https://nguix-starter.lamnhan.com/content/reference/classes/footercomponent.html)             |             |
 | [Header2ndComponent](https://nguix-starter.lamnhan.com/content/reference/classes/header2ndcomponent.html)       |             |
 | [HeaderComponent](https://nguix-starter.lamnhan.com/content/reference/classes/headercomponent.html)             |             |
@@ -113,12 +117,15 @@ Also, visit the [homepage](https://nguix-starter.lamnhan.com).
 | [LoginComponent](https://nguix-starter.lamnhan.com/content/reference/classes/logincomponent.html)               |             |
 | [NavIndicatorComponent](https://nguix-starter.lamnhan.com/content/reference/classes/navindicatorcomponent.html) |             |
 | [OopsComponent](https://nguix-starter.lamnhan.com/content/reference/classes/oopscomponent.html)                 |             |
+| [PostComponent](https://nguix-starter.lamnhan.com/content/reference/classes/postcomponent.html)                 |             |
+| [PostsComponent](https://nguix-starter.lamnhan.com/content/reference/classes/postscomponent.html)               |             |
 | [PwaBoxComponent](https://nguix-starter.lamnhan.com/content/reference/classes/pwaboxcomponent.html)             |             |
 | [PwaReminderComponent](https://nguix-starter.lamnhan.com/content/reference/classes/pwaremindercomponent.html)   |             |
 | [RegisterComponent](https://nguix-starter.lamnhan.com/content/reference/classes/registercomponent.html)         |             |
 | [ShareComponent](https://nguix-starter.lamnhan.com/content/reference/classes/sharecomponent.html)               |             |
 | [SpinnerComponent](https://nguix-starter.lamnhan.com/content/reference/classes/spinnercomponent.html)           |             |
 | [TabsComponent](https://nguix-starter.lamnhan.com/content/reference/classes/tabscomponent.html)                 |             |
+| [TextEditorComponent](https://nguix-starter.lamnhan.com/content/reference/classes/texteditorcomponent.html)     |             |
 
 </section>
 

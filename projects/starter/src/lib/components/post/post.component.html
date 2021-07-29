@@ -1,0 +1,80 @@
+<ng-container *transloco="let t">
+<div class="host">
+
+  <div class="categories" *ngIf="post.categories | o2a; let categories">
+    <a
+      class="category"
+      *ngFor="let categoryItem of categories"
+      [class]="categoryItem.id"
+      [usefulRouterLink]="['category', categoryItem.id]"
+      [usefulRouterBackwardable]="true"
+    >{{ categoryItem.title }}</a>
+  </div>
+
+  <h1 class="title">{{ post.title }}</h1>
+
+  <div class="info">
+    <div class="author" *ngIf="post.authors | o1i; let author">
+      <a class="muted" [usefulRouterLink]="[author.id]" [usefulRouterBackwardable]="true">
+        <img [src]="author.thumbnail" [alt]="author.title">
+        <span>{{ author.title }}</span>
+      </a>
+    </div>
+    <span class="date">{{ post.createdAt | datex }}</span>
+    <span class="duration">{{ post.duration }} {{ 'POST.MIN_READ' | transloco }}</span>
+  </div>
+
+  <div class="image">
+    <img [src]="post.image" [alt]="post.title">
+  </div>
+
+  <div class="content">
+
+    <div class="tldr" *ngIf="post.tldr">
+      <div class="name">{{ 'POST.TLDR' | transloco }}:</div>
+      <div [innerHtml]="post.tldr"></div>
+    </div>
+
+    <div class="description" [innerHtml]="post.description"></div>
+
+    <div class="toc" *ngIf="post.toc">
+      <div class="name">{{ 'POST.TOC' | transloco }}:</div>
+      <ul>
+        <li *ngFor="let tocItem of post.toc" [class]="'level-' + tocItem.level">
+          <a *ngIf="tocItem.href" [href]="tocItem.href" target="_blank">{{ tocItem.text }}</a>
+          <a *ngIf="tocItem.routerLink" [usefulRouterLink]="tocItem.routerLink">{{ tocItem.text }}</a>
+          <a *ngIf="tocItem.id" [href]="'#' + tocItem.id" (click)="navService.scrollTo(tocItem.id); false;">{{ tocItem.text }}</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="article">
+      <nguix-content [content]="post.content" [contentSrc]="post.contentSrc"></nguix-content>
+    </div>
+
+  </div>
+
+  <div class="tags">
+    <a
+      class="button-outline-medium-sm"
+      *ngFor="let tagItem of post.tags | o2a; let tags"
+      [usefulRouterLink]="['tag', tagItem.id]"
+    >{{ tagItem.title }}</a>
+  </div>
+
+  <div class="misc">
+    <div class="stats">
+      <div class="likes" *ngIf="post.likeCount">
+        <button class="button-clear"><i class="icon icon-love"></i> <span>{{ post.likeCount }}</span></button>
+      </div>
+      <div class="comments" *ngIf="post.commentCount">
+        <button class="button-clear"><i class="icon icon-comment"></i><span>{{ post.commentCount }}</span></button>
+      </div>
+    </div>
+    <div class="action">
+      <nguix-share [title]="post.title" [text]="post.description" [url]="navService.routeUrl"></nguix-share>
+    </div>
+  </div>
+
+</div>
+</ng-container>

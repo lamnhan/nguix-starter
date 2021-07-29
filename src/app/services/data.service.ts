@@ -85,6 +85,20 @@ export class DataService {
         routerLink: ['component', 'footer']
       },
     {
+      text: 'Content',
+      level: 0,
+    },
+      {
+        text: 'Posts',
+        level: 1,
+        routerLink: ['component', 'posts']
+      },
+      {
+        text: 'Post',
+        level: 1,
+        routerLink: ['component', 'post']
+      },
+    {
       text: 'User',
       level: 0,
     },

@@ -15,6 +15,8 @@ import { NguixShareComponentModule } from './components/share/share.module';
 import { NguixLoginComponentModule } from './components/login/login.module';
 import { NguixRegisterComponentModule } from './components/register/register.module';
 import { NguixAccountComponentModule } from './components/account/account.module';
+import { NguixPostsComponentModule } from './components/posts/posts.module';
+import { NguixPostComponentModule } from './components/post/post.module';
 
 @NgModule({
   declarations: [],
@@ -34,6 +36,8 @@ import { NguixAccountComponentModule } from './components/account/account.module
     NguixLoginComponentModule,
     NguixRegisterComponentModule,
     NguixAccountComponentModule,
+    NguixPostsComponentModule,
+    NguixPostComponentModule,
   ],
   exports: [
     NguixHeaderComponentModule,
@@ -51,6 +55,8 @@ import { NguixAccountComponentModule } from './components/account/account.module
     NguixLoginComponentModule,
     NguixRegisterComponentModule,
     NguixAccountComponentModule,
+    NguixPostsComponentModule,
+    NguixPostComponentModule,
   ]
 })
 export class NguixStarterModule { }

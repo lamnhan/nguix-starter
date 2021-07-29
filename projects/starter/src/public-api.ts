@@ -34,6 +34,10 @@ export * from './lib/components/register/register.component';
 export * from './lib/components/register/register.module';
 export * from './lib/components/account/account.component';
 export * from './lib/components/account/account.module';
+export * from './lib/components/posts/posts.component';
+export * from './lib/components/posts/posts.module';
+export * from './lib/components/post/post.component';
+export * from './lib/components/post/post.module';
 
 export * from './lib/pages/oops/oops.component';
 export * from './lib/pages/oops/oops.module';

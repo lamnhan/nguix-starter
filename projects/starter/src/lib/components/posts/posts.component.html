@@ -1,0 +1,62 @@
+<ng-container *transloco="let t">
+<ul class="host" [class]="'list-' + layout">
+
+  <li *ngFor="let postItem of posts">
+
+    <div class="head">
+
+      <a class="thumbnail" [usefulRouterLink]="['post', postItem.id]" [usefulRouterBackwardable]="true">
+        <img [src]="postItem.thumbnail" [alt]="postItem.title">
+      </a>
+
+      <a class="category"
+        *ngIf="postItem.categories | o1i; let category"
+        [class]="category.id"
+        [usefulRouterLink]="['category', category.id]"
+        [usefulRouterBackwardable]="true"
+      >{{ category.title }}</a>
+
+    </div>
+
+    <div class="body">
+
+      <div class="title">
+        <a [usefulRouterLink]="['post', postItem.id]" [usefulRouterBackwardable]="true">{{ postItem.title }}</a>
+      </div>
+
+      <div class="info">
+        <div class="author" *ngIf="postItem.authors | o1i; let author">
+          <a class="muted" [usefulRouterLink]="[author.id]" [usefulRouterBackwardable]="true">
+            <img [src]="author.thumbnail" [alt]="author.title">
+            <span>{{ author.title }}</span>
+          </a>
+        </div>
+        <div class="date">{{ postItem.createdAt }}</div>
+        <div class="duration">{{ postItem.duration }} {{ 'POST.MIN_READ' | transloco }}</div>
+      </div>
+
+      <div class="description" [innerHtml]="postItem.description"></div>
+
+    </div>
+
+    <div class="foot">
+
+      <div class="stats">
+        <div class="likes" *ngIf="postItem.likeCount">
+          <i class="icon icon-love"></i> <span>{{ postItem.likeCount }}</span>
+        </div>
+        <div class="comments" *ngIf="postItem.commentCount">
+          <i class="icon icon-comment"></i> <span>{{ postItem.commentCount }}</span>
+        </div>
+      </div>
+
+      <div class="action">
+        <a [usefulRouterLink]="['post', postItem.id]" [usefulRouterBackwardable]="true">{{ 'COMMON.READ_MORE' | transloco }} &#x2192;</a>
+      </div>
+
+    </div>
+
+  </li>
+
+</ul>
+</ng-container>

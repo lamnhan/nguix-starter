@@ -76,6 +76,8 @@ const routes: Routes = [
   { path: 'component/login', loadChildren: () => import('./pages/component/login/login.module').then(m => m.LoginPageModule) },
   { path: 'component/register', loadChildren: () => import('./pages/component/register/register.module').then(m => m.RegisterPageModule) },
   { path: 'component/account', loadChildren: () => import('./pages/component/account/account.module').then(m => m.AccountPageModule) },
+  { path: 'component/posts', loadChildren: () => import('./pages/component/posts/posts.module').then(m => m.PostsPageModule) },
+  { path: 'component/post', loadChildren: () => import('./pages/component/post/post.module').then(m => m.PostPageModule) },
   // pages
   { path: 'pages', loadChildren: () => import('./pages/pages/pages.module').then(m => m.PagesPageModule) },
   { path: 'page/oauth-popup', loadChildren: () => import('./pages/page/oauth-popup/oauth-popup.module').then(m => m.OauthPopupPageModule) },
