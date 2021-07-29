@@ -28,6 +28,7 @@ module.exports = {
     'docs/content/components/account.md': {main: ['AccountComponent', 'SUMMARY_PROPERTIES']},
     'docs/content/components/posts.md': {main: ['PostsComponent', 'SUMMARY_PROPERTIES']},
     'docs/content/components/post.md': {main: ['PostComponent', 'SUMMARY_PROPERTIES']},
+    'docs/content/components/videos.md': {main: ['VideosComponent', 'SUMMARY_PROPERTIES']},
     // pages
     'docs/content/pages/oauth-popup.md': {main: ['OauthPopupPage', 'SUMMARY_PROPERTIES']},
     'docs/content/pages/oops.md': {main: ['OopsPage', 'SUMMARY_PROPERTIES']},

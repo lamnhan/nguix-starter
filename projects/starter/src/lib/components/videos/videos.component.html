@@ -1,0 +1,28 @@
+<ng-container *transloco="let t">
+  <ul class="host" [class]="'list-' + layout" *ngIf="videos.length">
+  
+    <li *ngFor="let videoItem of videos">
+  
+      <div class="head">
+  
+        <a class="thumbnail" [usefulRouterLink]="['video', videoItem.id]" [usefulRouterBackwardable]="true">
+          <img [src]="videoItem.thumbnail" [alt]="videoItem.title">
+        </a>
+  
+        <span class="duration">{{ videoItem.duration }}</span>
+  
+      </div>
+  
+      <div class="body">
+  
+        <div class="title">
+          <a [usefulRouterLink]="['video', videoItem.id]" [usefulRouterBackwardable]="true">{{ videoItem.title }}</a>
+        </div>
+  
+      </div>
+  
+    </li>
+  
+  </ul>
+  </ng-container>
+  

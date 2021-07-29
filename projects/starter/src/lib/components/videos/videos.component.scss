@@ -1,0 +1,123 @@
+.host {
+
+  &.list-thumbnail, &.list-card {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &.list-thumbnail {
+
+  }
+
+  &.list-card {
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+      width: 100%;
+      display: flex;
+      flex-flow: column;
+      background: var(--app-color-background);
+      border-radius: var(--app-size-radius);
+      margin-bottom: 2rem;
+      overflow: hidden;
+
+      .head {
+        position: relative;
+        overflow: hidden;
+        padding-top: 56.25%;
+        width: 100%;
+
+        .thumbnail {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+
+          &, & img {
+            display: block;
+            width: 100%;
+          }
+        }
+
+        .duration {
+          position: absolute;
+          right: .5rem;
+          bottom: .5rem;
+          padding: .25rem;
+          border-radius: var(--app-size-radius);
+          background: var(--app-color-dark);
+          color: var(--app-color-light);
+          font-size: .8rem;
+        }
+      }
+
+      .body {
+        flex: 1;
+        display: flex;
+        flex-flow: column;
+        padding: 0 1rem;
+        margin-top: 1rem;
+
+        .title {
+          font-size: 1.1rem;
+          font-family: var(--app-font-head);
+          font-weight: 500;
+
+          a {
+            color: var(--app-color-foreground);
+          }
+        }
+      }
+    }
+  }
+
+}
+
+
+@media only screen and (min-width: 480px) {}
+
+@media only screen and (min-width: 576px) {
+
+  .host {
+
+    &.list-thumbnail {
+
+    }
+  
+    &.list-card {
+      width: calc(100% + 1rem);
+      margin-left: -1rem;
+
+      li {
+        width: calc(50% - 1rem);
+        margin-left: 1rem;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {}
+
+@media only screen and (min-width: 992px) {}
+
+@media only screen and (min-width: 1200px) {
+
+  .host {
+
+    &.list-thumbnail {
+
+    }
+  
+    &.list-card {
+
+      li {
+        width: calc((100% / 3) - 1rem);
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1400px) {}

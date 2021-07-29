@@ -78,6 +78,8 @@ const routes: Routes = [
   { path: 'component/account', loadChildren: () => import('./pages/component/account/account.module').then(m => m.AccountPageModule) },
   { path: 'component/posts', loadChildren: () => import('./pages/component/posts/posts.module').then(m => m.PostsPageModule) },
   { path: 'component/post', loadChildren: () => import('./pages/component/post/post.module').then(m => m.PostPageModule) },
+  { path: 'component/videos', loadChildren: () => import('./pages/component/videos/videos.module').then(m => m.VideosPageModule) },
+
   // pages
   { path: 'pages', loadChildren: () => import('./pages/pages/pages.module').then(m => m.PagesPageModule) },
   { path: 'page/oauth-popup', loadChildren: () => import('./pages/page/oauth-popup/oauth-popup.module').then(m => m.OauthPopupPageModule) },
@@ -85,7 +87,6 @@ const routes: Routes = [
   { path: 'page/terms', loadChildren: () => import('./pages/page/terms/terms.module').then(m => m.TermsPageModule) },
   { path: 'page/privacy', loadChildren: () => import('./pages/page/privacy/privacy.module').then(m => m.PrivacyPageModule) },
   { path: 'page/setting', loadChildren: () => import('./pages/page/setting/setting.module').then(m => m.SettingPageModule) },
-
   { path: '**', loadChildren: () => import('@lamnhan/nguix-starter').then(m => m.NguixOopsPageModule) },
 ];
 
