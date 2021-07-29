@@ -1,5 +1,5 @@
 <ng-container *transloco="let t">
-<div class="host">
+<div class="host" *ngIf="post">
 
   <div class="categories" *ngIf="post.categories | o2a; let categories">
     <a
@@ -21,24 +21,24 @@
       </a>
     </div>
     <span class="date">{{ post.createdAt | datex }}</span>
-    <span class="duration">{{ post.duration }} {{ 'POST.MIN_READ' | transloco }}</span>
+    <span class="duration">{{ post.duration }} min read</span>
   </div>
 
-  <div class="image">
+  <div class="image" *ngIf="post.image">
     <img [src]="post.image" [alt]="post.title">
   </div>
 
   <div class="content">
 
     <div class="tldr" *ngIf="post.tldr">
-      <div class="name">{{ 'POST.TLDR' | transloco }}:</div>
+      <div class="name">Long story short:</div>
       <div [innerHtml]="post.tldr"></div>
     </div>
 
     <div class="description" [innerHtml]="post.description"></div>
 
     <div class="toc" *ngIf="post.toc">
-      <div class="name">{{ 'POST.TOC' | transloco }}:</div>
+      <div class="name">In this post:</div>
       <ul>
         <li *ngFor="let tocItem of post.toc" [class]="'level-' + tocItem.level">
           <a *ngIf="tocItem.href" [href]="tocItem.href" target="_blank">{{ tocItem.text }}</a>

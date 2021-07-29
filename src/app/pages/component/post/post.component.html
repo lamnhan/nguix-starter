@@ -17,7 +17,7 @@
 
     <ng-template #componentTemplate>
       <div class="padding">
-        <nguix-post></nguix-post>
+        <nguix-post [post]="'post-1' | postDataItem | async"></nguix-post>
       </div>
     </ng-template>
 

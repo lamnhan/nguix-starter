@@ -4,7 +4,7 @@ import { Post } from '@lamnhan/schemata';
 export type PostsLayouts = 'thumbnail' | 'card';
 
 @Component({
-  selector: 'app-posts',
+  selector: 'nguix-posts',
   templateUrl: './posts.component.html',
   styleUrls: ['./posts.component.scss']
 })

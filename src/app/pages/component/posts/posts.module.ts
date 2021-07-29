@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { PostsDataPipeModule } from '@lamnhan/ngx-schemata';
 import { NguixPostsComponentModule } from '@lamnhan/nguix-starter';
 
 import { PageComponentModule } from '../../../components/page/page.module';
@@ -18,7 +19,8 @@ import { PostsComponent } from './posts.component';
     PageComponentModule,
     CompbodyComponentModule,
     NguixPostsComponentModule,
+    PostsDataPipeModule,
     PostsRoutingModule
   ]
 })
-export class PostsModule { }
+export class PostsPageModule {}

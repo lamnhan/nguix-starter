@@ -11,7 +11,6 @@ export class PostsComponent implements OnInit {
 
   constructor(public readonly data: DataService) { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
 }

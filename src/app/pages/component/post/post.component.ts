@@ -9,9 +9,8 @@ import { DataService } from '../../../services/data.service';
 })
 export class PostComponent implements OnInit {
 
-  constructor(public readonly data: DataService) { }
+  constructor(public readonly data: DataService) {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
 }

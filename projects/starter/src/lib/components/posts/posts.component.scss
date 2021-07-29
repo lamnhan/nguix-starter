@@ -15,6 +15,7 @@
     flex-wrap: wrap;
 
     li {
+      width: 100%;
       display: flex;
       flex-flow: column;
       background: var(--app-color-background);
@@ -24,13 +25,22 @@
       box-shadow: 0 0 1px var(--app-color-medium);
 
       .head {
-        flex: 1;
         position: relative;
         overflow: hidden;
+        padding-top: 56.25%;
+        width: 100%;
 
-        .thumbnail, .thumbnail img {
-          display: block;
-          width: 100%;
+        .thumbnail {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+
+          &, & img {
+            display: block;
+            width: 100%;
+          }
         }
 
         .category {
@@ -56,10 +66,10 @@
         flex: 1;
         display: flex;
         flex-flow: column;
-        padding: 1rem;
+        padding: 0 1rem;
+        margin-top: 1rem;
 
         .title {
-          flex: 1;
           font-size: 1.2rem;
           font-family: var(--app-font-head);
           font-weight: 700;
@@ -99,6 +109,7 @@
         }
 
         .description {
+          flex: 1;
           margin-top: .5rem;
         }
         
@@ -107,7 +118,9 @@
       .foot {
         display: flex;
         flex-wrap: nowrap;
-        padding: 0 1rem .5rem;
+        padding: 0 1rem;
+        margin-top: 1rem;
+        margin-bottom: .5rem;
 
         .stats {
           flex: 1;

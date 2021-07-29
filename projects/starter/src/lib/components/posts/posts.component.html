@@ -1,5 +1,5 @@
 <ng-container *transloco="let t">
-<ul class="host" [class]="'list-' + layout">
+<ul class="host" [class]="'list-' + layout" *ngIf="posts.length">
 
   <li *ngFor="let postItem of posts">
 
@@ -32,7 +32,7 @@
           </a>
         </div>
         <div class="date">{{ postItem.createdAt }}</div>
-        <div class="duration">{{ postItem.duration }} {{ 'POST.MIN_READ' | transloco }}</div>
+        <div class="duration">{{ postItem.duration }} min read</div>
       </div>
 
       <div class="description" [innerHtml]="postItem.description"></div>
@@ -51,7 +51,7 @@
       </div>
 
       <div class="action">
-        <a [usefulRouterLink]="['post', postItem.id]" [usefulRouterBackwardable]="true">{{ 'COMMON.READ_MORE' | transloco }} &#x2192;</a>
+        <a [usefulRouterLink]="['post', postItem.id]" [usefulRouterBackwardable]="true">Read more &#x2192;</a>
       </div>
 
     </div>

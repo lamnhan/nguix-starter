@@ -3,7 +3,7 @@ import { Post } from '@lamnhan/schemata';
 import { NavService } from '@lamnhan/ngx-useful';
 
 @Component({
-  selector: 'app-post',
+  selector: 'nguix-post',
   templateUrl: './post.component.html',
   styleUrls: ['./post.component.scss']
 })
