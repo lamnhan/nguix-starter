@@ -1,8 +1,8 @@
 <ng-container *transloco="let t">
   <div class="host" *ngIf="video">
 
-    <div class="player">
-      
+    <div class="player" *ngIf="video.src">
+      <nguix-video-player [src]="video.src"></nguix-video-player>
     </div>
   
     <div class="categories" *ngIf="video.categories | o2a; let categories">

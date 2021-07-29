@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { TranslocoModule } from '@ngneat/transloco';
 import { RouterLinkDirectiveModule, O2aPipeModule, O1iPipeModule, DatexPipeModule } from '@lamnhan/ngx-useful';
 import { NguixContentComponentModule } from '../content/content.module';
+import { NguixVideoPlayerComponentModule } from '../video-player/video-player.module';
 
 import { NguixShareComponentModule } from '../share/share.module';
 import { VideoComponent } from './video.component';
@@ -18,6 +19,7 @@ import { VideoComponent } from './video.component';
     DatexPipeModule,
     NguixShareComponentModule,
     NguixContentComponentModule,
+    NguixVideoPlayerComponentModule,
   ],
   exports: [VideoComponent]
 })
