@@ -1,0 +1,58 @@
+<ng-container *transloco="let t">
+  <div class="host" *ngIf="video">
+
+    <div class="player">
+      
+    </div>
+  
+    <div class="categories" *ngIf="video.categories | o2a; let categories">
+      <a
+        class="category"
+        *ngFor="let categoryItem of categories"
+        [class]="categoryItem.id"
+        [usefulRouterLink]="['category', categoryItem.id]"
+        [usefulRouterBackwardable]="true"
+      >{{ categoryItem.title }}</a>
+    </div>
+  
+    <h1 class="title">{{ video.title }}</h1>
+  
+    <div class="info">
+      <span class="date">{{ video.createdAt | datex }}</span>
+    </div>
+  
+    <div class="content">
+  
+      <div class="description" [innerHtml]="video.description"></div>
+    
+      <div class="article">
+        <nguix-content [content]="video.content" [contentSrc]="video.contentSrc"></nguix-content>
+      </div>
+  
+    </div>
+  
+    <div class="tags">
+      <a
+        class="button-outline-medium-sm"
+        *ngFor="let tagItem of video.tags | o2a; let tags"
+        [usefulRouterLink]="['tag', tagItem.id]"
+      >{{ tagItem.title }}</a>
+    </div>
+  
+    <div class="misc">
+      <div class="stats">
+        <div class="likes" *ngIf="video.likeCount">
+          <button class="button-clear"><i class="icon icon-love"></i> <span>{{ video.likeCount }}</span></button>
+        </div>
+        <div class="comments" *ngIf="video.commentCount">
+          <button class="button-clear"><i class="icon icon-comment"></i><span>{{ video.commentCount }}</span></button>
+        </div>
+      </div>
+      <div class="action">
+        <nguix-share [title]="video.title" [text]="video.description" [url]="navService.routeUrl"></nguix-share>
+      </div>
+    </div>
+  
+  </div>
+  </ng-container>
+  

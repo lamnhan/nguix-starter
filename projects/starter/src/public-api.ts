@@ -40,6 +40,8 @@ export * from './lib/components/post/post.component';
 export * from './lib/components/post/post.module';
 export * from './lib/components/videos/videos.component';
 export * from './lib/components/videos/videos.module';
+export * from './lib/components/video/video.component';
+export * from './lib/components/video/video.module';
 
 export * from './lib/pages/oops/oops.component';
 export * from './lib/pages/oops/oops.module';

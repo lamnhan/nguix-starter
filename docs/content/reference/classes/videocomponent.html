@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>OopsComponent | @lamnhan/nguix-starter</title>
+	<title>VideoComponent | @lamnhan/nguix-starter</title>
 	<meta name="description" content="Documentation for @lamnhan/nguix-starter">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -54,10 +54,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="oopscomponent.html">OopsComponent</a>
+					<a href="videocomponent.html">VideoComponent</a>
 				</li>
 			</ul>
-			<h1>Class OopsComponent</h1>
+			<h1>Class VideoComponent</h1>
 		</div>
 	</div>
 </header>
@@ -68,7 +68,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">OopsComponent</span>
+						<span class="target">VideoComponent</span>
 					</li>
 				</ul>
 			</section>
@@ -85,17 +85,15 @@
 						<section class="tsd-index-section ">
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="oopscomponent.html#constructor" class="tsd-kind-icon">constructor</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="videocomponent.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="oopscomponent.html#actionlink" class="tsd-kind-icon">action<wbr>Link</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="oopscomponent.html#actiontext" class="tsd-kind-icon">action<wbr>Text</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="oopscomponent.html#content" class="tsd-kind-icon">content</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="oopscomponent.html#i18n" class="tsd-kind-icon">i18n</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="oopscomponent.html#image" class="tsd-kind-icon">image</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="videocomponent.html#i18n" class="tsd-kind-icon">i18n</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="videocomponent.html#navservice" class="tsd-kind-icon">nav<wbr>Service</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="videocomponent.html#video" class="tsd-kind-icon">video</a></li>
 							</ul>
 						</section>
 					</div>
@@ -107,16 +105,22 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Oops<wbr>Component<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="oopscomponent.html" class="tsd-signature-type">OopsComponent</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Video<wbr>Component<span class="tsd-signature-symbol">(</span>navService<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">NavService</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="videocomponent.html" class="tsd-signature-type">VideoComponent</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/lamnhan/nguix-starter/blob/5da5f59/projects/starter/src/lib/components/oops/oops.component.ts#L32">projects/starter/src/lib/components/oops/oops.component.ts:32</a></li>
+									<li>Defined in projects/starter/src/lib/components/video/video.component.ts:20</li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <a href="oopscomponent.html" class="tsd-signature-type">OopsComponent</a></h4>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>navService: <span class="tsd-signature-type">NavService</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="videocomponent.html" class="tsd-signature-type">VideoComponent</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -124,57 +128,12 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="actionlink" class="tsd-anchor"></a>
-					<h3>action<wbr>Link</h3>
-					<div class="tsd-signature tsd-kind-icon">action<wbr>Link<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = [&#x27;/&#x27;]</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/lamnhan/nguix-starter/blob/5da5f59/projects/starter/src/lib/components/oops/oops.component.ts#L27">projects/starter/src/lib/components/oops/oops.component.ts:27</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Input() Component action link</p>
-						</div>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="actiontext" class="tsd-anchor"></a>
-					<h3>action<wbr>Text</h3>
-					<div class="tsd-signature tsd-kind-icon">action<wbr>Text<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;Go home&quot;</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/lamnhan/nguix-starter/blob/5da5f59/projects/starter/src/lib/components/oops/oops.component.ts#L32">projects/starter/src/lib/components/oops/oops.component.ts:32</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Input() Component action text. For i18n, <code>NGUIX_OOPS.ACTION_TEXT</code> = Go home</p>
-						</div>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="content" class="tsd-anchor"></a>
-					<h3>content</h3>
-					<div class="tsd-signature tsd-kind-icon">content<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;Page not found!&quot;</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/lamnhan/nguix-starter/blob/5da5f59/projects/starter/src/lib/components/oops/oops.component.ts#L22">projects/starter/src/lib/components/oops/oops.component.ts:22</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Input() Component content. For i18n, <code>NGUIX_OOPS.CONTENT</code> = Page not found</p>
-						</div>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="i18n" class="tsd-anchor"></a>
 					<h3>i18n</h3>
 					<div class="tsd-signature tsd-kind-icon">i18n<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/lamnhan/nguix-starter/blob/5da5f59/projects/starter/src/lib/components/oops/oops.component.ts#L12">projects/starter/src/lib/components/oops/oops.component.ts:12</a></li>
+							<li>Defined in projects/starter/src/lib/components/video/video.component.ts:15</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -184,17 +143,32 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="image" class="tsd-anchor"></a>
-					<h3>image</h3>
-					<div class="tsd-signature tsd-kind-icon">image<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;/assets/images/404.png&quot;</span></div>
+					<a name="navservice" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> nav<wbr>Service</h3>
+					<div class="tsd-signature tsd-kind-icon">nav<wbr>Service<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">NavService</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/lamnhan/nguix-starter/blob/5da5f59/projects/starter/src/lib/components/oops/oops.component.ts#L17">projects/starter/src/lib/components/oops/oops.component.ts:17</a></li>
+							<li>Defined in projects/starter/src/lib/components/video/video.component.ts:26</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>Input() Component image</p>
+							<p>Inject() Requires the <a href="https://ngx-useful.lamnhan.com/service/nav">NavService</a></p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="video" class="tsd-anchor"></a>
+					<h3>video</h3>
+					<div class="tsd-signature tsd-kind-icon">video<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Video</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in projects/starter/src/lib/components/video/video.component.ts:20</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Input() The post</p>
 						</div>
 					</div>
 				</section>
@@ -213,25 +187,19 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class">
-						<a href="oopscomponent.html" class="tsd-kind-icon">Oops<wbr>Component</a>
+						<a href="videocomponent.html" class="tsd-kind-icon">Video<wbr>Component</a>
 						<ul>
 							<li class=" tsd-kind-constructor tsd-parent-kind-class">
-								<a href="oopscomponent.html#constructor" class="tsd-kind-icon">constructor</a>
+								<a href="videocomponent.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="oopscomponent.html#actionlink" class="tsd-kind-icon">action<wbr>Link</a>
+								<a href="videocomponent.html#i18n" class="tsd-kind-icon">i18n</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="oopscomponent.html#actiontext" class="tsd-kind-icon">action<wbr>Text</a>
+								<a href="videocomponent.html#navservice" class="tsd-kind-icon">nav<wbr>Service</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="oopscomponent.html#content" class="tsd-kind-icon">content</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="oopscomponent.html#i18n" class="tsd-kind-icon">i18n</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="oopscomponent.html#image" class="tsd-kind-icon">image</a>
+								<a href="videocomponent.html#video" class="tsd-kind-icon">video</a>
 							</li>
 						</ul>
 					</li>

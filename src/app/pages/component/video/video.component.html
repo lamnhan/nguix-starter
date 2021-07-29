@@ -1,0 +1,26 @@
+<div class="host">
+
+  <app-page
+    menuName="List of components"
+    [menuItems]="data.componentMenu"
+    [bodyTemplate]="pageBody"
+  ></app-page>
+
+  <ng-template #pageBody>
+
+    <app-compbody
+      [componentTemplate]="componentTemplate"
+      apiSrc="https://raw.githubusercontent.com/lamnhan/nguix-starter/main/docs/content/components/video.md"
+      importName="NguixVideoComponentModule"
+      htmlCode="&lt;nguix-video&gt;&lt;/nguix-video&gt;"
+    ></app-compbody>
+
+    <ng-template #componentTemplate>
+      <div class="padding">
+        <nguix-video [video]="'video-1' | videoDataItem | async"></nguix-video>
+      </div>
+    </ng-template>
+
+  </ng-template>
+
+</div>

@@ -79,6 +79,7 @@ const routes: Routes = [
   { path: 'component/posts', loadChildren: () => import('./pages/component/posts/posts.module').then(m => m.PostsPageModule) },
   { path: 'component/post', loadChildren: () => import('./pages/component/post/post.module').then(m => m.PostPageModule) },
   { path: 'component/videos', loadChildren: () => import('./pages/component/videos/videos.module').then(m => m.VideosPageModule) },
+  { path: 'component/video', loadChildren: () => import('./pages/component/video/video.module').then(m => m.VideoPageModule) },
 
   // pages
   { path: 'pages', loadChildren: () => import('./pages/pages/pages.module').then(m => m.PagesPageModule) },

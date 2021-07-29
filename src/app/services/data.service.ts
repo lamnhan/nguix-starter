@@ -103,6 +103,11 @@ export class DataService {
         level: 1,
         routerLink: ['component', 'videos']
       },
+      {
+        text: 'Video',
+        level: 1,
+        routerLink: ['component', 'video']
+      },
     {
       text: 'User',
       level: 0,
