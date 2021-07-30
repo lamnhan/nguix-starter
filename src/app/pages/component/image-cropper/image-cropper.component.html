@@ -17,7 +17,10 @@
 
     <ng-template #componentTemplate>
       <div class="padding">
-        <nguix-image-cropper url="https://source.unsplash.com/mawU2PoJWfU/1920x1080"></nguix-image-cropper>
+        <nguix-image-cropper
+          url="https://source.unsplash.com/mawU2PoJWfU/1920x1080"
+          [options]="cropperOptions"
+        ></nguix-image-cropper>
       </div>
     </ng-template>
 

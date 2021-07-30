@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../../services/data.service';
 
 @Component({
-  selector: 'app-video-player',
+  selector: 'app-video-player-page',
   templateUrl: './video-player.component.html',
   styleUrls: ['./video-player.component.scss']
 })

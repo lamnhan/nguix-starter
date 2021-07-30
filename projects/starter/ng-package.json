@@ -9,14 +9,16 @@
       "@lamnhan/ngx-useful": "ng.lamnhan.useful",
       "@lamnhan/ngx-schemata": "ng.lamnhan.schemata",
       "@ngneat/transloco": "ng.transloco",
-      "ngx-markdown": "ngxMarkdown",
+      "ngx-markdown": "ng.markdown",
       "croppie": "croppie",
-      "basiclightbox": "basiclightbox"
+      "basiclightbox": "basiclightbox",
+      "ngx-youtube-player": "ng.youtubePlayer"
     }
   },
   "allowedNonPeerDependencies": [
     "ngx-markdown",
     "croppie",
-    "basiclightbox"
+    "basiclightbox",
+    "ngx-youtube-player"
   ]
 }
