@@ -20,6 +20,7 @@ import { NguixPostComponentModule } from './components/post/post.module';
 import { NguixVideosComponentModule } from './components/videos/videos.module';
 import { NguixVideoComponentModule } from './components/video/video.module';
 import { NguixVideoPlayerComponentModule } from './components/video-player/video-player.module';
+import { NguixImageCropperComponentModule } from './components/image-cropper/image-cropper.module';
 
 @NgModule({
   declarations: [],
@@ -44,6 +45,7 @@ import { NguixVideoPlayerComponentModule } from './components/video-player/video
     NguixVideosComponentModule,
     NguixVideoComponentModule,
     NguixVideoPlayerComponentModule,
+    NguixImageCropperComponentModule,
   ],
   exports: [
     NguixHeaderComponentModule,
@@ -66,6 +68,7 @@ import { NguixVideoPlayerComponentModule } from './components/video-player/video
     NguixVideosComponentModule,
     NguixVideoComponentModule,
     NguixVideoPlayerComponentModule,
+    NguixImageCropperComponentModule
   ]
 })
 export class NguixStarterModule { }

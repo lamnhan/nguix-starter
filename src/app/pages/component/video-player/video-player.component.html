@@ -1,0 +1,26 @@
+<div class="host">
+
+  <app-page
+    menuName="List of components"
+    [menuItems]="data.componentMenu"
+    [bodyTemplate]="pageBody"
+  ></app-page>
+
+  <ng-template #pageBody>
+
+    <app-compbody
+      [componentTemplate]="componentTemplate"
+      apiSrc="https://raw.githubusercontent.com/lamnhan/nguix-starter/main/docs/content/components/video-player.md"
+      importName="NguixVideoPlayerComponentModule"
+      htmlCode="&lt;nguix-video-player&gt;&lt;/nguix-video-player&gt;"
+    ></app-compbody>
+
+    <ng-template #componentTemplate>
+      <div class="padding">
+        <nguix-video-player src="https://www.youtube.com/watch?v=aqz-KE-bpKQ"></nguix-video-player>
+      </div>
+    </ng-template>
+
+  </ng-template>
+
+</div>

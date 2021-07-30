@@ -3,7 +3,6 @@ import { Observable } from 'rxjs';
 import { finalize } from 'rxjs/operators';
 import { StorageService } from '@lamnhan/ngx-useful';
 import * as Croppie from 'croppie';
-import Compressor from 'compressorjs';
 
 interface Uploading {
   uploadPercent$: Observable<undefined | number>;
@@ -15,75 +14,71 @@ interface Uploading {
   styleUrls: ['./avatar-editor.component.scss']
 })
 export class AvatarEditorComponent implements OnInit, OnChanges {
-  @Input() file?: File;
   @Input() uid!: string;
+  @Input() file!: File;
+
   @Output() close = new EventEmitter<void>();
   @Output() done = new EventEmitter<string>();
 
-  croppieInstance?: Croppie;
+  // editor
   isProcessing = false;
   uploading?: Uploading;
+  cropResult?: Blob;
+
+  // cropper
+  fileDataUrl?: string;
+  cropperOptions: Croppie.CroppieOptions = {
+    viewport: {
+      width: 120,
+      height: 120
+    },
+    boundary: {
+      width: 250,
+      height: 250,
+    },
+    showZoomer: true,
+  };
+  cropperResultOptions: Croppie.ResultOptions = {
+    size: {
+      width: 500,
+      height: 500,
+    }
+  };
 
   constructor(private storageService: StorageService) {}
 
   ngOnInit(): void {}
 
   ngOnChanges() {
-    if (this.file && !this.croppieInstance) {
-      const reader = new FileReader();
-      reader.onload = (e: any) => this.croppieInstance = this.getCroppie(e.target.result);
-      reader.readAsDataURL(this.file);
-    }
+    // get data url from file input
+    this.storageService.readFileDataUrl(this.file)
+    .subscribe(dataUrl => this.fileDataUrl = dataUrl);
   }
 
   closeAndReset() {
-    this.uploading = undefined;
     this.isProcessing = false;
-    this.croppieInstance?.destroy();
-    this.croppieInstance = undefined;
+    this.uploading = undefined;
+    this.cropResult = undefined;
     this.close.emit();
   }
 
-  doneCropping() {
-    if (this.croppieInstance) {
-      this.croppieInstance
-        .result({
-          type: 'blob',
-          format: 'jpeg',
-          size: { width: 500, height: 500 },
-          quality: 0.6,
-        })
-        .then(blob => this.processAvatar(blob));
+  processAvatar() {
+    if (this.cropResult) {
+      this.isProcessing = true;
+      this.storageService.compressImage(this.cropResult).subscribe(data =>
+        this.uploadBlob(
+          data,
+          url => {
+            this.done.emit(url);
+            this.closeAndReset();
+          }
+        )
+      );
     }
   }
 
-  private processAvatar(blob: Blob) {
-    this.isProcessing = true;
-    this.compressImage(blob).then(data =>
-      this.uploadBlob(
-        data,
-        url => {
-          this.done.emit(url);
-          this.closeAndReset();
-        }
-      )
-    );
-  }
-
-  private compressImage(blob: Blob) {
-    return new Promise<Blob>((resolve, reject) => new Compressor(
-      blob,
-      {
-        quality: 0.6,
-        mimeType: 'image/jpeg',
-        success: data => resolve(data),
-        error: err => reject(err),
-      }
-    ));
-  }
-
   private uploadBlob(blob: Blob, completed: (url: string) => void) {
-    const {name, fullPath, task} = this.storageService.uploadBlob(
+    const {ref, task} = this.storageService.uploadBlob(
       `${this.uid}/avatar.jpg`,
       blob,
       {
@@ -97,37 +92,11 @@ export class AvatarEditorComponent implements OnInit, OnChanges {
       uploadPercent$: task.percentageChanges(),
     };
     // completed
-    task.snapshotChanges().pipe(
-      finalize(() => {
-        this.storageService
-          .buildMediaItem(name, fullPath)
-          .downloadUrl$
-          .subscribe(url => completed(url));
-      })
-    ).subscribe();
-  }
-
-  private getCroppie(url: string) {
-    const el = document.getElementById('croppie-image-editor');
-    if (el) {
-      const croppie = new Croppie(
-        el,
-        {
-          viewport: {
-            width: 120,
-            height: 120
-          },
-          boundary: {
-            width: 250,
-            height: 250,
-          },
-          showZoomer: true,
-        }
-      );
-      croppie.bind({ url });
-      return croppie;
-    }
-    return undefined;
+    task.snapshotChanges()
+      .pipe(
+        finalize(() => ref.getDownloadURL().subscribe(completed)),
+      )
+      .subscribe();
   }
 
 }

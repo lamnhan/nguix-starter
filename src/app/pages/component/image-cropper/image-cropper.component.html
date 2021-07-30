@@ -1,0 +1,26 @@
+<div class="host">
+
+  <app-page
+    menuName="List of components"
+    [menuItems]="data.componentMenu"
+    [bodyTemplate]="pageBody"
+  ></app-page>
+
+  <ng-template #pageBody>
+
+    <app-compbody
+      [componentTemplate]="componentTemplate"
+      apiSrc="https://raw.githubusercontent.com/lamnhan/nguix-starter/main/docs/content/components/image-cropper.md"
+      importName="NguixImageCropperComponentModule"
+      htmlCode="&lt;nguix-image-cropper&gt;&lt;/nguix-image-cropper&gt;"
+    ></app-compbody>
+
+    <ng-template #componentTemplate>
+      <div class="padding">
+        <nguix-image-cropper url="https://source.unsplash.com/mawU2PoJWfU/1920x1080"></nguix-image-cropper>
+      </div>
+    </ng-template>
+
+  </ng-template>
+
+</div>

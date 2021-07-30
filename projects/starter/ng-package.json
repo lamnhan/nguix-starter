@@ -11,14 +11,12 @@
       "@ngneat/transloco": "ng.transloco",
       "ngx-markdown": "ngxMarkdown",
       "croppie": "croppie",
-      "compressorjs": "compressorjs",
       "basiclightbox": "basiclightbox"
     }
   },
   "allowedNonPeerDependencies": [
     "ngx-markdown",
     "croppie",
-    "compressorjs",
     "basiclightbox"
   ]
 }

@@ -93,9 +93,10 @@
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="avatareditorcomponent.html#close" class="tsd-kind-icon">close</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="avatareditorcomponent.html#croppieinstance" class="tsd-kind-icon">croppie<wbr>Instance</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="avatareditorcomponent.html#cropresult" class="tsd-kind-icon">crop<wbr>Result</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="avatareditorcomponent.html#done" class="tsd-kind-icon">done</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="avatareditorcomponent.html#file" class="tsd-kind-icon">file</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="avatareditorcomponent.html#filedataurl" class="tsd-kind-icon">file<wbr>Data<wbr>Url</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="avatareditorcomponent.html#isprocessing" class="tsd-kind-icon">is<wbr>Processing</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="avatareditorcomponent.html#uid" class="tsd-kind-icon">uid</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="avatareditorcomponent.html#uploading" class="tsd-kind-icon">uploading</a></li>
@@ -105,9 +106,16 @@
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="avatareditorcomponent.html#closeandreset" class="tsd-kind-icon">close<wbr>And<wbr>Reset</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="avatareditorcomponent.html#donecropping" class="tsd-kind-icon">done<wbr>Cropping</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="avatareditorcomponent.html#ngonchanges" class="tsd-kind-icon">ng<wbr>OnChanges</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="avatareditorcomponent.html#ngoninit" class="tsd-kind-icon">ng<wbr>OnInit</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="avatareditorcomponent.html#processavatar" class="tsd-kind-icon">process<wbr>Avatar</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Object literals</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-object-literal tsd-parent-kind-class"><a href="avatareditorcomponent.html#cropperoptions" class="tsd-kind-icon">cropper<wbr>Options</a></li>
+								<li class="tsd-kind-object-literal tsd-parent-kind-class"><a href="avatareditorcomponent.html#cropperresultoptions" class="tsd-kind-icon">cropper<wbr>Result<wbr>Options</a></li>
 							</ul>
 						</section>
 					</div>
@@ -125,7 +133,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/lamnhan/nguix-starter/blob/5da5f59/projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts#L25">projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts:25</a></li>
+									<li>Defined in <a href="https://github.com/lamnhan/nguix-starter/blob/2415198/projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts#L46">projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts:46</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -147,17 +155,17 @@
 					<div class="tsd-signature tsd-kind-icon">close<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">EventEmitter</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = new EventEmitter&lt;void&gt;()</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/lamnhan/nguix-starter/blob/5da5f59/projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts#L20">projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts:20</a></li>
+							<li>Defined in <a href="https://github.com/lamnhan/nguix-starter/blob/2415198/projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts#L20">projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts:20</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="croppieinstance" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> croppie<wbr>Instance</h3>
-					<div class="tsd-signature tsd-kind-icon">croppie<wbr>Instance<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Croppie</span></div>
+					<a name="cropresult" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> crop<wbr>Result</h3>
+					<div class="tsd-signature tsd-kind-icon">crop<wbr>Result<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Blob</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/lamnhan/nguix-starter/blob/5da5f59/projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts#L23">projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts:23</a></li>
+							<li>Defined in <a href="https://github.com/lamnhan/nguix-starter/blob/2415198/projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts#L26">projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts:26</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -167,17 +175,27 @@
 					<div class="tsd-signature tsd-kind-icon">done<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">EventEmitter</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = new EventEmitter&lt;string&gt;()</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/lamnhan/nguix-starter/blob/5da5f59/projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts#L21">projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts:21</a></li>
+							<li>Defined in <a href="https://github.com/lamnhan/nguix-starter/blob/2415198/projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts#L21">projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts:21</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="file" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> file</h3>
+					<h3>file</h3>
 					<div class="tsd-signature tsd-kind-icon">file<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">File</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/lamnhan/nguix-starter/blob/5da5f59/projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts#L18">projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts:18</a></li>
+							<li>Defined in <a href="https://github.com/lamnhan/nguix-starter/blob/2415198/projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts#L18">projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts:18</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="filedataurl" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> file<wbr>Data<wbr>Url</h3>
+					<div class="tsd-signature tsd-kind-icon">file<wbr>Data<wbr>Url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lamnhan/nguix-starter/blob/2415198/projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts#L29">projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts:29</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -187,7 +205,7 @@
 					<div class="tsd-signature tsd-kind-icon">is<wbr>Processing<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/lamnhan/nguix-starter/blob/5da5f59/projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts#L24">projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts:24</a></li>
+							<li>Defined in <a href="https://github.com/lamnhan/nguix-starter/blob/2415198/projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts#L24">projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts:24</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -197,7 +215,7 @@
 					<div class="tsd-signature tsd-kind-icon">uid<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/lamnhan/nguix-starter/blob/5da5f59/projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts#L19">projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts:19</a></li>
+							<li>Defined in <a href="https://github.com/lamnhan/nguix-starter/blob/2415198/projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts#L17">projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts:17</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -207,7 +225,7 @@
 					<div class="tsd-signature tsd-kind-icon">uploading<span class="tsd-signature-symbol">:</span> <a href="../interfaces/uploading.html" class="tsd-signature-type">Uploading</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/lamnhan/nguix-starter/blob/5da5f59/projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts#L25">projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts:25</a></li>
+							<li>Defined in <a href="https://github.com/lamnhan/nguix-starter/blob/2415198/projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts#L25">projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts:25</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -224,24 +242,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/lamnhan/nguix-starter/blob/5da5f59/projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts#L39">projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts:39</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="donecropping" class="tsd-anchor"></a>
-					<h3>done<wbr>Cropping</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">done<wbr>Cropping<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/lamnhan/nguix-starter/blob/5da5f59/projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts#L47">projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts:47</a></li>
+									<li>Defined in <a href="https://github.com/lamnhan/nguix-starter/blob/2415198/projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts#L58">projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts:58</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -258,7 +259,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/lamnhan/nguix-starter/blob/5da5f59/projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts#L31">projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts:31</a></li>
+									<li>Defined in <a href="https://github.com/lamnhan/nguix-starter/blob/2415198/projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts#L52">projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts:52</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -275,12 +276,152 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/lamnhan/nguix-starter/blob/5da5f59/projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts#L29">projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts:29</a></li>
+									<li>Defined in <a href="https://github.com/lamnhan/nguix-starter/blob/2415198/projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts#L50">projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts:50</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="processavatar" class="tsd-anchor"></a>
+					<h3>process<wbr>Avatar</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">process<wbr>Avatar<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lamnhan/nguix-starter/blob/2415198/projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts#L65">projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts:65</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Object literals</h2>
+				<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-class">
+					<a name="cropperoptions" class="tsd-anchor"></a>
+					<h3>cropper<wbr>Options</h3>
+					<div class="tsd-signature tsd-kind-icon">cropper<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lamnhan/nguix-starter/blob/2415198/projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts#L30">projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts:30</a></li>
+						</ul>
+					</aside>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="cropperoptions.showzoomer" class="tsd-anchor"></a>
+						<h3>show<wbr>Zoomer</h3>
+						<div class="tsd-signature tsd-kind-icon">show<wbr>Zoomer<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">true</span><span class="tsd-signature-symbol"> = true</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/lamnhan/nguix-starter/blob/2415198/projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts#L39">projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts:39</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-object-literal">
+						<a name="cropperoptions.boundary" class="tsd-anchor"></a>
+						<h3>boundary</h3>
+						<div class="tsd-signature tsd-kind-icon">boundary<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/lamnhan/nguix-starter/blob/2415198/projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts#L35">projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts:35</a></li>
+							</ul>
+						</aside>
+						<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+							<a name="cropperoptions.boundary.height" class="tsd-anchor"></a>
+							<h3>height</h3>
+							<div class="tsd-signature tsd-kind-icon">height<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 250</span></div>
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lamnhan/nguix-starter/blob/2415198/projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts#L37">projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts:37</a></li>
+								</ul>
+							</aside>
+						</section>
+						<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+							<a name="cropperoptions.boundary.width" class="tsd-anchor"></a>
+							<h3>width</h3>
+							<div class="tsd-signature tsd-kind-icon">width<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 250</span></div>
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lamnhan/nguix-starter/blob/2415198/projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts#L36">projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts:36</a></li>
+								</ul>
+							</aside>
+						</section>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-object-literal">
+						<a name="cropperoptions.viewport" class="tsd-anchor"></a>
+						<h3>viewport</h3>
+						<div class="tsd-signature tsd-kind-icon">viewport<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/lamnhan/nguix-starter/blob/2415198/projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts#L31">projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts:31</a></li>
+							</ul>
+						</aside>
+						<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+							<a name="cropperoptions.viewport.height-1" class="tsd-anchor"></a>
+							<h3>height</h3>
+							<div class="tsd-signature tsd-kind-icon">height<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 120</span></div>
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lamnhan/nguix-starter/blob/2415198/projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts#L33">projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts:33</a></li>
+								</ul>
+							</aside>
+						</section>
+						<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+							<a name="cropperoptions.viewport.width-1" class="tsd-anchor"></a>
+							<h3>width</h3>
+							<div class="tsd-signature tsd-kind-icon">width<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 120</span></div>
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lamnhan/nguix-starter/blob/2415198/projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts#L32">projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts:32</a></li>
+								</ul>
+							</aside>
+						</section>
+					</section>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-class">
+					<a name="cropperresultoptions" class="tsd-anchor"></a>
+					<h3>cropper<wbr>Result<wbr>Options</h3>
+					<div class="tsd-signature tsd-kind-icon">cropper<wbr>Result<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lamnhan/nguix-starter/blob/2415198/projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts#L41">projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts:41</a></li>
+						</ul>
+					</aside>
+					<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-object-literal">
+						<a name="cropperresultoptions.size" class="tsd-anchor"></a>
+						<h3>size</h3>
+						<div class="tsd-signature tsd-kind-icon">size<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/lamnhan/nguix-starter/blob/2415198/projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts#L42">projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts:42</a></li>
+							</ul>
+						</aside>
+						<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+							<a name="cropperresultoptions.size.height-2" class="tsd-anchor"></a>
+							<h3>height</h3>
+							<div class="tsd-signature tsd-kind-icon">height<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 500</span></div>
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lamnhan/nguix-starter/blob/2415198/projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts#L44">projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts:44</a></li>
+								</ul>
+							</aside>
+						</section>
+						<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+							<a name="cropperresultoptions.size.width-2" class="tsd-anchor"></a>
+							<h3>width</h3>
+							<div class="tsd-signature tsd-kind-icon">width<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 500</span></div>
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lamnhan/nguix-starter/blob/2415198/projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts#L43">projects/starter/src/lib/components/account/avatar-editor/avatar-editor.component.ts:43</a></li>
+								</ul>
+							</aside>
+						</section>
+					</section>
 				</section>
 			</section>
 		</div>
@@ -306,13 +447,16 @@
 								<a href="avatareditorcomponent.html#close" class="tsd-kind-icon">close</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="avatareditorcomponent.html#croppieinstance" class="tsd-kind-icon">croppie<wbr>Instance</a>
+								<a href="avatareditorcomponent.html#cropresult" class="tsd-kind-icon">crop<wbr>Result</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="avatareditorcomponent.html#done" class="tsd-kind-icon">done</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="avatareditorcomponent.html#file" class="tsd-kind-icon">file</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="avatareditorcomponent.html#filedataurl" class="tsd-kind-icon">file<wbr>Data<wbr>Url</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="avatareditorcomponent.html#isprocessing" class="tsd-kind-icon">is<wbr>Processing</a>
@@ -327,13 +471,19 @@
 								<a href="avatareditorcomponent.html#closeandreset" class="tsd-kind-icon">close<wbr>And<wbr>Reset</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="avatareditorcomponent.html#donecropping" class="tsd-kind-icon">done<wbr>Cropping</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="avatareditorcomponent.html#ngonchanges" class="tsd-kind-icon">ng<wbr>OnChanges</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="avatareditorcomponent.html#ngoninit" class="tsd-kind-icon">ng<wbr>OnInit</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="avatareditorcomponent.html#processavatar" class="tsd-kind-icon">process<wbr>Avatar</a>
+							</li>
+							<li class=" tsd-kind-object-literal tsd-parent-kind-class">
+								<a href="avatareditorcomponent.html#cropperoptions" class="tsd-kind-icon">cropper<wbr>Options</a>
+							</li>
+							<li class=" tsd-kind-object-literal tsd-parent-kind-class">
+								<a href="avatareditorcomponent.html#cropperresultoptions" class="tsd-kind-icon">cropper<wbr>Result<wbr>Options</a>
 							</li>
 						</ul>
 					</li>

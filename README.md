@@ -114,6 +114,7 @@ Also, visit the [homepage](https://nguix-starter.lamnhan.com).
 | [Header2ndComponent](https://nguix-starter.lamnhan.com/content/reference/classes/header2ndcomponent.html)       |             |
 | [HeaderComponent](https://nguix-starter.lamnhan.com/content/reference/classes/headercomponent.html)             |             |
 | [IconComponent](https://nguix-starter.lamnhan.com/content/reference/classes/iconcomponent.html)                 |             |
+| [ImageCropperComponent](https://nguix-starter.lamnhan.com/content/reference/classes/imagecroppercomponent.html) |             |
 | [LoginComponent](https://nguix-starter.lamnhan.com/content/reference/classes/logincomponent.html)               |             |
 | [NavIndicatorComponent](https://nguix-starter.lamnhan.com/content/reference/classes/navindicatorcomponent.html) |             |
 | [OopsComponent](https://nguix-starter.lamnhan.com/content/reference/classes/oopscomponent.html)                 |             |
@@ -127,6 +128,7 @@ Also, visit the [homepage](https://nguix-starter.lamnhan.com).
 | [TabsComponent](https://nguix-starter.lamnhan.com/content/reference/classes/tabscomponent.html)                 |             |
 | [TextEditorComponent](https://nguix-starter.lamnhan.com/content/reference/classes/texteditorcomponent.html)     |             |
 | [VideoComponent](https://nguix-starter.lamnhan.com/content/reference/classes/videocomponent.html)               |             |
+| [VideoPlayerComponent](https://nguix-starter.lamnhan.com/content/reference/classes/videoplayercomponent.html)   |             |
 | [VideosComponent](https://nguix-starter.lamnhan.com/content/reference/classes/videoscomponent.html)             |             |
 
 </section>

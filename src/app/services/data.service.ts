@@ -157,6 +157,16 @@ export class DataService {
         routerLink: ['component', 'share']
       },
       {
+        text: 'Video Player',
+        level: 1,
+        routerLink: ['component', 'video-player']
+      },
+      {
+        text: 'Image Cropper',
+        level: 1,
+        routerLink: ['component', 'image-cropper']
+      },
+      {
         text: 'Nav Indicator',
         level: 1,
         routerLink: ['component', 'nav-indicator']

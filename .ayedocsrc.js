@@ -30,6 +30,8 @@ module.exports = {
     'docs/content/components/post.md': {main: ['PostComponent', 'SUMMARY_PROPERTIES']},
     'docs/content/components/videos.md': {main: ['VideosComponent', 'SUMMARY_PROPERTIES']},
     'docs/content/components/video.md': {main: ['VideoComponent', 'SUMMARY_PROPERTIES']},
+    'docs/content/components/video-player.md': {main: ['VideoPlayerComponent', 'SUMMARY_PROPERTIES']},
+    'docs/content/components/image-cropper.md': {main: ['ImageCropperComponent', 'SUMMARY_PROPERTIES']},
     // pages
     'docs/content/pages/oauth-popup.md': {main: ['OauthPopupPage', 'SUMMARY_PROPERTIES']},
     'docs/content/pages/oops.md': {main: ['OopsPage', 'SUMMARY_PROPERTIES']},

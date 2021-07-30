@@ -3,7 +3,7 @@
   <div class="youtube embedded" *ngIf="isYoutube && youtubeId; else directSource;">
     <youtube-player
       [videoId]="youtubeId"
-      (ready)="saveYoutubePlayer($event)"
+      (ready)="this.youtubePlayer=$event"
     ></youtube-player>
   </div>
 

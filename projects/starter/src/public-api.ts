@@ -44,6 +44,8 @@ export * from './lib/components/video/video.component';
 export * from './lib/components/video/video.module';
 export * from './lib/components/video-player/video-player.component';
 export * from './lib/components/video-player/video-player.module';
+export * from './lib/components/image-cropper/image-cropper.component';
+export * from './lib/components/image-cropper/image-cropper.module';
 
 export * from './lib/pages/oops/oops.component';
 export * from './lib/pages/oops/oops.module';

@@ -6,6 +6,10 @@ import { Component, OnInit, OnChanges, Input, Output, EventEmitter } from '@angu
   styleUrls: ['./video-player.component.scss']
 })
 export class VideoPlayerComponent implements OnInit, OnChanges {
+
+  /**
+   * Input() The video source
+   */
   @Input() src!: string;
 
   /**
@@ -38,10 +42,6 @@ export class VideoPlayerComponent implements OnInit, OnChanges {
     if (this.isYoutube) {
       this.youtubeId = this.src.split('watch?v=')[1];
     }
-  }
-
-  saveYoutubePlayer(e: any) {
-    this.youtubePlayer = e;
   }
 
 }

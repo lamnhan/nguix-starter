@@ -1,8 +1,15 @@
 <ng-container *transloco="let t">
   <div id="cover-editor" class="host" [class.show]="!!file">
 
-    <div class="body" [style.display]="croppieInstance ? 'block' : 'none'">
-      <div id="croppie-image-editor"></div>
+    <div class="body">
+      <ng-container *ngIf="fileDataUrl">
+        <nguix-image-cropper
+          [url]="fileDataUrl"
+          [options]="cropperOptions"
+          [resultOptions]="cropperResultOptions"
+          (change)="cropResult=$event"
+        ></nguix-image-cropper>
+      </ng-container>
     </div>
   
     <div class="foot">
@@ -19,8 +26,8 @@
         >Cancel</button>
         <button
           class="button-primary-sm"
-          [disabled]="!croppieInstance || isProcessing || uploading"
-          (click)="doneCropping()"
+          [disabled]="!cropResult || isProcessing || uploading"
+          (click)="processCover()"
         >Change</button>
       </div>
     </div>

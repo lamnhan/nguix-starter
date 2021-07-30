@@ -7,7 +7,7 @@
       (click)="viewCover();false;"
     ></a>
     <button class="edit button-light-sm">
-      <nguix-icon base="icon-dark" name="trash" size="16"></nguix-icon>
+      <nguix-icon base="icon-dark" name="image" size="16"></nguix-icon>
       <span>Edit Cover</span>
     </button>
     <ul class="menu" *ngIf="uid">
@@ -29,11 +29,11 @@
     <input id="cover" type="file" (change)="coverSelected($event)">
   </ng-container>
   <ng-template #coverEditor>
-    <div class="editor" *ngIf="uid">
+    <div class="editor" *ngIf="uid && coverEditorFile">
       <nguix-account-cover-editor
+        [uid]="uid"
         [file]="coverEditorFile"
         (close)="coverEditorFile=undefined"
-        [uid]="uid"
         (done)="handleCoverChanged($event)"
       ></nguix-account-cover-editor>
     </div>
