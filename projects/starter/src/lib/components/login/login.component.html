@@ -21,7 +21,7 @@
     <div class="group">
       <div class="text">
         <label for="password" class="form-label">{{ !i18n ? passwordLabel : t('NGUIX_LOGIN.PASSWORD_LABEL') || passwordLabel }}</label>
-        <a href="#" (click)="resetPassword();false;">{{ !i18n ? forgotPassword : t('NGUIX_LOGIN.FORGOT') || forgotPassword }}</a>
+        <a class="forgot" href="#" (click)="resetPassword();false;">{{ !i18n ? forgotPassword : t('NGUIX_LOGIN.FORGOT') || forgotPassword }}</a>
       </div>
       <input id="password" class="form-control" type="password" formControlName="password" [placeholder]="!i18n ? passwordPlaceholder : t('NGUIX_LOGIN.PASSWORD_PLACEHOLDER') || passwordPlaceholder">
     </div>

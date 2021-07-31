@@ -1,21 +1,16 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, OnChanges, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'nguix-content',
   templateUrl: './content.component.html',
   styleUrls: ['./content.component.scss']
 })
-export class ContentComponent implements OnInit {
+export class ContentComponent implements OnInit, OnChanges {
 
   /**
-   * Input() Content from text
+   * Input() Url to content or full content
    */
-  @Input() content?: string;
-
-  /**
-   * Input() Content from url
-   */
-  @Input() contentSrc?: string;
+  @Input() input?: string = '';
 
   /**
    * Output() Content from text ready
@@ -32,12 +27,22 @@ export class ContentComponent implements OnInit {
    */
   @Output() error: EventEmitter<any> = new EventEmitter();
 
-  constructor() { }
+  /**
+   * @ignore
+   */
+  isExternal = false;
+
+  constructor() {}
 
   /**
    * @ignore
    */
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
+  /**
+   * @ignore
+   */
+  ngOnChanges() {
+    this.isExternal = (this.input || '').substr(0, 4) === 'http';
+  }
 }

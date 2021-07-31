@@ -1,11 +1,11 @@
 <article class="host">
   <markdown
-    *ngIf="contentSrc; else directContent"
-    [src]="contentSrc"
+    *ngIf="isExternal; else directContent"
+    [src]="input"
     (load)="load.emit($event)"
     (error)="error.emit($event)"
   ></markdown>
   <ng-template #directContent>
-    <markdown [data]="content || ''" (ready)="ready.emit()"></markdown>
+    <markdown [data]="input" (ready)="ready.emit()"></markdown>
   </ng-template>
 </article>

@@ -88,7 +88,7 @@ export class AccountComponent implements OnInit {
    * @ignore
    */
   updateDisplayName() {
-    const value = prompt('Please input your display name:');
+    const value = prompt('Please input your display name:', this.userService.data?.displayName);
     if (value && this.userService.data?.displayName !== value) {
       return this.userService.updateProfile({ displayName: value });
     }
