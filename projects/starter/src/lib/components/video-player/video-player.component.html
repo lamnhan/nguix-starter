@@ -9,7 +9,10 @@
 
   <ng-template #directSource>
     <div class="direct">
-      <video [src]="src" controls></video>
+      <video controls>
+        <source *ngFor="let video of srcs | o2a" [src]="video.src" [type]="video.name">
+        <p>Your browser does not support the video tag.</p>
+      </video>
     </div>
   </ng-template>
 

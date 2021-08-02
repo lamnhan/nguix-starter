@@ -6,7 +6,13 @@
       <div class="head">
   
         <a class="thumbnail" [usefulRouterLink]="['video', videoItem.id]" [usefulRouterBackwardable]="true">
-          <img [src]="videoItem.thumbnail" [alt]="videoItem.title">
+          <img
+          [src]="
+            (videoItem.thumbnails?.sd || videoItem.thumbnails?.default)?.src ||
+            'https://via.placeholder.com/720x480/f1f1f1/000000?text=+'
+          "
+          [alt]="videoItem.title"
+        >
         </a>
   
         <span class="duration">{{ ((videoItem.duration || 0 )* 1000) | date : 'mm:ss' }}</span>

@@ -2,7 +2,7 @@
   <ng-container *ngIf="!coverEditorFile; else coverEditor;">
     <a
       class="picture"
-      [style.background-image]="!coverPhoto ? null : 'url(' + coverPhoto + ')'"
+      [style.background-image]="!images ? null : 'url(' + images.default.src + ')'"
       href="#"
       (click)="viewCover();false;"
     ></a>

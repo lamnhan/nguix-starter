@@ -24,8 +24,8 @@
     <span class="duration">{{ post.duration }} min read</span>
   </div>
 
-  <div class="image" *ngIf="post.image">
-    <img [src]="post.image" [alt]="post.title">
+  <div class="image" *ngIf="post.images">
+    <img [src]="(post.images.fhd || post.images.default).src" [alt]="post.title">
   </div>
 
   <div class="content">

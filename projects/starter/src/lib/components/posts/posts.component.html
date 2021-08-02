@@ -6,7 +6,13 @@
     <div class="head">
 
       <a class="thumbnail" [usefulRouterLink]="['post', postItem.id]" [usefulRouterBackwardable]="true">
-        <img [src]="postItem.thumbnail" [alt]="postItem.title">
+        <img
+          [src]="
+            (postItem.thumbnails?.sd || postItem.thumbnails?.default)?.src ||
+            'https://via.placeholder.com/720x480/f1f1f1/000000?text=+'
+          "
+          [alt]="postItem.title"
+        >
       </a>
 
       <a class="category"

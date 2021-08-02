@@ -2,6 +2,11 @@ import { Component, OnInit, Input } from '@angular/core';
 import { UserService } from '@lamnhan/ngx-useful';
 import * as basicLightbox from 'basiclightbox';
 
+interface ResourceAlike {
+  name: string;
+  src: string;
+}
+
 @Component({
   selector: 'nguix-account-avatar',
   templateUrl: './avatar.component.html',
@@ -10,7 +15,7 @@ import * as basicLightbox from 'basiclightbox';
 export class AvatarComponent implements OnInit {
   @Input() uid?: string;
   @Input() displayName?: string = 'User';
-  @Input() photoURL?: string;
+  @Input() thumbnails?: Record<string, ResourceAlike>;
 
   avatarEditorFile?: File;
 
@@ -19,9 +24,9 @@ export class AvatarComponent implements OnInit {
   ngOnInit(): void {}
 
   viewAvatar() {
-    if (this.photoURL) {
+    if (this.thumbnails) {
       return basicLightbox.create(`
-        <img width="500" height="500" src="${this.photoURL}">
+        <img width="500" height="500" src="${(this.thumbnails.lg || this.thumbnails.default).src}">
       `)
       .show();
     }
@@ -41,7 +46,10 @@ export class AvatarComponent implements OnInit {
     }
   }
 
-  handleAvatarChanged(photoURL: string) {
-    return this.userService.updateProfile({ photoURL });
+  handleAvatarChanged(thumbnails: Record<'sm' | 'md' | 'lg', ResourceAlike>) {
+    return this.userService.updateProfile({
+      photoURL: thumbnails.md.src,
+      thumbnails,
+    });
   }
 }

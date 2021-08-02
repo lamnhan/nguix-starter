@@ -8,7 +8,7 @@
     <div class="cover">
       <nguix-account-cover
         [uid]="data.uid"
-        [coverPhoto]="data.coverPhoto"
+        [images]="publicData.images"
       ></nguix-account-cover>
     </div>
 
@@ -16,13 +16,13 @@
       <div class="avatar">
         <nguix-account-avatar
           [uid]="data.uid"
-          [displayName]="data.displayName"
-          [photoURL]="data.photoURL"
+          [displayName]="publicData.title"
+          [thumbnails]="publicData.thumbnails"
         ></nguix-account-avatar>
       </div>
       <div class="info">
         <h3 class="name">
-          <strong class="truncate">{{ data.displayName }}</strong>
+          <strong class="truncate">{{ publicData.title }}</strong>
           <button class="edit button-clear" (click)="updateDisplayName()">
             <nguix-icon name="pencil-square" size="16"></nguix-icon>
           </button>
@@ -33,7 +33,7 @@
         </div>
       </div>
       <div class="public" *ngIf="data.username">
-        <button class="button-primary" (click)="openPublicProfile()">Public Profile</button>
+        <button class="button-primary" (click)="openPublicProfile()">View Public Profile</button>
       </div>
     </div>
 

@@ -2,6 +2,11 @@ import { Component, OnInit, Input } from '@angular/core';
 import { UserService } from '@lamnhan/ngx-useful';
 import * as basicLightbox from 'basiclightbox';
 
+interface ResourceAlike {
+  name: string;
+  src: string;
+}
+
 @Component({
   selector: 'nguix-account-cover',
   templateUrl: './cover.component.html',
@@ -9,7 +14,7 @@ import * as basicLightbox from 'basiclightbox';
 })
 export class CoverComponent implements OnInit {
   @Input() uid?: string;
-  @Input() coverPhoto?: string;
+  @Input() images?: Record<string, ResourceAlike>;
 
   isProcessing = false;
   coverEditorFile?: File;
@@ -21,9 +26,9 @@ export class CoverComponent implements OnInit {
   ngOnInit(): void {}
 
   viewCover() {
-    if (this.coverPhoto) {
+    if (this.images) {
       return basicLightbox.create(`
-        <img width="1920" height="1080" src="${this.coverPhoto}">
+        <img width="1920" height="1080" src="${(this.images.lg || this.images.default).src}">
       `)
       .show();
     }
@@ -51,8 +56,11 @@ export class CoverComponent implements OnInit {
     }
   }
 
-  handleCoverChanged(coverPhoto: string) {
-    return this.userService.updateProfile({ coverPhoto });
+  handleCoverChanged(images: Record<'sm' | 'md' | 'lg' | 'xl', ResourceAlike>) {
+    return this.userService.updateProfile({
+      coverPhoto: images.xl.src,
+      images,
+    });
   }
 
 }

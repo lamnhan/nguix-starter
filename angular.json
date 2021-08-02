@@ -35,7 +35,6 @@
             ],
             "styles": [
               "src/styles.scss",
-              "./node_modules/croppie/croppie.css",
               "./node_modules/basiclightbox/dist/basicLightbox.min.css"
             ],
             "scripts": []

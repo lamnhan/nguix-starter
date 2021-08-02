@@ -1,4 +1,4 @@
-import { Component, OnInit, OnChanges, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, OnChanges, Input } from '@angular/core';
 
 @Component({
   selector: 'nguix-video-player',
@@ -10,7 +10,7 @@ export class VideoPlayerComponent implements OnInit, OnChanges {
   /**
    * Input() The video source
    */
-  @Input() src!: string;
+  @Input() srcs!: Record<string, {name: string, src: string}>;
 
   /**
    * @ignore
@@ -38,9 +38,12 @@ export class VideoPlayerComponent implements OnInit, OnChanges {
    * @ignore
    */
   ngOnChanges(): void {
-    this.isYoutube = this.src.indexOf('www.youtube.com') > -1;
+    const srcNames = Object.keys(this.srcs);
+    this.isYoutube = srcNames.indexOf('youtube') !== -1;
     if (this.isYoutube) {
-      this.youtubeId = this.src.split('watch?v=')[1];
+      this.youtubeId = this.srcs['youtube'].src
+        .split('watch?v=')[1]
+        .split('&')[0];
     }
   }
 

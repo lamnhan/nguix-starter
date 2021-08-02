@@ -9,6 +9,13 @@ import { DataService } from '../../../services/data.service';
 })
 export class VideoPlayerComponent implements OnInit {
 
+  srcs = {
+    youtube: {
+      name: 'youtube',
+      src: 'https://www.youtube.com/watch?v=aqz-KE-bpKQ',
+    }
+  };
+
   constructor(public readonly data: DataService) {}
 
   ngOnInit(): void {}

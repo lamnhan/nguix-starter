@@ -1,6 +1,12 @@
 <div class="host">
   <a class="picture" href="#" (click)="!uid ? viewAvatar() : false">
-    <img [src]="photoURL" [alt]="displayName">
+    <img
+      [src]="
+        (thumbnails?.md || thumbnails?.default)?.src ||
+        'https://www.gravatar.com/avatar/user?d=mp'
+      "
+      [alt]="displayName"
+    >
   </a>
   <ul class="menu" *ngIf="uid">
     <li class="view" (click)="viewAvatar()">
