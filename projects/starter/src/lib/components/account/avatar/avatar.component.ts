@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { UserService } from '@lamnhan/ngx-useful';
-import * as basicLightbox from 'basiclightbox';
+import { ModalService, UserService } from '@lamnhan/ngx-useful';
 
 interface ResourceAlike {
   name: string;
@@ -19,16 +18,18 @@ export class AvatarComponent implements OnInit {
 
   avatarEditorFile?: File;
 
-  constructor(private userService: UserService) {}
+  constructor(
+    private modalService: ModalService,
+    private userService: UserService
+  ) {}
 
   ngOnInit(): void {}
 
   viewAvatar() {
     if (this.thumbnails) {
-      return basicLightbox.create(`
-        <img width="500" height="500" src="${(this.thumbnails.lg || this.thumbnails.default).src}">
-      `)
-      .show();
+      return this.modalService
+        .image((this.thumbnails.lg || this.thumbnails.default).src)
+        .show();
     }
     return null;
   }

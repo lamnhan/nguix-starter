@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { UserService } from '@lamnhan/ngx-useful';
-import * as basicLightbox from 'basiclightbox';
+import { ModalService, UserService } from '@lamnhan/ngx-useful';
 
 interface ResourceAlike {
   name: string;
@@ -20,6 +19,7 @@ export class CoverComponent implements OnInit {
   coverEditorFile?: File;
 
   constructor(
+    private modalService: ModalService,
     private userService: UserService,
   ) {}
 
@@ -27,10 +27,9 @@ export class CoverComponent implements OnInit {
 
   viewCover() {
     if (this.images) {
-      return basicLightbox.create(`
-        <img width="1920" height="1080" src="${(this.images.xl || this.images.default).src}">
-      `)
-      .show();
+      return this.modalService
+        .image((this.images.xl || this.images.default).src)
+        .show();
     }
     return null;
   }

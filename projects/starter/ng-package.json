@@ -11,14 +11,12 @@
       "@ngneat/transloco": "ng.transloco",
       "ngx-markdown": "ng.markdown",
       "croppie": "croppie",
-      "basiclightbox": "basiclightbox",
       "ngx-youtube-player": "ng.youtubePlayer"
     }
   },
   "allowedNonPeerDependencies": [
     "ngx-markdown",
     "croppie",
-    "basiclightbox",
     "ngx-youtube-player"
   ]
 }
