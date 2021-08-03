@@ -1,11 +1,18 @@
 <div class="host">
   <ng-container *ngIf="!coverEditorFile; else coverEditor;">
-    <a
-      class="picture"
-      [style.background-image]="!images ? null : 'url(' + images.default.src + ')'"
-      href="#"
-      (click)="viewCover();false;"
-    ></a>
+    <div class="picture">
+      <a href="#" (click)="viewCover();false;">
+        <picture *ngIf="images; else fallbackCover;">
+          <source *ngIf="images.xl" media="(min-width: 1280px)" [srcset]="images.xl.src">
+          <source *ngIf="images.lg" media="(min-width: 720px)" [srcset]="images.lg.src">
+          <source *ngIf="images.md" media="(min-width: 480px)" [srcset]="images.md.src">
+          <img [src]="(images.sm || images.default).src" alt="Cover picture">
+        </picture>
+        <ng-template #fallbackCover>
+          <img src="https://via.placeholder.com/1920x1080/f1f1f1/000000?text=+" alt="Cover picture">
+        </ng-template>
+      </a>
+    </div>
     <button class="edit button-light-sm">
       <nguix-icon base="icon-dark" name="image" size="16"></nguix-icon>
       <span>Edit Cover</span>

@@ -28,7 +28,7 @@ export class CoverComponent implements OnInit {
   viewCover() {
     if (this.images) {
       return basicLightbox.create(`
-        <img width="1920" height="1080" src="${(this.images.lg || this.images.default).src}">
+        <img width="1920" height="1080" src="${(this.images.xl || this.images.default).src}">
       `)
       .show();
     }
