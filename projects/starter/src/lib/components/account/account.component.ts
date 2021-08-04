@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { NavService, AuthService, UserService } from '@lamnhan/ngx-useful';
+import { NavService, AlertService, AuthService, UserService } from '@lamnhan/ngx-useful';
 
 @Component({
   selector: 'nguix-account',
@@ -23,6 +23,10 @@ export class AccountComponent implements OnInit {
      */
     public readonly navService: NavService,
     /**
+     * Inject() Requires the [AlertService](https://ngx-useful.lamnhan.com/service/alert)
+     */
+    public readonly alertService: AlertService,
+    /**
      * Inject() Requires the [AuthService](https://ngx-useful.lamnhan.com/service/auth)
      */
     public readonly authService: AuthService,
@@ -41,12 +45,23 @@ export class AccountComponent implements OnInit {
    * @ignore
    */
   verifyEmail() {
-    const yes = confirm('Verify email now?');
-    if (yes) {
-      return this.userService.verifyEmail()
-        .subscribe(() => alert('Please check your inbox for instruction.'));
-    }
-    return null;
+    return this.alertService.confirm(
+      {
+        message: 'Verify email now?',
+        confirmText: 'Send verification'
+      },
+      yes => {
+        if (yes) {
+          this.userService.verifyEmail().subscribe(() =>
+            this.alertService.alert({
+              message: 'Please check your inbox for instruction.'
+            })
+            .show()
+          );
+        }
+      }
+    )
+    .show();
   }
 
   /**
@@ -56,11 +71,18 @@ export class AccountComponent implements OnInit {
     if (this.userService.username && this.userService.publicData?.status === 'publish') {
       return this.navService.navigate(this.userService.username);
     } else {
-      const yes = confirm('Your profile is private, make it public now?');
-      if (yes) {
-        return this.userService.changePublicity(true);
-      }
-      return null;
+      return this.alertService.confirm(
+        {
+          message: 'Your profile is private, make it public now?',
+          confirmText: 'Make public'
+        },
+        yes => {
+          if (yes) {
+            this.userService.changePublicity(true);
+          }
+        }
+      )
+      .show();
     }
   }
 
@@ -68,12 +90,20 @@ export class AccountComponent implements OnInit {
    * @ignore
    */
   signOut() {
-    const yes = confirm('Sign out now?');
-    if (yes) {
-      this.authService
-        .signOut()
-        .subscribe(() => this.navService.navigate(['']));
-    }
+    return this.alertService.confirm(
+      {
+        message: 'Are your sure want to sign out?',
+        confirmText: 'Sign out',
+      },
+      yes => {
+        if (yes) {
+          this.authService
+            .signOut()
+            .subscribe(() => this.navService.navigate(['']));
+        }
+      }
+    )
+    .show();
   }
 
   /**
@@ -88,11 +118,19 @@ export class AccountComponent implements OnInit {
    * @ignore
    */
   updateDisplayName() {
-    const value = prompt('Please input your display name:', this.userService.data?.displayName);
-    if (value && this.userService.data?.displayName !== value) {
-      return this.userService.updateProfile({ displayName: value });
-    }
-    return null;
+    return this.alertService.prompt(
+      {
+        message: 'Please input your display name:',
+        inputValue: this.userService.data?.displayName,
+        confirmText: 'Change name'
+      },
+      value => {
+        if (value && this.userService.data?.displayName !== value) {
+          this.userService.updateProfile({ displayName: value });
+        }
+      }
+    )
+    .show();
   }
 
   /**

@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
-import { AuthService, NativeUserCredential } from '@lamnhan/ngx-useful';
+import { AlertService, AuthService, NativeUserCredential } from '@lamnhan/ngx-useful';
 
 @Component({
   selector: 'nguix-login',
@@ -108,6 +108,10 @@ export class LoginComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     /**
+     * Inject() Requires the [AlertService](https://ngx-useful.lamnhan.com/service/alert)
+     */
+     public readonly alertService: AlertService,
+    /**
      * Inject() Requires the [AuthService](https://ngx-useful.lamnhan.com/service/auth)
      */
      public readonly authService: AuthService,
@@ -194,18 +198,29 @@ export class LoginComponent implements OnInit {
    */
   resetPassword() {
     if (!this.authService.authenticated && !this.lockdown) {
-      // TODO: implement better prompt/alert
-      const email = prompt('Please enter your email:');
-      if (
-        email
-        && (/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/).test(email.toLowerCase())
-      ) {
-        const done = () => alert('Email sent, now open your inbox and follow the instruction.');
-        this.authService.sendPasswordResetEmail(email).subscribe(
-          () => done(),
-          () => done()
-        );
-      }
+      this.alertService.prompt(
+        {
+          message: 'Please enter your email:',
+          title: 'Reset password',
+          confirmText: 'Send instruction'
+        },
+        email => {
+          if (
+            email
+            && (/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/).test(email.toLowerCase())
+          ) {
+            const done = () => this.alertService.alert({
+              message: 'Email sent, now open your inbox and follow the instruction.',
+            })
+            .show();
+            this.authService.sendPasswordResetEmail(email).subscribe(
+              () => done(),
+              () => done()
+            );
+          }
+        }
+      )
+      .show();
     }
   }
 

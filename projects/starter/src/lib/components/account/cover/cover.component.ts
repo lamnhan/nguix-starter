@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ModalService, UserService } from '@lamnhan/ngx-useful';
+import { AlertService, ModalService, UserService } from '@lamnhan/ngx-useful';
 
 interface ResourceAlike {
   name: string;
@@ -19,6 +19,7 @@ export class CoverComponent implements OnInit {
   coverEditorFile?: File;
 
   constructor(
+    private alertService: AlertService,
     private modalService: ModalService,
     private userService: UserService,
   ) {}
@@ -35,11 +36,18 @@ export class CoverComponent implements OnInit {
   }
 
   removeCover() {
-    const yes = confirm('Are you sure to remove your cover photo?');
-    if (yes) {
-      return this.userService.removeCoverPhoto();
-    }
-    return null;
+    return this.alertService.confirm(
+      {
+        message: 'Are you sure to remove your cover photo?',
+        confirmText: 'Remove cover'
+      },
+      yes => {
+        if (yes) {
+          this.userService.removeCoverPhoto();
+        }
+      }
+    )
+    .show();
   }
 
   coverSelected(e: any) {
@@ -49,7 +57,10 @@ export class CoverComponent implements OnInit {
       if (['image/jpeg', 'image/png'].indexOf(type) !== -1 && size < 10 * 1024 * 1024) {
         this.coverEditorFile = file;
       } else {
-        alert('Only image (.jpg, .png) less then 10MB is supported.');
+        this.alertService.alert({
+          message: 'Only image (.jpg, .png) less then 10MB is supported.',
+        })
+        .show();
       }
       e.target.value = null;
     }

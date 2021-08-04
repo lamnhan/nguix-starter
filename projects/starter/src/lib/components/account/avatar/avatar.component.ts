@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ModalService, UserService } from '@lamnhan/ngx-useful';
+import { AlertService, ModalService, UserService } from '@lamnhan/ngx-useful';
 
 interface ResourceAlike {
   name: string;
@@ -19,6 +19,7 @@ export class AvatarComponent implements OnInit {
   avatarEditorFile?: File;
 
   constructor(
+    private alertService: AlertService,
     private modalService: ModalService,
     private userService: UserService
   ) {}
@@ -41,7 +42,10 @@ export class AvatarComponent implements OnInit {
       if (['image/jpeg', 'image/png'].indexOf(type) !== -1 && size < 10 * 1024 * 1024) {
         this.avatarEditorFile = file;
       } else {
-        alert('Only image (.jpg, .png) less then 10MB is supported.');
+        this.alertService.alert({
+          message: 'Only image (.jpg, .png) less then 10MB is supported.',
+        })
+        .show();
       }
       e.target.value = null;
     }
