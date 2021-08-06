@@ -10,12 +10,12 @@ export class HomeComponent implements OnInit {
   installContent =
 `Install theming, [@unistylus/core](https://unistylus.lamnhan.com):
 \`\`\`sh
-npm i @unistylus/core @unistylus/bootstrap
+npm i @unistylus/{core,bootstrap}
 \`\`\`
 
 Install data models, [@lamnhan/schemata](https://schemata.lamnhan.com):
 \`\`\`sh
-npm i @lamnhan/schemata @lamnhan/ngx-schemata
+npm i @lamnhan/{schemata,ngx-schemata}
 \`\`\`
 
 Install utilities, [@lamnhan/ngx-useful](https://ngx-useful.lamnhan.com):

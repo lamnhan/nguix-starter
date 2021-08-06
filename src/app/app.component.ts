@@ -28,12 +28,6 @@ import { UserDataService, ProfileDataService } from '@lamnhan/ngx-schemata';
 })
 export class AppComponent {
 
-  footerMenu: MenuItem[] = [
-    { text: 'APP.SETTING', routerLink: ['setting'] },
-    { text: 'APP.TERMS', routerLink: ['terms'] },
-    { text: 'APP.PRIVACY', routerLink: ['privacy'] },
-  ];
-
   constructor(
     private firebaseFirestore: AngularFirestore,
     private firebaseStorage: AngularFireStorage,
@@ -94,9 +88,6 @@ export class AppComponent {
         ],
         personas: [
           { text: 'PERSONA.DEFAULT', value: 'default' },
-          { text: 'PERSONA.INTRO', value: 'intro' },
-          { text: 'PERSONA.BLOG', value: 'blog' },
-          { text: 'PERSONA.SHOP', value: 'shop' },
         ],
         locales: [
           { text: 'English', value: 'en-US' },
@@ -110,23 +101,8 @@ export class AppComponent {
     this.pwaService.setOptions({ reminder: false }).init();
     this.personaService
       .setIntegrations({ settingService: this.settingService })
-      .setMenuRegistry({
-        home: { name: 'home', text: 'APP.HOME', routerLink: [''] },
-        about: { name: 'about', text: 'APP.ABOUT', routerLink: ['about'] },
-        posts: { name: 'posts', text: 'APP.POSTS', routerLink: ['posts'], activeAlso: ['post'] },
-        products: { name: 'products', text: 'APP.PRODUCTS', routerLink: ['products'], activeAlso: ['product'] },
-      })
       .init({
-        default: {}, // the documentation
-        intro: {
-          menu: ['home', 'about'],
-        },
-        blog: {
-          menu: ['home', 'posts', 'about'],
-        },
-        shop: {
-          menu: ['home', 'products', 'about'],
-        }
+        default: {},
       });
     this.metaService
       .setIntegrations({ settingService: this.settingService })

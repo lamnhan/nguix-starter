@@ -18,27 +18,6 @@ export class DataService {
     { text: 'Link 2', routerLink: ['link-2'] },
     { text: 'Link 3', href: 'https://lamnhan.com', target: '_blank' },
   ];
-  
-  templateItems: Record<string, TemplateItem> = {
-    intro: {
-      id: 'intro',
-      title: 'Intro',
-      description: 'General landing page template',
-      thumbnail: 'http://source.unsplash.com/SymZoeE8quA/768x480',
-    },
-    blog: {
-      id: 'blog',
-      title: 'Blog',
-      description: 'General bloging template',
-      thumbnail: 'http://source.unsplash.com/3GZNPBLImWc/768x480',
-    },
-    shop: {
-      id: 'shop',
-      title: 'Shop',
-      description: 'Online shoping template',
-      thumbnail: 'http://source.unsplash.com/c9FQyqIECds/768x480',
-    },
-  };
 
   // guides
   guideMenu: NavItem[] = [
@@ -241,25 +220,6 @@ export class DataService {
         level: 1,
         routerLink: ['splashscreen', 'bouncing']
       },
-  ];
-
-  // templates
-  templateMenu: NavItem[] = [
-    {
-      text: 'Blank',
-      level: 1,
-      routerLink: ['template', 'blank']
-    },
-    {
-      text: 'Blog',
-      level: 1,
-      routerLink: ['template', 'blog']
-    },
-    {
-      text: 'Shop',
-      level: 1,
-      routerLink: ['template', 'shop']
-    },
   ];
 
   constructor() { }

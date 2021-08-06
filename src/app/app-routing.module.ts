@@ -51,9 +51,6 @@ const routes: Routes = [
   // guides
   { path: 'guides', loadChildren: () => import('./pages/guides/guides.module').then(m => m.GuidesPageModule) },
   { path: 'guide/:id', loadChildren: () => import('./pages/guide/guide.module').then(m => m.GuidePageModule) },
-  // templates
-  { path: 'templates', loadChildren: () => import('./pages/templates/templates.module').then(m => m.TemplatesPageModule) },
-  { path: 'template/:id', loadChildren: () => import('./pages/template/template.module').then(m => m.TemplatePageModule) },
   // splashscreens
   { path: 'splashscreens', loadChildren: () => import('./pages/splashscreens/splashscreens.module').then(m => m.SplashscreensPageModule) },
   { path: 'splashscreen/heartbeat', loadChildren: () => import('./pages/splashscreen/heartbeat/heartbeat.module').then(m => m.HeartbeatPageModule) },

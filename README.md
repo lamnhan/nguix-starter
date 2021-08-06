@@ -31,13 +31,13 @@ Homepage: [https://nguix-starter.lamnhan.com](https://nguix-starter.lamnhan.com)
 Install theming, [@unistylus/core](https://unistylus.lamnhan.com):
 
 ```sh
-npm i @unistylus/core @unistylus/bootstrap
+npm i @unistylus/{core,bootstrap}
 ```
 
 Install data models, [@lamnhan/schemata](https://schemata.lamnhan.com):
 
 ```sh
-npm i @lamnhan/schemata @lamnhan/ngx-schemata
+npm i @lamnhan/{schemata,ngx-schemata}
 ```
 
 Install utilities, [@lamnhan/ngx-useful](https://ngx-useful.lamnhan.com):
@@ -80,7 +80,7 @@ const routes: Routes = [
 ];
 ```
 
-See [guides](https://nguix-starter.lamnhan.com/guides) for more articles. Also see the list of [components](https://nguix-starter.lamnhan.com/components), [pages](https://nguix-starter.lamnhan.com/pages), [splashscreens](https://nguix-starter.lamnhan.com/splashscreens), [templates](https://nguix-starter.lamnhan.com/templates).
+See [guides](https://nguix-starter.lamnhan.com/guides) for more articles. Also see the list of [components](https://nguix-starter.lamnhan.com/components), [pages](https://nguix-starter.lamnhan.com/pages), [splashscreens](https://nguix-starter.lamnhan.com/splashscreens).
 
 Also, visit the [homepage](https://nguix-starter.lamnhan.com).
 
