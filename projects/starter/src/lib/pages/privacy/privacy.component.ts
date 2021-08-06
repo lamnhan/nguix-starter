@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { combineLatest, of } from 'rxjs';
-import { switchMap, map, tap } from 'rxjs/operators';
+import { switchMap, map, tap, catchError } from 'rxjs/operators';
 import { MetaService, SettingService } from '@lamnhan/ngx-useful';
 import { PageDataService } from '@lamnhan/ngx-schemata';
 
@@ -38,8 +38,12 @@ export class PrivacyPage implements OnInit {
         !data.i18n
           ? data.id
           : data.ids[locale] || data.ids['en-US'],
-        { time: 10080 /* 7 days */ }
+        { time: 10080 }
       )
+    ),
+    // fallback to default if no localized found
+    switchMap(page =>
+      page ? of(page) : this.pageDataService.getDoc(this.id, { time: 10080 })
     ),
     // change metas
     tap(page =>

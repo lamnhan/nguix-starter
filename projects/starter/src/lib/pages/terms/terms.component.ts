@@ -38,8 +38,12 @@ export class TermsPage implements OnInit {
         !data.i18n
           ? data.id
           : data.ids[locale] || data.ids['en-US'],
-        { time: 10080 /* 7 days */ }
+        { time: 10080 }
       )
+    ),
+    // fallback to default if no localized found
+    switchMap(page =>
+      page ? of(page) : this.pageDataService.getDoc(this.id, { time: 10080 })
     ),
     // change metas
     tap(page =>
