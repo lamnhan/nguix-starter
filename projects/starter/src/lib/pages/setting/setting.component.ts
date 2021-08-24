@@ -37,27 +37,27 @@ export class SettingPage implements OnInit {
   i18n = false;
 
   /**
-   * Page title. For i18n, `APP.SETTING` = Settings
+   * Page title. For i18n: `APP.SETTING` = Settings
    */
   title = 'Settings';
 
   /**
-   * Theme section title. For i18n, `THEME.TITLE` = Theme
+   * Theme section title. For i18n: `THEME.TITLE` = Theme
    */
   themeTitle = 'Theme';
 
   /**
-   * Theme section dark mode text. For i18n, `THEME.DARK_MODE` = Dark mode
+   * Theme section dark mode text. For i18n: `THEME.DARK_MODE` = Dark mode
    */
   themeDarkMode = 'Dark mode';
 
   /**
-   * Theme section title. For i18n, `LOCALE.TITLE` = Locale
+   * Theme section title. For i18n: `LOCALE.TITLE` = Locale
    */
   localeTitle = 'Locale';
    
   /**
-   * Theme section title. For i18n, `PERSONA.TITLE` = Persona
+   * Theme section title. For i18n: `PERSONA.TITLE` = Persona
    */
   personaTitle = 'Persona';
 

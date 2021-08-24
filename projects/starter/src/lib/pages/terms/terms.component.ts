@@ -34,7 +34,7 @@ export class TermsPage implements OnInit {
     ),
     // get the page
     switchMap(([data, locale]) =>
-      this.pageDataService.getDoc(
+      this.pageDataService.get(
         !data.i18n
           ? data.id
           : data.ids[locale] || data.ids['en-US'],
@@ -43,7 +43,7 @@ export class TermsPage implements OnInit {
     ),
     // fallback to default if no localized found
     switchMap(page =>
-      page ? of(page) : this.pageDataService.getDoc(this.id, { time: 10080 })
+      page ? of(page) : this.pageDataService.get(this.id, { time: 10080 })
     ),
     // change metas
     tap(page =>

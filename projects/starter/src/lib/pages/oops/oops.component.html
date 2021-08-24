@@ -1,9 +1,9 @@
 <div class="host" *ngIf="pageData$ | async; let pageData">
   <nguix-oops
     [i18n]="pageData.i18n"
+    [CONTENT]="pageData.content"
+    [ACTION_TEXT]="pageData.actionText"
     [image]="pageData.image"
-    [content]="pageData.content"
     [actionLink]="pageData.actionLink"
-    [actionText]="pageData.actionText"
   ></nguix-oops>
 </div>

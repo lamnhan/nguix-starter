@@ -20,7 +20,7 @@ export class NavIndicatorComponent implements OnInit {
   @Input() icon = '/assets/images/logo.svg';
 
   /**
-   * Input() Diplay text. For i18n, `NGUIX_NAV_INDICATOR.TEXT` = Please wait ...
+   * Input() Diplay text. For i18n: `NGUIX_NAV_INDICATOR.TEXT` = Please wait ...
    */
   @Input() text = 'Please wait ...';
 
