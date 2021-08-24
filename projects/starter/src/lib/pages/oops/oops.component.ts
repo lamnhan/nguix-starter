@@ -18,15 +18,15 @@ export class OopsPage implements OnInit {
       i18n: this.i18n,
       title: this.title,
       image: this.image,
-      content: this.content,
       actionLink: this.actionLink,
-      actionText: this.actionText,
+      CONTENT: this.CONTENT,
+      ACTION_TEXT: this.ACTION_TEXT,
       ...data,
     })),
     tap(() =>
       this.metaService.changePageMetas({
         title: this.title,
-        description: this.content,
+        description: this.CONTENT,
         image: this.image.startsWith('http')
           ? this.image
           : location.origin + this.image
@@ -50,19 +50,19 @@ export class OopsPage implements OnInit {
   image = '/assets/images/404.png';
 
   /**
-   * Page content. For i18n: `NGUIX_OOPS.CONTENT`: Page not found
-   */
-  content = 'Page not found!';
-
-  /**
    * Page action link
    */
   actionLink = [''];
 
   /**
-   * Page action text. For i18n: `NGUIX_OOPS.ACTION_TEXT`: Go home
+   * Page content. For i18n: `NGUIX_OOPS.CONTENT`
    */
-  actionText = 'Go home';
+  CONTENT = 'Page not found!';
+
+  /**
+   * Page action text. For i18n: `NGUIX_OOPS.ACTION_TEXT`
+   */
+  ACTION_TEXT = 'Go home';
 
   constructor(
     private route: ActivatedRoute,

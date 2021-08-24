@@ -16,16 +16,16 @@ export class SettingPage implements OnInit {
   public readonly pageData$ = this.route.data.pipe(
     map(data => ({
       i18n: this.i18n,
-      title: this.title,
-      themeTitle: this.themeTitle,
-      themeDarkMode: this.themeDarkMode,
-      localeTitle: this.localeTitle,
-      personaTitle: this.personaTitle,
+      TITLE: this.TITLE,
+      THEME_TITLE: this.THEME_TITLE,
+      THEME_DARK_MODE: this.THEME_DARK_MODE,
+      LOCALE_TITLE: this.LOCALE_TITLE,
+      PERSONA_TITLE: this.PERSONA_TITLE,
       ...data,
     })),
     tap(() =>
       this.metaService.changePageMetas({
-        title: this.title,
+        title: this.TITLE,
         description: 'Change app settings',
       })
     )
@@ -37,29 +37,29 @@ export class SettingPage implements OnInit {
   i18n = false;
 
   /**
-   * Page title. For i18n: `APP.SETTING` = Settings
+   * Page title. For i18n: `NGUIX_SETTING_PAGE.TITLE`
    */
-  title = 'Settings';
+  TITLE = 'Settings';
 
   /**
-   * Theme section title. For i18n: `THEME.TITLE` = Theme
+   * Theme section title. For i18n: `NGUIX_SETTING_PAGE.THEME_TITLE`
    */
-  themeTitle = 'Theme';
+  THEME_TITLE = 'Theme';
 
   /**
-   * Theme section dark mode text. For i18n: `THEME.DARK_MODE` = Dark mode
+   * Theme section dark mode text. For i18n: `NGUIX_SETTING_PAGE.THEME_DARK_MODE`
    */
-  themeDarkMode = 'Dark mode';
+  THEME_DARK_MODE = 'Dark mode';
 
   /**
-   * Theme section title. For i18n: `LOCALE.TITLE` = Locale
+   * Theme section title. For i18n: `NGUIX_SETTING_PAGE.LOCALE_TITLE`
    */
-  localeTitle = 'Locale';
+  LOCALE_TITLE = 'Locale';
    
   /**
-   * Theme section title. For i18n: `PERSONA.TITLE` = Persona
+   * Theme section title. For i18n: `NGUIX_SETTING_PAGE.PERSONA_TITLE`
    */
-  personaTitle = 'Persona';
+  PERSONA_TITLE = 'Persona';
 
   constructor(
     private route: ActivatedRoute,

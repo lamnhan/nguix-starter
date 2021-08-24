@@ -3,13 +3,13 @@
 <div class="host" *ngIf="pageData$ | async; let pageData">
 
   <section class="title">
-    <h3 class="text-medium">{{ !pageData.i18n ? pageData.title : t('APP.SETTING') || pageData.title }}</h3>
+    <h3 class="text-medium">{{ !pageData.i18n ? pageData.TITLE : t('NGUIX_SETTING_PAGE.TITLE') || pageData.TITLE }}</h3>
   </section>
 
   <section class="theme">
-    <div class="title">{{ !pageData.i18n ? pageData.themeTitle : t('THEME.TITLE') || pageData.themeTitle }}</div>
+    <div class="title">{{ !pageData.i18n ? pageData.THEME_TITLE : t('NGUIX_SETTING_PAGE.THEME_TITLE') || pageData.THEME_TITLE }}</div>
     <div class="body">
-      <label class="text" for="theming">{{ !pageData.i18n ? pageData.themeDarkMode : t('THEME.DARK_MODE') || pageData.themeDarkMode }}</label>
+      <label class="text" for="theming">{{ !pageData.i18n ? pageData.THEME_DARK_MODE : t('NGUIX_SETTING_PAGE.THEME_DARK_MODE') || pageData.THEME_DARK_MODE }}</label>
       <label class="form-switch">
         <input type="checkbox"
           id="theming"
@@ -22,7 +22,7 @@
   </section>
 
   <section class="locale">
-    <div class="title">{{ !pageData.i18n ? pageData.localeTitle : t('LOCALE.TITLE') || pageData.localeTitle }}</div>
+    <div class="title">{{ !pageData.i18n ? pageData.LOCALE_TITLE : t('NGUIX_SETTING_PAGE.LOCALE_TITLE') || pageData.LOCALE_TITLE }}</div>
     <div class="body">
       <button
         *ngFor="let localeItem of settingService.locales"
@@ -33,7 +33,7 @@
   </section>
 
   <section class="persona">
-    <div class="title">{{ !pageData.i18n ? pageData.personaTitle : t('PERSONA.TITLE') || pageData.personaTitle }}</div>
+    <div class="title">{{ !pageData.i18n ? pageData.PERSONA_TITLE : t('NGUIX_SETTING_PAGE.PERSONA_TITLE') || pageData.PERSONA_TITLE }}</div>
     <div class="body">
       <ul>
         <li *ngFor="let personaItem of settingService.personas">
