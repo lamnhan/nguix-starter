@@ -25,6 +25,16 @@ export class PostsComponent implements OnInit {
    */
   @Input() posts!: Post[];
 
+  /**
+   * Input() Minute to read text. For i18n: `NGUIX_POSTS.MIN_READ`
+   */
+  @Input() MIN_READ = 'min read';
+
+  /**
+   * Input() Read more text. For i18n: `NGUIX_POSTS.READ_MORE`
+   */
+  @Input() READ_MORE = 'Read more';
+
   constructor() {}
 
   /**

@@ -2,15 +2,15 @@
 <div class="host" *ngIf="pwaService && !pwaService.installed">
 
   <div class="head">
-    <span class="title">{{ !i18n ? title : t('NGUIX_PWA_BOX.TITLE') || title }}</span>
+    <span class="title">{{ !i18n ? TITLE : t('NGUIX_PWA_BOX.TITLE') || TITLE }}</span>
     <button class="close button-clear" (click)="dismiss.emit()">✕</button>
   </div>
 
   <div class="body" (click)="action.emit()">
     <img class="thumbnail" [src]="icon" alt="name">
     <div class="text">
-      <strong>{{ !i18n ? name : t('NGUIX_PWA_BOX.NAME') || name }}</strong>
-      <span>{{ !i18n ? tagline : t('NGUIX_PWA_BOX.TAGLINE') || tagline }}</span>
+      <strong>{{ !i18n ? NAME : t('NGUIX_PWA_BOX.NAME') || NAME }}</strong>
+      <span>{{ !i18n ? TAGLINE : t('NGUIX_PWA_BOX.TAGLINE') || TAGLINE }}</span>
     </div>
   </div>
 

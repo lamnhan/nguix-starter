@@ -21,47 +21,47 @@ export class LoginComponent implements OnInit {
   /**
    * Input() The email input label. For i18n: NGUIX_LOGIN.EMAIL_LABEL
    */
-  @Input() emailLabel = 'Email';
+  @Input() EMAIL_LABEL = 'Email';
 
   /**
    * Input() The email input placeholder. For i18n: NGUIX_LOGIN.EMAIL_PLACEHOLDER
    */
-  @Input() emailPlaceholder = 'Your email';
+  @Input() EMAIL_PLACEHOLDER = 'Your email';
 
   /**
    * Input() The password input label. For i18n: NGUIX_LOGIN.PASSWORD_LABEL
    */
-  @Input() passwordLabel = 'Password';
+  @Input() PASSWORD_LABEL = 'Password';
 
   /**
    * Input() The password input placeholder. For i18n: NGUIX_LOGIN.PASSWORD_PLACEHOLDER
    */
-  @Input() passwordPlaceholder = 'Your password';
+  @Input() PASSWORD_PLACEHOLDER = 'Your password';
 
   /**
    * Input() Submit text. For i18n: NGUIX_LOGIN.SUBMIT_TEXT
    */
-  @Input() submitText = "Sign In";
+  @Input() SUBMIT_TEXT = "Sign In";
 
   /**
    * Input() Forgot password text. For i18n: NGUIX_LOGIN.FORGOT_PASSWORD
    */
-  @Input() forgotPassword = "Forgot password?";
+  @Input() FORGOT_PASSWORD = "Forgot password?";
 
   /**
    * Input() Social text. For i18n: NGUIX_LOGIN.SOCIAL_TEXT
    */
-  @Input() socialText = 'Using social accounts:';
+  @Input() SOCIAL_TEXT = 'Using social accounts:';
 
   /**
    * Input() Register link text. For i18n: NGUIX_LOGIN.REGISTER_TEXT
    */
-  @Input() registerText = 'create now?';
+  @Input() REGISTER_TEXT = 'create now?';
 
   /**
    * Input() Register link description. For i18n: NGUIX_LOGIN.REGISTER_DESCRIPTION
    */
-  @Input() registerDescription = 'Don\'t have an account';
+  @Input() REGISTER_DESCRIPTION = 'Don\'t have an account';
 
   /**
    * Input() With socials signin: google, facebook, github

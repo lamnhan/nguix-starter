@@ -11,17 +11,17 @@ export class FooterComponent implements OnInit {
   /**
    * Input() Enable localization
    */
-   @Input() i18n = false;
-
-  /**
-   * Input() Footer text. For i18n: `NGUIX_FOOTER.TEXT` = Powered by ...
-   */
-  @Input() text = 'Powered by <a href="https://nguix-starter.lamnhan.com" target="_blank">@lamnhan/nguix-starter</a>';
+  @Input() i18n = false;
 
   /**
    * Input() Footer links
    */
   @Input() menuItems: MenuItem[] = [];
+
+  /**
+   * Input() Footer text. For i18n: `NGUIX_FOOTER.TEXT`
+   */
+  @Input() TEXT = 'Powered by <a href="https://nguix-starter.lamnhan.com" target="_blank">@lamnhan/nguix-starter</a>';
 
   constructor() {}
 

@@ -1,0 +1,11 @@
+{
+  "EMAIL_LABEL": "Email",
+  "EMAIL_PLACEHOLDER": "Địa chỉ email của bạn",
+  "PASSWORD_LABEL": "Mật khẩu",
+  "PASSWORD_PLACEHOLDER": "Mật khẩu bảo mật cao",
+  "CONFIRM_PASSWORD_LABEL": "Xác nhận",
+  "CONFIRM_PASSWORD_PLACEHOLDER": "Nhập lại mật khẩu",
+  "SUBMIT_TEXT": "Tạo tài khoản",
+  "LOGIN_TEXT": "đăng nhập ngay!",
+  "LOGIN_DESCRIPTION": "Đã có tài khoản"
+}

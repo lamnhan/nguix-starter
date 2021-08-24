@@ -13,17 +13,22 @@ export class VideosComponent implements OnInit {
   /**
    * Input() Enable localization
    */
-   @Input() i18n = false;
+  @Input() i18n = false;
 
-   /**
-    * Input() Listing layout
-    */
-   @Input() layout: VideosLayouts = 'thumbnail';
-   
-   /**
-    * Input() List of videos
-    */
-   @Input() videos!: Video[];
+  /**
+   * Input() Listing layout
+   */
+  @Input() layout: VideosLayouts = 'thumbnail';
+  
+  /**
+   * Input() List of videos
+   */
+  @Input() videos!: Video[];
+
+  /**
+   * Input() The view text. For i18n: `NGUIX_VIDEOS.VIEW_TEXT`
+   */
+  @Input() VIEW_TEXT = 'views';
  
    constructor() {}
  

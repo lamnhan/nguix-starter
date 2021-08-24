@@ -26,7 +26,7 @@
         </div>
 
         <div class="info">
-          <div class="view">{{ videoItem.viewCount || 0 }} views</div>
+          <div class="view">{{ videoItem.viewCount || 0 }} {{ !i18n ? VIEW_TEXT : t('NGUIX_VIDEOS.VIEW_TEXT') || VIEW_TEXT }}</div>
           <div class="date">{{ videoItem.createdAt | date }}</div>
         </div>
   

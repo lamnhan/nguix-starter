@@ -2,8 +2,8 @@
 <div class="host" *ngIf="authService">
 
   <div class="head">
-    <h3>{{ !i18n ? submitText : t('NGUIX_LOGIN.SUBMIT_TEXT') || submitText }}</h3>
-    <p>{{ !i18n ? registerDescription : ('NGUIX_LOGIN.REGISTER_DESCRIPTION') || registerDescription }}, <a [usefulRouterLink]="registerRouterLink">{{ !i18n ? registerText : ('NGUIX_LOGIN.REGISTER_TEXT') || registerText }}</a></p>
+    <h3>{{ !i18n ? SUBMIT_TEXT : t('NGUIX_LOGIN.SUBMIT_TEXT') || SUBMIT_TEXT }}</h3>
+    <p>{{ !i18n ? REGISTER_DESCRIPTION : ('NGUIX_LOGIN.REGISTER_DESCRIPTION') || REGISTER_DESCRIPTION }}, <a [usefulRouterLink]="registerRouterLink">{{ !i18n ? REGISTER_TEXT : ('NGUIX_LOGIN.REGISTER_TEXT') || REGISTER_TEXT }}</a></p>
   </div>
 
   <div class="message" *ngIf="message">
@@ -14,21 +14,21 @@
   <form [formGroup]="loginFormGroup" (ngSubmit)="signIn()" #loginForm="ngForm">
 
     <label class="group">
-      <span class="form-label">{{ !i18n ? emailLabel : t('NGUIX_LOGIN.EMAIL_LABEL') || emailLabel }}</span>
-      <input class="form-control" type="email" formControlName="email" [placeholder]="!i18n ? emailPlaceholder : t('NGUIX_LOGIN.EMAIL_PLACEHOLDER') || emailPlaceholder">
+      <span class="form-label">{{ !i18n ? EMAIL_LABEL : t('NGUIX_LOGIN.EMAIL_LABEL') || EMAIL_LABEL }}</span>
+      <input class="form-control" type="email" formControlName="email" [placeholder]="!i18n ? EMAIL_PLACEHOLDER : t('NGUIX_LOGIN.EMAIL_PLACEHOLDER') || EMAIL_PLACEHOLDER">
     </label>
 
     <div class="group">
       <div class="text">
-        <label for="password" class="form-label">{{ !i18n ? passwordLabel : t('NGUIX_LOGIN.PASSWORD_LABEL') || passwordLabel }}</label>
-        <a class="forgot" href="#" (click)="resetPassword();false;">{{ !i18n ? forgotPassword : t('NGUIX_LOGIN.FORGOT') || forgotPassword }}</a>
+        <label for="password" class="form-label">{{ !i18n ? PASSWORD_LABEL : t('NGUIX_LOGIN.PASSWORD_LABEL') || PASSWORD_LABEL }}</label>
+        <a class="forgot" href="#" (click)="resetPassword();false;">{{ !i18n ? FORGOT_PASSWORD : t('NGUIX_LOGIN.FORGOT_PASSWORD') || FORGOT_PASSWORD }}</a>
       </div>
-      <input id="password" class="form-control" type="password" formControlName="password" [placeholder]="!i18n ? passwordPlaceholder : t('NGUIX_LOGIN.PASSWORD_PLACEHOLDER') || passwordPlaceholder">
+      <input id="password" class="form-control" type="password" formControlName="password" [placeholder]="!i18n ? PASSWORD_PLACEHOLDER : t('NGUIX_LOGIN.PASSWORD_PLACEHOLDER') || PASSWORD_PLACEHOLDER">
     </div>
 
     <div class="action">
       <button class="button-primary" type="submit"
-        [disabled]="!loginForm.form.valid || lockdown">{{ !i18n ? submitText : t('NGUIX_LOGIN.SUBMIT_TEXT') || submitText }}</button>
+        [disabled]="!loginForm.form.valid || lockdown">{{ !i18n ? SUBMIT_TEXT : t('NGUIX_LOGIN.SUBMIT_TEXT') || SUBMIT_TEXT }}</button>
     </div>
 
   </form>
@@ -36,7 +36,7 @@
 
   <div class="socials" *ngIf="withSocials">
 
-    <div class="text">{{ !i18n ? socialText : t('NGUIX_LOGIN.SOCIAL_TEXT') || socialText }}</div>
+    <div class="text">{{ !i18n ? SOCIAL_TEXT : t('NGUIX_LOGIN.SOCIAL_TEXT') || SOCIAL_TEXT }}</div>
 
     <button
       class="button-outline"

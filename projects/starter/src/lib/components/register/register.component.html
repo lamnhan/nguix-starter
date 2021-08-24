@@ -2,8 +2,8 @@
 <div class="host">
 
   <div class="head">
-    <h3>{{ !i18n ? submitText : t('NGUIX_REGISTER.SUBMIT_TEXT') || submitText }}</h3>
-    <p>{{ !i18n ? loginDescription : t('NGUIX_NGUIX_REGISTER.LOGIN_DESCRIPTION') || loginDescription }}, <a [usefulRouterLink]="loginRouterLink">{{ !i18n ? loginText : t('NGUIX_NGUIX_REGISTER.LOGIN_TEXT') || loginText }}</a></p>
+    <h3>{{ !i18n ? SUBMIT_TEXT : t('NGUIX_REGISTER.SUBMIT_TEXT') || SUBMIT_TEXT }}</h3>
+    <p>{{ !i18n ? LOGIN_DESCRIPTION : t('NGUIX_REGISTER.LOGIN_DESCRIPTION') || LOGIN_DESCRIPTION }}, <a [usefulRouterLink]="loginRouterLink">{{ !i18n ? LOGIN_TEXT : t('NGUIX_REGISTER.LOGIN_TEXT') || LOGIN_TEXT }}</a></p>
   </div>
 
   <div class="message" *ngIf="message">
@@ -13,23 +13,23 @@
   <form [formGroup]="registerFormGroup" (ngSubmit)="signUp()" #registerForm="ngForm">
 
     <label class="group">
-      <span class="form-label">{{ !i18n ? emailLabel : t('NGUIX_REGISTER.EMAIL_LABEL') || emailLabel }}</span>
-      <input class="form-control" type="email" formControlName="email" [placeholder]="!i18n ? emailPlaceholder : t('NGUIX_REGISTER.EMAIL_PLACEHOLDER') || emailPlaceholder ">
+      <span class="form-label">{{ !i18n ? EMAIL_LABEL : t('NGUIX_REGISTER.EMAIL_LABEL') || EMAIL_LABEL }}</span>
+      <input class="form-control" type="email" formControlName="email" [placeholder]="!i18n ? EMAIL_PLACEHOLDER: t('NGUIX_REGISTER.EMAIL_PLACEHOLDER') || EMAIL_PLACEHOLDER">
     </label>
 
     <label class="group">
-      <span class="form-label">{{ !i18n ? passwordLabel : t('NGUIX_REGISTER.PASSWORD_LABEL') || passwordLabel }}</span>
-      <input class="form-control" type="password" formControlName="password" [placeholder]="!i18n ? passwordPlaceholder : t('NGUIX_REGISTER.PASSWORD_PLACEHOLDER') || passwordPlaceholder">
+      <span class="form-label">{{ !i18n ? PASSWORD_LABEL : t('NGUIX_REGISTER.PASSWORD_LABEL') || PASSWORD_LABEL }}</span>
+      <input class="form-control" type="password" formControlName="password" [placeholder]="!i18n ? PASSWORD_PLACEHOLDER : t('NGUIX_REGISTER.PASSWORD_PLACEHOLDER') || PASSWORD_PLACEHOLDER">
     </label>
 
     <label class="group">
-      <span class="form-label">{{ !i18n ? confirmPasswordLabel : t('NGUIX_REGISTER.CONFIRM_PASSWORD_LABEL') || confirmPasswordLabel }}</span>
-      <input class="form-control" type="password" formControlName="passwordConfirm" [placeholder]="!i18n ? confirmPasswordPlaceholder : t('NGUIX_REGISTER.CONFIRM_PASSWORD_PLACEHOLDER') || confirmPasswordPlaceholder">
+      <span class="form-label">{{ !i18n ? CONFIRM_PASSWORD_LABEL : t('NGUIX_REGISTER.CONFIRM_PASSWORD_LABEL') || CONFIRM_PASSWORD_LABEL }}</span>
+      <input class="form-control" type="password" formControlName="passwordConfirm" [placeholder]="!i18n ? CONFIRM_PASSWORD_PLACEHOLDER : t('NGUIX_REGISTER.CONFIRM_PASSWORD_PLACEHOLDER') || CONFIRM_PASSWORD_PLACEHOLDER">
     </label>
 
     <div class="action">
       <button class="button-primary" type="submit"
-        [disabled]="!registerForm.form.valid || lockdown">{{ !i18n ? submitText : t('NGUIX_REGISTER.SUBMIT_TEXT') || submitText }}</button>
+        [disabled]="!registerForm.form.valid || lockdown">{{ !i18n ? SUBMIT_TEXT : t('NGUIX_REGISTER.SUBMIT_TEXT') || SUBMIT_TEXT }}</button>
     </div>
 
   </form>

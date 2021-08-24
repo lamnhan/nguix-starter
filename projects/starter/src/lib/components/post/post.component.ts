@@ -19,6 +19,21 @@ export class PostComponent implements OnInit {
    */
   @Input() post!: Post;
 
+  /**
+   * Input() Minute to read text. For i18n: `NGUIX_POST.MIN_READ`
+   */
+  @Input() MIN_READ = 'min read';
+
+  /**
+   * Input() TLDR title. For i18n: `NGUIX_POST.TLDR_TITLE`
+   */
+  @Input() TLDR_TITLE = 'Long story short';
+
+  /**
+   * Input() TOC title. For i18n: `NGUIX_POST.TOC_TITLE`
+   */
+  @Input() TOC_TITLE = 'In this post';
+
   constructor(
     /**
      * Inject() Requires the [NavService](https://ngx-useful.lamnhan.com/service/nav)

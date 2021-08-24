@@ -29,11 +29,11 @@
         </h3>
         <div class="email">
           <em>{{ data.email }}</em>
-          <a *ngIf="!data.emailVerified" href="#" (click)="verifyEmail();false;">Verify Email</a>
+          <a *ngIf="!data.emailVerified" href="#" (click)="verifyEmail();false;">{{ !i18n ? VERIFY_EMAIL : t('NGUIX_ACCOUNT.VERIFY_EMAIL') || VERIFY_EMAIL }}</a>
         </div>
       </div>
       <div class="public" *ngIf="data.username">
-        <button class="button-primary" (click)="openPublicProfile()">View Public Profile</button>
+        <button class="button-primary" (click)="openPublicProfile()">{{ !i18n ? VIEW_PROFILE : t('NGUIX_ACCOUNT.VIEW_PROFILE') || VIEW_PROFILE }}</button>
       </div>
     </div>
 
@@ -42,7 +42,7 @@
   <div class="body">
 
     <ul class="general">
-      <li class="title">General</li>
+      <li class="title">{{ !i18n ? GENERAL_TITLE : t('NGUIX_ACCOUNT.GENERAL_TITLE') || GENERAL_TITLE }}</li>
 
       <li class="publicity">
         <div class="label">Profile {{ publicData.status==='publish' ? 'Is' : 'Is Not'}} Public</div>
@@ -84,7 +84,7 @@
       <li class="intro">
         <nguix-account-text-editor
           [i18n]="i18n"
-          label="Intro"
+          [label]="!i18n ? INTRO_LABEL : t('NGUIX_ACCOUNT.INTRO_LABEL') || INTRO_LABEL"
           type="text"
           [value]="data.intro"
           (save)="updateIntro($event)"
@@ -96,7 +96,7 @@
   </div>
   
   <div class="foot">
-    <button class="button-outline" (click)="signOut()">{{ !i18n ? logoutText : t('NGUIX_ACCOUNT.LOGOUT_TEXT') || logoutText }}</button>
+    <button class="button-outline" (click)="signOut()">{{ !i18n ? LOGOUT_TEXT : t('NGUIX_ACCOUNT.LOGOUT_TEXT') || LOGOUT_TEXT }}</button>
   </div>
 
 </ng-container>

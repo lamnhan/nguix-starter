@@ -21,7 +21,7 @@
       </a>
     </div>
     <span class="date">{{ post.createdAt | datex }}</span>
-    <span class="duration">{{ post.duration }} min read</span>
+    <span class="duration">{{ post.duration }} {{ !i18n ? MIN_READ : t('NGUIX_POST.MIN_READ') || MIN_READ }}</span>
   </div>
 
   <div class="image" *ngIf="post.images">
@@ -31,14 +31,14 @@
   <div class="content">
 
     <div class="tldr" *ngIf="post.tldr">
-      <div class="name">Long story short:</div>
+      <div class="name">{{ !i18n ? TLDR_TITLE : t('NGUIX_POST.TLDR_TITLE') || TLDR_TITLE }}:</div>
       <div [innerHtml]="post.tldr"></div>
     </div>
 
     <div class="description" [innerHtml]="post.description"></div>
 
     <div class="toc" *ngIf="post.toc">
-      <div class="name">In this post:</div>
+      <div class="name">{{ !i18n ? TOC_TITLE : t('NGUIX_POST.TOC_TITLE') || TOC_TITLE }}:</div>
       <ul>
         <li *ngFor="let tocItem of post.toc" [class]="'level-' + tocItem.level">
           <a *ngIf="tocItem.href" [href]="tocItem.href" target="_blank">{{ tocItem.text }}</a>

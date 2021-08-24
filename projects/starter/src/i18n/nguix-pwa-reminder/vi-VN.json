@@ -1,0 +1,14 @@
+{
+  "TITLE": "Cài đặt ứng dụng?",
+  "TEXT": "Cài đặt app xuống thiết bị của bạn.",
+  "DISMISS_TEXT": "Đã cài đặt",
+  "HIDE_TEXT": "Nhắc tôi sau",
+  "MESSAGES": {
+    "IOS_SAFARI": "<ul><li>Nhấn vào nút Chia sẻ</li><li>Sau đó, Thêm vào màn hình chính</li></ul>",
+    "IOS_ANY": "<ul><li>Mở trang web này bằng trình duyệt Safari</li><li>Và, làm theo hướng dẫn</li></ul>",
+    "ANDROID_CHROME": "<ul><li>Nhấn vào Menu trên góc phải phía trên</li><li>Sau đó, Cài đặt ...</li></ul>",
+    "ANDROID_ANY": "<ul><li>Mở trang web này bằng trình duyệt Chrome</li><li>Và, làm theo hướng dẫn</li></ul>",
+    "DESKTOP_CHROME": "<ul><li>Nhấn vào nút Cài đặt trên thanh địa chỉ</li><li>Sau đó, nhấn Cài đặt</li></ul>",
+    "DESKTOP_ANY": "<ul><li>Mở trang web này bằng trình duyệt Chrome</li><li>Và, làm theo hướng dẫn</li></ul>"
+  }
+}

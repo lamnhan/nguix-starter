@@ -13,9 +13,29 @@ export class AccountComponent implements OnInit {
   @Input() i18n = false;
 
   /**
+   * Input() The email verification text. For i18n: NGUIX_ACCOUNT.VERIFY_EMAIL
+   */
+  @Input() VERIFY_EMAIL = 'Verify Email';
+
+  /**
+   * Input() The view profile text. For i18n: NGUIX_ACCOUNT.VIEW_PROFILE
+   */
+  @Input() VIEW_PROFILE = 'View Public Profile';
+
+  /**
+   * Input() The general title text. For i18n: NGUIX_ACCOUNT.GENERAL_TITLE
+   */
+  @Input() GENERAL_TITLE = 'General';
+
+  /**
+   * Input() The intro label. For i18n: NGUIX_ACCOUNT.INTRO_LABEL
+   */
+  @Input() INTRO_LABEL = 'Intro';
+
+  /**
    * Input() The log out text. For i18n: NGUIX_ACCOUNT.LOGOUT_TEXT
    */
-  @Input() logoutText = 'Logout';
+  @Input() LOGOUT_TEXT = 'Logout';
 
   constructor(
     /**

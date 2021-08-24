@@ -15,111 +15,110 @@ export class PwaReminderComponent implements OnInit {
   @Input() i18n = false;
 
   /**
-   * Input() Reminder title. For i18n: `NGUIX_PWA_REMINDER.TITLE` = Install app?
-   */
-  @Input() title = 'Install app?';
-
-  /**
    * Input() App icon
    */
   @Input() icon = '/assets/images/logo.svg';
 
   /**
-   * Input() Description text. For i18n: `NGUIX_PWA_REMINDER.TEXT` = Add app to ...
+   * Input() Reminder title. For i18n: `NGUIX_PWA_REMINDER.TITLE`
    */
-  @Input() text = 'Add app to your home screen';
+  @Input() TITLE = 'Install app?';
 
   /**
-   * Input() Install message for IOS with Safari. For i18n: `NGUIX_PWA_REMINDER.MESSAGES.IOS_SAFARI` = ...
+   * Input() Description text. For i18n: `NGUIX_PWA_REMINDER.TEXT`
    */
-  @Input() iosSafariMessage: string | string[];
+  @Input() TEXT = 'Add app to your home screen.';
+  
+  /**
+   * Input() Dismiss button text. For i18n: `NGUIX_PWA_REMINDER.DISMISS_TEXT`
+   */
+  @Input() DISMISS_TEXT = 'Already installed';
 
   /**
-   * Input() Install message for IOS with other browsers. For i18n: `NGUIX_PWA_REMINDER.MESSAGES.IOS_ANY` = ...
+   * Input() Hide button text. For i18n: `NGUIX_PWA_REMINDER.HIDE_TEXT`
    */
-  @Input() iosAnyMessage: string | string[];
+  @Input() HIDE_TEXT = 'Remind me later';
 
   /**
-   * Input() Install message for Android with Chrome. For i18n: `NGUIX_PWA_REMINDER.MESSAGES.ANDROID_CHROME` = ...
+   * Input() Install message for IOS with Safari. For i18n: `NGUIX_PWA_REMINDER.MESSAGES.IOS_SAFARI`
    */
-  @Input() androidChromeMessage: string | string[];
+  @Input() iosSafariMessage: string | string[] = [
+    'Click the Share button',
+    'Then, Add to home screen',
+  ];
 
   /**
-   * Input() Install message for Android with other browsers. For i18n: `NGUIX_PWA_REMINDER.MESSAGES.ANDROID_ANY` = ...
+   * Input() Install message for IOS with other browsers. For i18n: `NGUIX_PWA_REMINDER.MESSAGES.IOS_ANY`
    */
-  @Input() androidAnyMessage: string | string[];
+  @Input() iosAnyMessage: string | string[] = [
+    'Open this website using the Safari browser',
+    ...this.iosSafariMessage,
+  ];
 
   /**
-   * Input() Install message for Desktop with Chrome. For i18n: `NGUIX_PWA_REMINDER.MESSAGES.DESKTOP_CHROME` = ...
+   * Input() Install message for Android with Chrome. For i18n: `NGUIX_PWA_REMINDER.MESSAGES.ANDROID_CHROME`
    */
-  @Input() desktopChromeMessage: string | string[];
+  @Input() androidChromeMessage: string | string[] = [
+    'Click the menu at the top right corner',
+    'Then, Install app ...',
+  ];
 
   /**
-   * Input() Install message for Desktop with other browsers. For i18n: `NGUIX_PWA_REMINDER.MESSAGES.DESKTOP_ANY` = ...
+   * Input() Install message for Android with other browsers. For i18n: `NGUIX_PWA_REMINDER.MESSAGES.ANDROID_ANY`
    */
-  @Input() desktopAnyMessage: string | string[];
+  @Input() androidAnyMessage: string | string[] = [
+    'Open this website using the Chrome browser',
+    ...this.androidChromeMessage,
+  ];
 
   /**
-   * Input() Dismiss button text. For i18n: `NGUIX_PWA_REMINDER.DISMISS_TEXT` = Already installed
+   * Input() Install message for Desktop with Chrome. For i18n: `NGUIX_PWA_REMINDER.MESSAGES.DESKTOP_CHROME`
    */
-  @Input() dismissText = 'Already installed';
+  @Input() desktopChromeMessage: string | string[] = [
+    'Click the Install button in the address bar',
+    'Then, Install',
+  ];
 
   /**
-   * Input() Hide button text. For i18n: `NGUIX_PWA_REMINDER.HIDE_TEXT` = Remind me later
+   * Input() Install message for Desktop with other browsers. For i18n: `NGUIX_PWA_REMINDER.MESSAGES.DESKTOP_ANY`
    */
-  @Input() hideText = 'Remind me later';
+  @Input() desktopAnyMessage: string | string[] = [
+    'Open this website using the Chrome browser',
+    ...this.desktopChromeMessage,
+  ];
+
+  /**
+   * @ignore
+   */
+  i18nMessageCode = '';
+
+  /**
+   * @ignore
+   */
+  message = '';
 
   constructor(
     /**
      * Inject() Requires the [PwaService](https://ngx-useful.lamnhan.com/service/pwa)
      */
     public readonly pwaService: PwaService,
-  ) {
-    this.iosSafariMessage = [
-      'Click the Share button',
-      'Then, Add to home screen',
-    ];
-    this.iosAnyMessage = [
-      'Open this website using the Safari browser',
-      ...this.iosSafariMessage,
-    ];
-
-    this.androidChromeMessage = [
-      'Click the menu at the top right corner',
-      'Then, Install app ...',
-    ];
-    this.androidAnyMessage = [
-      'Open this website using the Chrome browser',
-      ...this.androidChromeMessage,
-    ];
-
-    this.desktopChromeMessage = [
-      'Click the Install button in the address bar',
-      'Then, Install',
-    ];
-    this.desktopAnyMessage = [
-      'Open this website using the Chrome browser',
-      ...this.desktopChromeMessage,
-    ];
-  }
+  ) {}
 
   /**
    * @ignore
    */
-  ngOnInit(): void {}
-
-  /**
-   * @ignore
-   */
-  getI18nMessageCode() {
-    return 'NGUIX_PWA_REMINDER.MESSAGES.'
+  ngOnInit(): void {
+    // i18n code
+    this.i18nMessageCode = 'NGUIX_PWA_REMINDER.MESSAGES.'
       + (this.pwaService.runtime || 'desktop-any').replace(/-/g, '_').toUpperCase();
+    // message
+    this.message = this.getMessage();
   }
 
   /**
    * @ignore
    */
-  getMessage() {
+  private getMessage() {
     let msg: string | string[] = '';
     switch (this.pwaService.runtime) {
       case 'ios-safari':

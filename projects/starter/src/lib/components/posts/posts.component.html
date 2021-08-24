@@ -38,7 +38,7 @@
           </a>
         </div>
         <div class="date">{{ postItem.createdAt | date }}</div>
-        <div class="duration">{{ postItem.duration }} min read</div>
+        <div class="duration">{{ postItem.duration }} {{ !i18n ? MIN_READ : t('NGUIX_POSTS.MIN_READ') || MIN_READ }}</div>
       </div>
 
       <div class="description" [innerHtml]="postItem.description"></div>
@@ -57,7 +57,7 @@
       </div>
 
       <div class="action">
-        <a [usefulRouterLink]="['post', postItem.id]" [usefulRouterBackwardable]="true">Read more &#x2192;</a>
+        <a [usefulRouterLink]="['post', postItem.id]" [usefulRouterBackwardable]="true">{{ !i18n ? READ_MORE : t('NGUIX_POSTS.READ_MORE') || READ_MORE }} &#x2192;</a>
       </div>
 
     </div>

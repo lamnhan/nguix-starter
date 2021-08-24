@@ -15,24 +15,24 @@ export class PwaBoxComponent implements OnInit {
   @Input() i18n = false;
 
   /**
-   * Input() Box title. For i18n: `NGUIX_PWA_BOX.TITLE` = Install app?
-   */
-  @Input() title = 'Install app?';
-  
-  /**
    * Input() App icon url
    */
   @Input() icon = '/assets/images/logo.svg';
+
+  /**
+   * Input() Box title. For i18n: `NGUIX_PWA_BOX.TITLE`
+   */
+  @Input() TITLE = 'Install app?';
   
   /**
-   * Input() App name. For i18n: `NGUIX_PWA_BOX.NAME` = Install now
+   * Input() App name. For i18n: `NGUIX_PWA_BOX.NAME`
    */
-  @Input() name = 'Install now';
+  @Input() NAME = 'Install now';
   
   /**
-   * Input() Description text. For i18n: `NGUIX_PWA_BOX.TAGLINE` = Add app to ...
+   * Input() Description text. For i18n: `NGUIX_PWA_BOX.TAGLINE`
    */
-  @Input() tagline = 'Add app to your home screen';
+  @Input() TAGLINE = 'Add app to your home screen';
 
   /**
    * Output() Action when clicked

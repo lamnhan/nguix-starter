@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TranslocoModule } from '@ngneat/transloco';
+import { TranslocoModule, TRANSLOCO_SCOPE } from '@ngneat/transloco';
 
 import {NavIndicatorComponent} from './nav-indicator.component';
 
@@ -8,15 +8,15 @@ import {NavIndicatorComponent} from './nav-indicator.component';
  * @ignore
  */
 @NgModule({
-  declarations: [
-    NavIndicatorComponent,
-  ],
+  declarations: [NavIndicatorComponent],
   imports: [
     CommonModule,
     TranslocoModule
   ],
-  exports: [
-    NavIndicatorComponent,
-  ]
+  providers: [{
+    provide: TRANSLOCO_SCOPE,
+    useValue: { scope: 'nguix-nav-indicator', alias: 'NGUIX_NAV_INDICATOR' },
+  }],
+  exports: [NavIndicatorComponent]
 })
 export class NguixNavIndicatorComponentModule {}

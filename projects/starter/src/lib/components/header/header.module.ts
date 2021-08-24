@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TranslocoModule } from '@ngneat/transloco';
+import { TranslocoModule, TRANSLOCO_SCOPE } from '@ngneat/transloco';
 import { RouterLinkDirectiveModule } from '@lamnhan/ngx-useful';
 
 import { HeaderComponent } from './header.component';
@@ -15,6 +15,10 @@ import { HeaderComponent } from './header.component';
     TranslocoModule,
     RouterLinkDirectiveModule,
   ],
+  providers: [{
+    provide: TRANSLOCO_SCOPE,
+    useValue: { scope: 'nguix-header', alias: 'NGUIX_HEADER' },
+  }],
   exports: [HeaderComponent]
 })
 export class NguixHeaderComponentModule { }

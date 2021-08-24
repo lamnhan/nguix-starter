@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TranslocoModule } from '@ngneat/transloco';
+import { TranslocoModule, TRANSLOCO_SCOPE } from '@ngneat/transloco';
 import { RouterLinkDirectiveModule } from '@lamnhan/ngx-useful';
 
 import { NguixIconComponentModule } from '../icon/icon.module';
@@ -21,6 +21,10 @@ import { AccountComponent } from './account.component';
     NguixAccountAvatarComponentModule,
     NguixAccountCoverComponentModule,
   ],
+  providers: [{
+    provide: TRANSLOCO_SCOPE,
+    useValue: { scope: 'nguix-account', alias: 'NGUIX_ACCOUNT' },
+  }],
   exports: [AccountComponent]
 })
 export class NguixAccountComponentModule {}

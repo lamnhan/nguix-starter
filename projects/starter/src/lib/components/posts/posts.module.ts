@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TranslocoModule } from '@ngneat/transloco';
+import { TranslocoModule, TRANSLOCO_SCOPE } from '@ngneat/transloco';
 import { RouterLinkDirectiveModule, O2aPipeModule, O1iPipeModule } from '@lamnhan/ngx-useful';
 
 import { PostsComponent } from './posts.component';
@@ -14,6 +14,10 @@ import { PostsComponent } from './posts.component';
     O2aPipeModule,
     O1iPipeModule,
   ],
+  providers: [{
+    provide: TRANSLOCO_SCOPE,
+    useValue: { scope: 'nguix-posts', alias: 'NGUIX_POSTS' },
+  }],
   exports: [PostsComponent]
 })
 export class NguixPostsComponentModule {}

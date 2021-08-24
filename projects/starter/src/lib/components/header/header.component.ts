@@ -24,9 +24,9 @@ export class HeaderComponent implements OnInit {
   @Input() logo = '/assets/images/logo.svg';
 
   /**
-   * Input() Brand name. For i18n: `NGUIX_HEADER.NAME` = App
+   * Input() Brand name. For i18n: `NGUIX_HEADER.NAME`
    */
-  @Input() name = 'App';
+  @Input() NAME = 'App';
 
   /**
    * Input() Menu items

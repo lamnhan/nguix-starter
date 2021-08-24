@@ -1,0 +1,11 @@
+{
+  "EMAIL_LABEL": "Email",
+  "EMAIL_PLACEHOLDER": "Địa chỉ email của bạn",
+  "PASSWORD_LABEL": "Mật khẩu",
+  "PASSWORD_PLACEHOLDER": "Mật khẩu của bạn",
+  "SUBMIT_TEXT": "Đăng nhập",
+  "FORGOT_PASSWORD": "Quên mật khẩu?",
+  "SOCIAL_TEXT": "Đăng nhập bằng tài khoản mạng xã hội:",
+  "REGISTER_TEXT": "tạo tài khoản?",
+  "REGISTER_DESCRIPTION": "Chưa có tài khoản"
+}
