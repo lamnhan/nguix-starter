@@ -8,7 +8,8 @@
   "private": true,
   "scripts": {
     "splashscreens": "cpy splashscreens ../../../dist/starter --cwd=projects/starter/src --parents && sass dist/starter/splashscreens --style compressed",
-    "build:lib": "ng build starter && npm run splashscreens && cpy README.md LICENSE dist/starter",
+    "i18n": "cpy i18n ../../../dist/starter --cwd=projects/starter/src --parents",
+    "build:lib": "ng build starter && npm run splashscreens && npm run i18n && cpy README.md LICENSE dist/starter",
     "build:app": "ng build && ayedocs generate",
     "build": "npm run build:app && npm run build:lib",
     "deploy:lib": "cd ./dist/starter && npm publish && cd ../../",
