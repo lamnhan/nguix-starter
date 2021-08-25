@@ -91,9 +91,10 @@ Also, visit the [homepage](https://nguix-starter.lamnhan.com).
 <h2><a name="modules"><p>Modules</p>
 </a></h2>
 
-| Class                                                                                                     | Description |
-| --------------------------------------------------------------------------------------------------------- | ----------- |
-| [NguixStarterModule](https://nguix-starter.lamnhan.com/content/reference/classes/nguixstartermodule.html) |             |
+| Class                                                                                                             | Description |
+| ----------------------------------------------------------------------------------------------------------------- | ----------- |
+| [NguixStarterI18nModule](https://nguix-starter.lamnhan.com/content/reference/classes/nguixstarteri18nmodule.html) |             |
+| [NguixStarterModule](https://nguix-starter.lamnhan.com/content/reference/classes/nguixstartermodule.html)         |             |
 
 </section>
 

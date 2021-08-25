@@ -3,6 +3,7 @@
  */
 
 export * from './lib/starter.module';
+export * from './lib/starter-i18n.module';
 
 export * from './lib/components/header/header.component';
 export * from './lib/components/header/header.module';
@@ -12,6 +13,7 @@ export * from './lib/components/header2nd/header2nd.module';
 export * from './lib/components/header2nd/header2nd-i18n.module';
 export * from './lib/components/tabs/tabs.component';
 export * from './lib/components/tabs/tabs.module';
+export * from './lib/components/tabs/tabs-i18n.module';
 export * from './lib/components/footer/footer.component';
 export * from './lib/components/footer/footer.module';
 export * from './lib/components/footer/footer-i18n.module';
@@ -28,6 +30,7 @@ export * from './lib/components/pwa-reminder/pwa-reminder.module';
 export * from './lib/components/pwa-reminder/pwa-reminder-i18n.module';
 export * from './lib/components/pwa-box/pwa-box.component';
 export * from './lib/components/pwa-box/pwa-box.module';
+export * from './lib/components/pwa-box/pwa-box-i18n.module';
 export * from './lib/components/content/content.component';
 export * from './lib/components/content/content.module';
 export * from './lib/components/icon/icon.component';
@@ -36,16 +39,22 @@ export * from './lib/components/share/share.component';
 export * from './lib/components/share/share.module';
 export * from './lib/components/login/login.component';
 export * from './lib/components/login/login.module';
+export * from './lib/components/login/login-i18n.module';
 export * from './lib/components/register/register.component';
 export * from './lib/components/register/register.module';
+export * from './lib/components/register/register-i18n.module';
 export * from './lib/components/account/account.component';
 export * from './lib/components/account/account.module';
+export * from './lib/components/account/account-i18n.module';
 export * from './lib/components/posts/posts.component';
 export * from './lib/components/posts/posts.module';
+export * from './lib/components/posts/posts-i18n.module';
 export * from './lib/components/post/post.component';
 export * from './lib/components/post/post.module';
+export * from './lib/components/post/post-i18n.module';
 export * from './lib/components/videos/videos.component';
 export * from './lib/components/videos/videos.module';
+export * from './lib/components/videos/videos-i18n.module';
 export * from './lib/components/video/video.component';
 export * from './lib/components/video/video.module';
 export * from './lib/components/video-player/video-player.component';
