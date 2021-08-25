@@ -1,3 +1,4 @@
+import { Injectable, NgModule } from '@angular/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import {
   TRANSLOCO_LOADER,
@@ -9,13 +10,11 @@ import {
   TranslocoMissingHandler,
   TranslocoModule
 } from '@ngneat/transloco';
-import { Injectable, NgModule } from '@angular/core';
 import { environment } from '../environments/environment';
 
 @Injectable({ providedIn: 'root' })
-export class TranslocoHttpLoader implements TranslocoLoader {
+class TranslocoHttpLoader implements TranslocoLoader {
   constructor(private http: HttpClient) {}
-
   getTranslation(lang: string) {
     return this.http.get<Translation>(`./assets/i18n/${lang}.json`);
   }
@@ -37,7 +36,6 @@ class CustomHandler implements TranslocoMissingHandler {
         availableLangs: ['en-US', 'vi-VN'],
         defaultLang: 'en-US',
         fallbackLang: 'en-US',
-        // Remove this option if your application doesn't support changing language in runtime.
         reRenderOnLangChange: true,
         prodMode: environment.production,
       })
