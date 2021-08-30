@@ -3,7 +3,7 @@
 
   <div class="head">
     <h3>{{ !i18n ? SUBMIT_TEXT : t('NGUIX_LOGIN.SUBMIT_TEXT') || SUBMIT_TEXT }}</h3>
-    <p>{{ !i18n ? REGISTER_DESCRIPTION : ('NGUIX_LOGIN.REGISTER_DESCRIPTION') || REGISTER_DESCRIPTION }}, <a [usefulRouterLink]="registerRouterLink">{{ !i18n ? REGISTER_TEXT : ('NGUIX_LOGIN.REGISTER_TEXT') || REGISTER_TEXT }}</a></p>
+    <p>{{ !i18n ? REGISTER_DESCRIPTION : t('NGUIX_LOGIN.REGISTER_DESCRIPTION') || REGISTER_DESCRIPTION }}, <a [usefulRouterLink]="registerRouterLink" [usefulRouterBackwardable]="true">{{ !i18n ? REGISTER_TEXT : t('NGUIX_LOGIN.REGISTER_TEXT') || REGISTER_TEXT }}</a></p>
   </div>
 
   <div class="message" *ngIf="message">
