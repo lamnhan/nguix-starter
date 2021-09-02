@@ -1,6 +1,6 @@
 import { Component, OnInit, OnChanges, Input, Output, EventEmitter } from '@angular/core';
 import { of, Observable } from 'rxjs';
-import { tap, map, catchError } from 'rxjs/operators';
+import { map, catchError } from 'rxjs/operators';
 import { FetchService } from '@lamnhan/ngx-useful';
 
 @Component({
@@ -69,7 +69,6 @@ export class ContentComponent implements OnInit, OnChanges {
               .substring(startAt + 7, endAt)
               .replace(/<body(.*?)>/, '');
           }),
-          tap(console.log),
         );
     } else {
       this.isExternal = (this.input || '').substr(0, 4) === 'http';
