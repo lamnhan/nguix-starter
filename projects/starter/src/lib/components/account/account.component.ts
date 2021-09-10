@@ -13,6 +13,11 @@ export class AccountComponent implements OnInit {
   @Input() i18n = false;
 
   /**
+   * Input() Enable localization
+   */
+  @Input() publicProfileUrlSegment = '';
+
+  /**
    * Input() The email verification text. For i18n: NGUIX_ACCOUNT.VERIFY_EMAIL
    */
   @Input() VERIFY_EMAIL = 'Verify Email';
@@ -89,7 +94,10 @@ export class AccountComponent implements OnInit {
    */
   openPublicProfile() {
     if (this.userService.username && this.userService.publicData?.status === 'publish') {
-      return this.navService.navigate(this.userService.username);
+      const routerLink = !this.publicProfileUrlSegment
+        ? [this.userService.username]
+        : [this.publicProfileUrlSegment, this.userService.username];
+      return this.navService.navigate(routerLink);
     } else {
       return this.alertService.confirm(
         {
@@ -164,6 +172,10 @@ export class AccountComponent implements OnInit {
    * @ignore
    */
   updateEmailPublicly(isPublic: boolean) {
-    return this.userService.updatePublicly({ email: isPublic });
+    this.userService.updatePublicly({ email: isPublic });
+    return this.alertService.alert({
+        message: 'Email status is changed to public.',
+      })
+      .show();
   }
 }
