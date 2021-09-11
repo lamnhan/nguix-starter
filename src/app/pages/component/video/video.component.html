@@ -17,7 +17,7 @@
 
     <ng-template #componentTemplate>
       <div class="padding">
-        <ng-container *ngIf="'video-2' | videoDataItem | async; let video;">
+        <ng-container *ngIf="'video-2' | videoDataGet | async; let video;">
           <nguix-video [video]="video"></nguix-video>
         </ng-container>
       </div>

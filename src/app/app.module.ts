@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { environment } from '../environments/environment';
-import { AngularFireModule } from '@angular/fire';
-import { AngularFireStorage } from '@angular/fire/storage';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireStorage } from '@angular/fire/compat/storage';
 import {
   RouterLinkDirectiveModule,
   LocalstorageService,
