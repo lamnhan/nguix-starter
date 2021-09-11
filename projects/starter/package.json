@@ -22,9 +22,9 @@
     "@angular/core": "~12.2.5",
     "@angular/common": "~12.2.5",
     "@unistylus/core": "^0.0.4",
-    "@lamnhan/schemata": "^0.0.23",
-    "@lamnhan/ngx-schemata": "^0.0.12",
-    "@lamnhan/ngx-useful": "^0.0.29"
+    "@lamnhan/schemata": "^0.0.24",
+    "@lamnhan/ngx-schemata": "^0.0.13",
+    "@lamnhan/ngx-useful": "^0.0.30"
   },
   "dependencies": {
     "ngx-markdown": "^12.0.1",
