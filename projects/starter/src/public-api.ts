@@ -55,6 +55,8 @@ export * from './lib/components/post/post-i18n.module';
 export * from './lib/components/videos/videos.component';
 export * from './lib/components/videos/videos.module';
 export * from './lib/components/videos/videos-i18n.module';
+export * from './lib/components/videos/skeleton-videos/skeleton-videos.component';
+export * from './lib/components/videos/skeleton-videos/skeleton-videos.module';
 export * from './lib/components/video/video.component';
 export * from './lib/components/video/video.module';
 export * from './lib/components/video-player/video-player.component';

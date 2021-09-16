@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, Output } from '@angular/core';
 import { Video } from '@lamnhan/schemata';
 
-export type VideosLayouts = 'thumbnail' | 'card';
+type VideosLayouts = 'thumbnail' | 'card';
 
 @Component({
   selector: 'nguix-videos',
