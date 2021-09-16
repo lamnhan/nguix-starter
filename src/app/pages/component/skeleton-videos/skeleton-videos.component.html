@@ -10,16 +10,14 @@
 
     <app-compbody
       [componentTemplate]="componentTemplate"
-      apiSrc="https://raw.githubusercontent.com/lamnhan/nguix-starter/main/docs/content/components/video.md"
-      importName="NguixVideoComponentModule"
-      htmlCode="&lt;nguix-video&gt;&lt;/nguix-video&gt;"
+      apiSrc="https://raw.githubusercontent.com/lamnhan/nguix-starter/main/docs/content/components/skeleton-videos.md"
+      importName="NguixVideosComponentModule"
+      htmlCode="&lt;nguix-skeleton-videos&gt;&lt;/nguix-skeleton-videos&gt;"
     ></app-compbody>
 
     <ng-template #componentTemplate>
       <div class="padding">
-        <ng-container *ngIf="'big-buck-bunny' | videoDataGet | async; let video;">
-          <nguix-video [video]="video"></nguix-video>
-        </ng-container>
+        <nguix-skeleton-videos layout="card"></nguix-skeleton-videos>
       </div>
     </ng-template>
 

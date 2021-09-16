@@ -10,9 +10,9 @@ import { DataService } from '../../../services/data.service';
 export class VideoPlayerComponent implements OnInit {
 
   srcs = {
-    youtube: {
-      name: 'youtube',
-      src: 'https://www.youtube.com/watch?v=aqz-KE-bpKQ',
+    'video/mp4': {
+      name: 'video/mp4',
+      src: 'https://firebasestorage.googleapis.com/v0/b/lam-nhan-example.appspot.com/o/app-content%2Fuploads%2F2021%2F07%2Fvideo.mp4?alt=media&token=4ccd30c7-eed5-49c2-8f6e-74e677cc44c4',
     }
   };
 
