@@ -3,26 +3,32 @@
   
     <li *ngFor="let videoItem of videos">
   
-      <div class="head">
-  
-        <a class="thumbnail" [usefulRouterLink]="['video', videoItem.id]" [usefulRouterBackwardable]="true">
-          <img
-          [src]="
-            (videoItem.thumbnails?.sd || videoItem.thumbnails?.default)?.src ||
-            'https://via.placeholder.com/720x405/f1f1f1/000000?text=+'
-          "
-          [alt]="videoItem.title"
+      <div class="head">  
+        <a
+          class="thumbnail"
+          [usefulRouterLink]="['video', videoItem.id]"
+          [usefulRouteData]="{ video: videoItem }"
+          [usefulRouterBackwardable]="true"
         >
+          <img
+            [src]="
+              (videoItem.thumbnails?.sd || videoItem.thumbnails?.default)?.src ||
+              'https://via.placeholder.com/720x405/f1f1f1/000000?text=+'
+            "
+            [alt]="videoItem.title"
+          >
         </a>
-  
         <span class="duration">{{ ((videoItem.duration || 0 )* 1000) | date : 'mm:ss' }}</span>
-  
       </div>
   
       <div class="body">
   
         <div class="title">
-          <a [usefulRouterLink]="['video', videoItem.id]" [usefulRouterBackwardable]="true">{{ videoItem.title }}</a>
+          <a
+            [usefulRouterLink]="['video', videoItem.id]"
+            [usefulRouteData]="{ video: videoItem }"
+            [usefulRouterBackwardable]="true"
+          >{{ videoItem.title }}</a>
         </div>
 
         <div class="info">

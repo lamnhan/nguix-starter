@@ -2,106 +2,110 @@
 
   .player {}
 
-  .categories {
+  .main {
+    margin-top: 1rem;
 
-    a.category {
-      text-transform: uppercase;
-      margin-right: .5rem;
-      font-size: .75rem;
-      padding: .25rem .5rem;
-      border-radius: var(--app-size-radius);
-      background: var(--app-color-foreground);
-      color: var(--app-color-foreground-contrast);
-
-      &.web-app, &.web-app-vi-vn {
-        background: var(--app-color-success);
-        color: var(--app-color-success-contrast);
+    .categories {
+  
+      a.category {
+        text-transform: uppercase;
+        margin-right: .5rem;
+        font-size: .75rem;
+        padding: .25rem .5rem;
+        border-radius: var(--app-size-radius);
+        background: var(--app-color-foreground);
+        color: var(--app-color-foreground-contrast);
+  
+        &.web-app, &.web-app-vi-vn {
+          background: var(--app-color-success);
+          color: var(--app-color-success-contrast);
+        }
       }
     }
-  }
-
-  h1.title {
-    font-size: 1.5rem;
-    font-weight: 500;
-    margin-top: 1rem;
-  }
-
-  .info {
-    margin-top: .5rem;
-
-    .date {
-      color: var(--app-color-medium);
-    }
-  }
-
-  .content {
-    margin-top: 1rem;
-    line-height: 1.7;
-
-    .description {
+  
+    h1.title {
+      font-size: 1.5rem;
+      font-weight: 500;
       margin-top: 1rem;
-      font-size: 1.2rem;
-      color: var(--app-color-medium-shade);
     }
-
-    .article {
+  
+    .info {
+      margin-top: .5rem;
+  
+      .date {
+        color: var(--app-color-medium);
+      }
+    }
+  
+    .content {
       margin-top: 1rem;
-      color: var(--app-color-foreground-tint);
+      line-height: 1.7;
+  
+      .description {
+        margin-top: 1rem;
+        font-size: 1.2rem;
+        color: var(--app-color-medium-shade);
+      }
+  
+      .article {
+        margin-top: 1rem;
+        color: var(--app-color-foreground-tint);
+      }
     }
-  }
-
-  .tags {
-    margin-top: 2rem;
-
-    a {
-      margin-right: .5rem;
+  
+    .tags {
+      margin-top: 2rem;
+  
+      a {
+        margin-right: .5rem;
+      }
     }
-  }
-
-  .misc {
-    display: flex;
-    flex-wrap: nowrap;
-    margin-top: 1rem;
-
-    .stats {
-      flex: 1;
+  
+    .misc {
       display: flex;
       flex-wrap: nowrap;
-      align-items: center;
-      margin-top: .25rem;
-
-      button {
+      margin-top: 1rem;
+  
+      .stats {
+        flex: 1;
         display: flex;
         flex-wrap: nowrap;
         align-items: center;
-        justify-content: center;
-        margin-right: 1rem;
-        padding: 0;
-        color: var(--app-color-medium);
-        
-        &:hover {
-          color: var(--app-color-foreground);
-          text-decoration: underline;
+        margin-top: .25rem;
+  
+        button {
+          display: flex;
+          flex-wrap: nowrap;
+          align-items: center;
+          justify-content: center;
+          margin-right: 1rem;
+          padding: 0;
+          color: var(--app-color-medium);
+          
+          &:hover {
+            color: var(--app-color-foreground);
+            text-decoration: underline;
+          }
+  
+          span {
+            margin-left: .25rem;
+          }
         }
-
-        span {
-          margin-left: .25rem;
+  
+        .likes .icon {
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+  
+        .comments .icon {
+          width: 1.3rem;
+          height: 1.3rem;
         }
       }
-
-      .likes .icon {
-        width: 1.5rem;
-        height: 1.5rem;
-      }
-
-      .comments .icon {
-        width: 1.3rem;
-        height: 1.3rem;
-      }
+  
+      .action {}
+  
     }
-
-    .action {}
-
   }
 
 }

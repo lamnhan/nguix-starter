@@ -1,10 +1,12 @@
 <ng-container *transloco="let t">
-  <div class="host" *ngIf="video">
+<div class="host" *ngIf="video">
 
-    <div class="player" *ngIf="video.srcs">
-      <nguix-video-player [srcs]="video.srcs"></nguix-video-player>
-    </div>
-  
+  <div class="player" *ngIf="video.srcs">
+    <nguix-video-player [srcs]="video.srcs"></nguix-video-player>
+  </div>
+
+  <div class="main">
+
     <div class="categories" *ngIf="video.categories | o2a; let categories">
       <a
         class="category"
@@ -21,14 +23,11 @@
       <span class="date">{{ video.createdAt | datex }}</span>
     </div>
   
-    <div class="content">
-  
+    <div class="content">  
       <div class="description" [innerHtml]="video.description"></div>
-    
       <div class="article">
         <nguix-content [input]="video.content"></nguix-content>
-      </div>
-  
+      </div>  
     </div>
   
     <div class="tags">
@@ -52,7 +51,9 @@
         <nguix-share [title]="video.title" [text]="video.description" [url]="navService.routeUrl"></nguix-share>
       </div>
     </div>
-  
+
   </div>
-  </ng-container>
+  
+</div>
+</ng-container>
   
