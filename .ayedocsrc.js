@@ -19,6 +19,7 @@ module.exports = {
     'docs/content/components/spinner.md': {main: ['SpinnerComponent', 'SUMMARY_PROPERTIES']},
     'docs/content/components/icon.md': {main: ['IconComponent', 'SUMMARY_PROPERTIES']},
     'docs/content/components/content.md': {main: ['ContentComponent', 'SUMMARY_PROPERTIES']},
+    'docs/content/components/network-indicator.md': {main: ['NetworkIndicatorComponent', 'SUMMARY_PROPERTIES']},
     'docs/content/components/nav-indicator.md': {main: ['NavIndicatorComponent', 'SUMMARY_PROPERTIES']},
     'docs/content/components/pwa-box.md': {main: ['PwaBoxComponent', 'SUMMARY_PROPERTIES']},
     'docs/content/components/pwa-reminder.md': {main: ['PwaReminderComponent', 'SUMMARY_PROPERTIES']},

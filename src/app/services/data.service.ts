@@ -156,6 +156,11 @@ export class DataService {
         routerLink: ['component', 'image-cropper']
       },
       {
+        text: 'Network Indicator',
+        level: 1,
+        routerLink: ['component', 'network-indicator']
+      },
+      {
         text: 'Nav Indicator',
         level: 1,
         routerLink: ['component', 'nav-indicator']

@@ -1,0 +1,13 @@
+<ng-container *transloco="let t">
+<div
+  id="nguix-network-indicator"
+  class="host"
+  *ngIf="networkService"
+  [class.show]="!networkService.isOnline"
+>
+  <div class="body">
+    <img [src]="icon">
+    <span>{{ !i18n ? OFFLINE_TEXT : t('NGUIX_NETWORK_INDICATOR.OFFLINE_TEXT') || OFFLINE_TEXT }}</span>
+  </div>
+</div>
+</ng-container>

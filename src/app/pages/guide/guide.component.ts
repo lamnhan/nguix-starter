@@ -11,7 +11,7 @@ import { DataService } from '../../services/data.service';
 })
 export class GuideComponent implements OnInit {
   public readonly contentSrc$ = this.activatedRoute.params.pipe(
-    map(params => `/content/guides/${params.id}.md`),
+    map(params => `${location.origin}/content/guides/${params.id}.md`),
   );
 
   constructor(

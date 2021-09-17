@@ -6,6 +6,7 @@ import { NguixTabsComponentModule } from './components/tabs/tabs.module';
 import { NguixFooterComponentModule } from './components/footer/footer.module';
 import { NguixOopsComponentModule } from './components/oops/oops.module';
 import { NguixSpinnerComponentModule } from './components/spinner/spinner.module';
+import { NguixNetworkIndicatorComponentModule } from './components/network-indicator/network-indicator.module';
 import { NguixNavIndicatorComponentModule } from './components/nav-indicator/nav-indicator.module';
 import { NguixPwaReminderComponentModule } from './components/pwa-reminder/pwa-reminder.module';
 import { NguixPwaBoxComponentModule } from './components/pwa-box/pwa-box.module';
@@ -33,6 +34,7 @@ import { NguixImageCropperComponentModule } from './components/image-cropper/ima
     NguixFooterComponentModule,
     NguixOopsComponentModule,
     NguixSpinnerComponentModule,
+    NguixNetworkIndicatorComponentModule,
     NguixNavIndicatorComponentModule,
     NguixPwaReminderComponentModule,
     NguixPwaBoxComponentModule,
@@ -58,6 +60,7 @@ import { NguixImageCropperComponentModule } from './components/image-cropper/ima
     NguixFooterComponentModule,
     NguixOopsComponentModule,
     NguixSpinnerComponentModule,
+    NguixNetworkIndicatorComponentModule,
     NguixNavIndicatorComponentModule,
     NguixPwaReminderComponentModule,
     NguixPwaBoxComponentModule,

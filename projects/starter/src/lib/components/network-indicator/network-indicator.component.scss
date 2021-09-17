@@ -1,0 +1,36 @@
+.host {
+  z-index: 7;
+  position: fixed;
+  width: 200px;
+  left: 50%;
+  margin-left: -100px;
+  bottom: -5rem;
+  background: none;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  transition: .3s all ease;
+
+  &.show {
+    bottom: 1rem;
+  }
+
+  & .body {
+    display: flex;
+    align-items: center;
+    background: var(--app-color-foreground);
+    padding: .5rem 1rem;
+    border-radius: var(--app-size-radius);
+
+    & img {
+      width: 2rem;
+    }
+
+    & span {
+      display: inline-block;
+      color: var(--app-color-background);
+      margin-left: 1rem;
+    }
+  }
+}

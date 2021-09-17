@@ -65,6 +65,7 @@ const routes: Routes = [
   { path: 'component/oops', loadChildren: () => import('./pages/component/oops/oops.module').then(m => m.OopsPageModule) },
   { path: 'component/spinner', loadChildren: () => import('./pages/component/spinner/spinner.module').then(m => m.SpinnerPageModule) },
   { path: 'component/content', loadChildren: () => import('./pages/component/content/content.module').then(m => m.ContentPageModule) },
+  { path: 'component/network-indicator', loadChildren: () => import('./pages/component/network-indicator/network-indicator.module').then(m => m.NetworkIndicatorPageModule) },
   { path: 'component/nav-indicator', loadChildren: () => import('./pages/component/nav-indicator/nav-indicator.module').then(m => m.NavIndicatorPageModule) },
   { path: 'component/pwa-box', loadChildren: () => import('./pages/component/pwa-box/pwa-box.module').then(m => m.PwaBoxPageModule) },
   { path: 'component/pwa-reminder', loadChildren: () => import('./pages/component/pwa-reminder/pwa-reminder.module').then(m => m.PwaReminderPageModule) },

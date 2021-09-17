@@ -5,6 +5,7 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireStorage } from '@angular/fire/compat/storage';
 import {
   RouterLinkDirectiveModule,
+  NetworkService,
   LocalstorageService,
   CacheService,
   FetchService,
@@ -23,6 +24,7 @@ import { PageDataService, PostDataService, UserDataService, ProfileDataService }
 import {
   NguixHeaderComponentModule,
   NguixFooterComponentModule,
+  NguixNetworkIndicatorComponentModule,
   NguixNavIndicatorComponentModule,
   NguixPwaReminderComponentModule
 } from '@lamnhan/nguix-starter';
@@ -48,6 +50,7 @@ import { FooterComponentModule } from './components/footer/footer.module';
     FooterComponentModule,
     NguixHeaderComponentModule,
     NguixFooterComponentModule,
+    NguixNetworkIndicatorComponentModule,
     NguixNavIndicatorComponentModule,
     NguixPwaReminderComponentModule,
   ],
@@ -55,6 +58,7 @@ import { FooterComponentModule } from './components/footer/footer.module';
     AngularFireStorage,
     // useful normal services
     LocalstorageService,
+    NetworkService,
     CacheService,
     FetchService,
     AppService,

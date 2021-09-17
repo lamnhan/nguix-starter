@@ -1,0 +1,26 @@
+<div class="component-network-indicator-page">
+
+  <app-page
+    menuName="List of components"
+    [menuItems]="data.componentMenu"
+    [bodyTemplate]="pageBody"
+  ></app-page>
+
+  <ng-template #pageBody>
+
+    <app-compbody
+      [componentTemplate]="componentTemplate"
+      apiSrc="https://raw.githubusercontent.com/lamnhan/nguix-starter/main/docs/content/components/network-indicator.md"
+      importName="NguixNetworkIndicatorComponentModule"
+      htmlCode="&lt;nguix-network-indicator&gt;&lt;/nguix-network-indicator&gt;"
+    ></app-compbody>
+
+    <ng-template #componentTemplate>
+      <div class="padding">
+        Turn off your Wifi or cellular data to see the network indicator.
+      </div>
+    </ng-template>
+
+  </ng-template>
+
+</div>
