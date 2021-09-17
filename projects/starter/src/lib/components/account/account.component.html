@@ -1,5 +1,5 @@
 <ng-container *transloco="let t">
-<div class="host" *ngIf="userService.currentUser; else noUser">
+<div class="host" *ngIf="userService.currentUser">
 <ng-container *ngIf="userService.data; let data">
 <ng-container *ngIf="userService.publicData; let publicData">
 
@@ -102,9 +102,5 @@
 </ng-container>
 </ng-container>
 </div>
-
-<ng-template #noUser>
-  <p>No signed in user, <a [usefulRouterLink]="['login']">login here</a>!</p>
-</ng-template>
 
 </ng-container>

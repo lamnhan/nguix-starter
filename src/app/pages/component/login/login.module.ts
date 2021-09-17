@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterLinkDirectiveModule } from '@lamnhan/ngx-useful';
 import { NguixLoginComponentModule } from '@lamnhan/nguix-starter';
 
 import { PageComponentModule } from '../../../components/page/page.module';
@@ -15,6 +16,7 @@ import { LoginComponent } from './login.component';
   ],
   imports: [
     CommonModule,
+    RouterLinkDirectiveModule,
     PageComponentModule,
     CompbodyComponentModule,
     NguixLoginComponentModule,

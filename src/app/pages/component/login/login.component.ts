@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '@lamnhan/ngx-useful';
 
 import { DataService } from '../../../services/data.service';
 
@@ -9,7 +10,10 @@ import { DataService } from '../../../services/data.service';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(public readonly data: DataService) { }
+  constructor(
+    public readonly data: DataService,
+    public authService: AuthService,
+  ) {}
 
   ngOnInit(): void {
   }

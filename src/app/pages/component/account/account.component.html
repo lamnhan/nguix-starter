@@ -17,6 +17,13 @@
 
     <ng-template #componentTemplate>
       <div class="padding">
+        <div class="demo" *ngIf="!authService.authenticated">
+          <h3>Demo note</h3>
+          <ul>
+            <li>Step 1: Go to the <a [usefulRouterLink]="['component', 'login']">login</a> component.</li>
+            <li>Step 2: After logged in, return to this page.</li>
+          </ul>
+        </div>
         <nguix-account></nguix-account>
       </div>
     </ng-template>

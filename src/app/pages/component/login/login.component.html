@@ -17,6 +17,23 @@
 
     <ng-template #componentTemplate>
       <div class="padding">
+        <div class="demo">
+          <ng-container *ngIf="!authService.authenticated; else loggedIn;">
+            <h3>Demo note</h3>
+            <ul>
+              <li>Email: <strong>test@lamnhan.com</strong></li>
+              <li>Password: <strong>1234567890</strong></li>
+            </ul>
+          </ng-container>
+          <ng-template #loggedIn>
+            <h3>Account</h3>
+            <ul>
+              <li>Email: <strong>test@lamnhan.com</strong></li>
+              <li>Manage: Go to my <a [usefulRouterLink]="['component', 'account']">account</a>.</li>
+            </ul>
+          </ng-template>
+          <hr>
+        </div>
         <nguix-login [withSocials]="['google','facebook']"></nguix-login>
       </div>
     </ng-template>
