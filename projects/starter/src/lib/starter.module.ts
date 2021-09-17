@@ -20,6 +20,7 @@ import { NguixPostComponentModule } from './components/post/post.module';
 import { NguixVideosComponentModule } from './components/videos/videos.module';
 import { NguixSkeletonVideosComponentModule } from './components/videos/skeleton-videos/skeleton-videos.module';
 import { NguixVideoComponentModule } from './components/video/video.module';
+import { NguixSkeletonVideoComponentModule } from './components/video/skeleton-video/skeleton-video.module';
 import { NguixVideoPlayerComponentModule } from './components/video-player/video-player.module';
 import { NguixImageCropperComponentModule } from './components/image-cropper/image-cropper.module';
 
@@ -46,6 +47,7 @@ import { NguixImageCropperComponentModule } from './components/image-cropper/ima
     NguixVideosComponentModule,
     NguixSkeletonVideosComponentModule,
     NguixVideoComponentModule,
+    NguixSkeletonVideoComponentModule,
     NguixVideoPlayerComponentModule,
     NguixImageCropperComponentModule,
   ],
@@ -70,6 +72,7 @@ import { NguixImageCropperComponentModule } from './components/image-cropper/ima
     NguixVideosComponentModule,
     NguixSkeletonVideosComponentModule,
     NguixVideoComponentModule,
+    NguixSkeletonVideoComponentModule,
     NguixVideoPlayerComponentModule,
     NguixImageCropperComponentModule
   ]

@@ -1,0 +1,84 @@
+.skeleton {
+  border-radius: var(--app-size-radius);
+  margin-bottom: .1rem;
+}
+
+.host {
+
+  .player {
+    overflow: hidden;
+    padding-top: 56.25%;
+    width: 100%;
+  }
+
+  .main {
+    margin-top: 1.25rem;
+
+    .categories {
+
+      .category {
+        width: 5rem;
+        height: 1rem;
+        margin-right: .5rem;
+      }
+    }
+  
+    .title {
+      margin-top: .25rem;
+      width: 100%;
+      height: 2rem;
+    }
+  
+    .info {
+      margin-top: .25rem;
+  
+      .date {
+        width: 7rem;
+      }
+    }
+  
+    .content {
+      margin-top: 1.25rem;
+  
+      .line1, .line2 {
+        width: 100%;
+        height: 1rem;
+      }
+
+      .line3 {
+        width: 50%;
+        height: 1rem;
+      }
+    }
+
+    .misc {
+      display: flex;
+      flex-wrap: nowrap;
+      margin-top: 1rem;
+  
+      .stats {
+        flex: 1;
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+  
+        .item {
+          width: 3rem;
+          height: 1.25rem;
+          margin-right: .5rem;
+        }
+      }
+  
+      .actions {
+        
+        .item {
+          width: 1.5rem;
+          height: 1.5rem;
+          border-radius: 100%;
+          margin-left: .5rem;
+        }
+      }   
+    }
+  }
+
+}

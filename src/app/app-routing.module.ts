@@ -78,6 +78,7 @@ const routes: Routes = [
   { path: 'component/videos', loadChildren: () => import('./pages/component/videos/videos.module').then(m => m.VideosPageModule) },
   { path: 'component/skeleton-videos', loadChildren: () => import('./pages/component/skeleton-videos/skeleton-videos.module').then(m => m.SkeletonVideosPageModule) },
   { path: 'component/video', loadChildren: () => import('./pages/component/video/video.module').then(m => m.VideoPageModule) },
+  { path: 'component/skeleton-video', loadChildren: () => import('./pages/component/skeleton-video/skeleton-video.module').then(m => m.SkeletonVideoPageModule) },
   { path: 'component/video-player', loadChildren: () => import('./pages/component/video-player/video-player.module').then(m => m.VideoPlayerPageModule) },
   { path: 'component/image-cropper', loadChildren: () => import('./pages/component/image-cropper/image-cropper.module').then(m => m.ImageCropperPageModule) },
 

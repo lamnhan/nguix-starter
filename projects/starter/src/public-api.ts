@@ -59,6 +59,8 @@ export * from './lib/components/videos/skeleton-videos/skeleton-videos.component
 export * from './lib/components/videos/skeleton-videos/skeleton-videos.module';
 export * from './lib/components/video/video.component';
 export * from './lib/components/video/video.module';
+export * from './lib/components/video/skeleton-video/skeleton-video.component';
+export * from './lib/components/video/skeleton-video/skeleton-video.module';
 export * from './lib/components/video-player/video-player.component';
 export * from './lib/components/video-player/video-player.module';
 export * from './lib/components/image-cropper/image-cropper.component';

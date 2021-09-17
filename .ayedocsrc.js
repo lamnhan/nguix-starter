@@ -31,6 +31,7 @@ module.exports = {
     'docs/content/components/videos.md': {main: ['VideosComponent', 'SUMMARY_PROPERTIES']},
     'docs/content/components/skeleton-videos.md': {main: ['SkeletonVideosComponent', 'SUMMARY_PROPERTIES']},
     'docs/content/components/video.md': {main: ['VideoComponent', 'SUMMARY_PROPERTIES']},
+    'docs/content/components/skeleton-video.md': {main: ['SkeletonVideoComponent', 'SUMMARY_PROPERTIES']},
     'docs/content/components/video-player.md': {main: ['VideoPlayerComponent', 'SUMMARY_PROPERTIES']},
     'docs/content/components/image-cropper.md': {main: ['ImageCropperComponent', 'SUMMARY_PROPERTIES']},
     // pages
