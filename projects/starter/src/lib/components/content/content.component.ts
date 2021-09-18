@@ -58,7 +58,7 @@ export class ContentComponent implements OnInit, OnChanges {
   ngOnChanges() {
     if ((this.input || '').indexOf('docs.google.com') !== -1) {
       this.googleDoc = this.fetchService
-        .get<string>(this.input as string, undefined, false)
+        .getText(this.input as string)
         .pipe(
           catchError(() => of('')),
           map(result => {
