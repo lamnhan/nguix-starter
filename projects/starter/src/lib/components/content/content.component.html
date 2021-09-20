@@ -1,18 +1,18 @@
-<article class="host">
+<article class="host" #article>
   <ng-container *ngIf="googleDoc; else normalContent;">
   <ng-container *ngIf="googleDoc | async; let content;">
-    <markdown [data]="content" (ready)="ready.emit()"></markdown>
+    <markdown [data]="content" (ready)="ready.emit(article)"></markdown>
   </ng-container>
   </ng-container>
   <ng-template #normalContent>
     <markdown
       *ngIf="isExternal; else directContent;"
       [src]="input"
-      (load)="load.emit($event)"
+      (load)="ready.emit(article)"
       (error)="error.emit($event)"
     ></markdown>
     <ng-template #directContent>
-      <markdown [data]="input" (ready)="ready.emit()"></markdown>
+      <markdown [data]="input" (ready)="ready.emit(article)"></markdown>
     </ng-template>
   </ng-template>
 </article>

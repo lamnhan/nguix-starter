@@ -16,19 +16,14 @@ export class ContentComponent implements OnInit, OnChanges {
   @Input() input?: string = '';
 
   /**
-   * Output() Content from text ready
+   * Output() Content from text ready or url loaded
    */
-  @Output() ready: EventEmitter<void> = new EventEmitter();
-
-  /**
-   * Output() Finish loading content from url
-   */
-  @Output() load: EventEmitter<any> = new EventEmitter();
+  @Output() ready = new EventEmitter<HTMLElement>();
 
   /**
    * Output() Loading content from url failed
    */
-  @Output() error: EventEmitter<any> = new EventEmitter();
+  @Output() error = new EventEmitter();
 
   /**
    * @ignore

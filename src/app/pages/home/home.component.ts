@@ -50,7 +50,6 @@ const routes: Routes = [
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
 }
