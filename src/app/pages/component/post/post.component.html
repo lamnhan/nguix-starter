@@ -17,7 +17,7 @@
 
     <ng-template #componentTemplate>
       <div class="padding">
-        <ng-container *ngIf="'post-1' | postDataGet | async; let post;">
+        <ng-container *ngIf="'a-sample-post' | postDataGet | async; let post;">
           <nguix-post [post]="post"></nguix-post>
         </ng-container>
       </div>

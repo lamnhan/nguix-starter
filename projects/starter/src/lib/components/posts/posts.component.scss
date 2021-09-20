@@ -107,9 +107,10 @@
             color: var(--app-color-medium);
           }
         }
-
+        
         .description {
           flex: 1;
+          color: var(--app-color-medium);
           margin-top: .5rem;
         }
         
@@ -161,7 +162,6 @@
   }
 
 }
-
 
 @media only screen and (min-width: 480px) {}
 

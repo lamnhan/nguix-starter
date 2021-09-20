@@ -42,7 +42,39 @@
  * ====================================================
  */
 
+app-compbody nguix-content markdown {
+
+  h2 {
+    font-size: 1.2rem !important;
+    margin-top: 2rem;
+
+    & + p {
+      font-size: 1rem;
+      color: var(--app-color-foreground);
+    }
+  }
+
+  p {
+    word-break: break-word !important;
+  }
+
+  img {
+    width: auto !important;
+    height: auto !important;
+    max-width: 100% !important;
+  }
+
+  table tbody tr td {
+    vertical-align: top !important;
+  }
+
+}
+
 nguix-content markdown {
+
+  p {
+    word-break: break-word;
+  }
 
   h1 {
     display: none;

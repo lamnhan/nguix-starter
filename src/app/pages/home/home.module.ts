@@ -6,7 +6,7 @@ import { NguixIconComponentModule, NguixContentComponentModule } from '@lamnhan/
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 
-// import { NguixSkeletonVideoComponentModule } from '../../../../projects/starter/src/lib/components/video/skeleton-video/skeleton-video.module';
+import { NguixSkeletonPostsComponentModule } from '../../../../projects/starter/src/lib/components/posts/skeleton-posts/skeleton-posts.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +18,7 @@ import { HomeComponent } from './home.component';
     NguixIconComponentModule,
     NguixContentComponentModule,
     HomeRoutingModule,
-    // NguixSkeletonVideoComponentModule
+    NguixSkeletonPostsComponentModule
   ]
 })
 export class HomePageModule {}

@@ -58,7 +58,7 @@ export class ContentComponent implements OnInit, OnChanges {
   ngOnChanges() {
     if ((this.input || '').indexOf('docs.google.com') !== -1) {
       this.googleDoc = this.fetchService
-        .getText(this.input as string)
+        .getText(this.input as string, { group: 'nguix-content' })
         .pipe(
           catchError(() => of('')),
           map(result => {
@@ -66,8 +66,17 @@ export class ContentComponent implements OnInit, OnChanges {
             const startAt = content.indexOf('</head>');
             const endAt = content.indexOf('</body>');
             return content
+              // extract content
               .substring(startAt + 7, endAt)
-              .replace(/<body(.*?)>/, '');
+              .replace(/<body(.*?)>/, '')
+              // remove attributes
+              .replace(/ class="(.*?)"/g, '')
+              .replace(/ style="(.*?)"/g, '')
+              // decode html entities
+              .replace(/&lt;/g, '<')
+              .replace(/&gt;/g, '>')
+              .replace(/&quot;|&ldquo;|&rdquo;/g, '"')
+              .replace(/&lsquo;|&rsquo;/g, `'`);
           }),
         );
     } else {

@@ -52,6 +52,8 @@ export * from './lib/components/account/account-i18n.module';
 export * from './lib/components/posts/posts.component';
 export * from './lib/components/posts/posts.module';
 export * from './lib/components/posts/posts-i18n.module';
+export * from './lib/components/posts/skeleton-posts/skeleton-posts.component';
+export * from './lib/components/posts/skeleton-posts/skeleton-posts.module';
 export * from './lib/components/post/post.component';
 export * from './lib/components/post/post.module';
 export * from './lib/components/post/post-i18n.module';

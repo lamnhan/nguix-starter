@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, Output } from '@angular/core';
 import { Post } from '@lamnhan/schemata';
 
-export type PostsLayouts = 'thumbnail' | 'card';
+type PostsLayouts = 'thumbnail' | 'card';
 
 @Component({
   selector: 'nguix-posts',

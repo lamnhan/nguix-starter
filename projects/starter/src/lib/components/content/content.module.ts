@@ -30,7 +30,7 @@ import { ContentComponent } from './content.component';
     MarkdownService,
     {
       provide: SECURITY_CONTEXT,
-      useValue: SecurityContext.HTML
+      useValue: SecurityContext.NONE
     },
   ],
   exports: [ContentComponent]

@@ -17,7 +17,7 @@ export class SplashbodyComponent implements OnInit {
 
   ngOnInit(): void {
     this.fetchService
-      .get(this.splashscreenUrl, undefined, false)
+      .getText(this.splashscreenUrl)
       .pipe(take(1))
       .subscribe(htmlCode => {
         // extract content

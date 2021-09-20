@@ -17,6 +17,7 @@ import { NguixLoginComponentModule } from './components/login/login.module';
 import { NguixRegisterComponentModule } from './components/register/register.module';
 import { NguixAccountComponentModule } from './components/account/account.module';
 import { NguixPostsComponentModule } from './components/posts/posts.module';
+import { NguixSkeletonPostsComponentModule } from './components/posts/skeleton-posts/skeleton-posts.module';
 import { NguixPostComponentModule } from './components/post/post.module';
 import { NguixVideosComponentModule } from './components/videos/videos.module';
 import { NguixSkeletonVideosComponentModule } from './components/videos/skeleton-videos/skeleton-videos.module';
@@ -45,6 +46,7 @@ import { NguixImageCropperComponentModule } from './components/image-cropper/ima
     NguixRegisterComponentModule,
     NguixAccountComponentModule,
     NguixPostsComponentModule,
+    NguixSkeletonPostsComponentModule,
     NguixPostComponentModule,
     NguixVideosComponentModule,
     NguixSkeletonVideosComponentModule,
@@ -71,6 +73,7 @@ import { NguixImageCropperComponentModule } from './components/image-cropper/ima
     NguixRegisterComponentModule,
     NguixAccountComponentModule,
     NguixPostsComponentModule,
+    NguixSkeletonPostsComponentModule,
     NguixPostComponentModule,
     NguixVideosComponentModule,
     NguixSkeletonVideosComponentModule,

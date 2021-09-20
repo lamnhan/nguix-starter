@@ -33,7 +33,7 @@
       <div class="info">
         <div class="author" *ngIf="postItem.authors | o1i; let author">
           <a class="muted" [usefulRouterLink]="[author.id]" [usefulRouterBackwardable]="true">
-            <img [src]="author.thumbnail" [alt]="author.title">
+            <img [src]="(author.thumbnails?.sm || author.thumbnails?.default)?.src" [alt]="author.title">
             <span>{{ author.title }}</span>
           </a>
         </div>

@@ -1,6 +1,15 @@
 .host {
 
+  .image {
+    overflow: hidden;
+
+    img {
+      width: 100%;
+    }
+  }
+
   .categories {
+    margin-top: 1rem;
 
     a.category {
       text-transform: uppercase;
@@ -50,15 +59,6 @@
 
     .duration {
       color: var(--app-color-medium);
-    }
-  }
-
-  .image {
-    margin-top: 1rem;
-    overflow: hidden;
-
-    img {
-      width: 100%;
     }
   }
 
