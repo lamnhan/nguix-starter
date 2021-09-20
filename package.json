@@ -47,7 +47,7 @@
     "@lamnhan/ngx-useful": "0.0.32",
     "@lamnhan/schemata": "0.0.24",
     "@ngxs/store": "^3.7.2",
-    "@unistylus/bootstrap": "0.0.8",
+    "@unistylus/bootstrap": "0.0.9",
     "@unistylus/core": "0.0.4",
     "croppie": "^2.6.5",
     "ngx-markdown": "^11.1.3",

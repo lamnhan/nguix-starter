@@ -13,9 +13,9 @@ export class AccountComponent implements OnInit {
   @Input() i18n = false;
 
   /**
-   * Input() Enable localization
+   * Input() Public profile url segment
    */
-  @Input() publicProfileUrlSegment = '';
+  @Input() profileUrlSegment = '';
 
   /**
    * Input() The email verification text. For i18n: NGUIX_ACCOUNT.VERIFY_EMAIL
@@ -94,9 +94,9 @@ export class AccountComponent implements OnInit {
    */
   openPublicProfile() {
     if (this.userService.username && this.userService.publicData?.status === 'publish') {
-      const routerLink = !this.publicProfileUrlSegment
+      const routerLink = !this.profileUrlSegment
         ? [this.userService.username]
-        : [this.publicProfileUrlSegment, this.userService.username];
+        : [this.profileUrlSegment, this.userService.username];
       return this.navService.navigate(routerLink);
     } else {
       return this.alertService.confirm(

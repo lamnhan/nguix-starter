@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Video } from '@lamnhan/schemata';
 import { NavService } from '@lamnhan/ngx-useful';
 
@@ -18,6 +18,11 @@ export class VideoComponent implements OnInit {
    * Input() The post
    */
   @Input() video!: Video;
+  
+  /**
+   * Input() When content is ready
+   */
+   @Output() contentReady = new EventEmitter<HTMLElement>();
 
   constructor(
     /**

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Post } from '@lamnhan/schemata';
 import { NavService } from '@lamnhan/ngx-useful';
 
@@ -20,6 +20,11 @@ export class PostComponent implements OnInit {
   @Input() post!: Post;
 
   /**
+   * Input() Author url segment
+   */
+  @Input() authorUrlSegment?: string;
+
+  /**
    * Input() Minute to read text. For i18n: `NGUIX_POST.MIN_READ`
    */
   @Input() MIN_READ = 'min read';
@@ -33,6 +38,11 @@ export class PostComponent implements OnInit {
    * Input() TOC title. For i18n: `NGUIX_POST.TOC_TITLE`
    */
   @Input() TOC_TITLE = 'In this post';
+
+  /**
+   * Input() When content is ready
+   */
+  @Output() contentReady = new EventEmitter<HTMLElement>();
 
   constructor(
     /**
