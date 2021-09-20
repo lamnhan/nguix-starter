@@ -73,9 +73,19 @@ export class DataService {
         routerLink: ['component', 'posts']
       },
       {
+        text: 'Skeleton posts',
+        level: 1,
+        routerLink: ['component', 'skeleton-posts']
+      },
+      {
         text: 'Post',
         level: 1,
         routerLink: ['component', 'post']
+      },
+      {
+        text: 'Skeleton post',
+        level: 1,
+        routerLink: ['component', 'skeleton-post']
       },
       {
         text: 'Videos',
