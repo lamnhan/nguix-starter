@@ -6,7 +6,8 @@ import { NguixIconComponentModule, NguixContentComponentModule } from '@lamnhan/
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 
-import { NguixSkeletonPostsComponentModule } from '../../../../projects/starter/src/lib/components/posts/skeleton-posts/skeleton-posts.module';
+// import { NguixSkeletonPostsComponentModule } from '../../../../projects/starter/src/lib/components/posts/skeleton-posts/skeleton-posts.module';
+// import { NguixSkeletonPostComponentModule } from '../../../../projects/starter/src/lib/components/post/skeleton-post/skeleton-post.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { NguixSkeletonPostsComponentModule } from '../../../../projects/starter/
     NguixIconComponentModule,
     NguixContentComponentModule,
     HomeRoutingModule,
-    NguixSkeletonPostsComponentModule
+    // NguixSkeletonPostsComponentModule,
+    // NguixSkeletonPostComponentModule
   ]
 })
 export class HomePageModule {}
