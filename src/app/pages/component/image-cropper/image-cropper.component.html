@@ -12,13 +12,13 @@
       [componentTemplate]="componentTemplate"
       apiSrc="https://raw.githubusercontent.com/lamnhan/nguix-starter/main/docs/content/components/image-cropper.md"
       importName="NguixImageCropperComponentModule"
-      htmlCode="&lt;nguix-image-cropper&gt;&lt;/nguix-image-cropper&gt;"
+      htmlCode="&lt;nguix-image-cropper url=&quot;path_to_image&quot;&gt;&lt;/nguix-image-cropper&gt;"
     ></app-compbody>
 
     <ng-template #componentTemplate>
       <div class="padding">
         <nguix-image-cropper
-          url="https://source.unsplash.com/mawU2PoJWfU/1920x1080"
+          url="https://nguix-starter.lamnhan.com/assets/images/featured.jpg"
           [options]="cropperOptions"
         ></nguix-image-cropper>
       </div>

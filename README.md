@@ -126,6 +126,8 @@ Also, visit the [homepage](https://nguix-starter.lamnhan.com).
 | [PwaReminderComponent](https://nguix-starter.lamnhan.com/content/reference/classes/pwaremindercomponent.html)           |             |
 | [RegisterComponent](https://nguix-starter.lamnhan.com/content/reference/classes/registercomponent.html)                 |             |
 | [ShareComponent](https://nguix-starter.lamnhan.com/content/reference/classes/sharecomponent.html)                       |             |
+| [SkeletonPostComponent](https://nguix-starter.lamnhan.com/content/reference/classes/skeletonpostcomponent.html)         |             |
+| [SkeletonPostsComponent](https://nguix-starter.lamnhan.com/content/reference/classes/skeletonpostscomponent.html)       |             |
 | [SkeletonVideoComponent](https://nguix-starter.lamnhan.com/content/reference/classes/skeletonvideocomponent.html)       |             |
 | [SkeletonVideosComponent](https://nguix-starter.lamnhan.com/content/reference/classes/skeletonvideoscomponent.html)     |             |
 | [SpinnerComponent](https://nguix-starter.lamnhan.com/content/reference/classes/spinnercomponent.html)                   |             |
