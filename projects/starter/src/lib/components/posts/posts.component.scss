@@ -41,7 +41,7 @@
           left: 0;
           overflow: hidden;
           border-radius: var(--app-size-radius);
-          background: var(--app-color-medium);
+          background: var(--app-color-background-shade);
 
           &, & img {
             display: block;
@@ -145,7 +145,7 @@
           right: 0;
           bottom: 0;
           left: 0;
-          background: var(--app-color-medium);
+          background: var(--app-color-background-shade);
 
           &, & img {
             display: block;
