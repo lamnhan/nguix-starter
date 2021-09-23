@@ -29,10 +29,10 @@
   </section>
 
   <section class="test padding">
-    <nguix-posts layout="card" [posts]="(2 | postDataList : { name: 'all posts' } | async) || []"></nguix-posts>
-    <nguix-posts layout="thumbnail" [posts]="(2 | postDataList : { name: 'all posts' } | async) || []"></nguix-posts>
-    <nguix-skeleton-posts layout="card"></nguix-skeleton-posts>
-    <nguix-skeleton-posts layout="thumbnail"></nguix-skeleton-posts>
+    <nguix-videos layout="card" [videos]="(2 | videoDataList : { name: 'all videos' } | async) || []"></nguix-videos>
+    <nguix-skeleton-videos layout="card"></nguix-skeleton-videos>
+    <nguix-videos layout="thumbnail" [videos]="(2 | videoDataList : { name: 'all videos' } | async) || []"></nguix-videos>
+    <nguix-skeleton-videos layout="thumbnail"></nguix-skeleton-videos>
   </section>
 
   <section class="features">

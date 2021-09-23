@@ -7,7 +7,83 @@
   }
 
   &.list-thumbnail {
+    display: flex;
+    flex-wrap: wrap;
 
+    li {
+      width: 100%;
+      display: flex;
+      flex-wrap: nowrap;
+      background: var(--app-color-background);
+      margin-bottom: 1rem;
+      overflow: hidden;
+      
+      .head {
+        position: relative;
+        overflow: hidden;
+        padding-top: 19.69%;
+        width: 35%;
+        
+        .thumbnail {
+          overflow: hidden;
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          border-radius: var(--app-size-radius);
+          background: var(--app-color-background-shade);
+
+          &, & img {
+            display: block;
+            width: 100%;
+          }
+        }
+
+        .duration {
+          position: absolute;
+          right: .25rem;
+          bottom: .25rem;
+          padding: .1rem .25rem;
+          border-radius: var(--app-size-radius);
+          background: var(--app-color-dark);
+          color: var(--app-color-light);
+          font-size: .7rem;
+        }
+      }
+
+      .body {
+        flex: 1;
+        display: flex;
+        flex-flow: column;
+        padding: 0;
+        margin-left: 1rem;
+
+        .title {
+          font-size: 1rem;
+          font-family: var(--app-font-head);
+          font-weight: 500;
+
+          a {
+            color: var(--app-color-foreground);
+          }
+        }
+
+        .info {
+          margin-top: .5rem;
+          margin-bottom: .5rem;
+          color: var(--app-color-medium);
+          font-size: .9rem;
+          display: flex;
+          flex-wrap: nowrap;
+          align-items: center;
+
+          .view {
+            flex: 1;
+          }
+        }
+      }
+    }
   }
 
   &.list-card {
@@ -35,6 +111,7 @@
           right: 0;
           bottom: 0;
           left: 0;
+          background: var(--app-color-background-shade);
 
           &, & img {
             display: block;
