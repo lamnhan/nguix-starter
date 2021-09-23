@@ -26,42 +26,46 @@
 
     <div class="body">
 
-      <div class="title">
-        <a [usefulRouterLink]="['post', postItem.id]" [usefulRouterBackwardable]="true">{{ postItem.title }}</a>
+      <div class="major">
+
+        <div class="title">
+          <a [usefulRouterLink]="['post', postItem.id]" [usefulRouterBackwardable]="true">{{ postItem.title }}</a>
+        </div>
+  
+        <div class="info">
+          <div class="author truncate" *ngIf="postItem.authors | o1i; let author">
+            <a
+              class="muted"
+              [usefulRouterLink]="!authorUrlSegment ? [author.id] : [authorUrlSegment, author.id]"
+              [usefulRouterBackwardable]="true"
+            >
+              <img [src]="(author.thumbnails?.sm || author.thumbnails?.default)?.src" [alt]="author.title">
+              <span>{{ author.title }}</span>
+            </a>
+          </div>
+          <div class="date">{{ postItem.createdAt | date }}</div>
+          <div class="duration">{{ postItem.duration }} {{ !i18n ? MIN_READ : t('NGUIX_POSTS.MIN_READ') || MIN_READ }}</div>
+        </div>
+  
+        <div class="description" [innerHtml]="postItem.description"></div>
+      
       </div>
 
-      <div class="info">
-        <div class="author" *ngIf="postItem.authors | o1i; let author">
-          <a
-            class="muted"
-            [usefulRouterLink]="!authorUrlSegment ? [author.id] : [authorUrlSegment, author.id]"
-            [usefulRouterBackwardable]="true"
-          >
-            <img [src]="(author.thumbnails?.sm || author.thumbnails?.default)?.src" [alt]="author.title">
-            <span>{{ author.title }}</span>
-          </a>
+      <div class="minor">
+  
+        <div class="stats">
+          <div class="likes" *ngIf="postItem.likeCount">
+            <i class="icon icon-love"></i> <span>{{ postItem.likeCount }}</span>
+          </div>
+          <div class="comments" *ngIf="postItem.commentCount">
+            <i class="icon icon-comment"></i> <span>{{ postItem.commentCount }}</span>
+          </div>
         </div>
-        <div class="date">{{ postItem.createdAt | date }}</div>
-        <div class="duration">{{ postItem.duration }} {{ !i18n ? MIN_READ : t('NGUIX_POSTS.MIN_READ') || MIN_READ }}</div>
-      </div>
-
-      <div class="description" [innerHtml]="postItem.description"></div>
-
-    </div>
-
-    <div class="foot">
-
-      <div class="stats">
-        <div class="likes" *ngIf="postItem.likeCount">
-          <i class="icon icon-love"></i> <span>{{ postItem.likeCount }}</span>
+  
+        <div class="action">
+          <a [usefulRouterLink]="['post', postItem.id]" [usefulRouterBackwardable]="true">{{ !i18n ? READ_MORE : t('NGUIX_POSTS.READ_MORE') || READ_MORE }} &#x2192;</a>
         </div>
-        <div class="comments" *ngIf="postItem.commentCount">
-          <i class="icon icon-comment"></i> <span>{{ postItem.commentCount }}</span>
-        </div>
-      </div>
-
-      <div class="action">
-        <a [usefulRouterLink]="['post', postItem.id]" [usefulRouterBackwardable]="true">{{ !i18n ? READ_MORE : t('NGUIX_POSTS.READ_MORE') || READ_MORE }} &#x2192;</a>
+  
       </div>
 
     </div>

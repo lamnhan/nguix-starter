@@ -7,7 +7,116 @@
   }
 
   &.list-thumbnail {
+    display: flex;
+    flex-wrap: wrap;
 
+    li {
+      width: 100%;
+      overflow: hidden;
+      display: flex;
+      flex-wrap: nowrap;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      border-top: 1px solid var(--app-color-background-shade);
+
+      &:first-child {
+        border-top: none;
+      }
+      
+      &:last-child {
+        border-bottom: 1px solid var(--app-color-background-shade);
+      }
+
+      .head {
+        position: relative;
+        overflow: hidden;
+        padding-top: 19.69%;
+        width: 35%;
+          
+        .thumbnail {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          overflow: hidden;
+          border-radius: var(--app-size-radius);
+          background: var(--app-color-medium);
+
+          &, & img {
+            display: block;
+            width: 100%;
+          }
+        }
+
+        .category {
+          display: none;
+        }
+      }
+
+      .body {
+        flex: 1;
+        margin-left: 1rem;
+        position: relative;
+
+        .major {
+          width: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+
+          .title {
+            font-size: 1rem;
+            font-family: var(--app-font-head);
+            font-weight: 500;
+  
+            a {
+              color: var(--app-color-foreground);
+            }
+          }
+
+          .info {
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            margin-top: .5rem;
+  
+            .author {
+              flex: 1;
+  
+              img {
+                width: 1.25rem;
+                height: 1.25rem;
+                border-radius: 100%;
+                box-shadow: 0 0 1px var(--app-color-medium);
+              }
+  
+              span {
+                font-size: .9rem;
+                margin-left: .5rem;
+              }
+            }
+            
+            .date {
+              display: none;
+            }
+            
+            .duration {
+              font-size: .9rem;
+              color: var(--app-color-medium);
+            }
+          }
+          
+          .description {
+            display: none;
+          }
+        }
+
+        .minor {
+          display: none;
+        }
+      }
+    }
   }
 
   &.list-card {
@@ -36,6 +145,7 @@
           right: 0;
           bottom: 0;
           left: 0;
+          background: var(--app-color-medium);
 
           &, & img {
             display: block;
@@ -64,96 +174,98 @@
 
       .body {
         flex: 1;
-        display: flex;
-        flex-flow: column;
-        padding: 0 1rem;
-        margin-top: 1rem;
 
-        .title {
-          font-size: 1.2rem;
-          font-family: var(--app-font-head);
-          font-weight: 500;
-
-          a {
-            color: var(--app-color-foreground);
-          }
-        }
-
-        .info {
+        .major {
           display: flex;
-          flex-wrap: wrap;
-          margin-top: .5rem;
-
-          .author {
+          flex-flow: column;
+          padding: 0 1rem;
+          margin-top: 1rem;
+  
+          .title {
+            font-size: 1.2rem;
+            font-family: var(--app-font-head);
+            font-weight: 500;
+  
+            a {
+              color: var(--app-color-foreground);
+            }
+          }
+  
+          .info {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: .5rem;
+  
+            .author {
+              flex: 1;
+  
+              img {
+                width: 1.75rem;
+                height: 1.75rem;
+                border-radius: 100%;
+                box-shadow: 0 0 1px var(--app-color-medium);
+              }
+  
+              span {
+                margin-left: .75rem;
+              }
+            }
+  
+            .date {
+              display: none;
+            }
+  
+            .duration {
+              color: var(--app-color-medium);
+            }
+          }
+          
+          .description {
             flex: 1;
-
-            img {
-              width: 1.75rem;
-              height: 1.75rem;
-              border-radius: 100%;
-              box-shadow: 0 0 1px var(--app-color-medium);
-            }
-
-            span {
-              margin-left: .75rem;
-            }
-          }
-
-          .date {
-            display: none;
-          }
-
-          .duration {
             color: var(--app-color-medium);
+            margin-top: .5rem;
           }
         }
         
-        .description {
-          flex: 1;
-          color: var(--app-color-medium);
-          margin-top: .5rem;
-        }
-        
-      }
-
-      .foot {
-        display: flex;
-        flex-wrap: nowrap;
-        padding: 0 1rem;
-        margin-top: 1rem;
-        margin-bottom: .5rem;
-
-        .stats {
-          flex: 1;
+        .minor {
           display: flex;
           flex-wrap: nowrap;
-
-          span {
-            margin-left: .25rem;
-          }
-
-          .likes, .comments {
-            margin-right: 1rem;
+          padding: 0 1rem;
+          margin-top: 1rem;
+          margin-bottom: .5rem;
+  
+          .stats {
+            flex: 1;
             display: flex;
             flex-wrap: nowrap;
-            align-items: center;
-          }
-
-          .likes {
-
-            i.icon {
-              opacity: .3;
-              width: 1.2rem;
-              height: 1.2rem;
+  
+            span {
+              margin-left: .25rem;
             }
-          }
-
-          .comments {
-
-            i.icon {
-              opacity: .3;
-              width: 1rem;
-              height: 1rem;
+  
+            .likes, .comments {
+              margin-right: 1rem;
+              display: flex;
+              flex-wrap: nowrap;
+              align-items: center;
+            }
+  
+            .likes {
+  
+              i.icon {
+                opacity: .3;
+                width: 1.2rem;
+                height: 1.2rem;
+              }
+            }
+  
+            .comments {
+  
+              i.icon {
+                opacity: .3;
+                width: 1rem;
+                height: 1rem;
+              }
             }
           }
         }
