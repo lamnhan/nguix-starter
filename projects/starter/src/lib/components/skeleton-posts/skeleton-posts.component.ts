@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output } from '@angular/core';
 
-type PostsLayouts = 'thumbnail' | 'card';
+type PostsLayouts = 'thumbnail' | 'card' | 'hybrid';
 
 @Component({
   selector: 'nguix-skeleton-posts',

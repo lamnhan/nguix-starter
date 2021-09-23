@@ -29,12 +29,12 @@
   </section>
 
   <section class="test padding">
-    <nguix-videos layout="card" [videos]="(2 | videoDataList : { name: 'all videos' } | async) || []"></nguix-videos>
-    <nguix-skeleton-videos layout="card" [no]="2"></nguix-skeleton-videos>
-    <nguix-videos layout="thumbnail" [videos]="(2 | videoDataList : { name: 'all videos' } | async) || []"></nguix-videos>
-    <nguix-skeleton-videos layout="thumbnail" [no]="2"></nguix-skeleton-videos>
-    <nguix-videos layout="hybrid" [videos]="(2 | videoDataList : { name: 'all videos' } | async) || []"></nguix-videos>
-    <nguix-skeleton-videos layout="hybrid" [no]="2"></nguix-skeleton-videos>
+    <nguix-posts layout="card" [posts]="(2 | postDataList : { name: 'all posts' } | async) || []"></nguix-posts>
+    <nguix-skeleton-posts layout="card" [no]="2"></nguix-skeleton-posts>
+    <nguix-posts layout="thumbnail" [posts]="(2 | postDataList : { name: 'all posts' } | async) || []"></nguix-posts>
+    <nguix-skeleton-posts layout="thumbnail" [no]="2"></nguix-skeleton-posts>
+    <nguix-posts layout="hybrid" [posts]="(2 | postDataList : { name: 'all posts' } | async) || []"></nguix-posts>
+    <nguix-skeleton-posts layout="hybrid" [no]="2"></nguix-skeleton-posts>
   </section>
 
   <section class="features">
