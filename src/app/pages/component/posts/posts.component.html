@@ -17,10 +17,12 @@
 
     <ng-template #componentTemplate>
       <div class="padding">
-        <nguix-posts
-          layout="card"
-          [posts]="(5 | postDataList : { name: 'all posts' } | async) || []"
-        ></nguix-posts>
+        <h3 class="margin-top-3x margin-bottom">layout="card"</h3>
+        <nguix-posts layout="card" [posts]="(3 | postDataList : { name: 'all posts' } | async) || []"></nguix-posts>
+        <h3 class="margin-top-3x margin-bottom">layout="thumbnail"</h3>
+        <nguix-posts layout="thumbnail" [posts]="(3 | postDataList : { name: 'all posts' } | async) || []"></nguix-posts>
+        <h3 class="margin-top-3x margin-bottom">layout="hybrid"</h3>
+        <nguix-posts layout="hybrid" [posts]="(3 | postDataList : { name: 'all posts' } | async) || []"></nguix-posts>
       </div>
     </ng-template>
 

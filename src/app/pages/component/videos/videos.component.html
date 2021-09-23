@@ -17,10 +17,12 @@
 
     <ng-template #componentTemplate>
       <div class="padding">
-        <nguix-videos
-          layout="card"
-          [videos]="(5 | videoDataList : { name: 'all videos' } | async) || []"
-        ></nguix-videos>
+        <h3 class="margin-top-3x margin-bottom">layout="card"</h3>
+        <nguix-videos layout="card" [videos]="(3 | videoDataList : { name: 'all videos' } | async) || []"></nguix-videos>
+        <h3 class="margin-top-3x margin-bottom">layout="thumbnail"</h3>
+        <nguix-videos layout="thumbnail" [videos]="(3 | videoDataList : { name: 'all videos' } | async) || []"></nguix-videos>
+        <h3 class="margin-top-3x margin-bottom">layout="hybrid"</h3>
+        <nguix-videos layout="hybrid" [videos]="(3 | videoDataList : { name: 'all videos' } | async) || []"></nguix-videos>
       </div>
     </ng-template>
 
