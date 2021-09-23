@@ -6,9 +6,9 @@ import { NguixIconComponentModule, NguixContentComponentModule } from '@lamnhan/
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 
-import { PostsDataPipeModule } from '@lamnhan/ngx-schemata';
-import { NguixPostsComponentModule } from '../../../../projects/starter/src/lib/components/posts/posts.module';
-import { NguixSkeletonPostsComponentModule } from '../../../../projects/starter/src/lib/components/skeleton-posts/skeleton-posts.module';
+import { VideosDataPipeModule } from '@lamnhan/ngx-schemata';
+import { NguixVideosComponentModule } from '../../../../projects/starter/src/lib/components/videos/videos.module';
+import { NguixSkeletonVideosComponentModule } from '../../../../projects/starter/src/lib/components/skeleton-videos/skeleton-videos.module';
 
 @NgModule({
   declarations: [
@@ -20,9 +20,9 @@ import { NguixSkeletonPostsComponentModule } from '../../../../projects/starter/
     NguixIconComponentModule,
     NguixContentComponentModule,
     HomeRoutingModule,
-    PostsDataPipeModule,
-    NguixPostsComponentModule,
-    NguixSkeletonPostsComponentModule,
+    VideosDataPipeModule,
+    NguixVideosComponentModule,
+    NguixSkeletonVideosComponentModule,
   ]
 })
 export class HomePageModule {}

@@ -166,7 +166,6 @@ ul {
   }
 
   &.list-hybrid li {
-    @include list_thumbnail_item();
 
     &:first-child {
       @include list_card_item();
@@ -178,6 +177,10 @@ ul {
       .body {
         margin-left: 0;
       }
+    }
+
+    &:nth-child(n+2) {
+      @include list_thumbnail_item();
     }
   }
 }
