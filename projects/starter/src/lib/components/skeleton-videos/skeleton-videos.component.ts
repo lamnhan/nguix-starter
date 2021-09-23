@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output } from '@angular/core';
 
-type VideosLayouts = 'thumbnail' | 'card';
+type VideosLayouts = 'thumbnail' | 'card' | 'hybrid';
 
 @Component({
   selector: 'nguix-skeleton-videos',
