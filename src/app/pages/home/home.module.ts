@@ -9,6 +9,7 @@ import { HomeComponent } from './home.component';
 
 import { PostsDataPipeModule } from '@lamnhan/ngx-schemata';
 import { NguixPostsComponentModule } from '../../../../projects/starter/src/lib/components/posts/posts.module';
+import { NguixSkeletonPostsComponentModule } from '../../../../projects/starter/src/lib/components/skeleton-posts/skeleton-posts.module';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { NguixPostsComponentModule } from '../../../../projects/starter/src/lib/
     HomeRoutingModule,
     PostsDataPipeModule,
     NguixPostsComponentModule,
+    NguixSkeletonPostsComponentModule,
   ]
 })
 export class HomePageModule {}

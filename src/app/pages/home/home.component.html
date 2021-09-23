@@ -31,6 +31,8 @@
   <section class="test padding">
     <nguix-posts layout="card" [posts]="(2 | postDataList : { name: 'all posts' } | async) || []"></nguix-posts>
     <nguix-posts layout="thumbnail" [posts]="(2 | postDataList : { name: 'all posts' } | async) || []"></nguix-posts>
+    <nguix-skeleton-posts layout="card"></nguix-skeleton-posts>
+    <nguix-skeleton-posts layout="thumbnail"></nguix-skeleton-posts>
   </section>
 
   <section class="features">
