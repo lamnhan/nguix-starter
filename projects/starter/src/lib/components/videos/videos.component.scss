@@ -21,10 +21,15 @@
       left: 0;
       border-radius: var(--app-size-radius);
       background: var(--app-color-background-shade);
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: center;
 
-      &, & img {
+      img {
         display: block;
-        width: 100%;
+        width: auto;
+        height: 100%;
       }
     }
 
