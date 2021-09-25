@@ -29,12 +29,9 @@
   </section>
 
   <!-- <section class="test padding">
-    <nguix-videos layout="card" [videos]="(2 | videoDataList : { name: 'all videos' } | async) || []"></nguix-videos>
-    <nguix-skeleton-videos layout="card" [no]="2"></nguix-skeleton-videos>
-    <nguix-videos layout="thumbnail" [videos]="(2 | videoDataList : { name: 'all videos' } | async) || []"></nguix-videos>
-    <nguix-skeleton-videos layout="thumbnail" [no]="2"></nguix-skeleton-videos>
-    <nguix-videos layout="hybrid" [videos]="(2 | videoDataList : { name: 'all videos' } | async) || []"></nguix-videos>
-    <nguix-skeleton-videos layout="hybrid" [no]="2"></nguix-skeleton-videos>
+    <ng-container *ngIf="'a-sample-post' | postDataGet | async; let post;">
+      <nguix-post [post]="post"></nguix-post>
+    </ng-container>
   </section> -->
 
   <section class="features">

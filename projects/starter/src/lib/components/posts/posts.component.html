@@ -5,7 +5,12 @@
 
     <div class="head">
 
-      <a class="thumbnail" [usefulRouterLink]="['post', postItem.id]" [usefulRouterBackwardable]="true">
+      <a
+        class="thumbnail"
+        [usefulRouterLink]="['post', postItem.id]"
+        [usefulRouteData]="{ post: postItem }"
+        [usefulRouterBackwardable]="true"
+      >
         <img
           [src]="
             (postItem.thumbnails?.sd || postItem.thumbnails?.default)?.src ||
@@ -15,10 +20,15 @@
         >
       </a>
 
-      <a class="category"
-        *ngIf="postItem.categories | o1i; let category"
+      <a
+        *ngIf="postItem.categories | o1i; let category;"
+        class="category"
         [class]="category.id"
-        [usefulRouterLink]="['category', category.id]"
+        [usefulRouterLink]="
+          !categoryUrlSegment
+            ? ['category', category.id]
+            : (categoryUrlSegment + '/' + category.id)
+        "
         [usefulRouterBackwardable]="true"
       >{{ category.title }}</a>
 
@@ -29,14 +39,22 @@
       <div class="major">
 
         <div class="title">
-          <a [usefulRouterLink]="['post', postItem.id]" [usefulRouterBackwardable]="true">{{ postItem.title }}</a>
+          <a
+            [usefulRouterLink]="['post', postItem.id]"
+            [usefulRouteData]="{ post: postItem }"
+            [usefulRouterBackwardable]="true"
+          >{{ postItem.title }}</a>
         </div>
   
         <div class="info">
           <div class="author truncate" *ngIf="postItem.authors | o1i; let author">
             <a
               class="muted"
-              [usefulRouterLink]="!authorUrlSegment ? [author.id] : [authorUrlSegment, author.id]"
+              [usefulRouterLink]="
+                !authorUrlSegment
+                  ? [author.id]
+                  : (authorUrlSegment + '/' + author.id)
+                "
               [usefulRouterBackwardable]="true"
             >
               <img [src]="(author.thumbnails?.sm || author.thumbnails?.default)?.src" [alt]="author.title">
@@ -63,7 +81,11 @@
         </div>
   
         <div class="action">
-          <a [usefulRouterLink]="['post', postItem.id]" [usefulRouterBackwardable]="true">{{ !i18n ? READ_MORE : t('NGUIX_POSTS.READ_MORE') || READ_MORE }} &#x2192;</a>
+          <a
+            [usefulRouterLink]="['post', postItem.id]"
+            [usefulRouteData]="{ post: postItem }"
+            [usefulRouterBackwardable]="true"
+          >{{ !i18n ? READ_MORE : t('NGUIX_POSTS.READ_MORE') || READ_MORE }} &#x2192;</a>
         </div>
   
       </div>

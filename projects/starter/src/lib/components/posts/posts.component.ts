@@ -31,6 +31,11 @@ export class PostsComponent implements OnInit {
   @Input() authorUrlSegment?: string;
 
   /**
+   * Input() Category url segment
+   */
+  @Input() categoryUrlSegment?: string;
+
+  /**
    * Input() Minute to read text. For i18n: `NGUIX_POSTS.MIN_READ`
    */
   @Input() MIN_READ = 'min read';

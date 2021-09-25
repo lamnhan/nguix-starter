@@ -20,17 +20,17 @@
     <h1 class="title">{{ post.title }}</h1>
   
     <div class="info">
-      <div class="author" *ngIf="post.authors | o1i; let author">
-        <a
-          class="muted"
-          [usefulRouterLink]="!authorUrlSegment ? [author.id] : [authorUrlSegment, author.id]"
-          [usefulRouterBackwardable]="true"
-        >
-          <img [src]="(author.thumbnails?.sm || author.thumbnails?.default)?.src" [alt]="author.title">
-          <span>{{ author.title }}</span>
-        </a>
-      </div>
-      <span class="date">{{ post.createdAt | datex }}</span>
+      <a
+        class="author muted" *ngIf="post.authors | o1i; let author"
+        [usefulRouterLink]="!authorUrlSegment ? [author.id] : [authorUrlSegment, author.id]"
+        [usefulRouterBackwardable]="true"
+      >
+        <img [src]="(author.thumbnails?.sm || author.thumbnails?.default)?.src" [alt]="author.title">
+        <div class="text">
+          <div class="date">{{ post.createdAt | datex }}</div>
+          <div class="name">By {{ author.title }}</div>
+        </div>
+      </a>
       <span class="duration">{{ post.duration }} {{ !i18n ? MIN_READ : t('NGUIX_POST.MIN_READ') || MIN_READ }}</span>
     </div>
   

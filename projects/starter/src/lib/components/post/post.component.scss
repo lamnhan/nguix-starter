@@ -42,6 +42,9 @@
   
       .author {
         flex: 1;
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
   
         img {
           width: 2rem;
@@ -49,14 +52,20 @@
           border-radius: 100%;
           box-shadow: 0 0 1px var(--app-color-medium);
         }
-  
-        span {
+
+        .text {
           margin-left: .75rem;
+
+          .date {
+            display: block;
+          }
+
+          .name {
+            display: block;
+            font-size: .85rem;
+            color: var(--app-color-medium);
+          }
         }
-      }
-  
-      .date {
-        display: none;
       }
   
       .duration {
