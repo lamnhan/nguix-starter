@@ -27,7 +27,12 @@ export class PostComponent implements OnInit {
   /**
    * Input() Category path
    */
-   @Input() categoryPath?: string;
+  @Input() categoryPath?: string;
+
+  /**
+   * Input() TOC offset
+   */
+  @Input() tocOffset = 0;
 
   /**
    * Input() Minute to read text. For i18n: `NGUIX_POST.MIN_READ`
