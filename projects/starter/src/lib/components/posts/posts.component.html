@@ -54,7 +54,7 @@
                 !authorUrlSegment
                   ? [author.id]
                   : (authorUrlSegment + '/' + author.id)
-                "
+              "
               [usefulRouterBackwardable]="true"
             >
               <img [src]="(author.thumbnails?.sm || author.thumbnails?.default)?.src" [alt]="author.title">

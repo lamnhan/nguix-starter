@@ -9,10 +9,14 @@
 
     <div class="categories" *ngIf="post.categories | o2a; let categories">
       <a
-        class="category"
         *ngFor="let categoryItem of categories"
+        class="category"
         [class]="categoryItem.id"
-        [usefulRouterLink]="['category', categoryItem.id]"
+        [usefulRouterLink]="
+          !categoryUrlSegment
+            ? ['category', categoryItem.id]
+            : (categoryUrlSegment + '/' + categoryItem.id)
+        "
         [usefulRouterBackwardable]="true"
       >{{ categoryItem.title }}</a>
     </div>
@@ -22,7 +26,11 @@
     <div class="info">
       <a
         class="author muted" *ngIf="post.authors | o1i; let author"
-        [usefulRouterLink]="!authorUrlSegment ? [author.id] : [authorUrlSegment, author.id]"
+        [usefulRouterLink]="
+          !authorUrlSegment
+            ? [author.id]
+            : (authorUrlSegment + '/' + author.id)
+        "
         [usefulRouterBackwardable]="true"
       >
         <img [src]="(author.thumbnails?.sm || author.thumbnails?.default)?.src" [alt]="author.title">

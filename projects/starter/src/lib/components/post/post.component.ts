@@ -23,6 +23,11 @@ export class PostComponent implements OnInit {
    * Input() Author url segment
    */
   @Input() authorUrlSegment?: string;
+  
+  /**
+   * Input() Category url segment
+   */
+   @Input() categoryUrlSegment?: string;
 
   /**
    * Input() Minute to read text. For i18n: `NGUIX_POST.MIN_READ`
