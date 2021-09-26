@@ -26,6 +26,11 @@ export class VideosComponent implements OnInit {
   @Input() videos!: Video[];
 
   /**
+   * Input() Video path
+   */
+  @Input() videoPath?: string;
+
+  /**
    * Input() The view text. For i18n: `NGUIX_VIDEOS.VIEW_TEXT`
    */
   @Input() VIEW_TEXT = 'views';

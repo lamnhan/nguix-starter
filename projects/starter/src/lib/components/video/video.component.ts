@@ -20,6 +20,11 @@ export class VideoComponent implements OnInit {
   @Input() video!: Video;
   
   /**
+   * Input() Category path
+   */
+  @Input() categoryPath?: string;
+
+  /**
    * Input() When content is ready
    */
    @Output() contentReady = new EventEmitter<HTMLElement>();

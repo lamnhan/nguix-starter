@@ -13,9 +13,9 @@
         class="category"
         [class]="categoryItem.id"
         [usefulRouterLink]="
-          !categoryUrlSegment
+          !categoryPath
             ? ['category', categoryItem.id]
-            : (categoryUrlSegment + '/' + categoryItem.id)
+            : (categoryPath + '/' + categoryItem.id)
         "
         [usefulRouterBackwardable]="true"
       >{{ categoryItem.title }}</a>
@@ -27,9 +27,9 @@
       <a
         class="author muted" *ngIf="post.authors | o1i; let author"
         [usefulRouterLink]="
-          !authorUrlSegment
+          !authorPath
             ? [author.id]
-            : (authorUrlSegment + '/' + author.id)
+            : (authorPath + '/' + author.id)
         "
         [usefulRouterBackwardable]="true"
       >

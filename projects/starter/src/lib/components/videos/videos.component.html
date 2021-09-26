@@ -6,7 +6,11 @@
       <div class="head">
         <a
           class="thumbnail"
-          [usefulRouterLink]="['video', videoItem.id]"
+          [usefulRouterLink]="
+            !videoPath
+              ? ['video', videoItem.id]
+              : (videoPath + '/' + videoItem.id)
+          "
           [usefulRouteData]="{ video: videoItem }"
           [usefulRouterBackwardable]="true"
         >
@@ -25,7 +29,11 @@
   
         <div class="title">
           <a
-            [usefulRouterLink]="['video', videoItem.id]"
+            [usefulRouterLink]="
+              !videoPath
+                ? ['video', videoItem.id]
+                : (videoPath + '/' + videoItem.id)
+            "
             [usefulRouteData]="{ video: videoItem }"
             [usefulRouterBackwardable]="true"
           >{{ videoItem.title }}</a>

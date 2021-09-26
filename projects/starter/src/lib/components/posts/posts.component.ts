@@ -26,14 +26,19 @@ export class PostsComponent implements OnInit {
   @Input() posts!: Post[];
 
   /**
-   * Input() Author url segment
+   * Input() Post path
    */
-  @Input() authorUrlSegment?: string;
+  @Input() postPath?: string;
 
   /**
-   * Input() Category url segment
+   * Input() Author path
    */
-  @Input() categoryUrlSegment?: string;
+  @Input() authorPath?: string;
+
+  /**
+   * Input() Category path
+   */
+  @Input() categoryPath?: string;
 
   /**
    * Input() Minute to read text. For i18n: `NGUIX_POSTS.MIN_READ`

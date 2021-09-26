@@ -9,10 +9,14 @@
 
     <div class="categories" *ngIf="video.categories | o2a; let categories">
       <a
-        class="category"
         *ngFor="let categoryItem of categories"
+        class="category"
         [class]="categoryItem.id"
-        [usefulRouterLink]="['category', categoryItem.id]"
+        [usefulRouterLink]="
+          !categoryPath
+            ? ['category', categoryItem.id]
+            : (categoryPath + '/' + categoryItem.id)
+        "
         [usefulRouterBackwardable]="true"
       >{{ categoryItem.title }}</a>
     </div>
