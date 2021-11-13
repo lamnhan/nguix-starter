@@ -58,20 +58,31 @@ export class ContentComponent implements OnInit, OnChanges {
           catchError(() => of('')),
           map(result => {
             const content = !result ? '' : result;
-            const startAt = content.indexOf('</head>');
-            const endAt = content.indexOf('</body>');
+            const startAt = content.indexOf('<div') !== -1 // first div
+              ? content.indexOf('<div')
+              : content.indexOf('</head>') !== -1 // after head
+              ? content.indexOf('</head>') + 7
+              : 0;
+            const endAt = content.lastIndexOf('</div>') !== -1 // last div
+              ? content.lastIndexOf('</div>') + 6
+              : content.indexOf('</body>') !== -1 // before body
+              ? content.indexOf('</body>')
+              : -1;
             return content
               // extract content
-              .substring(startAt + 7, endAt)
+              .substring(startAt, endAt)
               .replace(/<body(.*?)>/, '')
+              // remove styles and scripts
+              .replace(/<style (.*?)<\/style>/g, '')
+              .replace(/<script (.*?)<\/script>/g, '')
               // remove attributes
               .replace(/ class="(.*?)"/g, '')
               .replace(/ style="(.*?)"/g, '')
               // decode html entities
               .replace(/&lt;/g, '<')
               .replace(/&gt;/g, '>')
-              .replace(/&quot;|&ldquo;|&rdquo;/g, '"')
-              .replace(/&lsquo;|&rsquo;/g, `'`);
+              .replace(/“|”|&quot;|&ldquo;|&rdquo;/g, '"')
+              .replace(/‘|’|&lsquo;|&rsquo;/g, `'`);
           }),
         );
     } else {
